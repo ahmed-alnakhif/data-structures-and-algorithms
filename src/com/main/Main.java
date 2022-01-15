@@ -1,14 +1,14 @@
 package com.main;
 
-import algorithms.PermutationList;
-import algorithms.PermutationString;
+import algorithms.Permutation;
+import dataStructures.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
-        PermutationString.Solution permutationString = new PermutationString.Solution();
-        PermutationList.Solution permutationList = new PermutationList.Solution();
-        permutationString.main();
-        permutationList.main();
+        Permutation.PermutationString permutationString = new Permutation.PermutationString();
+        Permutation.PermutationList permutationList = new Permutation.PermutationList();
+        LinkedList linkedList = new LinkedList();
+
     }
 }
