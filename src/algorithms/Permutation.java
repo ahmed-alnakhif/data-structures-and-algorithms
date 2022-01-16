@@ -33,7 +33,7 @@ public class Permutation {
             return result;
         }
 
-        public void main() {
+        public void run() {
             String str = "abc";
             System.out.println(permutation(str));
         }
@@ -66,7 +66,7 @@ public class Permutation {
             return result;
         }
 
-        public void main() {
+        public void run() {
             int[] nums = { 1, 2, 3 };
             System.out.println(permutation(nums));
         }
