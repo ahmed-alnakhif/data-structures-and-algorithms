@@ -1,7 +1,5 @@
 package dataStructures;
 
-import java.util.List;
-
 public class Trees {
     public static class Node {
         int data;
@@ -94,13 +92,6 @@ public class Trees {
                     : contains(curr.right, value);
         }
 
-        public Node initializeTree(int[] arr) {
-            for (int value : arr) {
-                insert(value);
-            }
-            return this.root;
-        }
-
         public void inOrderTraversal(Node curr) {
             if (curr != null) {
                 inOrderTraversal(curr.left);
@@ -125,9 +116,16 @@ public class Trees {
             }
         }
 
+        public Node initializeBinaryTree(int[] arr) {
+            for (int value : arr) {
+                insert(value);
+            }
+            return this.root;
+        }
+
         public void run() {
             int[] arr = { 8, 4, 12, 3, 7, 9, 14 };
-            initializeTree(arr);
+            initializeBinaryTree(arr);
             inOrderTraversal(this.root);
         }
     }
