@@ -2,6 +2,10 @@ package Problems;
 
 import java.util.HashSet;
 
+/**
+ * return the first recurring character in a string
+ */
+
 public class FirstRecurringCharacter {
 
     public Character firstRecurringCharacter(String str) {
