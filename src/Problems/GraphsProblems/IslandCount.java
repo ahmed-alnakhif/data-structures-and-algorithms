@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * return the number of connected component in a graph
+ * return the number of connected islands in a graph
  */
 
 public class IslandCount {
