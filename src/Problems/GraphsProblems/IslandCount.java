@@ -1,10 +1,6 @@
 package Problems.GraphsProblems;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 /**
  * return the number of connected islands in a graph
