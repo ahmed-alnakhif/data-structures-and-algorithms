@@ -4,23 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Given two strings s and t, return true if t is an anagram of s, and false
- * otherwise.
+ * Given an integer array nums, return an array answer such that answer[i] is
+ * equal to the product of all the elements of nums except nums[i].
  * 
- * An Anagram is a word or phrase formed by rearranging the letters of a
- * different word or phrase, typically using all the original letters exactly
- * once.
+ * The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit
+ * integer.
+ * 
+ * You must write an algorithm that runs in O(n) time and without using the
+ * division operation.
+ * 
  * 
  * 
  * Example 1:
  * 
- * Input: s = "anagram", t = "nagaram"
- * Output: true
- * Example 2:
- * 
- * Input: s = "rat", t = "car"
- * Output: false
- * 
+ * Input: nums = [1,2,3,4]
+ * Output: [24,12,8,6]
  */
 
 public class ProductOfArrayExceptSelf {
