@@ -1,12 +1,12 @@
 package com.main;
 
-import Problems.StringAndArrayManipulation.ContainsDuplicate;
+import Problems.StringAndArrayManipulation.ValidAnagram;
 
 public class Main {
 
     public static void main(String[] args) {
         // call <Class_Instance>.run() here
-        ContainsDuplicate c = new ContainsDuplicate();
-        c.run();
+        ValidAnagram validAnagram = new ValidAnagram();
+        validAnagram.run();
     }
 }
