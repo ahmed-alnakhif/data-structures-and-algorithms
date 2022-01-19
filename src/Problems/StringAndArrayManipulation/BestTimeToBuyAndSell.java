@@ -1,9 +1,5 @@
 package Problems.StringAndArrayManipulation;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * You are given an array prices where prices[i] is the price of a given stock
  * on the ith day.
