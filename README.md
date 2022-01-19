@@ -18,4 +18,6 @@
 
 | #   | Title         | Solution                                    | Basic idea | O Notation |
 | --- | ------------- | ------------------------------------------- | ---------- | ---------- |
-| 1   | Two Sum       | [Java](src/Problems/StringAndArrayManipulation/TwoSum.java) | use recursion <br>1. Hashmap <br>2. for loop to check if complement exists in the map | O(n) |
+| 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/StringAndArrayManipulation/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(n) |
+| 2   | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/StringAndArrayManipulation/ContainsDuplicate.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(n) |
+| 3   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/StringAndArrayManipulation/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(n) |
