@@ -21,3 +21,4 @@
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/StringAndArrayManipulation/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(n) |
 | 2   | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/StringAndArrayManipulation/ContainsDuplicate.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(n) |
 | 3   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/StringAndArrayManipulation/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(n) |
+| 4   | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/StringAndArrayManipulation/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(n) |
