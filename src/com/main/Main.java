@@ -1,16 +1,12 @@
 package com.main;
 
-import Problems.GraphsProblems.ConnectedComponentCount;
-import Problems.GraphsProblems.IslandCount;
-import Problems.GraphsProblems.LargestComponent;
-import Problems.GraphsProblems.ShortestPath;
-import Problems.StringAndArrayManipulation.TwoSum;
+import Problems.StringAndArrayManipulation.ContainsDuplicate;
 
 public class Main {
 
     public static void main(String[] args) {
         // call <Class_Instance>.run() here
-        TwoSum twoSum = new TwoSum();
-        twoSum.run();
+        ContainsDuplicate c = new ContainsDuplicate();
+        c.run();
     }
 }
