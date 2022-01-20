@@ -1,6 +1,5 @@
 package Problems.StringAndArrayManipulation;
 
-import java.util.HashMap;
 
 /**
  * Given an integer array nums, find the contiguous subarray (containing at
