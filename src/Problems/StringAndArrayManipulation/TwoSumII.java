@@ -25,7 +25,7 @@ package Problems.StringAndArrayManipulation;
 public class TwoSumII {
     /** We can use HashMap or Pointers. This solution uses pointers for sorted arrays */
 
-    public int[] twoSum(int[] numbers, int target) {
+    public int[] twoSumII(int[] numbers, int target) {
         int low = 0;
         int high = numbers.length - 1;
 
@@ -46,7 +46,7 @@ public class TwoSumII {
     public void run() {
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
-        System.out.println(twoSum(nums, target)[0]);
-        System.out.println(twoSum(nums, target)[1]);
+        System.out.println(twoSumII(nums, target)[0]);
+        System.out.println(twoSumII(nums, target)[1]);
     }
 }
