@@ -28,7 +28,7 @@
 | 7   | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  | [Java](src/Problems/StringAndArrayManipulation/TwoSumII.java) | 1. use a left and a right pointer <br>2. check if the sum is equal to the target <br>3. increment left if sum is lower, decrement right if sum is larger | O(n) |
 | 8   | [Three Sum Sorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/StringAndArrayManipulation/ThreeSum.java) | 1. two nested loop; first loop gets the first value, and second loop performs 2Sum (find 2 values == target) <br>2. Array must be sorted to avoid duplicates <br>3. we can use L & R pointers, hashSet, or binary search to solve 2Sum| O(n^2) |
 | 8   | [Three Sum Unsorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/StringAndArrayManipulation/ThreeSum.java) | 1. since the array is not sorted, we can avoid duplicate by sorting the 3 values before adding them to the resultSet list and if the new set is not new, it won't be added again| O(n^2) |
-| 9   | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/StringAndArrayManipulation/GroupAnagram.java) | sort each word and put it in a map where key is the word and value is a list of the words that match the sorted word| O(n* wLog(w)) |
+| 9   | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/StringAndArrayManipulation/GroupAnagram.java) | sort each word and put it in a map where key is the word and value is a list of the words that match the sorted word| O(n* wLog(w)) | 
 
 
 
