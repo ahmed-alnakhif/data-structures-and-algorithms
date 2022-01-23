@@ -1,4 +1,4 @@
-package Problems.StringAndArrayManipulation;
+package Problems.Sequences;
 
 import java.util.HashMap;
 

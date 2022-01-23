@@ -1,4 +1,4 @@
-package Problems.StringAndArrayManipulation;
+package Problems.Sequences;
 
 /**
  * You are given an array prices where prices[i] is the price of a given stock
