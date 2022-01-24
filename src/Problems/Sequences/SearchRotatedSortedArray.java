@@ -1,12 +1,5 @@
 package Problems.Sequences;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-import java.util.ArrayList;
 
 /**
  * There is an integer array nums sorted in ascending order (with distinct
@@ -45,7 +38,7 @@ public class SearchRotatedSortedArray {
 
             // Case 2: to check right side is sorted or not
             if (nums[mid] <= nums[high]) {
-                if (target > nums[mid] && target <= nums[high]) { // if sorted does target present
+                if (target > nums[mid] && target <= nums[high]) {
                     low = mid + 1;
                 } else {
                     high = mid - 1;
