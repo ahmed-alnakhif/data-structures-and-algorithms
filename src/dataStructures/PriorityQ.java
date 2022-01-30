@@ -33,6 +33,10 @@ public class PriorityQ {
          *      }
          * });
          */
+        /**
+         * 5) custom max heap with pair values
+         *  PriorityQueue<int[]> maxPQ = new PriorityQueue<int[]>((a, b) -> b[1] - a[1]);
+         */
 
         for (Integer integer : list) {
             maxPQ.add(integer);
