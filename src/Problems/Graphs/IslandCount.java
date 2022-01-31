@@ -1,4 +1,4 @@
-package Problems.GraphsProblems;
+package Problems.Graphs;
 
 import java.util.HashSet;
 
