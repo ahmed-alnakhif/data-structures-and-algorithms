@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.SlidingWindow;
 
 
 /**

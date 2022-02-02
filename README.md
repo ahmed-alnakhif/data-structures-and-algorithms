@@ -16,8 +16,8 @@
 | 3   | Quick Sort    | [java](src/algorithms/QuickSort.java) |  | O(n^2) |
 ## Questions & Solutions
 
-| #   | Title         | Solution                                    | Basic idea |  O Notation  |
-| --- | ------------- | ------------------------------------------- | ---------- | ------------ |
+| #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
+| --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(n) |
 | 2   | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(n) |
 | 3   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(n) |
@@ -46,6 +46,8 @@
 | 26   | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  | [Java](src/Problems/Sequences/TopKFrequentElements.java) | 1. HashMap to count frequency <br>2. Priority Queue to get max K times | Time: O(N Log(N)) <br> Space: O(N) | 
 | 27   | [Validate Binary Tree](https://leetcode.com/problems/validate-binary-search-tree/)  | [Java](src/Problems/Trees/ValidateBinaryTree.java) | 1. validate each subtree <br>2. if curr.val < low || curr.val > high return false | Time: O(N) <br> Space: O(N) | 
 | 28   | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | [Java](src/Problems/Trees/InvertBinaryTree.java) | 1. swap children <br>2. call recursive function one for the left side and one for the right side | Time: O(N) <br> Space: O(N) | 
+| 29   | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP)  | [Java](src/Problems/SlidingWindow/MaxKSubarray.java) | 1. calcuate window of size k <br>2. slide the window to the right and track the max value  | Time: O(N) <br> Space: O(1) | Sliding Window
+
 
 
 
