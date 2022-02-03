@@ -50,14 +50,21 @@
 | 30   | [Maximum Sum Subarray of Size K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, increase left to check for min window size <br>3. keep track of min size | Time: O(N) <br> Space: O(1) | Sliding Window
 | 31   | [Largest Subarray Length K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/LargestSubarrayLengthK.java) | 1. find largest starting value of a window <br>2. return all elements from start | Time: O(N) <br> Space: O(N) | Fixed Window
 | 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) |  | Time: O(N) <br> Space: O(N) | Sliding Window, Hash Map
-| 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | [Java](src/Problems/Sequences/FindFirstandLastPositionOfElement.java) |  | Time: O(log(N)) <br> Space: O(1) | Binary Search
+| 33   | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  | Time: O(log(N)) <br> Space: O(1) | Binary Search
 
 
 
 
-
-
-
+## Uber
+|  #  |                         Problem                         |                   Solution                    |      Pattern      |
+| --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
+|  1  | [Two Sum](https://leetcode.com/problems/two-sum/)       | [Java](src/Problems/Sequences/TwoSum.java)    | Arrays & Strings  |
+|  2  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  Arrays & Strings  |
+|  3  | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/Sequences/GroupAnagram.java) | Arrays & Strings  |
+|  4  | [Text Justification](https://leetcode.com/problems/text-justification/)                    |  | Arrays & Strings  |
+|  5  | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  | [Java](src/Problems/SlidingWindow/MinimumWindowSubstring.java) | Arrays & Strings  |
+|  6  | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/)  | [Java](src/Problems/Sequences/ValidateIPAddress.java) | Arrays & Strings  |
+|  7  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  |  | Linked Lists  |
 
 
 
