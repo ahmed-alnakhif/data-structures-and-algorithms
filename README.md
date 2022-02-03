@@ -56,7 +56,7 @@
 
 
 ## Uber
-|  #  |                         Problem                         |                   Solution                    |      Pattern      |
+|  #  | Title                                                   | Solution                                      | Pattern         |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Two Sum](https://leetcode.com/problems/two-sum/)       | [Java](src/Problems/Sequences/TwoSum.java)    | Arrays & Strings  |
 |  2  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  Arrays & Strings  |
