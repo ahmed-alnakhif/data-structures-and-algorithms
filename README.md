@@ -50,6 +50,7 @@
 | 30   | [Maximum Sum Subarray of Size K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, increase left to check for min window size <br>3. keep track of min size | Time: O(N) <br> Space: O(1) | Sliding Window
 | 31   | [Largest Subarray Length K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/LargestSubarrayLengthK.java) | 1. find largest starting value of a window <br>2. return all elements from start | Time: O(N) <br> Space: O(N) | Fixed Window
 | 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) |  | Time: O(N) <br> Space: O(N) | Sliding Window, Hash Map
+| 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | [Java](src/Problems/Sequences/FindFirstandLastPositionOfElement.java) |  | Time: O(log(N)) <br> Space: O(1) | Binary Search
 
 
 
