@@ -57,7 +57,7 @@
 
 
 ## Uber
-|  #  | Title                                                   | Solution                                      | Pattern         |
+|  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Two Sum](https://leetcode.com/problems/two-sum/)       | [Java](src/Problems/Sequences/TwoSum.java)    | Arrays & Strings  |
 |  2  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  Arrays & Strings  |
@@ -66,6 +66,7 @@
 |  5  | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  | [Java](src/Problems/SlidingWindow/MinimumWindowSubstring.java) | Arrays & Strings  |
 |  6  | [Validate IP Address](https://leetcode.com/problems/validate-ip-address/)  | [Java](src/Problems/Sequences/ValidateIPAddress.java) | Arrays & Strings  |
 |  7  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeTwoSortedLists.java)  | Linked Lists  |
+|  7  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeKSortedLists.java)  | Linked Lists  |
 
 
 
