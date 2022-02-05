@@ -68,6 +68,7 @@
 |  7  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeTwoSortedLists.java)  | Linked Lists  |
 |  8  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeKSortedLists.java)  | Linked Lists  |
 |  9  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java)  | Graphs  |
+|  10  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Graphs  |
 
 
 
