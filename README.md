@@ -69,9 +69,9 @@
 |  8  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeKSortedLists.java)  | Linked Lists  |
 |  9  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java)  | Graphs  |
 |  10  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Graphs  |
-|  11  | [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Trees  |
-|  12  | [Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Trees  |
-|  13  | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Trees  |
+|  11  | [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)  | [java]()  | Trees  |
+|  12  | [Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)  | [java]()  | Trees  |
+|  13  | [Serialize and Deserialize N-ary Tree]()  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Trees  |
 |  10  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  | [java](src/Problems/TwoPointers/TrappingRainWater.java)  | Two Pointers  |
 
 
