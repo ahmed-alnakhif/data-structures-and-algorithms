@@ -29,6 +29,7 @@
 |  #  | Title                       | Solution                    | Basic idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count
+|  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if zero increment zeroCount <br>2. if we reach the max allowed number of 0s, then calculate max and shrink window to the last seen zero
 
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
