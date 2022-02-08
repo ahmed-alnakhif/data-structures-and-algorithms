@@ -11,9 +11,9 @@ package Problems.SlidingWindow;
  * Explanation: Subarray with maximum sum is [5, 1, 3].
  */
 
-public class MaxKSubarray {
+public class MaximumSumSubarrayOfSizeK {
 
-    public int maxKSubArray(int[] arr, int k) {
+    public int maximumSumSubarrayOfSizeK(int[] arr, int k) {
         int left = 0, right = k - 1;
         int max = 0, sum = 0;
         for (int i = 0; i < k; i++) {
@@ -37,6 +37,6 @@ public class MaxKSubarray {
     public void run() {
         int[] nums = { 2, 1, 5, 1, 3, 2 };
         int k = 3;
-        System.out.println(maxKSubArray(nums, k));
+        System.out.println(maximumSumSubarrayOfSizeK(nums, k));
     }
 }

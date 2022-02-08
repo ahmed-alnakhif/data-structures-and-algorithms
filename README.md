@@ -1,4 +1,4 @@
-## Data Structure
+# Data Structure
 
 | #   | Title | Solution                              | Basic idea |  O Notation  |
 | --- | ----- | ------------------------------------- | ---------- | ------------ |
@@ -6,8 +6,8 @@
 | 2   | Binary Tree | [java](src/dataStructures/Trees.java) | 1. left child is smaller than root <br>2. right child is larger than root | 1. searching: O(log(N)) <br>2. insertion O(log(N)) <br>3. deletion: O(log(N))
 | 3   | Priority Queue | [java](src/dataStructures/PriorityQ.java) | 1. min PQ: root is always the smallest <br>2. max PQ: root is always the largest | 1. fetching: O(1) <br>2. insertion O(log(N)) <br>3. deletion: O(log(N))
 | 4   | Graphs | [java](src/dataStructures/Graph.java) | we can use adjacency list to represent graphs | 1. searching: O(E) <br>2. has a path: O(E) 
-
-## Algorithms
+<br><br>
+# Algorithms
 
 | #   | Title         | Solution                                    | Basic idea |  O Notation  |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ |
@@ -15,10 +15,24 @@
 | 2   | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
 | 3   | Binary Search | [java](src/algorithms/BinarySearch.java) | 1. set a most left & most right pointer <br>2. while pointers don't cross each other, calculate mid index <br>3. check if mid value equals the target | O(log(N)) |
 | 4   | Quick Sort    | [java](src/algorithms/QuickSort.java) |  | O(N^2) |
-## Questions & Solutions
 
-| #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
-| --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
+<br><br>
+
+# Patterns
+## 1) Sequence & Manipulation
+|  #  | Title                 | Solution                    | Basic idea                                    |  O Notation  |
+| --- | --------------------- | --------------------------- | --------------------------------------------- |------------- |
+
+<br>
+
+## 1) Sliding Window
+|  #  | Title                       | Solution                    | Basic idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count
+
+#
+|  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
+| ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
 | 2   | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |
 | 3   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
@@ -39,7 +53,7 @@
 | 18   | [Remove Nth Node From End of List](https://leetcode.com/problems/number-of-islands/)  | [Java](src/Problems/LinkedLists/RemoveNodeFromEnd.java) | 1. get the node position from head <br>2. traverse to the node before the to delete node | O(N)  | 
 | 19   | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)  | [Java](src/Problems/Sequences/ContainerWithMostWater.java) | 1. left and right pointer <br>2. get the area of min(value[left], value[right]) <br>3. keep track of the max area | O(N)  | 
 | 20   | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)  | [Java](src/Problems/SlidingWindow/MaxAverage.java) | 1. sliding window <br>2. calculate the sum of the first window <br>3. slide the window and recalculate the max sum <br>4. return maxSum/windowSize | O(N)  | 
-| 21   | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | 1. sliding window <br>2. if char is seen, remove most-left char, else increment our window | O(N)  |
+| 21   | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | 1. sliding window <br>2. if char is seen, remove most-left char, else increment our window | O(N)  | Sliding Window
 | 22   | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)  | [Java](src/Problems/SlidingWindow/LongestRepeatingCharacterReplacement.java) | 1. sliding window & hash map <br>2. check if window size - max freq char > k (we exhausted all replacement) <br>3. if true slide left side and decrement char count <br>4. result is equal to the maximum window size | O(N)  | 
 | 23   | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  | [Java](src/Problems/SlidingWindow/MinimumWindowSubstring.java) |  | O(S + T)  | 
 | 24   | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)  | [Java](src/Problems/Sequences/PalindromicSubstrings.java) | 1. palindromes are like unions, so if we count palnidromes around centers <br>2. center is every character in a string | Time: O(N^2) <br>Space: O(1) | 
@@ -47,8 +61,8 @@
 | 26   | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  | [Java](src/Problems/Sequences/TopKFrequentElements.java) | 1. HashMap to count frequency <br>2. Priority Queue to get max K times | Time: O(N Log(N)) <br> Space: O(N) | 
 | 27   | [Validate Binary Tree](https://leetcode.com/problems/validate-binary-search-tree/)  | [Java](src/Problems/Trees/ValidateBinaryTree.java) | 1. validate each subtree <br>2. if curr.val < low || curr.val > high return false | Time: O(N) <br> Space: O(N) | 
 | 28   | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | [Java](src/Problems/Trees/InvertBinaryTree.java) | 1. swap children <br>2. call recursive function one for the left side and one for the right side | Time: O(N) <br> Space: O(N) | 
-| 29   | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP)  | [Java](src/Problems/SlidingWindow/MaxKSubarray.java) | 1. calcuate window of size k <br>2. slide the window to the right and track the max value  | Time: O(N) <br> Space: O(1) | Sliding Window
-| 30   | [Maximum Sum Subarray of Size K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, increase left to check for min window size <br>3. keep track of min size | Time: O(N) <br> Space: O(1) | Sliding Window
+| 29   | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP)  | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | 1. calcuate window of size k <br>2. slide the window to the right and track the max value  | Time: O(N) <br> Space: O(1) | Sliding Window
+| 30   | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, calculate min and increment left <br>3. else incrementright | Time: O(N) <br> Space: O(1) | Sliding Window
 | 31   | [Largest Subarray Length K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/LargestSubarrayLengthK.java) | 1. find largest starting value of a window <br>2. return all elements from start | Time: O(N) <br> Space: O(N) | Fixed Window
 | 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) | 1. ordered hash map <br>2. if we get a seen char, remove it from the map and put the new index <br>3. if the map size > k keep removing left most char and assign left to its index <br>4. keep track of max length | Time: O(N) <br> Space: O(N) | Sliding Window, Hash Map
 | 33   | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  | Time: O(log(N)) <br> Space: O(1) | Binary Search
@@ -57,7 +71,15 @@
 | 36   | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)  | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. DFS and keep incrementing depth <br>2. if depth is larger than result size then add | Time: O(N) <br> Space: O(H) - H is a tree height | DFS
 
 
-
+## Grokking the Coding Interview
+|  #  | Title                                                   | Solution                                      | Pattern           |
+| --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
+|  1  | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP) | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | Sliding Window
+|  2  | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ) | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | | Sliding Window
+|  3  | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) | Sliding Window
+|  4  | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)  | [Java](src/Problems/SlidingWindow/FruitIntoBaskets.java) | Sliding Window
+|  5  | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)  | [Java](src/Problems/SlidingWindow/LongestRepeatingCharacterReplacement.java) | Sliding Window 
+|  7  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | Sliding Window
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
