@@ -74,6 +74,7 @@
 |  12  | [Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)  | [java]()  | Trees  |
 |  13  | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/)  | [java](src/Problems/Trees/SerializeAndDeserializeNTree.java)  | Trees  |
 |  10  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)  | [java](src/Problems/TwoPointers/TrappingRainWater.java)  | Two Pointers  |
+|  10  | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)  | [java](src/Problems/Permutations/LetterCombinationOfPhone.java)  | Recursion & Backtarcking  |
 
 
 
