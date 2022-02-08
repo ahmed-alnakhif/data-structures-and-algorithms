@@ -1,43 +1,42 @@
 package Problems.SlidingWindow;
 
 /**
- * Given an integer array nums, find the contiguous subarray (containing at
- * least one number) which has the largest sum and return its sum.
- * 
- * A subarray is a contiguous part of an array.
+ * Given a binary array nums, return the maximum number of consecutive 1's in
+ * the array if you can flip at most one 0.
  * 
  * 
  * Example 1:
  * 
- * Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
- * Output: 6
- * Explanation: [4,-1,2,1] has the largest sum = 6.
+ * Input: nums = [1,0,1,1,0]
+ * Output: 4
+ * Explanation: Flip the first zero will get the maximum number of consecutive
+ * 1s. After flipping, the maximum number of consecutive 1s is 4.
  */
 
 public class MaxConsecutiveOnesII {
 
     public int findMaxConsecutiveOnes(int[] nums) {
-        int max = 0;
+        int allowedZeros = 1;
         int right = 0, left = 0;
-        int zeroCount = 0, lastZeroIndex = 0;
-        
+
         while (right < nums.length) {
             if (nums[right] == 0) {
-                zeroCount++;
-                if(zeroCount > 1){
-                    max = Math.max(max, right - left);
-                    left = lastZeroIndex + 1;
-                }
-                
-                lastZeroIndex = right;
+                allowedZeros--;
             }
+
+            if (allowedZeros < 0) {
+                if (nums[left] == 0) {
+                    allowedZeros++;
+                }
+                left++;
+            }
+
             right++;
         }
 
-        max = Math.max(max, right - left);
-
-        return max;
+        return right - left;
     }
+
     public void run() {
         int[] nums = { 1, 1, 0, 1, 1, 1 };
         System.out.println(findMaxConsecutiveOnes(nums));
