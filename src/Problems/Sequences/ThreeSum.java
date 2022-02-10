@@ -36,25 +36,23 @@ public class ThreeSum {
     }
 
     void twoSumWithPointers(int i, int[] nums) {
-        int l = i + 1;
-        int r = nums.length - 1;
+        int left = i + 1, right = nums.length - 1;
+        while (left < right) {
+            int sum = nums[i] + nums[left] + nums[right];
 
-        while (l < r) {
-            int sum = nums[i] + nums[l] + nums[r];
-
-            if (sum > 0) {
-                r--;
-            } else if (sum < 0) {
-                l++;
-            } else {
-                result.add(List.of(nums[i], nums[l], nums[r]));
-                l++;
-                while (l < r && nums[l] == nums[l - 1]) {
-                    l++;
+            if (sum == 0) {
+                result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+                left++;
+                while (left < right && nums[left] == nums[left - 1]) {
+                    left++;
                 }
+
+            } else if (sum < 0) {
+                left++;
+            } else {
+                right--;
             }
         }
-
     }
 
     void twoSumWithHashSet(int i, int[] nums) {
