@@ -28,11 +28,11 @@
 ## 2) Sliding Window
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | O(N)
-|  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right | O(N)
-|  3  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right | O(N)
-|  4  | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | [Java](src/Problems/SlidingWindow/RepeatedDNASequences.java) | fixed window, and a hash map to check for DNA occurance | O(N)
-|  5  | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/solution/) | [Java](src/Problems/SlidingWindow/FindAllAnagramsInString.java) | 1. fixed window, and a hash map for each string <br>2. check if both hash maps are equal | O(N)
+|  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | T: O(N)
+|  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right | T: O(N)
+|  3  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right | T: O(N)
+|  4  | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | [Java](src/Problems/SlidingWindow/RepeatedDNASequences.java) | fixed window, and a hash map to check for DNA occurance | T: O(N)
+|  5  | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/solution/) | [Java](src/Problems/SlidingWindow/FindAllAnagramsInString.java) | 1. fixed window, and a hash map for each string <br>2. check if both hash maps are equal | T: O(N)
 
 
 ## 2) Two Pointers
@@ -40,6 +40,8 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Two Sum](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | O(N)
 |  2  | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [Java](src/Problems/TwoPointers/RemoveDuplicates.java) | 1. if left != right, increment left <br>2. left = right | T: O(N), S: O(1)
+|  3  | [Remove Element](https://leetcode.com/problems/remove-element/) | [Java](src/Problems/TwoPointers/RemoveElement.java) | 1. if right != val, left = right and increment left  | T: O(N), S: O(1)
+|  4  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | [Java](src/Problems/TwoPointers/SquaresOfSortedArray.java) | 1. check the largest absolute value and place the square value to the end of the result array <br>2. adjust right or left pointer accordingly  | T: O(N), S: O(N)
 
 
 
