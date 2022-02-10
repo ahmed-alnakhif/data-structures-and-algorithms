@@ -25,7 +25,7 @@
 
 <br>
 
-## 1) Sliding Window
+## 2) Sliding Window
 |  #  | Title                       | Solution                    | Basic idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | O(N)
