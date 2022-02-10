@@ -28,9 +28,13 @@
 ## 1) Sliding Window
 |  #  | Title                       | Solution                    | Basic idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count
-|  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right
-|  2  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iIi/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right
+|  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | O(N)
+|  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right | O(N)
+|  3  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right | O(N)
+|  4  | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | [Java](src/Problems/SlidingWindow/RepeatedDNASequences.java) | fixed window, and a hash map to check for DNA occurance | O(N)
+
+
+
 
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
@@ -71,7 +75,7 @@
 | 34   | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)  | [Java](src/Problems/SlidingWindow/FruitIntoBaskets.java) | Same as [Longest Substring with K Distinct Characters](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) | Time: O(N) <br> Space: O(1) | Sliding Window, Hash Map
 | 35   | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)  | [Java](src/Problems/Sequences/SubarraySumEqualsK.java) | 1. calculate sum while iterating <br>2. check if sum - k is in the map <br>3. if yes then our map has the desired sum  | Time: O(N) <br> Space: O(N) | Hash Map
 | 36   | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)  | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. DFS and keep incrementing depth <br>2. if depth is larger than result size then add | Time: O(N) <br> Space: O(H) - H is a tree height | DFS
-
+| 37  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [Java](src/Problems/Sequences/PermutationInString.java) | sort each substring and check if equal | O(L1Log(L1) + (L2 - L1)*L1Log(L1))
 
 ## Grokking the Coding Interview
 |  #  | Title                                                   | Solution                                      | Pattern           |
