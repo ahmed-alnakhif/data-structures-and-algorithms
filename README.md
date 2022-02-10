@@ -26,7 +26,7 @@
 <br>
 
 ## 2) Sliding Window
-|  #  | Title                       | Solution                    | Basic idea                                    |  O Notation  |
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | O(N)
 |  2  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right | O(N)
