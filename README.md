@@ -1,6 +1,6 @@
 # Data Structure
 
-| #   | Title | Solution                              | Basic idea |  O Notation  |
+| #   | Title | Solution                              | Basic Idea |  O Notation  |
 | --- | ----- | ------------------------------------- | ---------- | ------------ |
 | 1   | Linked List | [java](src/dataStructures/LinkedList.java) | 1. a node that has a pointer to another node | 1. searching/inserstion/deletion at the beginning or end: O(1) <br>2. O(N) for a specific index
 | 2   | Binary Tree | [java](src/dataStructures/Trees.java) | 1. left child is smaller than root <br>2. right child is larger than root | 1. searching: O(log(N)) <br>2. insertion O(log(N)) <br>3. deletion: O(log(N))
@@ -9,7 +9,7 @@
 <br><br>
 # Algorithms
 
-| #   | Title         | Solution                                    | Basic idea |  O Notation  |
+| #   | Title         | Solution                                    | Basic Idea |  O Notation  |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ |
 | 1   | Permutation   | [Java](src/algorithms/PermutationList.java) | use recursion <br>1. base case is when left == array length <br>2. swap left with i <br>3. call recursive function and increment left <br>4. swap again to revert back | O(N!) |
 | 2   | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
@@ -20,7 +20,7 @@
 
 # Patterns
 ## 1) Sequence & Manipulation
-|  #  | Title                 | Solution                    | Basic idea                                    |  O Notation  |
+|  #  | Title                 | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------- | --------------------------- | --------------------------------------------- |------------- |
 
 <br>
