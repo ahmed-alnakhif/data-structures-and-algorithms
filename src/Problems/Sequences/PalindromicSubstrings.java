@@ -1,8 +1,6 @@
 package Problems.Sequences;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 /**
  * Given a string s, return the number of palindromic substrings in it.

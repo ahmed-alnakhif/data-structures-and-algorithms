@@ -27,7 +27,7 @@ public class GroupAnagram {
 
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs.length == 0) {
-            return new ArrayList();
+            return new ArrayList<>();
         }
         
         Map<String, List<String>> map = new HashMap<>();
