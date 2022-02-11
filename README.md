@@ -33,7 +33,7 @@
 |  3  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right | T: O(N)
 |  4  | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | [Java](src/Problems/SlidingWindow/RepeatedDNASequences.java) | fixed window, and a hash map to check for DNA occurance | T: O(N)
 |  5  | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/solution/) | [Java](src/Problems/SlidingWindow/FindAllAnagramsInString.java) | 1. fixed window, and a hash map for each string <br>2. check if both hash maps are equal | T: O(N)
-
+|  6  | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | [Java](src/Problems/SlidingWindow/SubarrayProductLessThanK.java) | 1. calculate product <br>2. if product is greater than K, then remove left most num and increment left <br>3. then calculate count = count + window size and increment right | T: O(N)
 
 ## 2) Two Pointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
