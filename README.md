@@ -47,6 +47,7 @@
 |  7  | [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/) | [Java](src/Problems/TwoPointers/Sum3Smaller.java) | using two pointers <br>1. sort the array first <br>2. iterate and find the two sum from i + 1 <br>3. check if sum is smaller than target | O(N^2) |
 |  8  | [Sort Colors](https://leetcode.com/problems/sort-colors/) | [Java](src/Problems/TwoPointers/SortColors.java) | 1. if 0 => swap(i++, left++) <br>2. if 1 => i++ <br>3. if 2 => swap(i++, right++) | O(N) |
 |  9  | [4Sum](https://leetcode.com/problems/4sum/) | [Java](src/Problems/TwoPointers/FourSum.java) | 3sum + 2 sum | O(N^3) |
+|  10  | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | [Java](src/Problems/TwoPointers/BackspaceStringCompare.java) | two pointer: <br>1. start from the end of the string <br>2. inner while loop to skip backspaces <br>3. compare if current char in s != t<br> can be solved using a stack | T: O(N+M) <br> S: O(1)) |
 
 
 #
