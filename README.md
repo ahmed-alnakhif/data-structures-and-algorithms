@@ -45,6 +45,7 @@
 |  5  | [Three Sum](https://leetcode.com/problems/3sum/) | [Java](src/Problems/Sequences/ThreeSum.java) | using two pointers <br>1. sort the array first <br>2. iterate and find the two sum from i + 1| O(N^2) |
 |  6  | [3Sum Closest](https://leetcode.com/problems/3sum-closest/) | [Java](src/Problems/TwoPointers/Sum3Closest.java) | using two pointers <br>1. sort the array first <br>2. iterate and find the two sum from i + 1 <br>3. calculate the closest difference to the target | O(N^2) |
 |  7  | [3Sum Smaller](https://leetcode.com/problems/3sum-smaller/) | [Java](src/Problems/TwoPointers/Sum3Smaller.java) | using two pointers <br>1. sort the array first <br>2. iterate and find the two sum from i + 1 <br>3. check if sum is smaller than target | O(N^2) |
+|  8  | [Sort Colors](https://leetcode.com/problems/sort-colors/) | [Java](src/Problems/TwoPointers/SortColors.java) | 1. if 0 => swap(i++, left++) <br>2. if 1 => i++ <br>3. if 2 => swap(i++, right++) | O(N) |
 
 
 #
