@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.TwoPointers;
 
 import java.util.Arrays;
 import java.util.HashSet;
