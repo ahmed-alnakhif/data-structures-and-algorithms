@@ -51,6 +51,13 @@
 |  11 | [Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) | [Java](src/Problems/TwoPointers/ShortestSubarrayToBeRemoved.java) |  |  |
 
 
+
+## 2) FastAndSlowPointers
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycle.java) | 1. a fast pointer that moves two steps <br>2. if fast ptr == slow, then there's a cycle | O(N)
+
+
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
