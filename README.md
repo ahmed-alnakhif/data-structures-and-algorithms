@@ -19,13 +19,8 @@
 <br><br>
 
 # Patterns
-## 1) Sequence & Manipulation
-|  #  | Title                 | Solution                    | Basic Idea                                    |  O Notation  |
-| --- | --------------------- | --------------------------- | --------------------------------------------- |------------- |
 
-<br>
-
-## 2) Sliding Window
+## 1) Sliding Window
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | T: O(N)
@@ -52,7 +47,7 @@
 
 
 
-## 2) FastAndSlowPointers
+## 3) FastAndSlowPointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycle.java) | 1. a fast pointer that moves two steps <br>2. if fast ptr == slow, then there's a cycle | T: O(N) <br> S: O(1)
