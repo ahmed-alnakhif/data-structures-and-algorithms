@@ -55,7 +55,8 @@
 |  3  | [Linked List CycleII](https://leetcode.com/problems/linked-list-cycle-ii/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycleII.java) | 1. a fast pointer that moves two steps <br>2. find intersection node <br>3. traverse from intersect node and a new head ptr until they reach each other <br>4. return ptr | T: O(N) <br> S: O(1)
 |  4  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [Java](src/Problems/FastAndSlowPointers/FindDuplicateNumber.java) | Floyd's Algorithm | T: O(N) <br>S: O(1)
 |  5  | [Happy Number](https://leetcode.com/problems/happy-number/) | [Java](src/Problems/FastAndSlowPointers/HappyNumber.java) | Floyd's Algorithm <br>2. calculate next digit by using mod operator and division <br>3. use Floyd's algorithm to calculate fast and slow pointer <br>4. check also if fast == 1 (happy number) | T: O(log(N)) <br>S: O(1)
-|  6  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [Java](src/Problems/FastAndSlowPointers/PalindromeLinkedList.java) | 1. get the end of the first half <br>2. reverse the second half <br>3. check if palindrome | T: O(N) <br>S: O(1)
+|  6  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | [Java](src/Problems/FastAndSlowPointers/PalindromeLinkedList.java) | 1. get the end of the first half <br>2. reverse the second half <br>3. check if each repective nodes are equal | T: O(N) <br>S: O(1)
+|  7  | [Reorder Linked List](https://leetcode.com/problems/reorder-list/) | [Java](src/Problems/FastAndSlowPointers/ReorderLinkedList.java) | 1. get the end of the first half <br>2. reverse the second half <br>3. merge the two lists | T: O(N) <br>S: O(1)
 
 
 #
