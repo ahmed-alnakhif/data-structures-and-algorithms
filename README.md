@@ -55,8 +55,11 @@
 ## 2) FastAndSlowPointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycle.java) | 1. a fast pointer that moves two steps <br>2. if fast ptr == slow, then there's a cycle | O(N)
-|  2  | [Linked List CycleII](https://leetcode.com/problems/linked-list-cycle-ii/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycleII.java) | 1. a fast pointer that moves two steps <br>2. find intersection node <br>3. traverse from interset node and a new head ptr until they reach each other <br>4. return ptr | O(N)
+|  1  | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycle.java) | 1. a fast pointer that moves two steps <br>2. if fast ptr == slow, then there's a cycle | T: O(N) <br> S: O(1)
+|  2  | [Linked List CycleII](https://leetcode.com/problems/linked-list-cycle-ii/) | [Java](src/Problems/FastAndSlowPointers/LinkedListCycleII.java) | 1. a fast pointer that moves two steps <br>2. find intersection node <br>3. traverse from interset node and a new head ptr until they reach each other <br>4. return ptr | T: O(N) <br> S: O(1)
+|  3  | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | [Java](src/Problems/FastAndSlowPointers/FindDuplicateNumber.java) | Floyd's Algorithm | T: O(N) <br>S: O(1)
+
+
 
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
