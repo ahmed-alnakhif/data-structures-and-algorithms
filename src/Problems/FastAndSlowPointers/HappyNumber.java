@@ -44,6 +44,6 @@ public class HappyNumber {
 
     public void run() {
         int n = 19;
-        System.out.println(n);
+        System.out.println(isHappy(n));
     }
 }
