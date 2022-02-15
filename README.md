@@ -62,7 +62,8 @@
 ## 3) Intervals
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | 1. sort the array <br>2. update last interval in the result list if it's greater than the next interval starting time | T: O(N*log(N)) <br>S: O(N)
+|  1  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | 3 conditions: <br>1. sort intervals <br>2. toAdd < curr => add toAdd result list and update toAdd = curr <br>3. toAdd > curr => add curr to result list <br>4. toAdd & curr overlap => update toAdd min and max | T: O(N) <br>S: O(N) | T: O(N*log(N)) <br>S: O(N)
+|  2  | [Insert Interval](https://leetcode.com/problems/insert-interval/) | [Java](src/Problems/Intervals/InsertInterval.java) | same is merge intervals <br> if intervals are sorted then skip the first step | T: O(N) <br>S: O(N)
 
 
 #
