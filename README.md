@@ -59,6 +59,12 @@
 |  7  | [Reorder Linked List](https://leetcode.com/problems/reorder-list/) | [Java](src/Problems/FastAndSlowPointers/ReorderLinkedList.java) | 1. get the end of the first half <br>2. reverse the second half <br>3. merge the two lists | T: O(N) <br>S: O(1)
 
 
+## 3) Intervals
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | 1. sort the array <br>2. update last interval in the result list if it's greater than the next interval starting time | T: O(N*log(N)) <br>S: O(N)
+
+
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
