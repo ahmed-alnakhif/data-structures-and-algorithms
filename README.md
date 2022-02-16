@@ -67,6 +67,7 @@
 |  3  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | [Java](src/Problems/Intervals/IntervalListIntersections.java) | 1. find max of start between the two lists <br>2. find min of end between the two lists <br>3. if start<=end, add start and end to result <br>4. increment who has smaller end | T: O(N + M) <br>S: O(N + M)
 |  4  | [Meeting Rooms](https://leetcode.com/problems/meeting-rooms/) | [Java](src/Problems/Intervals/MeetingRooms.java) | 1. sort intervals <br>2. check if end is smaller than next start | T: O(N*log(N)) <br>S: O(1)
 |  5  | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [Java](src/Problems/Intervals/MeetingRoomsII.java) | 1. create an array for start time and array for end time then sort them <br>2. iterate and increment count <br>3. if start >= end decrement count | T: O(N*log(N)) <br>S: O(N)
+|  6  | [Car Pooling](https://leetcode.com/problems/car-pooling/) | [Java](src/Problems/Intervals/CarPooling.java) | 1. use TreeMap or PQ <br>2. add start time with + passengers <br>3. add end time with - passengers <br>4. get the accumultive sum of values <br>if > capacity then false | T: O(N*log(N)) <br>S: O(N)
 
 
 #
