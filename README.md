@@ -64,6 +64,7 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | 3 conditions: <br>1. sort intervals <br>2. toAdd < curr => add toAdd result list and update toAdd = curr <br>3. toAdd > curr => add curr to result list <br>4. toAdd & curr overlap => update toAdd min and max | T: O(N) <br>S: O(N) | T: O(N*log(N)) <br>S: O(N)
 |  2  | [Insert Interval](https://leetcode.com/problems/insert-interval/) | [Java](src/Problems/Intervals/InsertInterval.java) | same is merge intervals <br> if intervals are sorted then skip the first step | T: O(N) <br>S: O(N)
+|  3  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | [Java](src/Problems/Intervals/IntervalListIntersections.java) | 1. find max of start between the two lists <br>2. find min of end between the two lists <br>3. if start<=end, add start and end to result <br>4. increment who has smaller end | T: O(N + M) <br>S: O(N + M)
 
 
 #
