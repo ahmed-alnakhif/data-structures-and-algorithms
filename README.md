@@ -59,7 +59,7 @@
 |  7  | [Reorder Linked List](https://leetcode.com/problems/reorder-list/) | [Java](src/Problems/FastAndSlowPointers/ReorderLinkedList.java) | 1. get the end of the first half <br>2. reverse the second half <br>3. merge the two lists | T: O(N) <br>S: O(1)
 
 
-## 3) Intervals
+## 4) Intervals
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | 3 conditions: <br>1. sort intervals <br>2. toAdd < curr => add toAdd result list and update toAdd = curr <br>3. toAdd > curr => add curr to result list <br>4. toAdd & curr overlap => update toAdd min and max | T: O(N) <br>S: O(N) | T: O(N*log(N)) <br>S: O(N)
@@ -70,6 +70,7 @@
 |  6  | [Car Pooling](https://leetcode.com/problems/car-pooling/) | [Java](src/Problems/Intervals/CarPooling.java) | 1. use TreeMap or PQ <br>2. add start time with + passengers <br>3. add end time with - passengers <br>4. get the accumultive sum of values <br>if > capacity then false | T: O(N*log(N)) <br>S: O(N)
 |  7  | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | [Java](src/Problems/Intervals/EmployeeFreeTime.java) | 1. flaten all employees intervals <br>2. sort all intervals <br>3. if current start < prev end, add interval <br>4. track max end | T: O(N*log(N)) <br>S: O(N)
 
+## 5) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
@@ -111,6 +112,7 @@
 | 36   | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)  | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. DFS and keep incrementing depth <br>2. if depth is larger than result size then add | Time: O(N) <br> Space: O(H) - H is a tree height | DFS
 | 37  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [Java](src/Problems/Sequences/PermutationInString.java) | sort each substring and check if equal | O(L1Log(L1) + (L2 - L1)*L1Log(L1))
 | 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)
+| 39  | [Find Disappeared Numbers](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | [Java](src/Problems/Sequences/FindDisappearedNumbers.java ) | 1. mark the index of each num as negative <br>2. check if all numbers are negative | T: O(N) <br>S: O(1)
 
 
 

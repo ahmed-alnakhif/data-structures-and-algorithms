@@ -1,66 +1,65 @@
 package Problems.Sequences;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
- * Given an array nums containing n distinct numbers in the range [0, n], return
- * the only number in the range that is missing from the array.
- * 
+ * Given an array nums of n integers where nums[i] is in the range [1, n],
+ * return an array of all the integers in the range [1, n] that do not appear in nums.
  * 
  * 
  * Example 1:
  * 
- * Input: nums = [3,0,1]
- * Output: 2
- * Explanation: n = 3 since there are 3 numbers, so all numbers are in the range
- * [0,3]. 2 is the missing number in the range since it does not appear in nums.
+ * Input: nums = [4,3,2,7,8,2,3,1]
+ * Output: [5,6]
+ * Example 2:
+ * 
+ * Input: nums = [1,1]
+ * Output: [2]
  */
 
 public class FindDisappearedNumbers {
 
-    // using Gauss' Formula
-    public int missingNumber(int[] nums) {
-        int expectedSum = nums.length * (nums.length + 1) / 2;
+    // T: O(N), S:(1)
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        List<Integer> list = new ArrayList<>();
 
-        // instead of uisng the formula, you can get the expected sum from i -> n
-
-        int actualSum = 0;
-        for (int num : nums) {
-            actualSum += num;
+        for (int i = 0; i < nums.length; i++) {
+            int index = Math.abs(nums[i]);
+            nums[index - 1] = nums[index - 1] > 0 ? nums[index - 1] * -1 : nums[index - 1];
         }
 
-        return expectedSum - actualSum;
-    }
-
-    // using Set
-    public int missingNumber2(int[] nums) {
-        Set<Integer> numSet = new HashSet<Integer>();
-        for (int num : nums) {
-            numSet.add(num);
-        }
-
-        int expectedNumCount = nums.length + 1;
-        for (int number = 0; number < expectedNumCount; number++) {
-            if (!numSet.contains(number)) {
-                return number;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] > 0) {
+                list.add(i + 1);
             }
         }
 
-        return -1;
+        return list;
     }
 
-    //using Bit manipulation 
-    public int missingNumber3(int[] nums) {
-        int missing = nums.length;
-        for (int i = 0; i < nums.length; i++) {
-            missing = missing ^ i ^ nums[i];
+    // T: O(N), S: O(N)
+    public List<Integer> findDisappearedNumbers2(int[] nums) {
+        List<Integer> list = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : nums) {
+            set.add(num);
         }
-        return missing;
+
+        for (int i = 1; i < nums.length + 1; i++) {
+            if (!set.contains(i)) {
+                list.add(i);
+            }
+        }
+
+        return list;
     }
 
     public void run() {
-        int[] num = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(missingNumber(num));
+        int[] num = { 4, 3, 2, 7, 8, 2, 3, 1 };
+        System.out.println(findDisappearedNumbers(num));
     }
 }
