@@ -110,6 +110,9 @@
 | 35   | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)  | [Java](src/Problems/Sequences/SubarraySumEqualsK.java) | 1. calculate sum while iterating <br>2. check if sum - k is in the map <br>3. if yes then our map has the desired sum  | Time: O(N) <br> Space: O(N) | Hash Map
 | 36   | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)  | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. DFS and keep incrementing depth <br>2. if depth is larger than result size then add | Time: O(N) <br> Space: O(H) - H is a tree height | DFS
 | 37  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [Java](src/Problems/Sequences/PermutationInString.java) | sort each substring and check if equal | O(L1Log(L1) + (L2 - L1)*L1Log(L1))
+| 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)
+
+
 
 ## Grokking the Coding Interview
 |  #  | Title                                                   | Solution                                      | Pattern           |
