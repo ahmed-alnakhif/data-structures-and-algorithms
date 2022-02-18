@@ -70,13 +70,21 @@
 |  6  | [Car Pooling](https://leetcode.com/problems/car-pooling/) | [Java](src/Problems/Intervals/CarPooling.java) | 1. use TreeMap or PQ <br>2. add start time with + passengers <br>3. add end time with - passengers <br>4. get the accumultive sum of values <br>if > capacity then false | T: O(N*log(N)) <br>S: O(N)
 |  7  | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | [Java](src/Problems/Intervals/EmployeeFreeTime.java) | 1. flaten all employees intervals <br>2. sort all intervals <br>3. if current start < prev end, add interval <br>4. track max end | T: O(N*log(N)) <br>S: O(N)
 
+
 ## 4) Cyclic Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [Java](src/Problems/CyclicSort/FirstMissingPositive.java) | 1. sort nums using cyclic sort <br>2. return first unmatch index | T: O(N) <br>S: O(1) |
 |  2  | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/) | [Java](src/Problems/CyclicSort/FirstKthMissingPositive.java) | using binary search | T: O(log(N)) <br>S: O(1) |
 
-## 5) Sequences
+
+## 5) In-place Reversal of a LinkedList
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | 1. curr & prev pointers <br>2. iterate through the linked list and reverse | T: O(N) <br>S: O(1) |
+
+
+## 6) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
