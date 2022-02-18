@@ -86,6 +86,7 @@
 |  3  | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Java](src/Problems/LinkedLists/SwapNodesPairs.java) | 1. create dummy head <br>2. swap between first 2 nodes <br>3. move prev and head to next pairs | T: O(N) <br>S: O(1) |
 |  4  | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) | [Java](src/Problems/LinkedLists/SwapNodesInLinkedList.java) | 1. get front and end nodes <br>2. swap values | T: O(N) <br>S: O(1) |
 |  5  | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [Java](src/Problems/LinkedLists/ReverseNodesInKGroup.java) | 1. set left and right of sub linkedlist in a loop < LL length <br>2. head = reverseLinkedListII with left and right| T: O(N) <br>S: O(1) |
+|  6  | [Rotate Linked List](https://leetcode.com/problems/rotate-list/) | [Java](src/Problems/LinkedLists/RotateLinkedList.java) | 1. get the tail and length <br>2. calculate new tail k%length <br>3. link oldTail to head <br>4. move newTail ptr to new tail position <br>5. set newHead to newTail.next <br>6. set newTai.next to null| T: O(N) <br>S: O(1) |
 
 
 ## 6) Sequences
