@@ -71,14 +71,14 @@
 |  7  | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | [Java](src/Problems/Intervals/EmployeeFreeTime.java) | 1. flaten all employees intervals <br>2. sort all intervals <br>3. if current start < prev end, add interval <br>4. track max end | T: O(N*log(N)) <br>S: O(N)
 
 
-## 4) Cyclic Sort
+## 5) Cyclic Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [Java](src/Problems/CyclicSort/FirstMissingPositive.java) | 1. sort nums using cyclic sort <br>2. return first unmatch index | T: O(N) <br>S: O(1) |
 |  2  | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/) | [Java](src/Problems/CyclicSort/FirstKthMissingPositive.java) | using binary search | T: O(log(N)) <br>S: O(1) |
 
 
-## 5) In-place Reversal of a LinkedList
+## 6) In-place Reversal of a LinkedList
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | 1. curr & prev pointers <br>2. iterate through the linked list and reverse | T: O(N) <br>S: O(1) |
@@ -89,7 +89,13 @@
 |  6  | [Rotate Linked List](https://leetcode.com/problems/rotate-list/) | [Java](src/Problems/LinkedLists/RotateLinkedList.java) | 1. get the tail and length <br>2. calculate new tail k%length <br>3. link oldTail to head <br>4. move newTail ptr to new tail position <br>5. set newHead to newTail.next <br>6. set newTai.next to null| T: O(N) <br>S: O(1) |
 
 
-## 6) Sequences
+## 7) Tree - Breadth First Search
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Java](src/Problems/TreeBreadthFirstSearch/BinaryTreeLevelOrderTraversal.java) | 1. regular BFS <br>2. save queue size and loop < size <br>3. add polled node to your level list <br>4. after loop is done, add the level list to the final result list | T: O(N) <br>S: O(N) |
+
+
+## 8) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
