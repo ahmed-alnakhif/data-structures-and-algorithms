@@ -7,9 +7,9 @@ public class CyclicSort {
     public void cyclicSort(int[] arr) {
         int i = 0;
         while (i < arr.length) {
-            int j = arr[i] - 1;
-            if (arr[i] != arr[j]) {
-                swap(arr, i, j);
+            int index = arr[i] - 1;
+            if (arr[i] > 0 && arr[i] <= arr.length && arr[i] != arr[index]) {
+                swap(arr, i, index);
             } else {
                 i++;
             }
@@ -20,10 +20,6 @@ public class CyclicSort {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
-    }
-
-    private boolean inBound(int[] arr, int i) {
-        return i >= 0 && i < arr.length;
     }
 
     public void run() {
