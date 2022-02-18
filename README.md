@@ -82,6 +82,8 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | 1. curr & prev pointers <br>2. iterate through the linked list and reverse | T: O(N) <br>S: O(1) |
+|  2  | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | [Java](src/Problems/LinkedLists/ReverseLinkedListII.java) | 1. get left and right nodes <br>2. reverse sub linked list <br>3. connect pointers | T: O(N) <br>S: O(1) |
+|  3  | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Java](src/Problems/LinkedLists/SwapNodesPairs.java) | 1. create dummy head <br>2. swap between first 2 nodes <br>3. move prev and head to next pairs | T: O(N) <br>S: O(1) |
 
 
 ## 6) Sequences
