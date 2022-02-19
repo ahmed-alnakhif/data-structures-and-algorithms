@@ -102,7 +102,15 @@
 |  8  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. add node to result if we reach the end of a level | T: O(N) <br>S: O(N) |
 |  9  | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | [Java](src/Problems/TreeBreadthFirstSearch/PopulatingNextRightPointers.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. node points to next in the queue if node is not the last in the level | T: O(N) <br>S: O(N) |
 
-## 8) Sequences
+
+## 8) Tree - Depth First Search
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Path Sum](https://leetcode.com/problems/path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/PathSum.java) | 1. preorder DFS <br>2. keep track of accumlative sum <br>3. if sum = target AND is leaf node then return true <br>4. else check if left OR right is true | T: O(N) <br>S: O(N) |
+|  2  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | [Java](src/Problems/TreeDepthFirstSearch/PathSumII.java) | 1. preorder DFS <br>2. keep track of accumlative sum and traversed nodes<br>3. if sum = target AND is leaf node then add list to result <br>4. else check left and right <br>5. remove last node from list | T: O(N) <br>S: O(N) |
+
+
+## 9) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
