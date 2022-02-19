@@ -108,6 +108,7 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Path Sum](https://leetcode.com/problems/path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/PathSum.java) | 1. preorder DFS <br>2. keep track of accumlative sum <br>3. if sum = target AND is leaf node then return true <br>4. else check if left OR right is true | T: O(N) <br>S: O(N) |
 |  2  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | [Java](src/Problems/TreeDepthFirstSearch/PathSumII.java) | 1. preorder DFS <br>2. keep track of accumlative sum and traversed nodes<br>3. if sum = target AND is leaf node then add list to result <br>4. else check left and right <br>5. remove last node from list | T: O(N) <br>S: O(N) |
+|  3  | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | [Java](src/Problems/TreeDepthFirstSearch/BinaryTreePaths.java) | 1. preorder DFS <br>2. keep track of traversed nodes<br>3. if leaf node then add list to result <br>4. else check left and right <br>5. remove last node from list | T: O(N) <br>S: O(N) |
 
 
 ## 9) Sequences
