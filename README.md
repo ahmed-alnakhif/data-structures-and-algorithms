@@ -99,6 +99,7 @@
 |  5  | [Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/) | [Java](src/Problems/TreeBreadthFirstSearch/MaximumLevelSumOfBinaryTree.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. keep track of max sum and level | T: O(N) <br>S: O(N) |
 |  6  | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Java](src/Problems/TreeBreadthFirstSearch/MaximumDepthOfBinaryTree.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. keep incrementing depth and return it | T: O(N) <br>S: O(N) |
 |  7  | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | [Java](src/Problems/TreeBreadthFirstSearch/MinimumDepthOfBinaryTree.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. keep incrementing depth <br>3. if curr node is a leaf node, return depth | T: O(N) <br>S: O(N) |
+|  8  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | [Java](src/Problems/Trees/BinaryTreeRightSideView.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. add node to result if we reach the end of a level | T: O(N) <br>S: O(N) |
 
 ## 8) Sequences
 #

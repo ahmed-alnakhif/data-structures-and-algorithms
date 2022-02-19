@@ -1,9 +1,8 @@
 package Problems.Trees;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Given the root of a binary tree, imagine yourself standing on the right side
@@ -33,16 +32,37 @@ public class BinaryTreeRightSideView {
         }
     }
 
-    List<TreeNode> duplicateList = new ArrayList<>();
-    HashMap<String, Integer> map = new HashMap<>();
+    // using BFS
+    public List<Integer> rightSideView(TreeNode root) {        
+        List<Integer> list = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        
+        if(root == null) return list;
+        
+        queue.add(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
 
-    List<Integer> list = new LinkedList<>();
-
-    public List<Integer> rightSideView(TreeNode root) {
-        traverse(root, 1);
+            for(int i = 0; i<size; i++){
+                TreeNode node = queue.poll();
+                if(node.left != null) queue.add(node.left);
+                if(node.right != null) queue.add(node.right);
+                
+                if(i+1 == size) list.add(node.val);
+            }
+        }
+        
         return list;
     }
 
+
+    // using DFS
+    List<Integer> list = new LinkedList<>();
+
+    public List<Integer> rightSideView2(TreeNode root) {
+        traverse(root, 1);
+        return list;
+    }
     private void traverse(TreeNode root, int depth) {
         if (root == null)
             return;
