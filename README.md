@@ -47,7 +47,7 @@
 
 
 
-## 3) FastAndSlowPointers
+## 3) Fast and Slow Pointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Middle of the Linked List](https://leetcode.com/problems/happy-number/) | [Java](src/Problems/FastAndSlowPointers/MiddleOfLinkedList.java) | 1. fast and slow pointer <br>2. return the slow pointer | T: O(N) <br>S: O(1)
