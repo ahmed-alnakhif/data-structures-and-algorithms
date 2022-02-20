@@ -111,6 +111,7 @@
 |  3  | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | [Java](src/Problems/TreeDepthFirstSearch/BinaryTreePaths.java) | 1. preorder DFS <br>2. keep track of traversed nodes<br>3. if leaf node then add list to result <br>4. else check left and right <br>5. remove last node from list | T: O(N) <br>S: O(N) |
 |  4  | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | [Java](src/Problems/TreeDepthFirstSearch/SumRootToLeafNumbers.java) | 1. preorder DFS <br>2. keep track of sum<br>3. if leaf node then add sum to totalSum <br>4. else, check left and right | T: O(N) <br>S: O(H); H is the tree height to keep the recursion stack |
 |  5  | [Path With Given Sequence](https://www.educative.io/courses/grokking-the-coding-interview/m280XNlPOkn) | [Java](src/Problems/TreeDepthFirstSearch/PathWithGivenSequence.java) | 1. preorder DFS <br>2. keep track of sum<br>3. if leaf node then add sum to totalSum <br>4. else, check left and right | T: O(N) <br>S: O(N) |
+|  6  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | [Java](src/Problems/TreeDepthFirstSearch/DiameterOfBinaryTree.java) | 1. diameter = longest path in left subtree + right subtree  <br>2. get left and right longest path <br>3. track max diameter <br>4. return max between left and right + 1| T: O(N) <br>S: O(N) |
 
 
 ## 9) Sequences
