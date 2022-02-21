@@ -115,6 +115,18 @@
 |  7  | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | [Java](src/Problems/TreeDepthFirstSearch/DiameterOfBinaryTree.java) | 1. diameter = longest path in left subtree + right subtree  <br>2. get left and right longest path <br>3. track max diameter <br>4. return max between left and right + 1| T: O(N) <br>S: O(N) |
 |  8  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/MaximumPathSum.java) | 1. global variable to track max <br>2. get max gain for left and right subtrees <br>3. sum subtree gain (root+left+righ) <br>4. update maxSum <br>5. return root value and max of left or right | T: O(N) <br>S: O(N) |
 
+
+## 9) Two Heaps
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+
+
+
+## 10) Subsets
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Subsets](https://leetcode.com/problems/subsets/) | [Java](src/Problems/Subsets/Subsets.java) | Cascading <br>1. start with an empty list <br>2. an outter loop to traverse numbers <br>3. an inner loop to grap each subset and add num to it | T: O(N*2^N) <br>S: O(N*2^N) |
+
 ## 9) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
