@@ -127,7 +127,8 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Subsets](https://leetcode.com/problems/subsets/) | [Java](src/Problems/Subsets/Subsets.java) | Cascading <br>1. start with an empty list <br>2. an outter loop to traverse numbers <br>3. an inner loop to grap each subset and add num to it | T: O(N*2^N) <br>S: O(N*2^N) |
 
-## 9) Sequences
+
+## 11) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
