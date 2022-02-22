@@ -1,4 +1,4 @@
-package algorithms;
+package Problems.Permutations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
