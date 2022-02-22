@@ -126,6 +126,7 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Subsets](https://leetcode.com/problems/subsets/) | [Java](src/Problems/Subsets/Subsets.java) | Cascading <br>1. start with an empty list <br>2. an outter loop to traverse numbers <br>3. an inner loop to grap each subset and add num to it | T: O(N*2^N) <br>S: O(N*2^N) |
+|  2  | [SubsetsII](https://leetcode.com/problems/subsets-ii/) | [Java](ssrc/Problems/Subsets/SubsetsII.java) | same as [Subsets](https://leetcode.com/problems/subsets/), but calculate the starting index for the inner loop to be the beginning of duplicates| T: O(N*2^N) <br>S: O(N*2^N) |
 
 
 ## 11) Sequences

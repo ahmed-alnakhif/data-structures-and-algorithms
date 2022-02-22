@@ -8,7 +8,7 @@ public class Subset {
         List<List<Integer>> result = new ArrayList<>();
        
         result.add(new ArrayList<>());
-        if(nums == null || nums.length == 0){
+        if(nums.length == 0){
             return result;
         }
        

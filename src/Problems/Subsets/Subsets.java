@@ -1,6 +1,7 @@
 package Problems.Subsets;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,7 +19,34 @@ import java.util.List;
  */
 
 public class Subsets {
+
+    // using backtracking (recursion)
+    List<List<Integer>> result = new LinkedList<>();
+    LinkedList<Integer> subset = new LinkedList<>();
+
     public List<List<Integer>> subsets(int[] nums) {
+        dfs(0, nums);
+        return result;
+    }
+
+    private void dfs(int index, int[] nums) {
+        if (index >= nums.length) {
+            result.add(new LinkedList<>(subset));
+            return;
+        }
+
+        subset.add(nums[index]);
+
+        // decision to include nums[index]
+        dfs(index + 1, nums);
+
+        // decision not to include nums[index]
+        subset.removeLast();
+        dfs(index + 1, nums);
+    }
+
+    // using cascading
+    public List<List<Integer>> subsets2(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
 
         result.add(new ArrayList<>());
@@ -36,6 +64,27 @@ public class Subsets {
             }
         }
         return result;
+    }
+
+    // using bitmask
+    public List<List<Integer>> subsets3(int[] nums) {
+        List<List<Integer>> output = new ArrayList<>();
+        int n = nums.length;
+
+        for (int i = (int) Math.pow(2, n); i < (int) Math.pow(2, n + 1); ++i) {
+            // generate bitmask, from 0..00 to 1..11
+            String bitmask = Integer.toBinaryString(i).substring(1);
+
+            // append subset corresponding to that bitmask
+            List<Integer> curr = new ArrayList<>();
+            for (int j = 0; j < n; ++j) {
+                if (bitmask.charAt(j) == '1'){
+                    curr.add(nums[j]);
+                }
+            }
+            output.add(curr);
+        }
+        return output;
     }
 
     public void run() {
