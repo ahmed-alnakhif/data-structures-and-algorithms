@@ -129,6 +129,7 @@
 |  2  | [SubsetsII](https://leetcode.com/problems/subsets-ii/) | [Java](ssrc/Problems/Subsets/SubsetsII.java) | same as [Subsets](https://leetcode.com/problems/subsets/), but calculate the starting index for the inner loop to be the beginning of duplicates | T: O(N*N!) <br>S: O(N!) |
 |  3  | [Permutations](https://leetcode.com/problems/permutations/) | [Java](src/Problems/Permutations/Permutation.java) | 1. use backtracking <br> 2. base case is when left == list size <br>3. swap(left, i) <br>4. call func recursively with left+1 <br>5. backtrack by swapping again | T: O(N*2^N) <br>S: O(N*2^N) |
 |  4  | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | [Java](src/Problems/Permutations/LetterCasePermutation.java) | 1. same as [Permutations](https://leetcode.com/problems/permutations/) <br>2. if letter, perform permutation twice; one with upper case and one with lower case <br>if number perform permutation once | T: O(N*2^N) <br>S: O(N*2^N) |
+|  5  | [Combinations](https://leetcode.com/problems/combinations/) | [Java](src/Problems/Combination/Combinations.java) | 1. base case is when comb size == k <br>2. iterate from start to required length <br>3. add curr to comb list <br>4. call func recursively with i+1 <br>5. backtrack by removing the last added number | T: O(r * rCn) = O(n!/r!(n-r)!) <br>S: O(r * rCn) |
 
 
 ## 11) Sequences
