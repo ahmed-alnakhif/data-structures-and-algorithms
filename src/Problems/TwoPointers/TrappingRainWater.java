@@ -1,8 +1,5 @@
 package Problems.TwoPointers;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Given n non-negative integers representing an elevation map where the width
  * of each bar is 1,

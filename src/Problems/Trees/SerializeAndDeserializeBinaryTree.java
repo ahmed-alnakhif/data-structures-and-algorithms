@@ -1,9 +1,5 @@
 package Problems.Trees;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 /**
  * Given the root of a binary tree, invert the tree, and return its root.
  */

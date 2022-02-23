@@ -1,6 +1,5 @@
 package Problems.Sequences;
 
-import java.util.Arrays;
 
 /**
  * Given an array of integers nums sorted in non-decreasing order, find the
