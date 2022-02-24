@@ -26,17 +26,17 @@ public class TwoSumII {
     /** We can use HashMap or Pointers. This solution uses pointers for sorted arrays */
 
     public int[] twoSumII(int[] numbers, int target) {
-        int low = 0;
-        int high = numbers.length - 1;
+        int left = 0;
+        int right = numbers.length - 1;
 
-        while (low < high) {
-            int num = numbers[low] + numbers[high];
+        while (left < right) {
+            int num = numbers[left] + numbers[right];
             if (num == target) {
-                return new int[] { low + 1, high + 1 };
+                return new int[] { left + 1, right + 1 };
             } else if (num > target) {
-                high--;
+                right--;
             } else {
-                low++;
+                left++;
             }
         }
 
