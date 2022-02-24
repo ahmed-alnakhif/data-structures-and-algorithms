@@ -47,6 +47,7 @@ public class LinkedListCycleII {
         return null;
     }
 
+    //Floyd's Algorithm
     public ListNode detectCycle2(ListNode head) {
         if (head == null) return null;
 
