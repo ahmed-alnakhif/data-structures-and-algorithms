@@ -211,9 +211,10 @@
 |  15 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](src/Problems/TwoPointers/TrappingRainWater.java)  | Two Pointers  |
 |  16 | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [Java](src/Problems/Intervals/MeetingRoomsII.java) | Intervals |
 |  17 | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | [Java](src/Problems/Intervals/EmployeeFreeTime.java) | Intervals |
-|  18 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](src/Problems/Permutations/LetterCombinationOfPhone.java) | Recursion & Backtarcking  |
-|  19 | [Subsets](https://leetcode.com/problems/subsets/) | [java](src/algorithms/Subset.java)  | Recursion & Backtarcking  |
-|  20 | [Word Break](https://leetcode.com/problems/word-break/) | [java](src/Problems/DynamicProgramming/WordBreak.java) | DP |
+|  18 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Java](src/Problems/Intervals/MergeIntervals.java) | Intervals |
+|  19 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](src/Problems/Permutations/LetterCombinationOfPhone.java) | Recursion & Backtarcking  |
+|  20 | [Subsets](https://leetcode.com/problems/subsets/) | [java](src/Problems/Subsets/Subsets.java)  | Recursion & Backtarcking  |
+|  21 | [Word Break](https://leetcode.com/problems/word-break/) | [java](src/Problems/DynamicProgramming/WordBreak.java) | DP |
 
 
 

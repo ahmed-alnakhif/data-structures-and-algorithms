@@ -22,7 +22,6 @@ public class SubarraySumEqualsK {
 
     //Time: O(N^2)
     public int subarraySum1(int[] nums, int k) {
-        HashMap<Integer, int[]> map = new HashMap<>();
         int count = 0;
         
         for(int i=0; i<nums.length; i++){

@@ -35,9 +35,8 @@ public class Subsets {
             return;
         }
 
-        subset.add(nums[index]);
-
         // decision to include nums[index]
+        subset.add(nums[index]);
         dfs(index + 1, nums);
 
         // decision not to include nums[index]

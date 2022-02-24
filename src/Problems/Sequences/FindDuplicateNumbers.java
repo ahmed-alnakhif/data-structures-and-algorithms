@@ -1,10 +1,7 @@
 package Problems.Sequences;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Given an array nums of n integers where nums[i] is in the range [1, n],
