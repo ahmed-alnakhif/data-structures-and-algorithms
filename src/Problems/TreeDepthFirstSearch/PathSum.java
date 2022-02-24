@@ -41,11 +41,14 @@ public class PathSum {
 
         sum += root.val;
 
-        // sum = target AND is leaf node
-        if (root.left == null && root.right == null && sum == targetSum) {
+        if (isLeafNode(root) && sum == targetSum) {
             return true;
         }
 
         return preOrderDFS(root.left, sum, targetSum) || preOrderDFS(root.right, sum, targetSum);
+    }
+
+    private boolean isLeafNode(TreeNode root){
+        return root != null && root.left == null && root.right == null;
     }
 }
