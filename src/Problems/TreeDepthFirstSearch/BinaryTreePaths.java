@@ -45,8 +45,7 @@ public class BinaryTreePaths {
 
         list.add(String.valueOf(root.val));
 
-        // is leaf node
-        if (root.left == null && root.right == null) {
+        if (isLeafNode(root)) {
             result.add(serialize(list));
         } else {
             preOrderDFS(root.left);
@@ -54,6 +53,10 @@ public class BinaryTreePaths {
         }
 
         list.removeLast();
+    }
+
+    private boolean isLeafNode(TreeNode root){
+        return root != null && root.left == null && root.right == null;
     }
 
     private String serialize(List<String> list) {
