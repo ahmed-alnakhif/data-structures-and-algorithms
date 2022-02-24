@@ -17,6 +17,13 @@ public class ReconstructItinerary {
     List<String> result = new ArrayList<>();
 
     public List<String> findItinerary(List<List<String>> tickets) {
+        constructFlightMap(tickets);
+        dfs("JFK");
+        Collections.reverse(result);
+        return result;
+    }
+
+    void constructFlightMap(List<List<String>> tickets) {
         for (List<String> flight : tickets) {
             if (flightsMap.containsKey(flight.get(0))) {
                 flightsMap.get(flight.get(0)).add(flight.get(1));
@@ -25,12 +32,6 @@ public class ReconstructItinerary {
                 flightsMap.put(flight.get(0), new LinkedList<>(Arrays.asList(flight.get(1))));
             }
         }
-
-        dfs("JFK");
-
-        Collections.reverse(result);
-
-        return result;
     }
 
     public void dfs(String source) {

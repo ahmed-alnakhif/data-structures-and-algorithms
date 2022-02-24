@@ -46,7 +46,7 @@ public class PalindromeLinkedList {
         return true;
     }
 
-     //Better Space complexity => T: O(N), S: O(1)
+     //Better space complexity => T: O(N), S: O(1)
     public boolean isPalindrome2(ListNode head) {
         // 1) find end of first half
         ListNode firstHalfEnd = getFirstHalfEnd(head);
