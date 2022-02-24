@@ -39,7 +39,9 @@ public class EmployeeFreeTime {
     };
 
     public List<Interval> employeeFreeTime(List<List<Interval>> schedule) {
-        List<Interval> result = new LinkedList<>(), intervals = new LinkedList<>();
+        List<Interval> result = new LinkedList<>();
+        List<Interval> intervals = new LinkedList<>();
+        
         for (List<Interval> list : schedule) {
             intervals.addAll(list);
         }
