@@ -12,9 +12,10 @@
 | #   | Title         | Solution                                    | Basic Idea |  O Notation  |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ |
 | 1   | Permutation   | [Java](src/algorithms/PermutationList.java) | use recursion <br>1. base case is when left == array length <br>2. swap left with i <br>3. call recursive function and increment left <br>4. swap again to revert back | O(N!) |
-| 2   | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
-| 3   | Binary Search | [java](src/algorithms/BinarySearch.java) | 1. set a most left & most right pointer <br>2. while pointers don't cross each other, calculate mid index <br>3. check if mid value equals the target | O(log(N)) |
-| 4   | Quick Sort    | [java](src/algorithms/QuickSort.java) |  | O(N^2) |
+| 2   | [Combinations](https://leetcode.com/problems/combinations/) | [Java](src/Problems/Combination/Combinations.java) | 1. base case is when comb size == k <br>2. iterate from start to required length <br>3. add curr to comb list <br>4. call func recursively with i+1 <br>5. backtrack by removing the last added number | T: O(r * rCn) = O(n!/r!(n-r)!) <br>S: O(r * rCn) |
+| 3   | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
+| 4   | Binary Search | [java](src/algorithms/BinarySearch.java) | 1. set a most left & most right pointer <br>2. while pointers don't cross each other, calculate mid index <br>3. check if mid value equals the target | O(log(N)) |
+| 5   | Quick Sort    | [java](src/algorithms/QuickSort.java) |  | O(N^2) |
 
 <br><br>
 
