@@ -12,6 +12,7 @@ public class FallAndCrush {
         applyGravity(board);
     }
 
+    //not working correctly 
     protected void applyGravity2(char[][] board) {
         int falls = 1;
         while (falls != 0) {
