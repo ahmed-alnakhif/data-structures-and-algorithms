@@ -50,11 +50,15 @@ public class SumRootToLeafNumbers {
 
         sum = sum*10 + root.val;
         
-        if (root.left == null && root.right == null) {
+        if (isLeafNode(root)) {
             totalSum+= sum;
         }
             
         sumNumbers(root.left, sum);
         sumNumbers(root.right, sum);
+    }
+
+    private boolean isLeafNode(TreeNode root){
+        return root != null && root.left == null && root.right == null;
     }
 }
