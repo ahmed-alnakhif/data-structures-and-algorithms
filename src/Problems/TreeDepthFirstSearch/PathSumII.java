@@ -54,8 +54,7 @@ public class PathSumII {
 
         list.add(root.val);
 
-        // sum = target AND is leaf node
-        if (root.left == null && root.right == null && sum == targetSum) {
+        if (isLeafNode(root) && sum == targetSum) {
             result.add(new LinkedList<>(list));
         } else {
             preOrderDFS(root.left, sum, targetSum);
@@ -63,5 +62,9 @@ public class PathSumII {
         }
 
         list.removeLast();
+    }
+
+    private boolean isLeafNode(TreeNode root){
+        return root != null && root.left == null && root.right == null;
     }
 }

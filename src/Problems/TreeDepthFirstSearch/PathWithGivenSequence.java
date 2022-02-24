@@ -34,7 +34,7 @@ public class PathWithGivenSequence {
         }
     }
 
-    public static boolean findPath(TreeNode root, int[] sequence) {
+    public boolean findPath(TreeNode root, int[] sequence) {
         String strSequence = "";
         for (int num : sequence) {
             strSequence += num;
@@ -43,16 +43,19 @@ public class PathWithGivenSequence {
         return preOrderDFS(root, "", strSequence);
     }
 
-    private static boolean preOrderDFS(TreeNode root, String currPath, String sequence) {
+    private boolean preOrderDFS(TreeNode root, String currPath, String sequence) {
         if (root == null) return false;
 
         currPath += root.val;
 
-        if (root.left == null && root.right == null && currPath.equals(sequence)) {
+        if (isLeafNode(root) && currPath.equals(sequence)) {
             return true;
         }
 
         return preOrderDFS(root.left, currPath, sequence) || preOrderDFS(root.right, currPath, sequence);
+    }
 
+    private boolean isLeafNode(TreeNode root){
+        return root != null && root.left == null && root.right == null;
     }
 }
