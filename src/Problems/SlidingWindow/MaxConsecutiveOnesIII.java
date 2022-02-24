@@ -15,16 +15,17 @@ package Problems.SlidingWindow;
 public class MaxConsecutiveOnesIII {
 
     public int longestOnes(int[] nums, int k) {
+        int allowedZeros = k;
         int right = 0, left = 0;
 
         while (right < nums.length) {
             if (nums[right] == 0) {
-                k--;
+                allowedZeros--;
             }
 
-            if (k < 0) {
+            if (allowedZeros < 0) {
                 if (nums[left] == 0) {
-                    k++;
+                    allowedZeros++;
                 }
                 left++;
             }
