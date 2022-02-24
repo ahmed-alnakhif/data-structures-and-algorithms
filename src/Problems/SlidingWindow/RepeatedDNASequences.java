@@ -2,10 +2,8 @@ package Problems.SlidingWindow;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Given an integer array nums, return true if any value appears at least twice

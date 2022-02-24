@@ -194,7 +194,7 @@
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Two Sum](https://leetcode.com/problems/two-sum/)       | [Java](src/Problems/Sequences/TwoSum.java)    | Arrays & Strings  |
+|  1  | [Two Sum](https://leetcode.com/problems/two-sum/)       | [Java](src/Problems/TwoPointers/TwoSum.java)    | Arrays & Strings  |
 |  2  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | [Java](src/Problems/Sequences/FirstandLastPositionOfElement.java) |  Arrays & Strings  |
 |  3  | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/Sequences/GroupAnagram.java) | Arrays & Strings  |
 |  4  | [Text Justification](https://leetcode.com/problems/text-justification/) |  | Arrays & Strings  |

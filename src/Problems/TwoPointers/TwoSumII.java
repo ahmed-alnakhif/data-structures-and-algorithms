@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.TwoPointers;
 
 /**
  * Given a 1-indexed array of integers numbers that is already sorted in

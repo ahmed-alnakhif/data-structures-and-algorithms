@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.TwoPointers;
 
 import java.util.HashMap;
 
@@ -28,6 +28,7 @@ public class TwoSum {
             }
             map.put(nums[i], i);
         }
+
         return new int[2];
     }
 
