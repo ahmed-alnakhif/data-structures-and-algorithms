@@ -15,7 +15,7 @@ package Problems.TwoPointers;
 
 public class BackspaceStringCompare {
 
-    //using two pointers
+    // using two pointers
     public boolean backspaceCompare(String S, String T) {
         int i = S.length() - 1, j = T.length() - 1;
         int skipS = 0, skipT = 0;
@@ -31,8 +31,9 @@ public class BackspaceStringCompare {
                 } else if (skipS > 0) {
                     skipS--;
                     i--;
-                } else
+                } else {
                     break;
+                }
             }
 
             // Find position of next possible char in build(T)
@@ -49,7 +50,7 @@ public class BackspaceStringCompare {
             }
 
             // If two actual characters are different
-            if (i >= 0 && j >= 0 && S.charAt(i) != T.charAt(j)){
+            if (i >= 0 && j >= 0 && S.charAt(i) != T.charAt(j)) {
                 return false;
             }
 
@@ -65,22 +66,22 @@ public class BackspaceStringCompare {
         return true;
     }
 
-    //uisng stringBuilder/stack 
+    // uisng stringBuilder/stack
     public boolean backspaceCompare2(String S, String T) {
         return build(S).equals(build(T));
     }
+
     private String build(String str) {
-        StringBuilder sbr = new StringBuilder(); // or we can use a stack
+        StringBuilder strBuilder = new StringBuilder(); // or we can use a stack
 
         for (char c : str.toCharArray()) {
-
             if (c != '#') {
-                sbr.append(c);
-            } else if (sbr.length() != 0) {
-                sbr.deleteCharAt(sbr.length() - 1);
+                strBuilder.append(c);
+            } else if (strBuilder.length() != 0) {
+                strBuilder.deleteCharAt(strBuilder.length() - 1);
             }
         }
-        return sbr.toString();
+        return strBuilder.toString();
     }
 
     public void run() {
