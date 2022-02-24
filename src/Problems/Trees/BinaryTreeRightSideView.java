@@ -48,6 +48,7 @@ public class BinaryTreeRightSideView {
                 if(node.left != null) queue.add(node.left);
                 if(node.right != null) queue.add(node.right);
                 
+                //last node in the level
                 if(i+1 == size) list.add(node.val);
             }
         }
