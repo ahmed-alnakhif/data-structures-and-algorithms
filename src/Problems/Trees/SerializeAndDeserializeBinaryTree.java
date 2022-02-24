@@ -15,14 +15,11 @@ public class SerializeAndDeserializeBinaryTree {
         }
     }
 
-    int index = 0;
+    
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        String str = serializeDFS(root);
-        System.out.println(str);
-
-        return str;
+        return serializeDFS(root);
     }
 
     // Decodes your encoded data to tree.
@@ -41,7 +38,8 @@ public class SerializeAndDeserializeBinaryTree {
         return root.val + "," + left + "," + right;
 
     }
-
+    
+    private int index = 0;
     private TreeNode deserializeDFS(String[] nodes) {
         if (nodes[index].equals("null")) {
             index++;

@@ -43,12 +43,11 @@ public class FindDuplicateSubtrees {
     }
 
     private String postOrderDFS(TreeNode root) {
-        if (root == null)
-            return "null";
+        if (root == null) return "null";
 
-        String right = postOrderDFS(root.right);
         String left = postOrderDFS(root.left);
-        String curr = root.val + "," + left + "," + right;
+        String right = postOrderDFS(root.right);
+        String curr = left + "," + right + ","+ root.val;
 
         map.put(curr, map.getOrDefault(curr, 0) + 1);
 

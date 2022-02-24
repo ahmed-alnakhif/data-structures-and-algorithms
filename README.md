@@ -203,15 +203,15 @@
 |  7  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeTwoSortedLists.java)  | Linked Lists  |
 |  8  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)  | [java](src/Problems/LinkedLists/MergeKSortedLists.java)  | Linked Lists  |
 |  9  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java)  | Graphs  |
-|  10  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Graphs  |
-|  11  | [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)  | [java](src/Problems/Trees/FindDuplicateSubtrees.java)  | Trees  |
-|  12  | [Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)  | [java]()  | Trees  |
-|  13  | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [java](src/Problems/Trees/SerializeAndDeserializeBinaryTree.java) | Trees  |
-|  14  | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | [java](src/Problems/Trees/SerializeAndDeserializeNTree.java) | Trees  |
-|  15  | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](src/Problems/TwoPointers/TrappingRainWater.java)  | Two Pointers  |
-|  16  | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](src/Problems/Permutations/LetterCombinationOfPhone.java)  | Recursion & Backtarcking  |
-|  17  | [Subsets](https://leetcode.com/problems/subsets/) | [java](src/algorithms/Subset.java)  | Recursion & Backtarcking  |
-|  18  | [Word Break](https://leetcode.com/problems/word-break/)  | [java](src/Problems/DynamicProgramming/WordBreak.java) | dynamic programming  |
+|  10 | [Evaluate Division](https://leetcode.com/problems/evaluate-division/)  | [java](src/Problems/Graphs/EvaluateDivision.java)  | Graphs  |
+|  11 | [Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)  | [java](src/Problems/Trees/FindDuplicateSubtrees.java)  | Trees  |
+|  12 | [Print Binary Tree](https://leetcode.com/problems/print-binary-tree/)  | [java]()  | Trees  |
+|  13 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [java](src/Problems/Trees/SerializeAndDeserializeBinaryTree.java) | Trees  |
+|  14 | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/) | [java](src/Problems/Trees/SerializeAndDeserializeNTree.java) | Trees  |
+|  15 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [java](src/Problems/TwoPointers/TrappingRainWater.java)  | Two Pointers  |
+|  16 | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | [java](src/Problems/Permutations/LetterCombinationOfPhone.java)  | Recursion & Backtarcking  |
+|  17 | [Subsets](https://leetcode.com/problems/subsets/) | [java](src/algorithms/Subset.java)  | Recursion & Backtarcking  |
+|  18 | [Word Break](https://leetcode.com/problems/word-break/)  | [java](src/Problems/DynamicProgramming/WordBreak.java) | dynamic programming  |
 
 
 
