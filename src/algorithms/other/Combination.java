@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.other;
 
 import java.util.LinkedList;
 import java.util.List;

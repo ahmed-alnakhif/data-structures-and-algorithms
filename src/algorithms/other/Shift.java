@@ -1,4 +1,4 @@
-package algorithms;
+package algorithms.other;
 
 public class Shift {
 

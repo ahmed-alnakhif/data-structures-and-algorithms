@@ -1,12 +1,13 @@
 package com.main;
 
-import algorithms.ParseNumber;
+import Problems.DynamicProgramming.Fib;
 
 public class Main {
 
     public static void main(String[] args) {
         // call <Class_Instance>.run() here
-        ParseNumber parseNumber = new ParseNumber();
-        parseNumber.run();
+        Fib fib = new Fib();
+        fib.run();
+        
     }
 }

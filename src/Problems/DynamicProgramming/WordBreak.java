@@ -23,4 +23,8 @@ public class WordBreak {
 
         return dp[s.length()];
     }
+
+    public void run() {
+
+    }
 }
