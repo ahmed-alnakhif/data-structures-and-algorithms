@@ -1,0 +1,11 @@
+Memoization Recipe
+
+1) make it work
+    - visualize the problem as a tree
+    - implement the tree using recursion 
+    - test it 
+
+2) make it efficient
+    - add a memo map
+    - add a base case to return memo map
+    - store return values into memo map

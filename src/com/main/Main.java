@@ -1,13 +1,14 @@
 package com.main;
 
 import Problems.DynamicProgramming.Fib;
+import Problems.DynamicProgramming.GridTraveler;
 
 public class Main {
 
     public static void main(String[] args) {
         // call <Class_Instance>.run() here
-        Fib fib = new Fib();
-        fib.run();
+        GridTraveler gridTraveler = new GridTraveler();
+        gridTraveler.run();
         
     }
 }
