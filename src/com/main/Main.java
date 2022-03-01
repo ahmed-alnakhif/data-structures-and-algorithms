@@ -1,13 +1,14 @@
 package com.main;
 
 import Problems.DynamicProgramming.HowSum;
+import Problems.DynamicProgramming.ShortestSum;
 
 public class Main {
 
     public static void main(String[] args) {
         // call <Class_Instance>.run() here
-        HowSum howSum = new HowSum();
-        howSum.run();
+        ShortestSum shortestSum = new ShortestSum();
+        shortestSum.run();
 
     }
 }
