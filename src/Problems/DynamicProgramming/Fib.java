@@ -7,6 +7,12 @@ public class Fib {
 
     Map<Integer, Long> memoMap = new HashMap<>();
 
+    public long fibSequence(int n) {
+        long result = fib(n);
+        memoMap.clear();
+        return result;
+    }
+
     public long fib(int n) {
 
         if (memoMap.containsKey(n)) {
@@ -23,9 +29,9 @@ public class Fib {
     }
 
     public void run() {
-        System.out.println(fib(6)); // 8
-        System.out.println(fib(7)); // 13
-        System.out.println(fib(8)); // 21
-        System.out.println(fib(50)); // 12586269025
+        System.out.println(fibSequence(6)); // 8
+        System.out.println(fibSequence(7)); // 13
+        System.out.println(fibSequence(8)); // 21
+        System.out.println(fibSequence(50)); // 12586269025
     }
 }
