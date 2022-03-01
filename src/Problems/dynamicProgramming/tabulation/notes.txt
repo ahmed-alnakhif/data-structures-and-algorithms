@@ -1,0 +1,5 @@
+Tabulation Recipe
+
+1) create an array with size = n + 1
+2) fill the table 
+3) 

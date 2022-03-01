@@ -1,4 +1,4 @@
-package Problems.DynamicProgramming;
+package Problems.dynamicProgramming.memoization;
 
 import java.util.ArrayList;
 import java.util.HashMap;
