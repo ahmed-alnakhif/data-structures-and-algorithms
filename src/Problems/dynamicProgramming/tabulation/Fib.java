@@ -1,17 +1,14 @@
 package Problems.dynamicProgramming.tabulation;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Fib {
 
-    Map<Integer, Long> memoMap = new HashMap<>();
-
     public static long fibSequence(int n) {
-        int[] table = new int[n + 1];
-        for (int i = 0; i <= n; i++) {
-            table[i + 1] = table[i];
-            table[i + 2] = table[i];
+        long[] table = new long[n + 1];
+        table[0] = 0;
+        table[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            table[i] = table[i - 1] + table[i - 2];
         }
 
         return table[n];
