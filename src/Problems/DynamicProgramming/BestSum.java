@@ -11,15 +11,15 @@ import java.util.Map;
 
 public class BestSum {
 
-    Map<Integer, ArrayList<Integer>> memoMap;
+    static Map<Integer, List<Integer>> memoMap;
     ArrayList<Integer> shortedList;
 
-    List<Integer> bestSum(int target, int[] nums) {
+    static List<Integer> bestSum(int target, int[] nums) {
         memoMap = new HashMap<>();
         return smallestSum(target, nums);
     }
 
-    ArrayList<Integer> smallestSum(int target, int[] nums) {
+    static List<Integer> smallestSum(int target, int[] nums) {
         if (target == 0) {
             return new ArrayList<>();
         }
@@ -32,25 +32,25 @@ public class BestSum {
             return memoMap.get(target);
         }
 
-        ArrayList<Integer> shortedCombination = null;
+        List<Integer> shortedCombination = null;
 
         for (int num : nums) {
             int remainder = target - num;
-            ArrayList<Integer> combination = smallestSum(remainder, nums);
+            List<Integer> combination = smallestSum(remainder, nums);
             if (combination != null) {
                 combination.add(num);
                 if (shortedCombination == null || combination.size() < shortedCombination.size()) {
-                    shortedCombination = new ArrayList<>(combination);
+                    shortedCombination = new ArrayList<Integer>(combination);;
                 }
             }
         }
 
-        memoMap.put(target, shortedCombination == null ? null : new ArrayList<>(shortedCombination));
+        memoMap.put(target, shortedCombination);
 
         return shortedCombination;
     }
 
-    public void run() {
+    public static void main(String[] args) {
         System.out.println(bestSum(7, new int[] { 5, 3, 4, 7 }));
         System.out.println(bestSum(8, new int[] { 2, 3, 5 }));
         System.out.println(bestSum(8, new int[] { 1, 4, 5 }));

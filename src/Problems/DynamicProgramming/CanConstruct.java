@@ -28,7 +28,7 @@ public class CanConstruct {
         for (String str : wordBank) {
             // str is a prefix
             if (word.indexOf(str) == 0) {
-                String suffix = word.substring(str.length(), word.length());
+                String suffix = word.substring(str.length());
                 if (canConstructHelper(suffix, wordBank)) {
                     memoMap.put(word, true);
                     return true;

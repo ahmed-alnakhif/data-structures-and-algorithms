@@ -28,7 +28,7 @@ public class CountConstruct {
         int totalCount = 0;
         for (String word : wordBank) {
             if (target.indexOf(word) == 0) {
-                String suffix = target.substring(word.length(), target.length());
+                String suffix = target.substring(word.length());
                 totalCount += countConstructHelper(suffix, wordBank);
             }
         }
