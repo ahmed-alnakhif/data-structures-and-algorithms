@@ -9,17 +9,17 @@ import java.util.Map;
  return list of the shortest combination in the array that add up to the target number
 */
 
-public class ShortestSum {
+public class BestSum {
 
     Map<Integer, ArrayList<Integer>> memoMap;
     ArrayList<Integer> shortedList;
 
-    List<Integer> shortestSum(int target, int[] nums) {
+    List<Integer> bestSum(int target, int[] nums) {
         memoMap = new HashMap<>();
-        return shortestSumHelper(target, nums);
+        return smallestSum(target, nums);
     }
 
-    ArrayList<Integer> shortestSumHelper(int target, int[] nums) {
+    ArrayList<Integer> smallestSum(int target, int[] nums) {
         if (target == 0) {
             return new ArrayList<>();
         }
@@ -36,7 +36,7 @@ public class ShortestSum {
 
         for (int num : nums) {
             int remainder = target - num;
-            ArrayList<Integer> combination = shortestSumHelper(remainder, nums);
+            ArrayList<Integer> combination = smallestSum(remainder, nums);
             if (combination != null) {
                 combination.add(num);
                 if (shortedCombination == null || combination.size() < shortedCombination.size()) {
@@ -51,9 +51,9 @@ public class ShortestSum {
     }
 
     public void run() {
-        System.out.println(shortestSum(7, new int[] { 5, 3, 4, 7 }));
-        System.out.println(shortestSum(8, new int[] { 2, 3, 5 }));
-        System.out.println(shortestSum(8, new int[] { 1, 4, 5 }));
-        System.out.println(shortestSum(100, new int[] { 1, 2, 5, 25 })); // not correct
+        System.out.println(bestSum(7, new int[] { 5, 3, 4, 7 }));
+        System.out.println(bestSum(8, new int[] { 2, 3, 5 }));
+        System.out.println(bestSum(8, new int[] { 1, 4, 5 }));
+        System.out.println(bestSum(100, new int[] { 1, 2, 5, 25 })); // not correct
     }
 }
