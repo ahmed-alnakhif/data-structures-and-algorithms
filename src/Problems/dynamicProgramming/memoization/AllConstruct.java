@@ -11,6 +11,8 @@ import java.util.List;
 
 public class AllConstruct {
 
+    //m = target.length, n = wordBack.length
+    //T: O(n^m), S: O(n^m)
     static List<List<String>> allConstruct(String target, String[] wordBank) {
         return allConstructHelper(target, wordBank, new HashMap<>());
     }
@@ -47,13 +49,10 @@ public class AllConstruct {
 
     public static void main(String[] args) {
         System.out.println(allConstruct("abcdef", new String[] { "ab", "abc", "cd", "def", "abcd", "ef", "c" }));
-        // System.out.println(allConstruct("skateboard", new String[] { "bo", "rd",
-        // "ate", "t", "ska", "sk", "boar" }));
-        // System.out.println(allConstruct("enterapotentpot", new String[] { "a", "p",
-        // "ent", "enter", "ot", "o", "t" }));
-        // System.out.println(allConstruct("purple", new String[] { "purp", "p", "ur",
-        // "le", "purpl" }));
-        // System.out.println(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",new
-        // String[] { "e", "ee", "eee", "eeee", "eeeee" }));
+        System.out.println(allConstruct("skateboard", new String[] { "bo", "rd", "ate", "t", "ska", "sk", "boar" }));
+        System.out.println(allConstruct("enterapotentpot", new String[] { "a", "p", "ent", "enter", "ot", "o", "t" })); //not correct
+        System.out.println(allConstruct("purple", new String[] { "purp", "p", "ur", "le", "purpl" }));
+        System.out.println(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+                new String[] { "e", "ee", "eee", "eeee", "eeeee" }));
     }
 }
