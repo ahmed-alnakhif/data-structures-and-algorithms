@@ -11,14 +11,14 @@ import java.util.Map;
 
 public class HowSum {
 
-    Map<Integer, List<Integer>> memoMap;
+    static Map<Integer, List<Integer>> memoMap;
 
-    List<Integer> howSum(int target, int[] nums) {
+    static List<Integer> howSum(int target, int[] nums) {
         memoMap = new HashMap<>();
         return howSumHelper(target, nums);
     }
 
-    List<Integer> howSumHelper(int target, int[] nums) {
+    static List<Integer> howSumHelper(int target, int[] nums) {
         if (target == 0) {
             return new ArrayList<>();
         }
@@ -46,7 +46,7 @@ public class HowSum {
         return null;
     }
 
-    public void run() {
+    public static void main(String[] args) {
         System.out.println(howSum(7, new int[] { 2, 3 }));
         System.out.println(howSum(7, new int[] { 5, 3, 4, 7 }));
         System.out.println(howSum(7, new int[] { 2, 4 }));
