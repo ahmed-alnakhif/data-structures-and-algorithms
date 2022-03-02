@@ -1,7 +1,4 @@
-package Problems.dynamicProgramming.memoization;
-
-import java.util.HashMap;
-import java.util.Map;
+package Problems.dynamicProgramming.tabulation;
 
 /*
   given a word and a string of words, count the number of ways that the target can be constructed from the word bank array 
@@ -9,33 +6,23 @@ import java.util.Map;
 
 public class CountConstruct {
 
-    static Map<String, Integer> memoMap;
+    // T: O(m^2 * n), S: O(m)
+    static int countConstruct(String target, String[] wordBank) {
+        int[] table = new int[target.length() + 1];
+        table[0] = 1;
 
-    static int countConstruct(String word, String[] wordBank) {
-        memoMap = new HashMap<>();
-        return countConstructHelper(word, wordBank);
-    }
-
-    static int countConstructHelper(String target, String[] wordBank) {
-        if (target.equals("")) {
-            return 1;
-        }
-
-        if (memoMap.containsKey(target)) {
-            return memoMap.get(target);
-        }
-
-        int totalCount = 0;
-        for (String word : wordBank) {
-            if (target.indexOf(word) == 0) {
-                String suffix = target.substring(word.length());
-                totalCount += countConstructHelper(suffix, wordBank);
+        for (int i = 0; i < table.length; i++) {
+            for (String word : wordBank) {
+                if (i + word.length() < table.length) {
+                    String suffix = target.substring(i, i + word.length());
+                    if (word.equals(suffix)) {
+                        table[i + word.length()] += table[i];
+                    }
+                }
             }
         }
 
-        memoMap.put(target, totalCount);
-
-        return totalCount;
+        return table[target.length()];
     }
 
     public static void main(String[] args) {
@@ -48,4 +35,3 @@ public class CountConstruct {
                 new String[] { "e", "ee", "eee", "eeee", "eeeee" }));
     }
 }
- 
