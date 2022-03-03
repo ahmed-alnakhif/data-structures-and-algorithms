@@ -24,10 +24,10 @@ public class MedianFinder {
         }
     }
 
-    public double findMedian() {
-        if (minH.size() == maxH.size()) {
+    public double findMedian() { 
+        if (minH.size() == maxH.size()) { //even size
             return (double) (maxH.peek() + minH.peek()) / 2.0;
-        } else {
+        } else { //odd size 
             return (double) maxH.peek();
         }
 
