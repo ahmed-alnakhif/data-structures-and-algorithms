@@ -120,7 +120,7 @@
 ## 9) Two Heaps
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-
+|  1  | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [Java](src/Problems/twoHeaps/MedianFinder.java) | 1. create a minHeap and maxHeap <br>2. minHeap will hold the left side and maxHeap will hold the right side <br>3. find the median by getting the top of minHeap and maxHeap | T: O(log(N)) <br>S: O(N) |
 
 
 ## 10) Subsets
