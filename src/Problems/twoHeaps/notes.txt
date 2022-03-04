@@ -1,0 +1,15 @@
+We usually use two heaps pattern when: 
+    1. we want to divide somthing to two parts.
+        - first part end is max heap
+        - second part start is min heap
+        - examples: 
+            - median 
+
+    2. we have to properties that are proportional to each other
+        - want to find the max value with the min resources 
+        - value would be a max heap and resource would be a min heap 
+        - examples: 
+            - min costs to hire k workers
+            - min capital to gain max profit  
+            
+    3. one property depends on another property 
