@@ -25,11 +25,11 @@ public class Subsets {
     LinkedList<Integer> subset = new LinkedList<>();
 
     public List<List<Integer>> subsets(int[] nums) {
-        dfs(0, nums);
+        backtrack(0, nums);
         return result;
     }
 
-    private void dfs(int index, int[] nums) {
+    private void backtrack(int index, int[] nums) {
         if (index >= nums.length) {
             result.add(new LinkedList<>(subset));
             return;
@@ -37,17 +37,16 @@ public class Subsets {
 
         // decision to include nums[index]
         subset.add(nums[index]);
-        dfs(index + 1, nums);
+        backtrack(index + 1, nums);
 
         // decision not to include nums[index]
         subset.removeLast();
-        dfs(index + 1, nums);
+        backtrack(index + 1, nums);
     }
 
     // using cascading
     public List<List<Integer>> subsets2(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-
         result.add(new ArrayList<>());
 
         if (nums.length == 0) {

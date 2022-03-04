@@ -35,6 +35,6 @@ public class AllCombinations {
     }
 
     public static void main(String[] args) {
-        System.out.println(combination(Arrays.asList("a", "b", "c")));
+        System.out.println(combination(Arrays.asList("1", "2", "3")));
     }
 }

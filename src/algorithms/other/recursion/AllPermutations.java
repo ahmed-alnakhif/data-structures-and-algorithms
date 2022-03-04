@@ -19,7 +19,7 @@ public class AllPermutations {
     public static class PermutationString {
         List<String> result = new ArrayList<>();
 
-        private List<String> permutation(String str) {
+        private List<String> permutations(String str) {
             backtrack(str.toCharArray(), 0);
             return result;
         }
@@ -42,27 +42,19 @@ public class AllPermutations {
             chars[i] = chars[j];
             chars[j] = tmp;
         }
-
-        public void run() {
-            String str = "abc";
-            System.out.println(permutation(str));
-        }
     }
 
     public static class PermutationArray {
-        static List<int[]> result = new ArrayList<>();
+        static List<List<Integer>> result = new ArrayList<>();
 
-        private static List<int[]> permutation(int[] nums) {
-            System.out.println(result);
+        private static List<List<Integer>> permutations(int[] nums) {
             backtrack(nums, 0);
             return result;
         }
 
         private static void backtrack(int[] nums, int left) {
             if (left == nums.length) {
-                result.add(nums.clone());
-                // if return type is List<List<>>
-                // result.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));  
+                result.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));  
                 return;
             }
 
@@ -119,7 +111,8 @@ public class AllPermutations {
 
     public static void main(String[] args) {
         int[] nums = { 1, 2, 3 };
-        System.out.println(PermutationArray.permutation(nums));
+        // System.out.println(PermutationArray.permutations(nums));
+        System.out.println(PermutationList.permutations(List.of("1", "2", "3")));
     }
 
 }
