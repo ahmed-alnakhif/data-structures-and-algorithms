@@ -15,11 +15,11 @@ public class CanConstruct {
 
         for (int i = 0; i < table.length; i++) {
             if (table[i] == true) {
-                for (String word : wordBank) {
-                    if(i + word.length() < target.length() + 1){
-                        String suffix = target.substring(i, i + word.length());
-                        if (word.equals(suffix)) {
-                            table[i + word.length()] = true;
+                for (String option : wordBank) {
+                    if(i + option.length() < target.length() + 1){
+                        String suffix = target.substring(i, i + option.length());
+                        if (option.equals(suffix)) {
+                            table[i + option.length()] = true;
                         }
                     }
                 }
