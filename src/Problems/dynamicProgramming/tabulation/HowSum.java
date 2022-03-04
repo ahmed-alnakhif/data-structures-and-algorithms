@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
- return list of combination of 2 numbers in the array that add up to the target number
+ return a combination of 2 numbers in the array that add up to the target number
 */
 
 public class HowSum {
