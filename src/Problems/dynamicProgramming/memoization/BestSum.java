@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /*
- return list of the shortest combination in the array that add up to the target number
+ return the shortest combination in the array that add up to the target number
 */
 
 public class BestSum {
@@ -32,22 +32,22 @@ public class BestSum {
             return memoMap.get(target);
         }
 
-        List<Integer> shortedCombination = null;
+        List<Integer> shortestCombination = null;
 
         for (int num : nums) {
             int remainder = target - num;
             List<Integer> combination = smallestSum(remainder, nums);
             if (combination != null) {
                 combination.add(num);
-                if (shortedCombination == null || combination.size() < shortedCombination.size()) {
-                    shortedCombination = new ArrayList<Integer>(combination);;
+                if (shortestCombination == null || combination.size() < shortestCombination.size()) {
+                    shortestCombination = new ArrayList<Integer>(combination);;
                 }
             }
         }
 
-        memoMap.put(target, shortedCombination);
+        memoMap.put(target, shortestCombination);
 
-        return shortedCombination;
+        return shortestCombination;
     }
 
     public static void main(String[] args) {

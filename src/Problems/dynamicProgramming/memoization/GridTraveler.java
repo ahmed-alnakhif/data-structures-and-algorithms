@@ -12,30 +12,34 @@ import java.util.Map;
 
 public class GridTraveler {
 
-    Map<String, Long> map = new HashMap<>();
+    static Map<String, Long> map = new HashMap<>();
 
-    long gridTraveler(int n, int m) {
-        if (n * m == 0) {
+    static long gridTraveler(int row, int col) {
+        //base case: if reach end of either row or col
+        if (row * col == 0) {
             return 0;
         }
 
-        if (n == 1 && m == 1) {
+        //base case: I have only one cell
+        if (row == 1 && col == 1) {
             return 1;
         }
 
-        String cell = n > m ? n + "," + m : m + "," + n;
+        String cell = row > col ? row + "," + col : col + "," + row;
 
         if (map.containsKey(cell)) {
             return map.get(cell);
         }
 
-        map.put(cell, gridTraveler(n - 1, m) + gridTraveler(n, m - 1));
+        //             go one step down         go one step right 
+        map.put(cell, gridTraveler(row - 1, col) + gridTraveler(row, col - 1));
 
         return map.get(cell);
     }
 
-    public void run() {
+    public static void main(String[] args) {
         System.out.println(gridTraveler(1, 1));
+        System.out.println(gridTraveler(2, 2));
         System.out.println(gridTraveler(2, 3));
         System.out.println(gridTraveler(3, 2));
         System.out.println(gridTraveler(5, 5));
