@@ -1,4 +1,4 @@
-package Problems.Combination;
+package Problems.combination;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -18,14 +18,14 @@ import java.util.List;
  */
 
 public class Combinations {
-    List<List<Integer>> result = new LinkedList<>();
+    static List<List<Integer>> result = new LinkedList<>();
 
-    public List<List<Integer>> combine(int n, int k) {
+    public static List<List<Integer>> combine(int n, int k) {
         combination(1, n, k, new LinkedList<>());
         return result;
     }
 
-    private void combination(int start, int n, int k, LinkedList<Integer> comb) {
+    private static void combination(int start, int n, int k, LinkedList<Integer> comb) {
         if (comb.size() == k) {
             result.add(new LinkedList<>(comb));
             return;
@@ -44,7 +44,7 @@ public class Combinations {
         }
     }
 
-    public void run() {
+    public static void main(String[] args) {
         int n = 4, k = 2;
         System.out.println(combine(n, k));
     }

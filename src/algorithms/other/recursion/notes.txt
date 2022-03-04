@@ -1,0 +1,9 @@
+When to use recursion?
+    for problems that contains smaller instances of the same problem
+  
+Anatomy of Recursion:
+    # Base Case:
+        - the "smallest" instance of a problem that's solved trivially
+
+    # Recursive Case:
+        - an instance of a problem that shrinks the size of the input toward the base case 

@@ -18,34 +18,19 @@ import java.util.List;
  */
 
 public class Combination {
-    List<List<Integer>> result = new LinkedList<>();
+    
+    //T: O(N^2), S: O(N^2)
 
-    public List<List<Integer>> combine(int n, int k) {
-        combination(1, n, k, new LinkedList<>());
-        return result;
+    public List<List<Integer>> combination(int n, int k) {
+        combine(1, n, k, new LinkedList<>());
+        return null;
     }
 
-    private void combination(int start, int n, int k, LinkedList<Integer> comb) {
-        if (comb.size() == k) {
-            result.add(new LinkedList<>(comb));
-            return;
-        }
-
-        // optimization -> return if there aren't enough numbers left to fill the
-        // partial comb list up to k
-        if (k - comb.size() > n - start + 1) {
-            return;
-        }
-
-        for (int i = start; i < n + 1; i++) {
-            comb.add(i);
-            combination(i + 1, n, k, comb);
-            comb.removeLast();
-        }
+    private void combine(int start, int n, int k, LinkedList<Integer> comb) {
+       
     }
 
     public void run() {
-        int n = 4, k = 2;
-        System.out.println(combine(n, k));
+        // System.out.println(combination(n, k));
     }
 }
