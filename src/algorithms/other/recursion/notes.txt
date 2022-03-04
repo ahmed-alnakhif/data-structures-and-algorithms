@@ -1,9 +1,35 @@
-When to use recursion?
-    for problems that contains smaller instances of the same problem
-  
-Anatomy of Recursion:
-    # Base Case:
-        - the "smallest" instance of a problem that's solved trivially
 
-    # Recursive Case:
-        - an instance of a problem that shrinks the size of the input toward the base case 
+# Recursion: 
+    When to use recursion?
+        for problems that contains smaller instances of the same problem
+    
+    Anatomy of Recursion:
+        - Base Case:
+            the "smallest" instance of a problem that's solved trivially
+
+        - Recursive Case:
+            an instance of a problem that shrinks the size of the input toward the base case 
+
+
+# Combination: 
+    What is a Combination? 
+        - a collection of things where the order does NOT matter
+        - take the decision whether or not we include an element 
+        - given a set of n things, there are 2^n possible combinations 
+
+    Common Questions: 
+        - given n things, in how many ways can we arrange them
+        - in how many ways can we do X
+        - what's the shortest way to do Y
+
+
+# Permutation:
+    What is a Permutation? 
+        - a collection of things where the order matters
+        - definitely incluse an element, but choosing where to place it exactly
+        - given a set of n things, there are n! possible permutations
+
+
+
+TODO:
+    - add recursive tree for all above 
