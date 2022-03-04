@@ -29,6 +29,7 @@ public class GridTraveler {
 
     public static void main(String[] args) {
         System.out.println(gridTraveler(1, 1));
+        System.out.println(gridTraveler(2, 2));
         System.out.println(gridTraveler(2, 3));
         System.out.println(gridTraveler(3, 2));
         System.out.println(gridTraveler(5, 5));
