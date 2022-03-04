@@ -16,36 +16,37 @@ public class CanConstruct {
         return canConstructHelper(word, wordBank);
     }
 
-    static Boolean canConstructHelper(String word, String[] wordBank) {
-        if (word.equals("")) {
+    static Boolean canConstructHelper(String target, String[] wordBank) {
+        // base case: string becomes empty;
+        // meaning that we were able to take off all the letters from the word bank
+        if (target.equals("")) {
             return true;
         }
 
-        if (memoMap.containsKey(word)) {
-            return memoMap.get(word);
+        if (memoMap.containsKey(target)) {
+            return memoMap.get(target);
         }
 
-        for (String str : wordBank) {
-            // str is a prefix
-            if (word.indexOf(str) == 0) {
-                String suffix = word.substring(str.length());
+        for (String word : wordBank) {
+            if (target.indexOf(word) == 0) {
+                String suffix = target.substring(word.length());
                 if (canConstructHelper(suffix, wordBank)) {
-                    memoMap.put(word, true);
+                    memoMap.put(target, true);
                     return true;
                 }
             }
         }
 
-        memoMap.put(word, false);
+        memoMap.put(target, false);
 
         return false;
     }
 
     public static void main(String[] args) {
-        System.out.println(canConstruct("abcdef", new String[] { "ab", "abc", "cd", "def", "abcd" })); //true
-        System.out.println(canConstruct("skateboard", new String[] { "bo", "rd", "ate", "t", "ska", "sk", "boar" })); //false
+        System.out.println(canConstruct("abcdef", new String[] { "ab", "abc", "cd", "def", "abcd" })); // true
+        System.out.println(canConstruct("skateboard", new String[] { "bo", "rd", "ate", "t", "ska", "sk", "boar" })); // false
         System.out.println(canConstruct("enterapotentpot", new String[] { "a", "p", "ent", "enter", "ot", "o", "t" })); // true
         System.out.println(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
-                new String[] { "e", "ee", "eee", "eeee", "eeeee" })); //false
+                new String[] { "e", "ee", "eee", "eeee", "eeeee" })); // false
     }
 }
