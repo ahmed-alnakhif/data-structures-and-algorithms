@@ -15,12 +15,12 @@ public class BestSum {
 
         for (int i = 0; i < table.length; i++) {
             if (table[i] != null) {
-                for (int num : nums) {
-                    if (i + num < table.length) {
+                for (int option : nums) {
+                    if (i + option < table.length) {
                         ArrayList<Integer> newList = new ArrayList<>(table[i]);
-                        newList.add(num);
-                        if (table[i + num] == null || newList.size() < table[i + num].size()) {
-                            table[i + num] = newList;
+                        newList.add(option);
+                        if (table[i + option] == null || newList.size() < table[i + option].size()) {
+                            table[i + option] = newList;
                         }
                     }
                 }
