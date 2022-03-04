@@ -121,7 +121,8 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | [Java](src/Problems/twoHeaps/MedianFinder.java) | 1. create a minHeap and maxHeap <br>2. minHeap will hold the left side and maxHeap will hold the right side <br>3. find the median by getting the top of minHeap and maxHeap | T: O(log(N)) <br>S: O(N) |
-|  1  | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | [Java](src/Problems/twoHeaps/SlidingWindowMedian.java) | based on [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) <br>1. use TreeSet instead of PQ <br>2. if window size is greater than k, then we remove from both heaps <br>3. add num <br>4. if we have a full window, then we add median to result | T: O(N*log(N)) <br>S: O(N) |
+|  2  | [Sliding Window Median](https://leetcode.com/problems/sliding-window-median/) | [Java](src/Problems/twoHeaps/SlidingWindowMedian.java) | based on [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) <br>1. use TreeSet instead of PQ <br>2. if window size is greater than k, then we remove from both heaps <br>3. add num <br>4. if we have a full window, then we add median to result | T: O(N*log(N)) <br>S: O(N) |
+|  3  | [IPO](https://leetcode.com/problems/ipo/) | [Java](src/Problems/twoHeaps/IPO.java) | the idea is to maximize the profit and minimize the capital <br>1. max heap for profit & min heap for capital <br>2. while our available capital is less than the min cap, then we have to take it <br> we add the profit of the project to our avail cap | T: O(N*log(N)) <br>S: O(N) |
 
 
 ## 10) Subsets
