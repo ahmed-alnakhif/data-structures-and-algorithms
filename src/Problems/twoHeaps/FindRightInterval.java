@@ -55,7 +55,7 @@ public class FindRightInterval {
             maxStartHeap.add(new Interval(intervals[i][0], intervals[i][1], i));
         }
 
-        // go through each interval 0 -> intervals.length
+        // go through each interval 
         while (!maxEndHeap.isEmpty()) {
             Interval maxEndInterval = maxEndHeap.poll();
             result[maxEndInterval.index] = -1;
