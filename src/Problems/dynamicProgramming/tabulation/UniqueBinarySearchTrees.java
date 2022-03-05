@@ -20,6 +20,7 @@ import java.util.Map;
 
 public class UniqueBinarySearchTrees {
 
+    // tabulation
     public static int numTrees(int n) {
         int[] dp = new int[n + 1];
         dp[0] = 1;
@@ -42,6 +43,25 @@ public class UniqueBinarySearchTrees {
             C = C * 2 * (2 * i + 1) / (i + 2);
         }
         return (int) C;
+    }
+
+    // memoization
+    Map<Integer, Integer> cache = new HashMap<>();  
+    public int numTrees3(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+
+        int total = 0;
+        for (int i = 1; i < n + 1; i++) {
+            int countOfLeftSubtrees = cache.getOrDefault(i-1, numTrees(i - 1));
+            int countOfRightSubtrees = cache.getOrDefault(n-i, numTrees(n - i));
+            total += (countOfLeftSubtrees * countOfRightSubtrees);
+        }
+
+        cache.put(n, total);
+       
+        return total;
     }
 
     public static void main(String[] args) {
