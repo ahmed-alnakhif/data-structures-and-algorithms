@@ -137,6 +137,7 @@
 |  6  | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [Java](src/Problems/Permutations/GenerateParentheses.java) | 3 conditions <br>1. base case: add subset if open == close == n <br>2. add open if open < n <br>3. add close if close < open  | T: O(N*2ᴺ) <br>S: O(N*2ᴺ) |
 |  7  | [Different Way to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/) | [Java](src/Problems/Subsets/DiffWaysToAddParentheses.java) |  |  |
 |  8  | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [Java](src/Problems/dynamicProgramming/tabulation/UniqueBinarySearchTrees.java) | using dp <br> apply Catalan number formular | T: O(N^2)/O(N) S: O(N) |
+|  9  | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O( ) S: O( ) |
 
 
 ## 11) Sequences

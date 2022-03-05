@@ -1,12 +1,7 @@
 package Problems.Permutations;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
 
 /**
  * Given a string s, you can transform every letter individually to be lowercase
