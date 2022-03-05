@@ -135,7 +135,9 @@
 |  4  | [Letter Case Permutation](https://leetcode.com/problems/letter-case-permutation/) | [Java](src/Problems/Permutations/LetterCasePermutation.java) | 1. same as [Permutations](https://leetcode.com/problems/permutations/) <br>2. if letter, perform permutation twice; one with upper case and one with lower case <br>if number perform permutation once | T: O(N*2^N) <br>S: O(N*2^N) |
 |  5  | [Combinations](https://leetcode.com/problems/combinations/) | [Java](src/Problems/Combination/Combinations.java) | 1. base case is when comb size == k <br>2. iterate from start to required length <br>3. add curr to comb list <br>4. call func recursively with i+1 <br>5. backtrack by removing the last added number | T: O(r * rCn) = O(n!/r!(n-r)!) <br>S: O(r * rCn) |
 |  6  | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [Java](src/Problems/Permutations/GenerateParentheses.java) | 3 conditions <br>1. base case: add subset if open == close == n <br>2. add open if open < n <br>3. add close if close < open  | T: O(N*2ᴺ) <br>S: O(N*2ᴺ) |
-|  7  | [https://leetcode.com/problems/different-ways-to-add-parentheses/](https://leetcode.com/problems/different-ways-to-add-parentheses/) | [Java](src/Problems/Subsets/DiffWaysToAddParentheses.java) |  |  |
+|  7  | [Different Way to Add Parentheses](https://leetcode.com/problems/different-ways-to-add-parentheses/) | [Java](src/Problems/Subsets/DiffWaysToAddParentheses.java) |  |  |
+|  8  | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [Java](src/Problems/dynamicProgramming/tabulation/UniqueBinarySearchTrees.java) | using dp <br> apply Catalan number formular | T: O(N^2)/O(N) S: O(N) |
+
 
 ## 11) Sequences
 #
