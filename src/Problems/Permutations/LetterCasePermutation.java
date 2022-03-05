@@ -24,14 +24,14 @@ import java.util.List;
 // Can be solved in a more optimized way using sliding window
 public class LetterCasePermutation {
 
-    List<String> result = new ArrayList<>();
+    static List<String> result = new ArrayList<>();
 
-    public List<String> letterCasePermutation(String s) {
-        dfs(s, new StringBuilder(), 0);
+    public static List<String> letterCasePermutation(String s) {
+        backtrack(s, new StringBuilder(), 0);
         return result;
     }
 
-    private void dfs(String str, StringBuilder resultStr, int left) {
+    private static void backtrack(String str, StringBuilder resultStr, int left) {
         if (left == str.length()) {
             result.add(resultStr.toString());
             return;
@@ -40,22 +40,19 @@ public class LetterCasePermutation {
         char c = str.charAt(left);
         if (Character.isLetter(c)) {
             // for lower case
-            resultStr.append(Character.toLowerCase(c));
-            dfs(str, resultStr, left + 1);
+            backtrack(str, resultStr.append(Character.toLowerCase(c)), left + 1);
             resultStr.deleteCharAt(resultStr.length() - 1);
 
             // for upper case
-            resultStr.append(Character.toUpperCase(c));
-            dfs(str, resultStr, left + 1);
+            backtrack(str, resultStr.append(Character.toUpperCase(c)), left + 1);
             resultStr.deleteCharAt(resultStr.length() - 1);
         } else {
-            resultStr.append(c);
-            dfs(str, resultStr, left + 1);
+            backtrack(str, resultStr.append(c), left + 1);
             resultStr.deleteCharAt(resultStr.length() - 1);
         }
     }
 
-    public void run() {
+    public static void main(String[] args) {
         String s = "a1b2";
         System.out.println(letterCasePermutation(s));
     }
