@@ -139,6 +139,11 @@
 |  8  | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [Java](src/Problems/dynamicProgramming/tabulation/UniqueBinarySearchTrees.java) | using dp <br> apply Catalan number formular | T: O(N^2)/O(N) S: O(N) |
 |  9  | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O( ) S: O( ) |
 
+## 11) Modified Binary Search
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Binary Search](https://leetcode.com/problems/binary-search/) | [Java](src/Problems/modifiedBinarySearch/BinarySearch.java) | 1. left and right pointers <br>2. mid = (left+right)/2 <br>3. if val < target, divide the array and move left to mid + 1 <br>4. if val > target, divide the array and move right to mid - 1 | T: O(log(N)) <br>S: O(1) |
+
 
 ## 11) Sequences
 #
