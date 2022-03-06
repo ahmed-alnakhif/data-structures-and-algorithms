@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /*
-  given a word and a string of words, return all the ways that the target can be constructed from the word bank array
+  given a target string and an array of words, return all the ways that the target can be constructed from the word bank array
    
 */
 
@@ -23,7 +23,7 @@ public class AllConstruct {
         List<List<String>> result = new ArrayList<>();
         
         // base case: string becomes empty;
-        // meaning that we were able to take off all the letters from the word bank
+        // meaning that we were able to take off all the letters from the word bank http://instagift564.pw/ahmed7.adel
         if (target.equals("")) {
             result.add(new ArrayList<>());
             return result;
