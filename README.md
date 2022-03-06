@@ -144,9 +144,10 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Binary Search](https://leetcode.com/problems/binary-search/) | [Java](src/Problems/modifiedBinarySearch/BinarySearch.java) | 1. left and right pointers <br>2. mid = (left+right)/2 <br>3. if val < target, divide the array and move left to mid + 1 <br>4. if val > target, divide the array and move right to mid - 1 | T: O(log(N)) <br>S: O(1) |
 |  2  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [Java](src/Problems/modifiedBinarySearch/SearchInsertPosition.java) | 1. same as binary search. But if we didn't find the value, then we return left instead of -1 | T: O(log(N)) <br>S: O(1) |
+|  2  | [Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/) | [Java](src/Problems/modifiedBinarySearch/SmallestLetterGreaterThanTarget.java) | the idea is to find the point where left crosses right, and then return one character ahead. if they didn't cross; meaning that target is in the array, then we return right | T: O(log(N)) <br>S: O(1) |
 
 
-## 11) Sequences
+## 12) Sequences
 #
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
