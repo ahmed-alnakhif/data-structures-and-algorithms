@@ -1,25 +1,25 @@
 package Problems.modifiedBinarySearch;
 
 /**
- * Given an array of integers nums which is sorted in ascending order, and an
- * integer target, write a function to search target in nums. If target exists,
- * then return its index. Otherwise, return -1.
+ * Given a sorted array of distinct integers and a target value, return the
+ * index if the target is found. If not, return the index where it would be if
+ * it were inserted in order.
  * 
  * You must write an algorithm with O(log n) runtime complexity.
  * 
  * 
+ * 
  * Example 1:
  * 
- * Input: nums = [-1,0,3,5,9,12], target = 9
- * Output: 4
- * Explanation: 9 exists in nums and its index is 4
+ * Input: nums = [1,3,5,6], target = 5
+ * Output: 2
+ * Example 2:
  * 
- * 
- * follow-up : what if we don't know if the arrya is sorted asc or desc? 
- * answer: compare first and last element to know. Then modify the binary search accordingly
+ * Input: nums = [1,3,5,6], target = 2
+ * Output: 1
  */
 
-public class BinarySearch {
+public class SearchInsertPosition {
 
     public static int search(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
@@ -34,7 +34,7 @@ public class BinarySearch {
             }
         }
 
-        return -1;
+        return left;
     }
 
     public static void main(String[] args) {

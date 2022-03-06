@@ -143,6 +143,7 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Binary Search](https://leetcode.com/problems/binary-search/) | [Java](src/Problems/modifiedBinarySearch/BinarySearch.java) | 1. left and right pointers <br>2. mid = (left+right)/2 <br>3. if val < target, divide the array and move left to mid + 1 <br>4. if val > target, divide the array and move right to mid - 1 | T: O(log(N)) <br>S: O(1) |
+|  2  | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [Java](src/Problems/modifiedBinarySearch/SearchInsertPosition.java) | 1. same as binary search. But if we didn't find the value, then we return left instead of -1 | T: O(log(N)) <br>S: O(1) |
 
 
 ## 11) Sequences
