@@ -149,8 +149,14 @@
 |  4  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)  | [Java](src/Problems/modifiedBinarySearch/FirstandLastPositionOfElement.java) | 1. first find the position of the target <br>2. scan right side <br> 3. scan left side | Time: O(log(N)) <br> Space: O(1) |
 |  5  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/) | [Java](src/Problems/modifiedBinarySearch/SearchSortedArrayOfUnknownSize.java) | 1. find the right bound by comparing reader with target. if value > target then we found the upper bound <br>2. regular binary search | Time: O(log(N)) <br> Space: O(1) |
 
-## 12) Sequences
-#
+
+## 12) Top Kth Elements
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [Java](src/Problems/topKElements/KthLargestElement.java) | 1. min queue to hold k elements <br>2. traverse and add nums to min heap. <br>3. if size > k then poll so we only keep the largest k elements <br>4. return top in the heap | T: O(N * log(k)) <br>S: O(k) |
+
+
+## 13) Sequences
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
