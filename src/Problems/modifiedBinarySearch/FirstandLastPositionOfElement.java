@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.modifiedBinarySearch;
 
 import java.util.Arrays;
 
@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class FirstandLastPositionOfElement {
 
-    public int[] searchRange(int[] nums, int target) {
+    public static int[] searchRange(int[] nums, int target) {
         int[] answer = { -1, -1 };
         int pos = Arrays.binarySearch(nums, target);
 
@@ -40,7 +40,7 @@ public class FirstandLastPositionOfElement {
         return answer;
     }
 
-    public void run() {
+    public static void main(String[] args) {
         int[] nums = { 5, 7, 7, 8, 8, 10 };
         int target = 8;
         System.out.println(searchRange(nums, target));
