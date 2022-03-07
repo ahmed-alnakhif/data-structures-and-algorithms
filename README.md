@@ -192,6 +192,7 @@
 | 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)
 | 39  | [Find Disappeared Numbers](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | [Java](src/Problems/Sequences/FindDisappearedNumbers.java) | 1. mark the index of each num as negative <br>2. check if all numbers are negative | T: O(N) <br>S: O(1)
 | 40  | [Find Duplicate Numbers](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [Java](src/Problems/Sequences/FindDuplicateNumbers.java) | 1. mark the index of each num as negative <br>2. if num in the index is already negative, then it's a duplicate | T: O(N) <br>S: O(1)
+|  41  | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](src/Problems/Sequences/MinimumAbsoluteDifference.java) | 1. sort the array <br>2. calculate min diff while traversing <br>3. if equal to min diff pairs, then add to result <br>4. else, clear result and update min diff pairs | Time: O(log(N)) <br> Space: O(1) |
 
 
 
