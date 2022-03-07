@@ -1,0 +1,27 @@
+When to use Top K elements pattern?
+    - when the question asks for top / largest / smallest / most frequent K elements 
+
+Ways to solve problems that fall under this patter:
+    - when the question asks for K smallest, we use max heap
+    - when the question asks for K largest, we use min heap
+
+Steps: 
+    1. choose min/max heap
+    2. ordering criteria
+        - file size
+        - distance to origin
+        - frequency 
+    3. iterate on all elements and fill the heap up to size K 
+
+Examples: 
+    1) Kth largest elements in an array
+    2) top K frequent elements
+    3) top K frequent words
+    4) kth largest element in a stream
+    5) K closest points to origin 
+    6) sort character by frequenecy
+    7) rearrange string K distant apart
+    8) reorganize string
+    9) task scheduler 
+    10) find K closest points
+    11) frequency stack
