@@ -10,40 +10,66 @@ import java.util.Arrays;
  * before it are smaller, and all elements after it are greater
  * 
  * There are different versions of quickSort that pick pivot in different ways.
+ * 
+ * Worst case:
+ *      n^2 when always choosing a wrong pivot (the largest element). To avoid that,
+ *      make the first partition recursive call on which side that has fewer elements log(n)
+ * 
+ * Optimization: 
+ *      - Pivot picking:
+ *          - consider pickig 3 elements and take a median as pivot
+ *          - or consider using the median of the first, middle, and last from a block   
  */
 
 public class QuickSort {
 
-    public static void quickSort(int[] arr, int left, int right) {
-        if (left >= right) {
+    public static void improvedQuickSort(int[] arr, int start, int end) {
+        while (start < end) { // improve worst case space stack
+
+            int pivot = partition2(arr, start, end);
+
+            // for better performance, always start with the smaller size side
+            if (pivot - start < end - pivot) {
+                quickSort(arr, start, pivot - 1);
+                start = pivot + 1;
+            } else {
+                quickSort(arr, pivot + 1, end);
+                end = pivot - 1;
+            }
+        }
+    }
+
+    public static void quickSort(int[] arr, int start, int end) {
+        if (start >= end) {
             return;
         }
 
-        int pivot = partition2(arr, left, right);
-        quickSort(arr, left, pivot - 1);
-        quickSort(arr, pivot + 1, right);
+        int pivot = partition2(arr, start, end);
+
+        quickSort(arr, start, pivot - 1);
+        quickSort(arr, pivot + 1, end);
     }
 
-    public static int partition1(int[] arr, int left, int right) {
-        int pivot = right;
-        int i = left - 1, j = left;
+    public static int partition1(int[] arr, int start, int end) {
+        int pivot = end;
+        int i = start - 1, j = start;
 
         while (j < pivot) {
-            if (arr[j] < arr[pivot]) {
+            if (arr[j] <= arr[pivot]) {
                 i++;
                 swap(arr, i, j);
             }
 
             j++;
         }
-        swap(arr, i + 1, right);
+        swap(arr, i + 1, end);
 
         return i + 1;
     }
 
-    public static int partition2(int[] arr, int left, int right) {
-        int pivot = right;
-        int i = left, j = right;
+    public static int partition2(int[] arr, int start, int end) {
+        int pivot = end;
+        int i = start, j = end;
 
         while (i < j) {
             if (arr[i] <= arr[pivot]) {
