@@ -1,17 +1,11 @@
 package algorithms.other;
 
-import java.util.Arrays;
 
 /**
  * What's Quick Select?
  * - Finds the k-th smallest element
  * - Partition around kth element (put everything smaller than Kth element on
- * the left side, and everything larger on the right side )
- * 
- * 
- * 
- * 
- * 
+ *   the left side, and everything larger on the right side )
  */
 public class QuickSelect {
 
