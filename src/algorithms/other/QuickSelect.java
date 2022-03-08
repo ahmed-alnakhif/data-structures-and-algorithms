@@ -3,7 +3,7 @@ package algorithms.other;
 
 /**
  * What's Quick Select?
- * - Finds the k-th smallest element
+ * - Finds the k-th element
  * - Partition around kth element (put everything smaller than Kth element on
  *   the left side, and everything larger on the right side )
  */
