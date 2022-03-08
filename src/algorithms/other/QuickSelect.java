@@ -1,5 +1,6 @@
 package algorithms.other;
 
+import java.util.Random;
 
 /**
  * What's Quick Select?
@@ -9,41 +10,43 @@ package algorithms.other;
  */
 public class QuickSelect {
 
-    public static int quickSort(int[] arr, int start, int end, int k) {
+    public static int quickSelect(int[] arr, int start, int end, int k) {
         if (start == end) {
             return arr[start];
         }
 
-        int pivot = partition(arr, start, end);
+        Random random = new Random();
+        int pivot = start + random.nextInt(end - start);
+        pivot = partition(arr, start, end, pivot);
 
         if (pivot == k) {
             return arr[k];
         } else if (pivot < k) {
-            return quickSort(arr, pivot + 1, end, k);
+            return quickSelect(arr, pivot + 1, end, k);
         } else {
-            return quickSort(arr, start, pivot - 1, k);
+            return quickSelect(arr, start, pivot - 1, k);
         }
     }
 
-    public static int partition(int[] arr, int start, int end) {
-        int pivot = end;
-        int i = start, j = end;
-
-        while (i < j) {
-            if (arr[i] <= arr[pivot]) {
-                i++;
-            }
-
-            if (arr[j] > arr[pivot]) {
-                j--;
-            }
-
-            if (i < j) {
-                swap(arr, i, j);
-            }
+    public static int partition(int[] arr, int start, int end, int pivotIndex) {
+        int pivot = arr[pivotIndex];
+        
+        // 1. move pivot to end
+        swap(arr, pivotIndex, end);
+        int storeIndex = start;
+    
+        // 2. move all smaller elements to the left
+        for (int i = start; i <= end; i++) {
+          if (arr[i] < pivot) {
+            swap(arr, storeIndex, i);
+            storeIndex++;
+          }
         }
-
-        return j;
+    
+        // 3. move pivot to its final place
+        swap(arr, storeIndex, end);
+    
+        return storeIndex;
     }
 
     private static void swap(int[] arr, int i, int j) {
@@ -55,6 +58,6 @@ public class QuickSelect {
     public static void main(String[] args) {
         int[] arr = { 2, 1, 4, 13, 14, 12, 3, 16, 5, 2, 10 };
         int kth = arr.length; // largest element
-        System.out.println(quickSort(arr, 0, arr.length - 1, kth - 1));
+        System.out.println(quickSelect(arr, 0, arr.length - 1, kth - 1));
     }
 }

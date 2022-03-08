@@ -3,7 +3,10 @@ package Problems.topKElements;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+import algorithms.other.QuickSelect;
+
 public class KthLargestElement {
+    
 
     // T: O(N*log(N)), S: O(1)
     public static int findKthLargest(int[] nums, int k) {
@@ -26,7 +29,12 @@ public class KthLargestElement {
         return minHeap.peek();
     }
 
+    //using quick select
+    public static int findKthLargest3(int[] nums, int k) {
+        return QuickSelect.quickSelect(nums, 0, nums.length - 1, nums.length - k);
+    }
+
     public static void main(String[] args) {
-        System.out.println(findKthLargest(new int[] { 3, 2, 1, 5, 6, 4 }, 2));
+        System.out.println(findKthLargest3(new int[] { 3, 2, 1, 5, 6, 4 }, 2));
     }
 }

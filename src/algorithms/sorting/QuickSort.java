@@ -1,6 +1,7 @@
 package algorithms.sorting;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and
@@ -26,15 +27,18 @@ public class QuickSort {
     public static void improvedQuickSort(int[] arr, int start, int end) {
         while (start < end) { // improve worst case space stack
 
-            int pivot = partition2(arr, start, end);
+            //improve pivot selection
+            Random random = new Random();
+            int pivotIndex = start + random.nextInt(end - start);
+            pivotIndex = partition3(arr, start, end, pivotIndex); //only partition3 approach works with random pivot
 
             // for better performance, always start with the smaller size side
-            if (pivot - start < end - pivot) {
-                quickSort(arr, start, pivot - 1);
-                start = pivot + 1;
+            if (pivotIndex - start < end - pivotIndex) {
+                quickSort(arr, start, pivotIndex - 1);
+                start = pivotIndex + 1;
             } else {
-                quickSort(arr, pivot + 1, end);
-                end = pivot - 1;
+                quickSort(arr, pivotIndex + 1, end);
+                end = pivotIndex - 1;
             }
         }
     }
@@ -44,7 +48,7 @@ public class QuickSort {
             return;
         }
 
-        int pivot = partition2(arr, start, end);
+        int pivot = partition1(arr, start, end);
 
         quickSort(arr, start, pivot - 1);
         quickSort(arr, pivot + 1, end);
@@ -88,6 +92,26 @@ public class QuickSort {
         return j;
     }
 
+    public static int partition3(int[] arr, int start, int end, int pivotIndex) {
+        int pivot = arr[pivotIndex];
+        // 1. move pivot to end
+        swap(arr, pivotIndex, end);
+        int storeIndex = start;
+    
+        // 2. move all smaller elements to the left
+        for (int i = start; i <= end; i++) {
+          if (arr[i] < pivot) {
+            swap(arr, storeIndex, i);
+            storeIndex++;
+          }
+        }
+    
+        // 3. move pivot to its final place
+        swap(arr, storeIndex, end);
+    
+        return storeIndex;
+    }
+
     private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
@@ -96,11 +120,11 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = { 2, 1, 4, 13, 14, 12, 3, 16, 5, 2, 10 };
-        quickSort(arr, 0, arr.length - 1);
+        improvedQuickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
 
         int[] arr2 = { 10, 16, 8, 12, 15, 6, 3, 9, 5 };
-        quickSort(arr2, 0, arr2.length - 1);
+        improvedQuickSort(arr2, 0, arr2.length - 1);
         System.out.println(Arrays.toString(arr2));
 
     }
