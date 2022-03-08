@@ -30,6 +30,10 @@ public class Utils {
         Collections.rotate(list, k);
     }
 
+    public static void swap(List<Integer> list, int i, int j) {
+        Collections.swap(list, i, j);
+    }
+
     public static int frequency(List<Integer> list, int k) {
         return Collections.frequency(list, k);
     }
