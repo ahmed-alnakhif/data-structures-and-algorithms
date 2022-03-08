@@ -157,6 +157,7 @@
 |  2  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | [Java](src/Problems/topKElements/TopKFrequentElements.java) | 1. map to count frequency <br>2. min heap to hold k elements <br>3. iterate through map and add words to min heap. <br>4. if size > k then poll so we only keep the largest k elements <br>4. return all elements in min heap | T: O(N * log(k)) <br>S: O(k) |
 |  3  | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | [Java](src/Problems/topKElements/TopKFrequentWords.java) | 1. map to count frequency <br>2. min heap to hold k elements <br>3. iterate through map and add words to min heap. <br>4. if size > k then poll so we only keep the largest k elements <br>4. return all elements in min heap in a reversed order | T: O(N * log(k)) <br>S: O(k) |
 |  4  | [Sort Chars By Frequency](https://leetcode.com/problems/top-k-frequent-words/) | [Java](src/Problems/topKElements/SortCharactersByFrequency.java) | 1. map to count frequency. Whenever we see an existing char, we icrease the string as well <br>2. min heap to get max freq first <br>3. return all elements in max heap| T: O(N * log(N)) <br>S: O(N) |
+|  5  | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | [Java](src/Problems/topKElements/KthLargestElementInStream.java) | 1. use min heap <br>2. maintain heap size whenever we add an item | T: O(N * log(N)) <br>S: O(N) |
 
 
 ## 13) Sequences
