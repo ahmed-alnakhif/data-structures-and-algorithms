@@ -1,33 +1,42 @@
 package Problems.topKElements;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
- * Given a string s, rearrange the characters of s so that any two adjacent
- * characters are not the same.
- * 
- * Return any possible rearrangement of s or return "" if not possible.
- * 
+ * Given a string s and an integer k, rearrange s such that the same characters
+ * are at least distance k from each other. If it is not possible to rearrange
+ * the string, return an empty string "".
  * 
  * 
  * Example 1:
  * 
- * Input: s = "aab"
- * Output: "aba"
+ * Input: s = "aabbcc", k = 3
+ * Output: "abcabc"
+ * Explanation: The same letters are at least a distance of 3 from each other.
  * Example 2:
  * 
- * Input: s = "aaab"
+ * Input: s = "aaabc", k = 3
  * Output: ""
+ * Explanation: It is not possible to rearrange the string.
  */
 
-public class ReorganizeString {
+public class ReorganizeStringKDistanceApart {
 
-    public static String reorganizeString(String str) {
+    public static String rearrangeString(String str, int k) {
+        if (k <= 1) {
+            return str;
+        }
+
         Map<Character, Integer> charFrequencyMap = new HashMap<>();
         for (char chr : str.toCharArray()) {
             charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
+            if (charFrequencyMap.get(chr) > (str.length() + 1) / 2) {
+                return "";
+            }
         }
 
         PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<Map.Entry<Character, Integer>>(
@@ -36,21 +45,25 @@ public class ReorganizeString {
         // add all characters to the max heap
         maxHeap.addAll(charFrequencyMap.entrySet());
 
-        Map.Entry<Character, Integer> previousEntry = null;
+        Queue<Map.Entry<Character, Integer>> queue = new LinkedList<>();
         StringBuilder resultString = new StringBuilder(str.length());
         while (!maxHeap.isEmpty()) {
             Map.Entry<Character, Integer> currentEntry = maxHeap.poll();
 
-            // add the previous entry back in the heap if its frequency is greater than zero
-            if (previousEntry != null && previousEntry.getValue() > 0) {
-                maxHeap.offer(previousEntry);
-            }
-
             // append the current character to the result string and decrement its count
             resultString.append(currentEntry.getKey());
             currentEntry.setValue(currentEntry.getValue() - 1);
-            
-            previousEntry = currentEntry;
+
+            queue.offer(currentEntry);
+
+            // add item waiting in the queue if we reach k distance
+            if (queue.size() == k) {
+                Map.Entry<Character, Integer> entry = queue.poll();
+                if (entry.getValue() > 0) {
+                    maxHeap.offer(entry);
+                }
+            }
+
         }
 
         // if successful in appending all the characters to the result string, return it
@@ -58,6 +71,6 @@ public class ReorganizeString {
     }
 
     public static void main(String[] args) {
-        System.out.println(reorganizeString("vvvlo"));
+        System.out.println(rearrangeString("vvvlo", 2));
     }
 }
