@@ -160,6 +160,7 @@
 |  5  | [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/) | [Java](src/Problems/topKElements/KthLargestElementInStream.java) | 1. use min heap <br>2. maintain heap size whenever we add an item | T: O(N * log(N)) <br>S: O(N) |
 |  6  | [Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/) | [Java](src/Problems/topKElements/FindKClosestElements.java) | combination of binary search and two pointers <br>1. use BS to find closest element <br>2. initalize left and right pointer to get expand outward <br>3. once we have our window size, build the result from left to right | T: O(log(N) + k) <br>S: O(1) |
 |  7  | [Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/) | [Java](src/Problems/topKElements/LeastNumberOfUniqueIntegers.java) | 1. map to count occurance <br>2. min Heap <br>3. subtract k from each top element in the min heap <br>3. if k is positive, return heap size, else heap size + 1 | T: O(N*log(N)) <br>S: O(N) |
+|  8  | [Sum of Elements](https://www.educative.io/courses/grokking-the-coding-interview/qVljv3Plr67) | [Java](src/Problems/topKElements/SumOfElements.java) | the idea is to calculate the sum between k1 and k2 <br>1. add all elements to a min heap <br>2. remove elements up to k1 <br>3. calculate total sum up to k2-k1-1 | T: O(N*log(N)) <br>S: O(N) |
 
 
 ## 13) Sequences
