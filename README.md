@@ -167,7 +167,14 @@
 |  12  | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | [Java](src/Problems/topKElements/MaxFrequencyStack.java) | freq map and max heap | T: O(N*log(N)) <br>S: O(N) |
 
 
-## 13) Sequences
+## 13) Merge Two Sorted Lists
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | 1. min heap to hold the head of the two lists <br>2. poll min top and connect pointers <br>3. return head  <br>** check recursive approach for optimized solution| T: O(N * log(2)) <br>S: O(2) |
+
+
+
+## 14) Sequences
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
