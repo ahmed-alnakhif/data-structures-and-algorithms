@@ -167,7 +167,7 @@
 |  12  | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | [Java](src/Problems/topKElements/MaxFrequencyStack.java) | freq map and max heap | T: O(N*log(N)) <br>S: O(N) |
 
 
-## 13) Merge Two Sorted Lists
+## 13) K-Way Merge
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | 1. min heap to hold the head of the two lists <br>2. poll min top and connect pointers <br>3. return head  <br>** check recursive approach for optimized solution| T: O(N * log(2)) <br>S: O(2) |
@@ -175,6 +175,8 @@
 |  3  | [Kth Smallest Number in Sorted Lists](https://www.educative.io/courses/grokking-the-coding-interview/myAqDMyRXn3) | [Java](src/Problems/kWayMerge/KthSmallestNumberInSortedLists.java) | 1. add the first cells from all lists to the min heap <br>2. while our min heap is not empty, pop the first element <br>3. if count == k, then we reached our kth number <br>4. if popped element array still has elements, then we increment index of element and add it to the min heap | T: O(K * log(M)) <br>S: O(M) |
 |  4  | [Kth Smallest Number in Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Java](src/Problems/kWayMerge/KthSmallestNumberInSortedMatrix.java) | same as [Kth Smallest Number in Sorted Lists](https://www.educative.io/courses/grokking-the-coding-interview/myAqDMyRXn3) <br> optimized approach using binary search | T: O(min(K,N)+K∗logN) <br>S: O(N) |
 |  5  | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | [Java](src/Problems/kWayMerge/SmallestRange.java) | same approach but extra trackers <br>1. add the head of each list to min heap <br>2. track the max head <br>3. while we have all lists in our heap, poll top and calculate the new range <br>4. update the range if less  | T: O(N*log(M)) <br>S: O(M) |
+|  6  | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Java](src/Problems/kWayMerge/FindKSmallestPairs.java) | 1. min heap <br>2. create a pair by iterating through the first list and the first element in the second list <br>3. while we're larger than k, pop the top element and add it to the result <br>4. increment index of second list and add it to the min heap | T: O(K*log(K)) <br>S: O(K) |
+|  7  | [Find K Pairs with Largest Sums](https://www.educative.io/courses/grokking-the-coding-interview/N767x7VoYmK) | [Java](src/Problems/kWayMerge/FindKLargestPairs.java) |  | T: O(K*log(K)) <br>S: O(K) |
 
 
 
