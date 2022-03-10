@@ -1,4 +1,4 @@
-package Problems.FastAndSlowPointers;
+package Problems.fastAndSlowPointers;
 
 /**
  * Given an array of integers nums containing n + 1 integers where each integer

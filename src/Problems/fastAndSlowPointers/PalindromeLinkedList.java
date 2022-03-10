@@ -1,4 +1,4 @@
-package Problems.FastAndSlowPointers;
+package Problems.fastAndSlowPointers;
 
 /**
  * Given the head of a singly linked list, return the middle node of the linked

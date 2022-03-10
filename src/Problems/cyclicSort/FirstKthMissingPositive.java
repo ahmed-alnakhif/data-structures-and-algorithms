@@ -1,4 +1,4 @@
-package Problems.CyclicSort;
+package Problems.cyclicSort;
 
 import java.util.ArrayList;
 import java.util.Arrays;

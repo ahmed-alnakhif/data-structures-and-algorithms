@@ -1,4 +1,4 @@
-package Problems.FastAndSlowPointers;
+package Problems.fastAndSlowPointers;
 
 /**
  * Write an algorithm to determine if a number n is happy.

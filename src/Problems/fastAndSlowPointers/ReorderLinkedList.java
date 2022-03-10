@@ -1,4 +1,4 @@
-package Problems.FastAndSlowPointers;
+package Problems.fastAndSlowPointers;
 
 import java.util.Stack;
 
