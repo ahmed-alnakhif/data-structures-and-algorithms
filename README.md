@@ -163,6 +163,7 @@
 |  8  | [Sum of Elements](https://www.educative.io/courses/grokking-the-coding-interview/qVljv3Plr67) | [Java](src/Problems/topKElements/SumOfElements.java) | the idea is to calculate the sum between k1 and k2 <br>1. add all elements to a min heap <br>2. remove elements up to k1 <br>3. calculate total sum up to k2-k1-1 | T: O(N*log(N)) <br>S: O(N) |
 |  9  | [Reorganize String](https://leetcode.com/problems/reorganize-string/) | [Java](src/Problems/topKElements/SumOfElements.java) | 1. HashMap for freq and Max Heap <br>2. prev entry which is set to null first <br>3. curr entry we poll while heap is not empty <br>4. if prev is not null then we add it <br>5. add curr and set prev to curr  | T: O(N*log(N)) <br>S: O(N) |
 |  10  | [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart/) | [Java](src/Problems/topKElements/ReorganizeStringKDistanceApart.java) | 1. same idea as [Reorganize String](https://leetcode.com/problems/reorganize-string/) 2. instead, we just need to have a queue and push curr element and wait for queue size == k to add the element back to the heap | T: O(N*log(N)) <br>S: O(N) |
+|  11  | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | [Java](src/Problems/topKElements/TaskScheduler.java) |  | T: O(N*log(N)) <br>S: O(N) |
 
 
 ## 13) Sequences
