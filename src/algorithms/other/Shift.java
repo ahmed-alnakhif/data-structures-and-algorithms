@@ -4,7 +4,7 @@ public class Shift {
 
     public static class ShiftList {
         public void run() {
-            
+            //Collections.rotate(list, k);
         }
     }
 

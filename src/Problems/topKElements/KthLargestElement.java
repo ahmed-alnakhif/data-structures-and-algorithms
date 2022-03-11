@@ -3,7 +3,7 @@ package Problems.topKElements;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-import algorithms.other.QuickSelect;
+import algorithms.searching.QuickSelect;
 
 public class KthLargestElement {
     
