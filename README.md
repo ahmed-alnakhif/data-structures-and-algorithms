@@ -190,11 +190,11 @@
 | 2.2 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/GridTraveler.java) | 1. create a 2d table of size n+1, m+1 <br>2. base case: init table[1][1] = 1 <br>3. curr cell = left cell + bottom cell| T: O( ) <br>S: O( ) |
 | 3.1 | [Can Sum](https://leetcode.com/problems/two-sum/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/CanSum.java) | 1. base case: if target == 0, return true <br>2. base case: if target < 0, return false <br>3. recursive case: iterate through our options and calculate the remainder and pass it to the recursive func as a target <br>4. if the returned value is true, then return true <br>5. if we finished the loop, then there's no answer, return false | T: O(M * N) <br>S: O(M) |
 | 3.2 | [Can Sum](https://leetcode.com/problems/two-sum/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/CanSum.java) | 1. create a table of size target + 1 <br>2. base case: table[0] = true <br>2. recursive case: iterate through the tables cell <br>3. if the curr cell is true, then go through all the options we have, and set the table[i+option] = true | T: O(M * N) <br>S: O(M) |
-| 4.1 | [How Sum](https://leetcode.com/problems/two-sum/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/HowSum.java) | 1. base case: if target == 0, return an empty list <br>2. base case: if target < 0, return null <br>3. recursive case: iterate through all the options and calculate the remainder <br>4. call the recursive function and save it into a list <br>5. if the list is not null then we add the current option and backtrack | T: O(N * M^2) <br>S: O(M^2) |
-| 4.2 | []() | memoization: [Java]() |  | T: O( ) <br>S: O( ) |
+| 4.1 | [How Sum](https://leetcode.com/problems/two-sum/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/HowSum.java) | 1. base case: if target == 0, return an empty list <br>2. base case: if target < 0, return null <br>3. recursive case: iterate through all the options and calculate the remainder <br>4. call the recursive function and save it into a list <br>5. if the list is not null then we add the current option and backtrack | T: O(N*M^2) <br>S: O(M^2) |
+| 4.2 | [How Sum](https://leetcode.com/problems/two-sum/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/HowSum.java) | 1. create a table of size target + 1 <br>2. base case: table[0] = an empty list <br>2. recursive case: iterate through the tables cell <br>3. if the curr cell is not null, then go through all the options we have, and copy the list at the curr index + option into table[i+option] | T: O(N*M^M) <br>S: O(M^2) |
 
-| .1 | []() | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
-| .2 | []() | memoization: [Java]() |  | T: O( ) <br>S: O( ) |
+| .1 | []() | memoization: [Java]() |  | T: O( ) <br>S: O( ) |
+| .2 | []() | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
 
 ## 15) Sequences
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
