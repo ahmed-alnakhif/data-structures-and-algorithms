@@ -22,8 +22,8 @@ public class AllConstruct {
         for (int i = 0; i < table.size(); i++) {
             for (String word : wordBank) {
                 if (i + word.length() < target.length() + 1) {
-                    String suffix = target.substring(i, i + word.length());
-                    if (word.equals(suffix)) {
+                    String substring = target.substring(i, i + word.length());
+                    if (word.equals(substring)) {
                         // copy the current list + word at index i to the [i+word.length] list
                         for (List<String> comb : table.get(i)) {
                             List<String> newComb = new ArrayList<>(comb);

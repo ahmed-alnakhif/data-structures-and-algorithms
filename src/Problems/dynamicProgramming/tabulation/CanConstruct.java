@@ -17,8 +17,8 @@ public class CanConstruct {
             if (table[i] == true) {
                 for (String option : wordBank) {
                     if(i + option.length() < target.length() + 1){
-                        String suffix = target.substring(i, i + option.length());
-                        if (option.equals(suffix)) {
+                        String substring = target.substring(i, i + option.length());
+                        if (option.equals(substring)) {
                             table[i + option.length()] = true;
                         }
                     }
