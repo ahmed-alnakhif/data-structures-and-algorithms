@@ -38,6 +38,8 @@ public class AllConstruct {
         return table.get(target.length());
     }
 
+    
+
     public static void main(String[] args) {
         System.out.println(allConstruct("purple", new String[] { "purp", "p", "ur", "le", "purpl" }));
         System.out.println(allConstruct("abcdef", new String[] { "ab", "abc", "cd", "def", "abcd", "ef", "c" }));
