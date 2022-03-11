@@ -19,7 +19,7 @@ public class HowSum {
                 for (int num : nums) {
                     if (i + num < table.length) {
                         // replace list at index i + num with with list at index i + num
-                        List<Integer> list = new ArrayList<>(table[i]);
+                        List<Integer> list = new ArrayList<Integer>(table[i]);
                         list.add(num);
                         table[i+num] = list;
                     }
