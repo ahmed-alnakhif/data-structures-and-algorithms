@@ -188,8 +188,11 @@
 | 1.1 | [Fibonacci]() | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/Fib.java) | 1. create a table of size n + 1 <br>2. initialize i(0) = 0, i(1) = 1 <br>3. table[i] = table[i-1] + table[i-2] | T: O(n) <br>S: O(n) |
 | 2.1 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/GridTraveler.java) | 1. base case: if we reached the end of either row or col, return 0 <br>2. base case: we have only one cell, return 1 <br>3. recursive case: sum of shrinking by one row down + one col right | T: O( ) <br>S: O( ) |
 | 2.2 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/GridTraveler.java) | 1. create a 2d table of size n+1, m+1 <br>2. base case: init table[1][1] = 1 <br>3. curr cell = left cell + bottom cell| T: O( ) <br>S: O( ) |
+| 3.1 | [Can Sum](https://leetcode.com/problems/two-sum/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/CanSum.java) | 1. base case: if target == 0, return true <br>2. base case: if target < 0, return false <br>3. recursive case: iterate through our options and calculate the remainder and pass it to the recursive func as a target <br>4. if the returned value is true, then return true <br>5. if we finished the loop, then there's no answer, return false | T: O(M * N) <br>S: O(M) |
+| 3.2 | [Can Sum](https://leetcode.com/problems/two-sum/) | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
 
-| 2.2 | []() | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
+| .1 | []() | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
+| .2 | []() | memoization: [Java]() |  | T: O( ) <br>S: O( ) |
 
 ## 15) Sequences
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |

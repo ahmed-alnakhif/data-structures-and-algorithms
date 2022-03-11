@@ -9,11 +9,11 @@ import java.util.Map;
 
 public class CanSum {
 
-    Map<Integer, Boolean> memoMap = new HashMap<>();
+    Map<Integer, Boolean> memoMap;
 
     boolean targetSum(int target, int[] nums) {
+        memoMap = new HashMap<>();
         boolean result = canSum(target, nums);
-        memoMap.clear();
         return result;
     }
 
@@ -42,11 +42,13 @@ public class CanSum {
         return false;
     }
 
-    public void run() {
-        System.out.println(targetSum(7, new int[] { 2, 3 })); // true
-        System.out.println(targetSum(7, new int[] { 2, 3, 4, 7 })); // true
-        System.out.println(targetSum(7, new int[] { 2, 4 })); // false
-        System.out.println(targetSum(8, new int[] { 2, 3, 5 })); // true
-        System.out.println(targetSum(300, new int[] { 7, 14 })); // false
+    public static void main(String[] args) {
+        CanSum canSum = new CanSum();
+
+        System.out.println(canSum.targetSum(7, new int[] { 2, 3 })); // true
+        System.out.println(canSum.targetSum(7, new int[] { 2, 3, 4, 7 })); // true
+        System.out.println(canSum.targetSum(7, new int[] { 2, 4 })); // false
+        System.out.println(canSum.targetSum(8, new int[] { 2, 3, 5 })); // true
+        System.out.println(canSum.targetSum(300, new int[] { 7, 14 })); // false
     }
 }
