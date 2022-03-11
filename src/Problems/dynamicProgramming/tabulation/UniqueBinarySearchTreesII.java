@@ -1,4 +1,4 @@
-package Problems.dynamicProgramming;
+package Problems.dynamicProgramming.tabulation;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -33,7 +33,6 @@ public class UniqueBinarySearchTreesII {
         }
     }
 
-    // tabulation
     public static List<TreeNode> generateTrees(int n) {
         if (n == 0) {
             return new LinkedList<TreeNode>();
@@ -52,7 +51,7 @@ public class UniqueBinarySearchTreesII {
         for (int i = start; i <= end; i++) {
             // get all left trees
             List<TreeNode> leftTrees = generateTrees(start, i - 1);
-            // get all right rees
+            // get all right trees
             List<TreeNode> rightTrees = generateTrees(i + 1, end);
 
             // connect left & right to root (i)
