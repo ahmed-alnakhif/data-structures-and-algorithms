@@ -179,8 +179,15 @@
 |  7  | [Find K Pairs with Largest Sums](https://www.educative.io/courses/grokking-the-coding-interview/N767x7VoYmK) | [Java](src/Problems/kWayMerge/FindKLargestPairs.java) |  | T: O(K*log(K)) <br>S: O(K) |
 
 
+## 14) Dynamic Programming
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+| 1.1 | [Fibonacci]() | memoization: [Java](src/Problems/dynamicProgramming/memoization/Fib.java) | 1. base case: n <= 2 return 1 <br> 2. recursive case: n = n(n-1) + n(n-2) | T: O(n) <br>S: O(n) |
+| 1.1 | [Fibonacci]() | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/Fib.java) | 1. create a table of size n + 1 <br>2. initalize i(0) = 0, i(1) = 1 <br>3. table[i] = table[i-1] + table[i-2] | T: O(n) <br>S: O(n) |
+| 2.1 | []() | memoization: [Java]() |  | T: O( ) <br>S: O( ) |
+| 2.2 | []() | tabulation: [Java]() |  | T: O( ) <br>S: O( ) |
 
-## 14) Sequences
+## 15) Sequences
 |  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 | 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
