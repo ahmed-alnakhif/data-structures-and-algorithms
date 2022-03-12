@@ -15,34 +15,31 @@ public class Knapsack {
     Map<String, Integer> cache = new HashMap<String, Integer>();
 
     public int solveKnapsack(int[] profits, int[] weights, int capacity) {
-        return solveKnapSackHelper(profits, weights, capacity, 0);
-    }
+        int[][] dp = new int[profits.length][capacity + 1];
 
-    public int solveKnapSackHelper(int[] profits, int[] weights, int capacity, int index) {
-        // base case:
-        if (capacity <= 0 || index >= weights.length) {
-            return 0;
+        for (int cap = 0; cap <= capacity; cap++) {
+            if (weights[0] <= cap) {
+                dp[0][cap] = profits[0];
+            }
         }
 
-        // check cache
-        String key = capacity + "," + index;
-        if (cache.containsKey(key)) {
-            return cache.get(key);
+        //formula: 
+        //dp[i][c] = max (dp[i-1][c], profit[i] + dp[i-1][c-weight[i]])
+        for (int row = 1; row < dp.length; row++) {
+            for (int cap = 1; cap < dp[0].length; cap++) {                
+                int profitByNotPickingUpItem = dp[row - 1][cap]; //upper cell
+                
+                //if the item weight <= capacity, then [upper][cap - weight] + profit
+                int profitByPickingUpItem = 0;
+                if (weights[row] <= cap) { 
+                    profitByPickingUpItem = profits[row] + dp[row - 1][cap - weights[row]];
+                }
+
+                dp[row][cap] = Math.max(profitByPickingUpItem, profitByNotPickingUpItem);
+            }
         }
 
-        // recursive case:
-        int profitByPickingUpItem = 0;
-        if (weights[index] <= capacity) {
-            profitByPickingUpItem = profits[index]
-                    + solveKnapSackHelper(profits, weights, capacity - weights[index], index + 1);
-        }
-
-        int profitByNotPickingUpItem = solveKnapSackHelper(profits, weights, capacity, index + 1);
-
-        int max = Math.max(profitByPickingUpItem, profitByNotPickingUpItem);
-        cache.put(key, max);
-        
-        return max;
+        return dp[profits.length - 1][capacity];
     }
 
     public static void main(String[] args) {
