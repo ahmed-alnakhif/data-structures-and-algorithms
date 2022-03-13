@@ -210,6 +210,8 @@
 | 13 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/LongestCommonSubsequence.java) | 1. create a 2d table of size text1+1 and text2+1 <br>2. iterate through each cell and apply 2 rules <br>3. if matching character, then get the prev diagonal value + 1 <br>4. else, get the max of upper and left cell | T: O(M*N) <br>S: O(M*N) |
 | 14 | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTrees.java) |  | T: O(N^2) <br>S: O(N) |
 | 15 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O(N^2) <br>S: O(N) |
+| 16 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O(N^2) <br>S: O(N) |
+
 
 
 
