@@ -38,6 +38,11 @@ public class Utils {
         return Collections.frequency(list, k);
     }
 
+    public static int getTotalSum(List<Integer> list) {
+        list.stream().mapToInt(Integer::intValue).sum();
+        return list.stream().reduce((a, b) -> a + b).get();
+    }
+
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>(List.of(5, 2, 1, 3, 7, 3, 4));
         System.out.println(list);
