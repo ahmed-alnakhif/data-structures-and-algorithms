@@ -11,14 +11,14 @@ import java.util.Map;
 
 public class HowSum {
 
-    static Map<Integer, List<Integer>> memoMap;
+    Map<Integer, List<Integer>> memoMap;
 
-    static List<Integer> howSum(int target, int[] nums) {
+    List<Integer> howSum(int target, int[] nums) {
         memoMap = new HashMap<>();
         return howSumHelper(target, nums);
     }
 
-    static List<Integer> howSumHelper(int target, int[] nums) {
+    List<Integer> howSumHelper(int target, int[] nums) {
         if (target == 0) {
             return new ArrayList<>();
         }
@@ -47,10 +47,12 @@ public class HowSum {
     }
 
     public static void main(String[] args) {
-        System.out.println(howSum(7, new int[] { 2, 3 }));
-        System.out.println(howSum(7, new int[] { 5, 3, 4, 7 }));
-        System.out.println(howSum(7, new int[] { 2, 4 }));
-        System.out.println(howSum(8, new int[] { 2, 3, 5 }));
-        System.out.println(howSum(300, new int[] { 7, 14 }));
+        HowSum h = new HowSum();
+        // System.out.println(h.howSum(7, new int[] { 2, 3 }));
+        // System.out.println(h.howSum(7, new int[] { 5, 3, 4, 7 }));
+        // System.out.println(h.howSum(7, new int[] { 2, 4 }));
+        // System.out.println(h.howSum(8, new int[] { 2, 3, 5 }));
+        // System.out.println(h.howSum(300, new int[] { 7, 14 }));
+        System.out.println(h.howSum(4, new int[] { 1, 1, 2, 3 }));
     }
 }

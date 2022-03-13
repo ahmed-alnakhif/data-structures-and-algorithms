@@ -9,3 +9,7 @@ Memoization Recipe
     - add a memo map
     - add a base case to return memo map
     - store return values into memo map
+
+Side Nodes: 
+    - if we want to allow using the choice more than once, then don't add the "not include case" 
+    - if we don't want to allow using the choice more than once, then use an index

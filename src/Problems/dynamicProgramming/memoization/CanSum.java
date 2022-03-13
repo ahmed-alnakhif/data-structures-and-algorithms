@@ -13,8 +13,7 @@ public class CanSum {
 
     boolean targetSum(int target, int[] nums) {
         memoMap = new HashMap<>();
-        boolean result = canSum(target, nums);
-        return result;
+        return canSum(target, nums);
     }
 
     boolean canSum(int target, int[] nums) {
