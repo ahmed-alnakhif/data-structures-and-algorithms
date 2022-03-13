@@ -1,6 +1,8 @@
 package Problems.dynamicProgramming.tabulation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,15 +25,15 @@ public class Knapsack {
             }
         }
 
-        //formula: 
-        //dp[i][c] = max (dp[i-1][c], profit[i] + dp[i-1][c-weight[i]])
+        // formula:
+        // dp[i][c] = max (dp[i-1][c], profit[i] + dp[i-1][c-weight[i]])
         for (int row = 1; row < dp.length; row++) {
-            for (int cap = 1; cap < dp[0].length; cap++) {                
-                int profitByNotPickingUpItem = dp[row - 1][cap]; //upper cell
-                
-                //if the item weight <= capacity, then [upper][cap - weight] + profit
+            for (int cap = 1; cap < dp[0].length; cap++) {
+                int profitByNotPickingUpItem = dp[row - 1][cap]; // upper cell
+
+                // if the item weight <= capacity, then [upper][cap - weight] + profit
                 int profitByPickingUpItem = 0;
-                if (weights[row] <= cap) { 
+                if (weights[row] <= cap) {
                     profitByPickingUpItem = profits[row] + dp[row - 1][cap - weights[row]];
                 }
 
@@ -39,7 +41,28 @@ public class Knapsack {
             }
         }
 
+        System.out.println("by taking: " + SelectedElements(dp, weights, profits, capacity));
+
         return dp[profits.length - 1][capacity];
+    }
+
+    private List<Integer> SelectedElements(int dp[][], int[] weights, int[] profits, int capacity) {
+        List<Integer> result = new ArrayList<>();
+
+        int totalProfit = dp[weights.length - 1][capacity];
+        for (int i = weights.length - 1; i > 0; i--) {
+            if (totalProfit != dp[i - 1][capacity]) {
+                result.add(weights[i]);
+                capacity -= weights[i];
+                totalProfit -= profits[i];
+            }
+        }
+
+        if (totalProfit != 0) {
+            result.add(weights[0]);
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
