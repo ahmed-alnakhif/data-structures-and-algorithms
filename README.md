@@ -217,7 +217,7 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an in-degree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>  a. poll the node  <br>  b. decrement the children degree <br>  c. if child degree == 0, add it to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
-|  2  | [Course Schedule](https://leetcode.com/problems/course-schedule/) | [Java](src/Problems/topologicalSort/CourseSchedule.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. count the courses inside the while block and return if count == totalCourses | T:O(V+E) <br>S:O(V+E) |
+|  2  | [Course Schedule](https://leetcode.com/problems/course-schedule/) | [Java](src/Problems/topologicalSort/CourseSchedule.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. count the courses inside the while block <br>3. return if count == totalCourses | T:O(V+E) <br>S:O(V+E) |
 
 
 
