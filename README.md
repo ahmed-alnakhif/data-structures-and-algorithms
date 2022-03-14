@@ -216,7 +216,7 @@
 ## 15) Topological Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an inDegree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>a. poll the node  <br>b. decrement the children degree <br>c. if child degree == 0, add to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
+|  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an inDegree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>  a. poll the node  <br>b. decrement the children degree <br>c. if child degree == 0, add to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
 
 
 
