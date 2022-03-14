@@ -69,6 +69,12 @@ public class Graph {
         return adjList.get(label);
     }
 
+    Set<String> DFSWithRecursion(String root) {
+        Set<String> result = new LinkedHashSet<>();
+        recursiveDFS(result, root);
+        return result;
+    }
+
     void recursiveDFS(Set<String> visited, String source) {
         visited.add(source);
         for (String node : getAdjNodes(source)) {
@@ -76,13 +82,7 @@ public class Graph {
         }
     }
 
-    Set<String> dfs(String root) {
-        Set<String> result = new LinkedHashSet<>();
-        recursiveDFS(result, root);
-        return result;
-    }
-
-    Set<String> DFS(String root) {
+    Set<String> DFSWithStack(String root) {
         Set<String> visited = new LinkedHashSet<>();
         Stack<String> stack = new Stack<>();
 
@@ -145,8 +145,8 @@ public class Graph {
     public void run() {
         generateGraph();
         System.out.println(adjList);
-        System.out.println("dfs:" + dfs("a"));
-        System.out.println("DFS:" + DFS("a"));
+        System.out.println("dfs:" + DFSWithRecursion("a"));
+        System.out.println("DFS:" + DFSWithStack("a"));
         System.out.println("BFS:" + BFS("a"));
         System.out.println("has path: " + hasPath("d", "c"));
     }
