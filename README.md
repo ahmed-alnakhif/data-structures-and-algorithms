@@ -185,7 +185,7 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 | 1.1 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/Fib.java) | 1. base case: n <= 2 return 1 <br> 2. recursive case: n = (n-1) + (n-2) | T: O(n) <br>S: O(n) |
-| 1.1 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/Fib.java) | 1. create a table of size n + 1 <br>2. initialize i(0) = 0, i(1) = 1 <br>3. table[i] = table[i-1] + table[i-2] | T: O(n) <br>S: O(n) |
+| 1.2 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/Fib.java) | 1. create a table of size n + 1 <br>2. initialize i(0) = 0, i(1) = 1 <br>3. table[i] = table[i-1] + table[i-2] | T: O(n) <br>S: O(n) |
 | 2.1 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/GridTraveler.java) | 1. base case: if we reached the end of either row or col, return 0 <br>2. base case: we have only one cell, return 1 <br>3. recursive case: sum of shrinking by one row down + one col right | T: O( ) <br>S: O( ) |
 | 2.2 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/GridTraveler.java) | 1. create a 2d table of size n+1, m+1 <br>2. base case: init table[1][1] = 1 <br>3. curr cell = left cell + bottom cell| T: O( ) <br>S: O( ) |
 | 3.1 | [Can Sum](https://leetcode.com/problems/two-sum/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/CanSum.java) | 1. base case: if target == 0, return true <br>2. base case: if target < 0, return false <br>3. recursive case: iterate through our options and calculate the remainder and pass it to the recursive func as a target <br>4. if the returned value is true, then return true <br>5. if we finished the loop, then there's no answer, return false | T: O(M * N) <br>S: O(M) |
@@ -213,23 +213,28 @@
 | 16 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O(N^2) <br>S: O(N) |
 
 
+## 15) Dynamic Programming
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+| 1.1 | []() | memoization: [Java](src/Problems/dynamicProgramming/memoization/Fib.java) | 1. base case: n <= 2 return 1 <br> 2. recursive case: n = (n-1) + (n-2) | T: O(n) <br>S: O(n) |
 
 
-## 15) Sequences
-|  #   | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
-| ---- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
-| 1   | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
-| 2   | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |
-| 3   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
-| 4   | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/Sequences/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(N) |
-| 5   | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | [Java](src/Problems/Sequences/ProductOfArrayExceptSelf.java) | 1. calculate product and number of zeros <br>2. check number of zeros and return the proper product | O(N) |
-| 6   | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)  | [Java](src/Problems/Sequences/ValidParentheses.java) | 1. use a stack to push open brackets <br>2. check if next char is matching closing bracket && stack is empty at the end | O(N) |
-| 7   | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/Sequences/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | O(N) |
-| 8   | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  | [Java](src/Problems/TwoPointers/TwoSumII.java) | 1. use a left and a right pointer <br>2. check if the sum is equal to the target <br>3. increment left if sum is lower, decrement right if sum is larger | O(N) |
-| 9   | [Three Sum Sorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. two nested loop; first loop gets the first value, and second loop performs 2Sum (find 2 values == target) <br>2. Array must be sorted to avoid duplicates <br>3. we can use L & R pointers, hashSet, or binary search to solve 2Sum| O(N^2) |
-| 10  | [Three Sum Unsorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. since the array is not sorted, we can avoid duplicate by sorting the 3 values before adding them to the resultSet list and if the new set is not new, it won't be added again| O(N^2) |
-| 11   | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/Sequences/GroupAnagram.java) | sort each word and put it in a map where key is the word and value is a list of the words that match the sorted word| O(n* wLog(w)) | 
-| 12   | [Max Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)  | [Java](src/Problems/Sequences/MaxProductSubarray.java) |  | O(N) | 
+
+## 16) Other
+|  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
+| --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
+|  1  | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
+|  2  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |
+|  3  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
+|  4  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/Sequences/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(N) |
+|  5  | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | [Java](src/Problems/Sequences/ProductOfArrayExceptSelf.java) | 1. calculate product and number of zeros <br>2. check number of zeros and return the proper product | O(N) |
+|  6  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)  | [Java](src/Problems/Sequences/ValidParentheses.java) | 1. use a stack to push open brackets <br>2. check if next char is matching closing bracket && stack is empty at the end | O(N) |
+|  7  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/Sequences/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | O(N) |
+|  8  | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  | [Java](src/Problems/TwoPointers/TwoSumII.java) | 1. use a left and a right pointer <br>2. check if the sum is equal to the target <br>3. increment left if sum is lower, decrement right if sum is larger | O(N) |
+|  9  | [Three Sum Sorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. two nested loop; first loop gets the first value, and second loop performs 2Sum (find 2 values == target) <br>2. Array must be sorted to avoid duplicates <br>3. we can use L & R pointers, hashSet, or binary search to solve 2Sum| O(N^2) |
+|  10 | [Three Sum Unsorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. since the array is not sorted, we can avoid duplicate by sorting the 3 values before adding them to the resultSet list and if the new set is not new, it won't be added again| O(N^2) |
+|  11 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/Sequences/GroupAnagram.java) | sort each word and put it in a map where key is the word and value is a list of the words that match the sorted word| O(n* wLog(w)) | 
+|  12 | [Max Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)  | [Java](src/Problems/Sequences/MaxProductSubarray.java) |  | O(N) | 
 | 13   | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)  | [Java](src/Problems/Sequences/SearchRotatedSortedArray.java) |  | O(log(N))  | 
 | 14   | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)  | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | track prev node, traverse the linked list and switch next pointer  | O(N)  | 
 | 15   | [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)  | [Java](src/Problems/LinkedLists/LinkedListCycle.java) | 1. a slow and a faster pointer <br>2. if fast == slow, then there's a cycle  | O(N)  | 
@@ -257,7 +262,8 @@
 | 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)
 | 39  | [Find Disappeared Numbers](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | [Java](src/Problems/Sequences/FindDisappearedNumbers.java) | 1. mark the index of each num as negative <br>2. check if all numbers are negative | T: O(N) <br>S: O(1)
 | 40  | [Find Duplicate Numbers](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [Java](src/Problems/Sequences/FindDuplicateNumbers.java) | 1. mark the index of each num as negative <br>2. if num in the index is already negative, then it's a duplicate | T: O(N) <br>S: O(1)
-|  41  | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](src/Problems/Sequences/MinimumAbsoluteDifference.java) | 1. sort the array <br>2. calculate min diff while traversing <br>3. if equal to min diff pairs, then add to result <br>4. else, clear result and update min diff pairs | Time: O(log(N)) <br> Space: O(1) |
+|  41 | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](src/Problems/Sequences/MinimumAbsoluteDifference.java) | 1. sort the array <br>2. calculate min diff while traversing <br>3. if equal to min diff pairs, then add to result <br>4. else, clear result and update min diff pairs | Time: O(log(N)) <br> Space: O(1) |
+|  42 | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Problems/backtracking/WordSearch.java) | DFS | Time: O() <br> Space: O() |
 
 
 
