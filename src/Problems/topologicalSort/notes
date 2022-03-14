@@ -1,6 +1,6 @@
 What's Topological Sort?
     - a way to solve problems where some events may occurs before others 
-    - problems usually are represented as graphs with directed edges.
+    - problems usually are represented as a graph with directed edges.
     - gives us a topological ordering:
         - an ordering of the nodes in a directed graph where for each directed edge 
           from node A to node B, node A appears before node B in the ordering 
@@ -9,11 +9,15 @@ What's Topological Sort?
     - not every graph can have a topological ordering; graphs that have a cycle. 
     - the only graph which has a valid topological ordering is a directed acyclic graphs (graphs with directed edges and no cycles)
     - every tree has a topological ordering since they don't have a cycle 
-    - Algorithm: 
-        1. pick an unvisited node
-        2. perform a dfs exploring only unvisited nodes
-        3. on the dfs recursive callback, add the current node to the topological ordering in reverse order
-
+    - algorithm: 
+        1. build a graph 
+        2. build an inDegree map 
+        3. create a source queue (nodes that have 0 in-degree edges)
+        4. while the queue is not empty, 
+            a. poll the node 
+            b. decrement the children degree
+            c. if child degree == 0, add to the queue
+        5. check if we were able to add all the nodes to the result list
     - Examples: 
         1. school class prerequisites 
         2. program dependencies
