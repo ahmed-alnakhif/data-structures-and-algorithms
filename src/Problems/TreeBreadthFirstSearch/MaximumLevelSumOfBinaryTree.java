@@ -66,7 +66,7 @@ public class MaximumLevelSumOfBinaryTree {
         return maxLevel;  
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
