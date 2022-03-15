@@ -220,8 +220,7 @@
 |  2  | [Course Schedule](https://leetcode.com/problems/course-schedule/) | [Java](src/Problems/topologicalSort/CourseSchedule.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. count the courses inside the while block <br>3. return if count == totalCourses | T:O(V+E) <br>S:O(V+E) |
 |  3  | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | [Java](src/Problems/topologicalSort/CourseScheduleII.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | T:O(V+E) <br>S:O(V+E) |
 |  4  | [All Scheduling Tasks](https://www.educative.io/courses/grokking-the-coding-interview/q2YmVjQMMr3) | [Java](src/Problems/topologicalSort/AllTaskSchedulingOrders.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. instead of only polling sources from the queue, have a recursive function that does that <br>3. for every source node, remove source, decrement degrees and then backtrack | T:O(V!*E) <br> S:O(V!*E)) |
-|  5  | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [Java](src/Problems/topologicalSort/AlienDictionary.java) |  | T:O(V+N)
- <br> S:O(V+N) |
+|  5  | [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/) | [Java](src/Problems/topologicalSort/AlienDictionary.java) |  | T:O(V+N) <br> S:O(V+N) |
 |  6  | [Sequence Reconstruction](https://leetcode.com/problems/sequence-reconstruction/) | [Java](src/Problems/topologicalSort/SequenceReconstruction.java) |  | T:O() <br> S:O() |
 |  7  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | [Java](src/Problems/topologicalSort/MinimumHeightTrees.java) |  | T:O() <br> S:O() |
 
