@@ -42,7 +42,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
             return levels;
 
         queue.add(root);
-        boolean reverse = true;
+        boolean reverse = false;
         while (!queue.isEmpty()) {
             LinkedList<Integer> level = new LinkedList<>();
             int size = queue.size();
@@ -52,9 +52,9 @@ public class BinaryTreeZigzagLevelOrderTraversal {
                 if (node.right != null) queue.add(node.right);
 
                 if (reverse) {
-                    level.add(node.val);
-                } else {
                     level.addFirst(node.val);
+                } else {
+                    level.add(node.val);
                 }
             }
 
@@ -65,7 +65,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         return levels;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
