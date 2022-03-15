@@ -25,14 +25,14 @@ import java.util.Map;
 
 public class GroupAnagram {
 
-    public List<List<String>> groupAnagrams(String[] strs) {
-        if (strs.length == 0) {
+    public List<List<String>> groupAnagrams(String[] strings) {
+        if (strings.length == 0) {
             return new ArrayList<>();
         }
         
         Map<String, List<String>> map = new HashMap<>();
 
-        for (String str : strs) {
+        for (String str : strings) {
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String word = String.valueOf(chars);
