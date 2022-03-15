@@ -44,6 +44,7 @@ public class TopologicalSortAlgorithm {
         while (!sourcesQueue.isEmpty()) {
             int node = sourcesQueue.poll();
             sortedResult.add(node);
+
             for (int child : graph.get(node)) { // get the node's children to decrement their in-degrees
                 inDegree.put(child, inDegree.get(child) - 1);
                 if (inDegree.get(child) == 0) {

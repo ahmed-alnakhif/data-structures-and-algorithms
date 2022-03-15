@@ -219,10 +219,12 @@
 |  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an in-degree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>  a. poll the node  <br>  b. decrement the children degree <br>  c. if child degree == 0, add it to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
 |  2  | [Course Schedule](https://leetcode.com/problems/course-schedule/) | [Java](src/Problems/topologicalSort/CourseSchedule.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. count the courses inside the while block <br>3. return if count == totalCourses | T:O(V+E) <br>S:O(V+E) |
 |  3  | [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) | [Java](src/Problems/topologicalSort/CourseScheduleII.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | T:O(V+E) <br>S:O(V+E) |
+|  4  | [All Scheduling Tasks](https://www.educative.io/courses/grokking-the-coding-interview/q2YmVjQMMr3) | [Java](src/Problems/topologicalSort/AllTaskSchedulingOrders.java) | 1. same approach as [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) <br>2. instead of only polling sources from the queue, have a recursive function that does that <br>3. for every source node, remove source, decrement degrees and then backtrack | T:O(V!*E) <br> S:O(V!*E)) |
 
 
 
 ## 16) Other
+            
 |  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 |  1  | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
