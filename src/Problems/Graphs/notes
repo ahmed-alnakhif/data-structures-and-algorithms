@@ -1,0 +1,29 @@
+
+Graph:
+  - it's the relationship between nodes.
+  - Graph = nodes + edges
+  - e.g: nodes are courses and edges are prerequisites, nodes are cities and
+    edges are the roads
+
+Edge/Vertex:
+  - it's the connection between nodes
+
+Directed Graph:
+  - edges have a direction
+
+Undirected Graph:
+  - no direction between nodes
+
+Neighbor nodes:
+  - nodes that are connected with an edge
+
+Ways to represent graphs:
+  1) adjacency list
+  2) adjacency matrix
+  3) adjacency set
+
+
+TODO: 
+  - Dijkstra Algo. (network delay LC)
+  - Prim's or Kruskal's (minimum spanning tree)
+  - Floyd Warshall's Algo. (very rare)

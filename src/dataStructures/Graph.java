@@ -17,7 +17,7 @@ import java.util.Stack;
  * - e.g: nodes are courses and edges are prerequisites, nodes are cities and
  * edges are the roads
  * 
- * Edge/Vertix:
+ * Edge/Vertex:
  * - it's the connection between nodes
  * 
  * Directed Graph:
@@ -142,12 +142,14 @@ public class Graph {
         addEdge("d", "f");
     }
 
-    public void run() {
-        generateGraph();
-        System.out.println(adjList);
-        System.out.println("dfs:" + DFSWithRecursion("a"));
-        System.out.println("DFS:" + DFSWithStack("a"));
-        System.out.println("BFS:" + BFS("a"));
-        System.out.println("has path: " + hasPath("d", "c"));
+    public static void main(String[] args) {
+        Graph graph = new Graph();
+
+        graph.generateGraph();
+        System.out.println(graph.adjList);
+        System.out.println("dfs:" + graph.DFSWithRecursion("a"));
+        System.out.println("DFS:" + graph.DFSWithStack("a"));
+        System.out.println("BFS:" + graph.BFS("a"));
+        System.out.println("has path: " + graph.hasPath("d", "c"));
     }
 }

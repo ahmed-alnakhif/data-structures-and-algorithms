@@ -180,8 +180,15 @@
 |  6  | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Java](src/Problems/kWayMerge/FindKSmallestPairs.java) | 1. min heap <br>2. create a pair by iterating through the first list and the first element in the second list <br>3. while we're larger than k, pop the top element and add it to the result <br>4. increment index of second list and add it to the min heap | T: O(K*log(K)) <br>S: O(K) |
 |  7  | [Find K Pairs with Largest Sums](https://www.educative.io/courses/grokking-the-coding-interview/N767x7VoYmK) | [Java](src/Problems/kWayMerge/FindKLargestPairs.java) |  | T: O(K*log(K)) <br>S: O(K) |
 
+## 14) Graphs
+|  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
+| --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
+|  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V}) 
+|  2  | [Island Count]() | [Java]() |  | T: <br>S: 
 
-## 14) Dynamic Programming
+|  1  | []() | [Java]() |  | T: <br>S: 
+
+## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 | 1.1 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/Fib.java) | 1. base case: n <= 2 return 1 <br> 2. recursive case: n = (n-1) + (n-2) | T: O(n) <br>S: O(n) |
@@ -213,7 +220,7 @@
 | 16 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O(N^2) <br>S: O(N) |
 
 
-## 15) Topological Sort
+## 16) Topological Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an in-degree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>  a. poll the node  <br>  b. decrement the children degree <br>  c. if child degree == 0, add it to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
