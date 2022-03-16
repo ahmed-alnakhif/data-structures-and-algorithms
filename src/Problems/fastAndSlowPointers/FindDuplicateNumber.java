@@ -29,7 +29,7 @@ public class FindDuplicateNumber {
             fast = nums[nums[fast]];
         } while (fast != slow);
 
-        // find the enterance to the cycle
+        // find the entrance to the cycle
         slow = nums[0]; // reset to the beginning
         while (slow != fast) {
             slow = nums[slow];

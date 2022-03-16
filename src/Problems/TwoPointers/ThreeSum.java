@@ -23,6 +23,27 @@ import java.util.Set;
 public class ThreeSum {
     List<List<Integer>> result = new LinkedList<>();
 
+    public boolean isThreeSum(int[] nums){
+        for (int i = 0; i < nums.length - 2; i++) {
+            if(isTwoSum(nums, i)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isTwoSum(int[] nums, int index){
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = index + 1; i < nums.length; i++) {
+            int comp = - nums[index] - nums[i];
+            if(set.contains(comp)){
+                return true;
+            }
+            set.add(nums[i]);
+        }
+        return false;
+    }
+
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
 
@@ -86,8 +107,10 @@ public class ThreeSum {
         }
     }
 
-    public void run() {
+   public static void main(String[] args) {
+       ThreeSum t = new ThreeSum();
         int[] nums = { -1, 0, 1, 2, -1, -4 };
-        System.out.println(threeSum(nums));
+        int[] nums2 = { -1, -1, -4 };
+        System.out.println(t.isThreeSum(nums2));
     }
 }

@@ -54,7 +54,7 @@ public class PalindromeLinkedList {
         // 2) reverse second half
         ListNode secondHalfStart = getReversedLinkedList(firstHalfEnd.next);
 
-        // 3) check is a palindrome (compare from head and start of seconf half)
+        // 3) check is a palindrome (compare from head and start of second half)
         ListNode ptr1 = head, ptr2 = secondHalfStart;
         while (ptr2 != null) {
             if (ptr1.val != ptr2.val) {

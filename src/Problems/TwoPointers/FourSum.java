@@ -26,8 +26,7 @@ public class FourSum {
     List<List<Integer>> result = new LinkedList<>();
 
     public List<List<Integer>> fourSum(int[] nums, int target) {
-        if (nums.length < 4)
-            return result;
+        if (nums.length < 4) return result;
 
         Arrays.sort(nums);
 

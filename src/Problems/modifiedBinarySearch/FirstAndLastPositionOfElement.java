@@ -16,7 +16,7 @@ import java.util.Arrays;
  * Output: [3,4]
  */
 
-public class FirstandLastPositionOfElement {
+public class FirstAndLastPositionOfElement {
 
     public static int[] searchRange(int[] nums, int target) {
         int[] answer = { -1, -1 };

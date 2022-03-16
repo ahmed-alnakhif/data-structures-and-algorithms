@@ -43,14 +43,14 @@ public class IPO {
         PriorityQueue<Project> maxHeapPro = new PriorityQueue<>((a, b) -> b.pro - a.pro);
         PriorityQueue<Project> minHeapCap = new PriorityQueue<>((a, b) -> a.cap - b.cap);
 
-        int availCaptial = w;
+        int availCapital = w;
 
         for (int i = 0; i < profit.length; i++) {
             minHeapCap.add(new Project(capital[i], profit[i]));
         }
 
         for (int i = 0; i < k; i++) {
-            while (!minHeapCap.isEmpty() && minHeapCap.peek().cap <= availCaptial) {
+            while (!minHeapCap.isEmpty() && minHeapCap.peek().cap <= availCapital) {
                 maxHeapPro.add(minHeapCap.poll());
             }
 
@@ -58,10 +58,10 @@ public class IPO {
                 break;
             }
 
-            availCaptial += maxHeapPro.poll().pro;
+            availCapital += maxHeapPro.poll().pro;
         }
 
-        return availCaptial;
+        return availCapital;
     }
 
     public static void main(String[] args) {

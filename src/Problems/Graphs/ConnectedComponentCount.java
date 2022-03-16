@@ -12,18 +12,6 @@ import java.util.Map;
 public class ConnectedComponentCount {
     HashSet<Integer> visited = new HashSet<>();
 
-    void dfs(int source, Map<Integer, List<Integer>> graph) {
-        if (visited.contains(source)) {
-            return;
-        }
-
-        visited.add(source);
-
-        for (Integer node : graph.get(source)) {
-            dfs(node, graph);
-        }
-    }
-
     int connectedComponentCount(Map<Integer, List<Integer>> graph) {
         int count = 0;
 
@@ -35,6 +23,18 @@ public class ConnectedComponentCount {
         }
 
         return count;
+    }
+
+    void dfs(int source, Map<Integer, List<Integer>> graph) {
+        if (visited.contains(source)) {
+            return;
+        }
+
+        visited.add(source);
+
+        for (Integer node : graph.get(source)) {
+            dfs(node, graph);
+        }
     }
 
     Map<Integer, List<Integer>> generateGraph() {

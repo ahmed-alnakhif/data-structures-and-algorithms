@@ -12,6 +12,22 @@ import java.util.Map;
 public class LargestComponent {
     HashSet<Integer> visited = new HashSet<>();
 
+    int largestComponent(Map<Integer, List<Integer>> graph) {
+        int max = 0;
+
+        for (Map.Entry<Integer, List<Integer>> entry : graph.entrySet()) {
+            int count = 0;
+            if (!visited.contains(entry.getKey())) {
+                count = dfs(entry.getKey(), graph, count);
+                if (count > max) {
+                    max = count;
+                }
+            }
+        }
+
+        return max;
+    }
+
     int dfs(int source, Map<Integer, List<Integer>> graph, int count) {
         if (visited.contains(source)) {
             return count;
@@ -23,22 +39,6 @@ public class LargestComponent {
             count = dfs(node, graph, count);
         }
         return count;
-    }
-
-    int largestComponent(Map<Integer, List<Integer>> graph) {
-        int max = 0;
-
-        for (Map.Entry<Integer, List<Integer>> entry : graph.entrySet()) {
-            int count = 0;
-            if (!visited.contains(entry.getKey())) {
-                count = dfs(entry.getKey(), graph, count);
-                if(count > max){
-                    max = count;
-                }
-            }
-        }
-
-        return max;
     }
 
     Map<Integer, List<Integer>> generateGraph() {
