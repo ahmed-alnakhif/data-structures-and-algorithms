@@ -1,5 +1,5 @@
 {
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx8G -Xms100m -javaagent:\"/home/ahmed/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -javaagent:\"/home/ahmed/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "better-comments.multilineComments": true,
@@ -51,4 +51,5 @@
       "italic": false
     }
   ],
+  "java.dependency.packagePresentation": "hierarchical"
 }

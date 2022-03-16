@@ -43,7 +43,7 @@ public class ShortestPath {
         return bfs(graph, source, dest);
     }
 
-    Map<Integer, List<Integer>> generateGraph() {
+    private Map<Integer, List<Integer>> generateGraph() {
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(1, List.of(2, 5));
         graph.put(2, List.of(1, 3));
@@ -57,9 +57,10 @@ public class ShortestPath {
         return graph;
     }
 
-    public void run() {
-        Map<Integer, List<Integer>> graph = generateGraph();
+    public static void main(String[] args) {
+        ShortestPath s = new ShortestPath();
+        Map<Integer, List<Integer>> graph = s.generateGraph();
         System.out.println(graph);
-        System.out.println(shortestPath(graph, 1, 6));
+        System.out.println(s.shortestPath(graph, 1, 6));
     }
 }

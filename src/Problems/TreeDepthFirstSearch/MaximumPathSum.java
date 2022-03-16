@@ -54,4 +54,8 @@ public class MaximumPathSum {
 
         return root.val + Math.max(leftMaxGain, rightMaxGain);
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
