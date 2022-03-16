@@ -183,10 +183,10 @@
 ## 14) Graphs
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V}) 
-|  2  | [Island Count]() | [Java]() |  | T: <br>S: 
+|  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V) |  
+|  2  | [Island Count](https://leetcode.com/problems/number-of-islands/) | [Java](src/Problems/Graphs/NumberOfIslands.java) |  | T:O(N*M) <br>S:O(M*N) | 
 
-|  1  | []() | [Java]() |  | T: <br>S: 
+|  1  | []() | [Java]() |  | T: <br>S:  |
 
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -292,6 +292,12 @@
 |  7  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | Sliding Window
 |  8  | [Two Sum](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | use hash map if array is not sorted <br>1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | Two Pointers
 
+# Companies 
+
+## Google
+|  #  | Title                                                   | Solution                                      | Type              |
+| --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
+|  1  | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | [Java](src/Companies/google/CountCompleteTreeNodes.java) | Trees |
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
