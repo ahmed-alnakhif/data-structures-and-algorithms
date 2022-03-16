@@ -32,41 +32,34 @@ public class BinaryTreePaths {
         }
     }
 
-    List<String> result = new LinkedList<>();
-    LinkedList<String> list = new LinkedList<>();
+    List<String> allPaths = new ArrayList<>();
 
     public List<String> binaryTreePaths(TreeNode root) {
-        preOrderDFS(root);
-        return result;
+        dfs(root, new StringBuilder());
+        return allPaths;
     }
 
-    private void preOrderDFS(TreeNode root) {
-        if (root == null) return;
+    void dfs(TreeNode root, StringBuilder path) {
+        if (root == null)
+            return;
 
-        list.add(String.valueOf(root.val));
+        int originalLength = path.length();
+
+        path.append(root.val);
 
         if (isLeafNode(root)) {
-            result.add(serialize(list));
+            allPaths.add(path.toString());
         } else {
-            preOrderDFS(root.left);
-            preOrderDFS(root.right);
+            path.append("->");
+            dfs(root.left, path);
+            dfs(root.right, path);
         }
 
-        list.removeLast();
+        // backtrack to the previous path
+        path.setLength(originalLength);
     }
 
-    private boolean isLeafNode(TreeNode root){
+    private boolean isLeafNode(TreeNode root) {
         return root != null && root.left == null && root.right == null;
-    }
-
-    private String serialize(List<String> list) {
-        String str = "";
-        for (int i = 0; i < list.size(); i++) {
-            str += list.get(i);
-            if (i + 1 != list.size()) {
-                str += "->";
-            }
-        }
-        return str;
     }
 }

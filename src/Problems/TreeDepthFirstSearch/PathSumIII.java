@@ -57,7 +57,7 @@ public class PathSumIII {
         subPathSumDFS(root.left, currSum, targetSum);
         subPathSumDFS(root.right, currSum, targetSum);
 
-        // remove curruent sum, so we don't use it with other subtrees paths
+        // decrement current sum, so it doesn't affect other subtrees paths
         map.put(currSum, map.get(currSum) - 1);
     }
 }
