@@ -55,7 +55,26 @@ public class PathWithGivenSequence {
         return preOrderDFS(root.left, currPath, sequence) || preOrderDFS(root.right, currPath, sequence);
     }
 
+    private boolean findPathRecursive(TreeNode root, int[] sequence, int index) {
+
+        if (root == null) return false;
+    
+        if (index >= sequence.length || root.val != sequence[index]) return false;
+    
+        // if the current node is a leaf, add it is the end of the sequence, we have found a path!
+        if (isLeafNode(root) && index == sequence.length - 1) return true;
+    
+        // recursively call to traverse the left and right sub-tree
+        // return true if any of the two recursive call return true
+        return findPathRecursive(root.left, sequence, index + 1)
+            || findPathRecursive(root.right, sequence, index + 1);
+      }
+
     private boolean isLeafNode(TreeNode root){
         return root != null && root.left == null && root.right == null;
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
