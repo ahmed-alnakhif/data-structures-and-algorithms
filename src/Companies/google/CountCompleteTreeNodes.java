@@ -41,8 +41,7 @@ public class CountCompleteTreeNodes {
     }
 
     private void dfs(TreeNode root) {
-        if (root == null)
-            return;
+        if (root == null) return;
 
         count += 1;
 

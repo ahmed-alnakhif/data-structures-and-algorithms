@@ -16,14 +16,10 @@ public class GridTraveler {
 
     static long gridTraveler(int row, int col) {
         //base case: if reach end of either row or col
-        if (row * col == 0) {
-            return 0;
-        }
+        if (row * col == 0) return 0;
 
         //base case: I have only one cell
-        if (row == 1 && col == 1) {
-            return 1;
-        }
+        if (row == 1 && col == 1) return 1;
 
         String cell = row > col ? row + "," + col : col + "," + row;
 

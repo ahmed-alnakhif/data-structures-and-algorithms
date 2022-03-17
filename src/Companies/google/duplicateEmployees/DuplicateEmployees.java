@@ -62,18 +62,18 @@ public class DuplicateEmployees {
         HashMap<String, String> employeesMap = new HashMap<>();
 
         // try {
-        // CSVReader reader = new CSVReaderBuilder(new FileReader(file)).build();
+            // CSVReader reader = new CSVReaderBuilder(new FileReader(file)).build();
 
-        // reader.readAll().stream().forEach((record) -> {
-        // if (employeesMap.containsKey(record[1])) {
-        // duplicateEmployeesSet.add(record[0]);
-        // duplicateEmployeesSet.add(employeesMap.get(record[1]));
-        // }
+            // reader.readAll().stream().forEach((record) -> {
+                // if (employeesMap.containsKey(record[1])) {
+                    // duplicateEmployeesSet.add(record[0]);
+                    // duplicateEmployeesSet.add(employeesMap.get(record[1]));
+                // }
 
-        // employeesMap.put(record[1], record[0]);
-        // });
+                // employeesMap.put(record[1], record[0]);
+            // });
         // } catch (Exception e) {
-        // System.out.println(e);
+            // System.out.println(e);
         // }
 
         // JSONParser parser = new JSONParser();
@@ -86,13 +86,7 @@ public class DuplicateEmployees {
         //     String name = (String) jsonObject.get("name");
         //     System.out.println(name);
 
-        //     String city = (String) jsonObject.get("city");
-        //     System.out.println(city);
-
-        //     String job = (String) jsonObject.get("job");
-        //     System.out.println(job);
-
-        //     // loop array
+        // loop array
         //     JSONArray cars = (JSONArray) jsonObject.get("cars");
         //     Iterator<String> iterator = cars.iterator();
         //     while (iterator.hasNext()) {
