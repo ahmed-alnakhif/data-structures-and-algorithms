@@ -297,7 +297,8 @@
 ## Google
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | [Java](src/Companies/google/CountCompleteTreeNodes.java) | Trees |
+|  1  | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | [Java](src/Companies/google/CountCompleteTreeNodes.java) | Trees, Recursion |
+|  2  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [Java](src/Companies/google/LongestIncreasingPathInMatrix.java) | Recursion |
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
