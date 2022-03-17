@@ -12,8 +12,7 @@ import java.util.List;
 public class RepeatedDNASequences {
 
     public List<String> findRepeatedDnaSequences(String s) {
-        if (s.length() < 10)
-            return new ArrayList<>();
+        if (s.length() < 10) return new ArrayList<>();
 
         List<String> result = new LinkedList<>();
         HashMap<String, Integer> map = new HashMap<>();
@@ -24,8 +23,9 @@ public class RepeatedDNASequences {
         while (right < s.length()) {
             window = s.substring(left, right + 1);
             map.put(window, map.getOrDefault(window, 0) + 1);
-            if (map.get(window) == 2)
+            if (map.get(window) == 2){
                 result.add(window);
+            }
             right++;
             left++;
         }

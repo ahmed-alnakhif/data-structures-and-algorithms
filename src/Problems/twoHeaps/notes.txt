@@ -1,5 +1,5 @@
 We usually use two heaps pattern when: 
-    1. we want to divide somthing to two parts.
+    1. we want to divide something to two parts.
         - first part end is max heap
         - second part start is min heap
         - examples: 

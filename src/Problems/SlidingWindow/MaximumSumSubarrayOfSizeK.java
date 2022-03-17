@@ -24,8 +24,7 @@ public class MaximumSumSubarrayOfSizeK {
             right++;
             left++;
 
-            if (right == arr.length)
-                break;
+            if (right == arr.length) break;
 
             sum = sum - arr[left - 1] + arr[right];
             max = Math.max(max, sum);

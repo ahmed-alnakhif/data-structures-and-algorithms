@@ -21,7 +21,7 @@ public class MergeTwoSortedLists {
         }
     }
 
-    // recurive solution
+    // recursive solution
     // T: O(n + m), S: O(1)
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         if (list1 == null)
