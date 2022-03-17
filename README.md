@@ -300,6 +300,7 @@
 |  1  | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | [Java](src/Companies/google/CountCompleteTreeNodes.java) | Trees, Recursion |
 |  2  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [Java](src/Companies/google/LongestIncreasingPathInMatrix.java) | Recursion |
 |  3  | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Recursion |
+|  3  | [Valid Word Square](https://leetcode.com/problems/valid-word-square/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Recursion |
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
