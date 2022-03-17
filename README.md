@@ -167,6 +167,7 @@
 |  10  | [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart/) | [Java](src/Problems/topKElements/ReorganizeStringKDistanceApart.java) | 1. same idea as [Reorganize String](https://leetcode.com/problems/reorganize-string/) 2. instead, we just need to have a queue and push curr element and wait for queue size == k to add the element back to the heap | T: O(N*log(N)) <br>S: O(N) |
 |  11  | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | [Java](src/Problems/topKElements/TaskScheduler.java) |  | T: O(N*log(N)) <br>S: O(N) |
 |  12  | [Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/) | [Java](src/Problems/topKElements/MaxFrequencyStack.java) | freq map and max heap | T: O(N*log(N)) <br>S: O(N) |
+|  13  | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | [Java](src/Problems/topKElements/KClosestPointsToOrigin.java) | max heap <br>1. add each point with its distance to the heap <br>2. poll if size > k | T: O(N*log(N)) <br>S: O(N) |
 
 
 ## 13) K-Way Merge
@@ -233,8 +234,7 @@
 
 
 
-## 16) Other
-            
+## 17) Other
 |  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 |  1  | [Two Sum](https://leetcode.com/problems/two-sum/)  | [Java](src/Problems/Sequences/TwoSum.java) | 1. HashMap <br>2. for loop to check if complement exists in the map | O(N) |
