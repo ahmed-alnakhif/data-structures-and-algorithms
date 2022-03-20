@@ -278,6 +278,7 @@
 | 40  | [Find Duplicate Numbers](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | [Java](src/Problems/Sequences/FindDuplicateNumbers.java) | 1. mark the index of each num as negative <br>2. if num in the index is already negative, then it's a duplicate | T: O(N) <br>S: O(1)
 |  41 | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](src/Problems/Sequences/MinimumAbsoluteDifference.java) | 1. sort the array <br>2. calculate min diff while traversing <br>3. if equal to min diff pairs, then add to result <br>4. else, clear result and update min diff pairs | Time: O(log(N)) <br> Space: O(1) |
 |  42 | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Problems/backtracking/WordSearch.java) | DFS | Time: O() <br> Space: O() |
+|  43 | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/facebook/CanBeEqual.java) | 1. sort the two arrays <br>2. return false if they're not equal | Time: O(N*log(N)) <br> Space: O(1) |
 
 
 
