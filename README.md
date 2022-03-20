@@ -309,8 +309,8 @@
 ## Facebook
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays Manipulation |
-|  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays Manipulation |
+|  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays |
+|  1  | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java)| Arrays |
 
 
 ## Uber
