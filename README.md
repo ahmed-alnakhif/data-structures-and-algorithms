@@ -279,6 +279,7 @@
 |  41 | [Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/) | [Java](src/Problems/Sequences/MinimumAbsoluteDifference.java) | 1. sort the array <br>2. calculate min diff while traversing <br>3. if equal to min diff pairs, then add to result <br>4. else, clear result and update min diff pairs | Time: O(log(N)) <br> Space: O(1) |
 |  42 | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Problems/backtracking/WordSearch.java) | DFS | Time: O() <br> Space: O() |
 |  43 | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/facebook/CanBeEqual.java) | 1. sort the two arrays <br>2. return false if they're not equal | Time: O(N*log(N)) <br> Space: O(1) |
+|  44 | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java) | 1. start from student 1 <br>2. at the beginning the owner and the curr holder are the same <br>3. prev student signs the book <br>3. change the curr holder to the prev student <br>4. if owner == curr holder, we stop| Time: O( ) <br> Space: O(1) |
 
 
 
@@ -304,6 +305,12 @@
 |  4  | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Recursion |
 |  5  | [Android Unlock Patterns](https://leetcode.com/problems/android-unlock-patterns/) | [Java](src/Companies/google/AndroidUnlockPatterns.java) | Recursion |
 
+
+## Facebook
+|  #  | Title                                                   | Solution                                      | Type              |
+| --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
+|  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays Manipulation |
+|  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays Manipulation |
 
 
 ## Uber
