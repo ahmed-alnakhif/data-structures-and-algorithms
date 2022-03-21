@@ -280,6 +280,9 @@
 |  42 | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Problems/backtracking/WordSearch.java) | DFS | Time: O() <br> Space: O() |
 |  43 | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/facebook/CanBeEqual.java) | 1. sort the two arrays <br>2. return false if they're not equal | Time: O(N*log(N)) <br> Space: O(1) |
 |  44 | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java) | 1. start from student 1 <br>2. at the beginning the owner and the curr holder are the same <br>3. prev student signs the book <br>3. change the curr holder to the prev student <br>4. if owner == curr holder, we stop| Time: O( ) <br> Space: O(1) |
+|  45 | [Pair Sums](https://leetcode.com/problems/combination-sum/) | [Java](src/Companies/facebook/PairSums.java) | 1. create a freq map <br>2. if map contains the complement, then we have to handle two cases: <br> a. if the two numbers are different, then multiply their values <br> b. if the numbers are the same, subtract one from one of the values <br>3. return count / 2 since the algo. is calculating the work twice for the same pair | Time: O(N) <br> Space: O(N) |
+| 46 | [Combination Sum](https://leetcode.com/problems/combination-sum/) | [Java](https://leetcode.com/problems/combination-sum/) | 1. same as fining a combination in an array <br>2. keep subtracting targetSum, and if == 0, add to our result | Time: O(N^(T/M + 1)) <br> Space: O(T/M) |
+
 
 
 
@@ -310,8 +313,8 @@
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays |
-|  1  | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java)| Arrays |
-
+|  2  | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java)| Arrays |
+|  3  | [Pair Sums](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](https://leetcode.com/problems/combination-sum/) | Hash Tables | 
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |

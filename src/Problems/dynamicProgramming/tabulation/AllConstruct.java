@@ -45,7 +45,7 @@ public class AllConstruct {
         System.out.println(allConstruct("abcdef", new String[] { "ab", "abc", "cd", "def", "abcd", "ef", "c" }));
         System.out.println(allConstruct("skateboard", new String[] { "bo", "rd", "ate", "t", "ska", "sk", "boar" }));
         System.out.println(allConstruct("aaaaaaaaaaaaz", new String[] { "a", "aa", "aaa", "aaaa", "aaaaa" }));
-        System.out.println(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+        System.out.println(allConstruct("eeeeeeeef",
                 new String[] { "e", "ee", "eee", "eeee", "eeeee" }));
     }
 }

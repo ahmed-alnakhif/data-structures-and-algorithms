@@ -14,10 +14,10 @@ public class CountSum {
         for (int num = 1; num < dp.length; num++) {
             int currSum = nums[num - 1];
             for (int sum = 0; sum < dp[0].length; sum++) {
-                //decision not to include 
+                // decision not to include
                 dp[num][sum] = dp[num - 1][sum];
 
-                //decision to include if less than sum
+                // decision to include if less than sum
                 if (currSum <= sum) {
                     dp[num][sum] += dp[num - 1][sum - currSum];
                 }
@@ -30,6 +30,7 @@ public class CountSum {
     public static void main(String[] args) {
         CountSum c = new CountSum();
         System.out.println(c.countSubsets(new int[] { 1, 1, 2, 3 }, 4));
+        System.out.println(c.countSubsets(new int[] { 2, 3, 6, 7 }, 7));
         System.out.println(c.countSubsets(new int[] { 1, 2, 7, 1, 5 }, 9));
     }
 }

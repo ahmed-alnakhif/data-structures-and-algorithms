@@ -38,9 +38,9 @@ public class Subsets {
         // decision to include nums[index]
         subset.add(nums[index]);
         backtrack(index + 1, nums);
+        subset.removeLast();
 
         // decision not to include nums[index]
-        subset.removeLast();
         backtrack(index + 1, nums);
     }
 
