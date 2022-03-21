@@ -284,6 +284,7 @@
 | 46  | [Combination Sum](https://leetcode.com/problems/combination-sum/) | [Java](src/algorithms/other/recursion/CombinationSum.java) | 1. same as fining a combination in an array <br>2. keep subtracting targetSum, and if == 0, add to our result | Time: O(N^(T/M + 1)) <br> Space: O(T/M) |
 | 47  | [Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/) | [Java](src/Companies/google/WeakCharactersInTheGame.java) | 1. sort attacks in a descending order, if attack is the same then sort defense in ascending order <br>2. keep track of max <br>3. if defense value is less than max, then add it to the result | Time: O(N*log(N))) <br> Space: O(1) |
 | 48  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | 1. use a stack to go from left to right, then from right to left <br>2. while traversing, if the top of the stack < arr[i], then we keep popping and increment our result cell <br>3. we do the same from right to left, but with a fresh temp array so we can get the counts without being affected by the previous pass | Time: O(N) <br> Space: O(N) |
+| 49  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | 1. iterate through each character <br>2. check if letter, digit, else <br>3. using ascii table, we can subtract the value of the char from 'A' or '0', then add # rotations, and then add 'A' or '0' again to convert it back to a string | Time: O(N) <br> Space: O(N) |
 
 
 
@@ -318,6 +319,8 @@
 |  2  | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java)| Arrays |
 |  3  | [Pair Sums](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](https://leetcode.com/problems/combination-sum/) | Hash Tables |
 |  4  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | Arrays & Stack |
+|  5  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | Strings |
+
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
