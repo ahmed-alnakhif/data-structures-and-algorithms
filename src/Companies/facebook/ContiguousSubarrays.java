@@ -1,13 +1,42 @@
 package Companies.facebook;
 
-public class ContiguousSubarrays {
-    
-    int[] countSubarrays(int[] arr) {
+import java.util.Stack;
 
+public class ContiguousSubarrays {
+
+    int[] countSubarrays(int[] arr) {
+        Stack<Integer> stack = new Stack<>();
+        int[] output = new int[arr.length];
+
+        // Train's moving from L to R, picking up indices and carrying as max on left
+        for (int i = 0; i < arr.length; i++) {
+            // Drop off everyone that is too small
+            while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
+                output[i] += output[stack.pop()];
+            }
+            stack.push(i);
+
+            // increment by one since each cell returns 1
+            output[i]++;
+        }
+        stack.clear();
+
+        //we use a temp array so we can count fresh values for left move
+        int[] temp = new int[arr.length];
+        for (int i = arr.length - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && arr[stack.peek()] < arr[i]) {
+                int idx = stack.pop();
+                output[i] += temp[idx];
+                temp[i] += temp[idx];
+            }
+            stack.push(i);
+            temp[i]++;
+        }
+
+        return output;
     }
 
-
-    //T: O(N^2), S: O(1)
+    // T: O(N^2), S: O(1)
     int[] countSubarrays2(int[] arr) {
         int[] output = new int[arr.length];
 
