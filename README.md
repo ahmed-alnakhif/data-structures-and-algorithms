@@ -287,6 +287,7 @@
 | 49  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | 1. iterate through each character <br>2. check if letter, digit, else <br>3. using ascii table, we can subtract the value of the char from 'A' or '0', then add # rotations, and then add 'A' or '0' again to convert it back to a string | Time: O(N) <br> Space: O(N) |
 | 50  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | the idea here is to have a currNum and lastNum vars. <br>currNum would parse the currNum and lastNum would perform the operation if we fulfilled or conditions <br>  1. iterate through each char <br>2. if digit, then add it to a var currNum <br>3. if operation OR last char, then check which operation <br>4. if it's + or -, then we want to add lastNum seen to the result <br>5. if * or /, then we want to apply that to the lastNum seen <br>6. reset currNum and update operation | Time: O(N) <br> Space: O(1) |
 | 51  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | 1. handle null nodes <br>2. root1.val = root1.val + root2.val <br>3. root1.left = recursive call and pass left for both trees <br>4. root1.right = recursive call and pass right for both tree <br>5. return root1 | Time: O(N + M) <br> Space: O(N) |
+| 52  | [Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Java](src/Companies/facebook/OceanView.java) | 1. iterate from the end and track max <br>2. if building is greater than curr max, then it has an ocean view | Time: O(N) <br> Space: O(1) |
 
 
 
@@ -326,7 +327,7 @@
 |  6  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | Strings
 |  7  | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Companies/facebook/WordSearch.java) | Recursion |
 |  8  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | Trees | 
-
+|  9  | [Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Java](src/Companies/facebook/OceanView.java) | Arrays | 
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
