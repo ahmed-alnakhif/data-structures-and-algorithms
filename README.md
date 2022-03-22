@@ -286,7 +286,7 @@
 | 48  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | 1. use a stack to go from left to right, then from right to left <br>2. while traversing, if the top of the stack < arr[i], then we keep popping and increment our result cell <br>3. we do the same from right to left, but with a fresh temp array so we can get the counts without being affected by the previous pass | Time: O(N) <br> Space: O(N) |
 | 49  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | 1. iterate through each character <br>2. check if letter, digit, else <br>3. using ascii table, we can subtract the value of the char from 'A' or '0', then add # rotations, and then add 'A' or '0' again to convert it back to a string | Time: O(N) <br> Space: O(N) |
 | 50  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | the idea here is to have a currNum and lastNum vars. <br>currNum would parse the currNum and lastNum would perform the operation if we fulfilled or conditions <br>  1. iterate through each char <br>2. if digit, then add it to a var currNum <br>3. if operation OR last char, then check which operation <br>4. if it's + or -, then we want to add lastNum seen to the result <br>5. if * or /, then we want to apply that to the lastNum seen <br>6. reset currNum and update operation | Time: O(N) <br> Space: O(1) |
-
+| 51  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | 1. handle null nodes <br>2. root1.val = root1.val + root2.val <br>3. root1.left = recursive call and pass left for both trees <br>4. root1.right = recursive call and pass right for both tree <br>5. return root1 | Time: O(N + M) <br> Space: O(N) |
 
 
 
@@ -300,6 +300,8 @@
 |  5  | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)  | [Java](src/Problems/SlidingWindow/LongestRepeatingCharacterReplacement.java) | Sliding Window 
 |  7  | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | Sliding Window
 |  8  | [Two Sum](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | use hash map if array is not sorted <br>1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | Two Pointers
+
+
 
 # Companies 
 
@@ -322,6 +324,8 @@
 |  4  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | Arrays & Stack |
 |  5  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | Strings |
 |  6  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | Strings
+|  7  | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Companies/facebook/WordSearch.java) | Recursion |
+|  8  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | Trees |
 
 
 ## Uber
