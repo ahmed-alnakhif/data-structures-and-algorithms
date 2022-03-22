@@ -325,7 +325,7 @@
 |  5  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | Strings |
 |  6  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | Strings
 |  7  | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Companies/facebook/WordSearch.java) | Recursion |
-|  8  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | Trees |
+|  8  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | Trees | 
 
 
 ## Uber
