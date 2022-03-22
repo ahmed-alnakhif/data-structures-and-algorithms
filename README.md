@@ -321,6 +321,7 @@
 |  3  | [Pair Sums](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](https://leetcode.com/problems/combination-sum/) | Hash Tables |
 |  4  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | Arrays & Stack |
 |  5  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | Strings |
+|  6  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | Strings
 
 
 ## Uber
