@@ -1,19 +1,19 @@
 package Problems.Intervals;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class IntervalListIntersections {
 
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
-        LinkedList<int[]> list = new LinkedList<>();
+        ArrayList<int[]> result = new ArrayList<>();
         int i = 0, j = 0;
 
         while (i < firstList.length && j < secondList.length) {
-            int start = Math.max(firstList[i][0], secondList[j][0]);
-            int end = Math.min(firstList[i][1], secondList[j][1]);
+            int maxStart = Math.max(firstList[i][0], secondList[j][0]);
+            int minEnd = Math.min(firstList[i][1], secondList[j][1]);
 
-            if (start <= end) {
-                list.add(new int[] { start, end });
+            if (maxStart <= minEnd) {
+                result.add(new int[] { maxStart, minEnd });
             }
 
             if (firstList[i][1] < secondList[j][1]) {
@@ -23,10 +23,12 @@ public class IntervalListIntersections {
             }
         }
 
-        return list.toArray(new int[list.size()][2]);
+        return result.toArray(new int[result.size()][2]);
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        IntervalListIntersections i = new IntervalListIntersections();
+
         int[][] firstList = new int[][] {
                 { 0, 2 }, { 5, 10 }, { 13, 23 }, { 24, 25 }
         };
@@ -34,6 +36,6 @@ public class IntervalListIntersections {
                 { 1, 5 }, { 8, 12 }, { 15, 24 }, { 25, 26 }
         };
 
-        System.out.println(intervalIntersection(firstList, secondList));
+        System.out.println(i.intervalIntersection(firstList, secondList));
     }
 }

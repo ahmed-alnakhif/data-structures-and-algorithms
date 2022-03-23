@@ -317,7 +317,7 @@
 |  3  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [Java](src/Companies/google/LongestIncreasingPathInMatrix.java) | Recursion |
 |  4  | [Robot Room Cleaner](https://leetcode.com/problems/robot-room-cleaner/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Recursion |
 |  5  | [Android Unlock Patterns](https://leetcode.com/problems/android-unlock-patterns/) | [Java](src/Companies/google/AndroidUnlockPatterns.java) | Recursion |
-
+|  6  | [Weak Characters in the Game](https://leetcode.com/problems/the-number-of-weak-characters-in-the-game/) | [Java](src/Companies/google/WeakCharactersInTheGame.java) | Arrays |
 
 ## Facebook
 |  #  | Title                                                   | Solution                                      | Type              |

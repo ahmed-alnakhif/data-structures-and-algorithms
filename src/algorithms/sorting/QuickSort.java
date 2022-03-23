@@ -18,32 +18,32 @@ import java.util.Random;
  * 
  * Optimization: 
  *      - Pivot picking:
- *          - consider pickig 3 elements and take a median as pivot
+ *          - consider picking 3 elements and take a median as pivot
  *          - or consider using the median of the first, middle, and last from a block   
  */
 
 public class QuickSort {
 
-    public static void improvedQuickSort(int[] arr, int start, int end) {
+    public void improvedQuickSort(int[] arr, int start, int end) {
         while (start < end) { // improve worst case space stack
 
-            //improve pivot selection
+            //to improve pivot selection
             Random random = new Random();
             int pivotIndex = start + random.nextInt(end - start);
-            pivotIndex = partition3(arr, start, end, pivotIndex); //only partition3 approach works with random pivot
+            pivotIndex = partition2(arr, start, end, pivotIndex); //only partition3 approach works with random pivot
 
             // for better performance, always start with the smaller size side
             if (pivotIndex - start < end - pivotIndex) {
-                quickSort(arr, start, pivotIndex - 1);
+                improvedQuickSort(arr, start, pivotIndex - 1);
                 start = pivotIndex + 1;
             } else {
-                quickSort(arr, pivotIndex + 1, end);
+                improvedQuickSort(arr, pivotIndex + 1, end);
                 end = pivotIndex - 1;
             }
         }
     }
 
-    public static void quickSort(int[] arr, int start, int end) {
+    public void quickSort(int[] arr, int start, int end) {
         if (start >= end) {
             return;
         }
@@ -54,7 +54,41 @@ public class QuickSort {
         quickSort(arr, pivot + 1, end);
     }
 
-    public static int partition1(int[] arr, int start, int end) {
+    public int partition1(int[] arr, int start, int end) {
+        int pivot = end;
+        
+        swap(arr, start, pivot);
+        for (int i = start; i <= end; i++) {
+            if (arr[i] < arr[pivot]) {
+                swap(arr, i, start++);
+            }
+        }
+        swap(arr, start, pivot);
+
+        return start;
+    }
+
+    public int partition2(int[] arr, int start, int end, int pivotIndex) {
+        int pivot = arr[pivotIndex];
+        // 1. move pivot to end
+        swap(arr, pivotIndex, end);
+        int storeIndex = start;
+    
+        // 2. move all smaller elements to the left
+        for (int i = start; i <= end; i++) {
+          if (arr[i] < pivot) {
+            swap(arr, storeIndex++, i);
+          }
+        }
+    
+        // 3. move pivot to its final place
+        swap(arr, storeIndex, end);
+    
+        return storeIndex;
+    }
+
+    
+    public int partition3(int[] arr, int start, int end) {
         int pivot = end;
         int i = start - 1, j = start;
 
@@ -71,7 +105,7 @@ public class QuickSort {
         return i + 1;
     }
 
-    public static int partition2(int[] arr, int start, int end) {
+    public int partition4(int[] arr, int start, int end) {
         int pivot = end;
         int i = start, j = end;
 
@@ -92,39 +126,21 @@ public class QuickSort {
         return j;
     }
 
-    public static int partition3(int[] arr, int start, int end, int pivotIndex) {
-        int pivot = arr[pivotIndex];
-        // 1. move pivot to end
-        swap(arr, pivotIndex, end);
-        int storeIndex = start;
-    
-        // 2. move all smaller elements to the left
-        for (int i = start; i <= end; i++) {
-          if (arr[i] < pivot) {
-            swap(arr, storeIndex, i);
-            storeIndex++;
-          }
-        }
-    
-        // 3. move pivot to its final place
-        swap(arr, storeIndex, end);
-    
-        return storeIndex;
-    }
-
-    private static void swap(int[] arr, int i, int j) {
+    private void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
 
     public static void main(String[] args) {
+        QuickSort qSort = new QuickSort();
+
         int[] arr = { 2, 1, 4, 13, 14, 12, 3, 16, 5, 2, 10 };
-        improvedQuickSort(arr, 0, arr.length - 1);
+        qSort.improvedQuickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
 
         int[] arr2 = { 10, 16, 8, 12, 15, 6, 3, 9, 5 };
-        improvedQuickSort(arr2, 0, arr2.length - 1);
+        qSort.improvedQuickSort(arr2, 0, arr2.length - 1);
         System.out.println(Arrays.toString(arr2));
 
     }

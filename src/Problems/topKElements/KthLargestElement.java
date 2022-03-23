@@ -31,7 +31,8 @@ public class KthLargestElement {
 
     //using quick select
     public static int findKthLargest3(int[] nums, int k) {
-        return QuickSelect.quickSelect(nums, 0, nums.length - 1, nums.length - k);
+        QuickSelect q = new QuickSelect();
+        return q.quickSelect(nums, 0, nums.length - 1, nums.length - k);
     }
 
     public static void main(String[] args) {
