@@ -293,7 +293,7 @@
 | 55  | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) | [Java](src/Problems/Trees/LCAInBinaryTree.java) | 1. base case: root == null, return null <br>2. base case: root == p or q, return root <br> 2. recursive case: search in the left subtree, search in the right subtree <br>3. if both left & right are null, then return null <br> 4. if either are not null, return the one that's not null <br>5. if both are not null then we find the parent and we return it | Time: O(N) <br> Space: O(N) |
 | 56  | [Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/) | [Java](src/Problems/Trees/LCAInBinaryTreeII.java) | same approach as [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) but we need to explore all nodes to make sure that we have both p & q <br> we can use a boolean for that | Time: O(N) <br> Space: O(N) |
 | 57  | [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [Java](src/Problems/Trees/LCAInBinaryTreeIII.java) | same approach as [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) OR [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Time: O(N) <br> Space: O(N) |
-
+| 58  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | 1. get the ordering of the characters <br>2. compare each word to the next <br>3. if prev word is greater than the next one, then return false | Time: O(N*M) <br> Space: O(1) |
 
 
 ## Grokking the Coding Interview
@@ -333,6 +333,10 @@
 |  7  | [Word Search](https://leetcode.com/problems/word-search/) | [Java](src/Companies/facebook/WordSearch.java) | Recursion |
 |  8  | [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) | [Java](src/Problems/Trees/MergeTwoBinaryTrees.java) | Trees | 
 |  9  | [Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/) | [Java](src/Companies/facebook/OceanView.java) | Arrays | 
+| 10  | [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [Java](src/Problems/Trees/LCAInBinaryTreeIII.java) | Trees |
+| 11  | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [Java](src/Problems/Permutations/GenerateParentheses.java) | Recursion |
+| 12  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | [Java](src/Problems/Intervals/IntervalListIntersections.java) | Intervals |
+
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
