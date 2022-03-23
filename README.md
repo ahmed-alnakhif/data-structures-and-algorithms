@@ -294,7 +294,7 @@
 | 58  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | 1. get the ordering of the characters <br>2. compare each word to the next <br>3. if prev word is greater than the next one, then return false | Time: O(N*M) <br> Space: O(1) |
 
 
-## Grokking the Coding Interview
+# Grokking the Coding Interview
 |  #  | Title                                                   | Solution                                      | Pattern           |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP) | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | Sliding Window
