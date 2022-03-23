@@ -17,7 +17,7 @@ package Problems.TreeDepthFirstSearch;
  */
 
 public class MaximumPathSum {
-    public class TreeNode {
+    class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
