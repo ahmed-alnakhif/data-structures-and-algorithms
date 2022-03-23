@@ -187,8 +187,6 @@
 |  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V) |  
 |  2  | [Island Count](https://leetcode.com/problems/number-of-islands/) | [Java](src/Problems/Graphs/NumberOfIslands.java) |  | T:O(N*M) <br>S:O(M*N) | 
 
-|  1  | []() | [Java]() |  | T: <br>S:  |
-
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
