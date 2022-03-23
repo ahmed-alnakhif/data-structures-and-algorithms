@@ -334,6 +334,7 @@
 | 10  | [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [Java](src/Problems/Trees/LCAInBinaryTreeIII.java) | Trees |
 | 11  | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | [Java](src/Problems/Permutations/GenerateParentheses.java) | Recursion |
 | 12  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | [Java](src/Problems/Intervals/IntervalListIntersections.java) | Intervals |
+| 13  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | Strings |
 
 
 ## Uber
