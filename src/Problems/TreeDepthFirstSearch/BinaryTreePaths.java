@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public class BinaryTreePaths {
-    public class TreeNode {
+    class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -40,8 +40,7 @@ public class BinaryTreePaths {
     }
 
     void dfs(TreeNode root, StringBuilder path) {
-        if (root == null)
-            return;
+        if (root == null) return;
 
         int originalLength = path.length();
 
