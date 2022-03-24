@@ -36,38 +36,39 @@ import java.util.Queue;
  * Column 2: Only node 7 is in this column.
  */
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
-class Node {
-    TreeNode node;
-    int row;
-    int col;
-
-    Node(TreeNode node, int row, int col) {
-        this.node = node;
-        this.row = row;
-        this.col = col;
-    }
-}
 
 public class BinaryTreeVerticalOrderII {
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+    
+        TreeNode() {
+        }
+    
+        TreeNode(int val) {
+            this.val = val;
+        }
+    
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+    
+    class Node {
+        TreeNode node;
+        int row;
+        int col;
+    
+        Node(TreeNode node, int row, int col) {
+            this.node = node;
+            this.row = row;
+            this.col = col;
+        }
+    }
 
     // T: O(N*Log(N)), S: O(N)
     public List<List<Integer>> verticalTraversal(TreeNode root) {

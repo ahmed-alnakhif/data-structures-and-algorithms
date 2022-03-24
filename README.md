@@ -296,6 +296,7 @@
 | 60  | [Coin Change](https://leetcode.com/problems/coin-change/) | [Java](src/Problems/dynamicProgramming/CoinChange.java) | 1. create a table of size amount + 1 and fill with max value <br> 2. base case: dp[0] = 0 <br>3. recursive case: iterate through the table cells <br>4. if num - coin > 0, then get the min of the current cell and 1 + dp[num - coin] | Time: O(N*C) <br> Space: O(C) |
 | 61  | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrder.java) | 1. create map to store col and list nodes that share the same col <br>2. create a queue for BFS approach <br>3. while queue is not empty, we poll and check if our map has the column and add the value to the list <br>4. if left!=null, we add it to the queue with col -1 <br>5. if right!=null, we add it to the queue with col+1 <br>6. to get columns in order, we have a min and max vars to track columns, and then we fill our result from min -> max | Time: O(N) <br> Space: O(N) |
 | 62  | [Binary Tree Vertical Order Traversal II](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrderII.java) | 1. same as [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) <br>2. additionally, we need store every row and col of each node <br>3. before adding column list to the result, we need to have a custom comparator to sort values in the same row and same col | Time: O(N*Log(N)) <br> Space: O(N) |
+| 63  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [Java](src/Companies/facebook/MakeParenthesesValid.java) | the idea is to eliminate paris as we iterate through the string. <br>1. keep track of open a close parentheses <br>2. if char is closing, decrement open if > 0  <br>3. else, increment close <br>3. return the sum of open and close | Time: O(N*Log(N)) <br> Space: O(N) |
 
 
 # Grokking the Coding Interview
@@ -344,7 +345,7 @@
 | 15  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/MaximumPathSum.java) | Trees
 | 16  | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrder.java) | Trees |
 | 17  | [Binary Tree Vertical Order Traversal II](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrderII.java) | Trees |
-
+| 18  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [Java](src/Companies/facebook/MakeParenthesesValid.java) | Strings | 
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |

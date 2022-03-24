@@ -1,6 +1,5 @@
 package Companies.facebook;
 
-import java.util.Arrays;
 
 /**
  * There are n students, numbered from 1 to n, each with their own yearbook.
