@@ -291,7 +291,8 @@
 | 55  | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) | [Java](src/Problems/Trees/LCAInBinaryTree.java) | 1. base case: root == null, return null <br>2. base case: root == p or q, return root <br> 2. recursive case: search in the left subtree, search in the right subtree <br>3. if both left & right are null, then return null <br> 4. if either are not null, return the one that's not null <br>5. if both are not null then we find the parent and we return it | Time: O(N) <br> Space: O(N) |
 | 56  | [Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/) | [Java](src/Problems/Trees/LCAInBinaryTreeII.java) | same approach as [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) but we need to explore all nodes to make sure that we have both p & q <br> we can use a boolean for that | Time: O(N) <br> Space: O(N) |
 | 57  | [Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/) | [Java](src/Problems/Trees/LCAInBinaryTreeIII.java) | same approach as [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/) OR [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Time: O(N) <br> Space: O(N) |
-| 58  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | 1. get the ordering of the characters <br>2. compare each word to the next <br>3. if prev word is greater than the next one, then return false | Time: O(N*M) <br> Space: O(1) |
+| 58  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | 1. get the ordering of the characters <br>2. compare each word to the next <br>3. if prev word is greater than the next one, then return false | Time: O(N*M) <br> Space: O(1) |
+| 59  | [Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/ | [Java](src/Problems/dynamicProgramming/MinCostForTickets.java) | 1. Have 3 queues for each ticket duration <br>2. iterate through each day <br>3. remove all expired tickets from the three queues <br>4. add all 3 possible options to the queues <br>5. track minCost and return it | Time: O(N) <br> Space: O(1) |
 
 
 # Grokking the Coding Interview
@@ -337,7 +338,8 @@
 | 12  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | [Java](src/Problems/Intervals/IntervalListIntersections.java) | Intervals |
 | 13  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/solution/) | [Java](src/Companies/facebook/VerifyingAlienDictionary.java) | Strings |
 | 14  | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/) | [Java](src/Problems/TreeDepthFirstSearch/SumRootToLeafNumbers.java) | Trees |
-| 13  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/MaximumPathSum.java) | Trees
+| 15  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/MaximumPathSum.java) | Trees
+
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
