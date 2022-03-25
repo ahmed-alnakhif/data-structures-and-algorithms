@@ -332,7 +332,7 @@
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Make Two Arrays Equal by Reversing](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](src/Companies/google/RobotRoomCleaner.java) | Arrays |
 |  2  | [Passing Yearbooks](https://leetcode.com/discuss/interview-question/614096/facebook-interview-preparation-question-passing-yearbooks) | [Java](src/Companies/facebook/PassingYearbooks.java)| Arrays |
-|  3  | [Pair Sums](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-sub-arrays/) | [Java](https://leetcode.com/problems/combination-sum/) | Hash Tables |
+|  3  | [Pair Sums](https://leetcode.com/problems/combination-sum/) | [Java](src/Companies/facebook/PairSums.java) | Hash Tables |
 |  4  | [Contiguous Subarrays](https://leetcode.com/discuss/interview-question/579606/count-contiguous-subarrays) | [Java](src/Companies/facebook/ContiguousSubarrays.java) | Arrays & Stack |
 |  5  | [Rotational Cipher](https://www.hackerrank.com/challenges/caesar-cipher-1/problem) | [Java](src/Companies/facebook/RotationalCipher.java) | Strings |
 |  6  | [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/) | [Java](src/Companies/facebook/BasicCalculatorII.java) | Strings
