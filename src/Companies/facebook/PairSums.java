@@ -27,6 +27,7 @@ public class PairSums {
         currComb = new ArrayList<>();
         count = 0;
         comb(nums, target, 0);
+        System.out.println(count);
         return count;
     }
 

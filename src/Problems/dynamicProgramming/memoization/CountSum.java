@@ -46,7 +46,7 @@ public class CountSum {
         CountSum c = new CountSum();
         System.out.println(c.countSubsets(new int[] { 1, 1, 2, 3 }, 4));
         System.out.println(c.countSubsets(new int[] { 1, 2, 7, 1, 5 }, 9));
-        System.out.println(c.countSubsets(new int[] { 1, 2, 3, 4, 3 }, 6)); //()
+        System.out.println(c.countSubsets(new int[] { 1, 2, 3, 4, 3 }, 6)); 
         System.out.println(c.countSubsets(new int[] { 1, 5, 3, 3, 3 }, 6));
     }
 }

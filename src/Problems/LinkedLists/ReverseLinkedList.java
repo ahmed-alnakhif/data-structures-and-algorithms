@@ -3,7 +3,7 @@ package Problems.LinkedLists;
 
 public class ReverseLinkedList {
 
-    public class ListNode {
+    class ListNode {
         int val;
         ListNode next;
 
@@ -25,10 +25,10 @@ public class ReverseLinkedList {
         ListNode prev = null;
 
         while (curr != null) {
-            ListNode next = curr.next;
+            ListNode tmp = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = next;
+            curr = tmp;
         }
 
         return prev;
