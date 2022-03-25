@@ -19,7 +19,30 @@ public class RemoveNodeFromEnd {
         }
     }
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    public ListNode removeNthFromEnd(ListNode head, int n) { 
+        ListNode curr = head, prev = head;
+        int length = 1;
+        
+        while(curr.next != null){
+            length++;
+            curr = curr.next;
+            
+            if(length > n + 1){ //to stop prev at distance of n 
+                prev = prev.next;
+            }
+        }
+        
+        //remove head;
+        if(length == n){
+            return head.next;
+        }
+        
+        //else
+        prev.next = prev.next.next;
+        return head;
+    }
+    
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
         ListNode curr = head;
         int length = 0;
 
@@ -33,8 +56,7 @@ public class RemoveNodeFromEnd {
 
         // remove head
         if (toRemoveIndex == 0) {
-            head = head.next;
-            return head;
+            return head.next;
         }
 
         // else, stop before the node to delete
