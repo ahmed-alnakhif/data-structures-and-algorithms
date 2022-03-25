@@ -1,5 +1,7 @@
 package Companies.facebook;
 
+import java.util.HashMap;
+
 /**
  * In an alien language, surprisingly, they also use English lowercase letters,
  * but possibly in a different order. The order of the alphabet is some
@@ -28,10 +30,12 @@ public class VerifyingAlienDictionary {
 
     //T: O(N*M), S: O(1)
     int[] mapping = new int[26];
+    HashMap<Character, Integer> orderMap = new HashMap<>();
 
     public boolean isAlienSorted(String[] words, String order) {
         for (int i = 0; i < order.length(); i++) {
             mapping[order.charAt(i) - 'a'] = i;
+            orderMap.put(order.charAt(i), i);
         }
 
         for (int i = 1; i < words.length; i++) {
@@ -48,10 +52,16 @@ public class VerifyingAlienDictionary {
 
         for (int i = 0; i < Math.min(n, m); i++) {
             if (s1.charAt(i) != s2.charAt(i)) {
-                return mapping[s1.charAt(i) - 'a'] > mapping[s2.charAt(i) - 'a'];
+                // return mapping[s1.charAt(i) - 'a'] > mapping[s2.charAt(i) - 'a'];
+                return orderMap.get(s1.charAt(i)) > orderMap.get(s2.charAt(i));
             }
         }
 
         return n > m;
+    }
+
+    public static void main(String[] args) {
+        VerifyingAlienDictionary vDictionary = new VerifyingAlienDictionary();
+        System.out.println(vDictionary.isAlienSorted(new String[]{"hello","leetcode"}, "hlabcdefgijkmnopqrstuvwxyz"));
     }
 }

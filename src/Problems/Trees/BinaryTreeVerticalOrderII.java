@@ -70,7 +70,7 @@ public class BinaryTreeVerticalOrderII {
         }
     }
 
-    // T: O(N*Log(N)), S: O(N)
+    // T: O(N*log(N)), S: O(N)
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> output = new ArrayList<>();
         if (root == null) return output;

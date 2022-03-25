@@ -15,9 +15,7 @@ public class ContiguousSubarrays {
                 output[i] += output[stack.pop()];
             }
             stack.push(i);
-
-            // increment by one since each cell returns 1
-            output[i]++;
+            output[i]++; // increment by one since each cell returns 1
         }
         stack.clear();
 

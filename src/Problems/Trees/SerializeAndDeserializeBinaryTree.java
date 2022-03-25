@@ -29,8 +29,7 @@ public class SerializeAndDeserializeBinaryTree {
     }
 
     private String serializeDFS(TreeNode root) {
-        if (root == null)
-            return "null";
+        if (root == null) return "null";
 
         String left = serializeDFS(root.left);
         String right = serializeDFS(root.right);
@@ -53,7 +52,7 @@ public class SerializeAndDeserializeBinaryTree {
         return root;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }

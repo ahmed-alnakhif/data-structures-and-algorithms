@@ -49,7 +49,7 @@ public class CombinationSum {
     }
 
     private void backtrack(int[] nums, int targetSum, int index) {
-        if (targetSum < 0 || index >= nums.length) {
+        if (targetSum < 0) {
             return;
         }
 

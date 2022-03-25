@@ -51,14 +51,10 @@ public class WordSearch {
         String key = row + "," + col;
 
         // base cases:
-        if (index >= word.length())
-            return true;
-        if (!isInbound(board, row, col))
-            return false;
-        if (word.charAt(index) != board[row][col])
-            return false;
-        if (charSet.contains(key))
-            return false;
+        if (index >= word.length()) return true;
+        if (!isInbound(board, row, col)) return false;
+        if (word.charAt(index) != board[row][col]) return false;
+        if (charSet.contains(key)) return false;
 
         charSet.add(key);
 
