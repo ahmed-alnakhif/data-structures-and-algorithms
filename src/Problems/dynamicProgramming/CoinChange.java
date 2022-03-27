@@ -8,7 +8,7 @@ public class CoinChange {
     //T: O(N * C), S: O(C)
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
+        Arrays.fill(dp, amount+1);
         dp[0] = 0;
 
         for (int num = 0; num < dp.length; num++) {
@@ -19,7 +19,7 @@ public class CoinChange {
             }
         }
 
-        return dp[amount] != Integer.MAX_VALUE ? dp[amount] : -1;
+        return dp[amount] !=  amount+1 ? dp[amount] : -1;
     }
 
     HashMap<Integer, Integer> cache;
