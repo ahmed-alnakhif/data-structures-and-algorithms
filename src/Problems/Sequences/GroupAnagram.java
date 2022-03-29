@@ -33,9 +33,9 @@ public class GroupAnagram {
         Map<String, List<String>> map = new HashMap<>();
 
         for (String str : strings) {
-            char[] chars = str.toCharArray();
-            Arrays.sort(chars);
-            String word = String.valueOf(chars);
+            char[] tempChars = str.toCharArray();
+            Arrays.sort(tempChars);
+            String word = String.valueOf(tempChars);
 
             if (map.containsKey(word)) {
                 map.get(word).add(str);
@@ -47,8 +47,8 @@ public class GroupAnagram {
         return new ArrayList<>(map.values());
     }
 
-    public void run() {
-        String[] words = { "eat", "tea", "tan", "ate", "nat", "bat" };
-        System.out.println(groupAnagrams(words));
+   public static void main(String[] args) {
+        GroupAnagram groupAnagram = new GroupAnagram();
+        System.out.println(groupAnagram.groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
     }
 }
