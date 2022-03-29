@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.TwoPointers;
 
 /**
  * You are given an integer array height of length n. There are n vertical lines
@@ -13,22 +13,21 @@ package Problems.Sequences;
 
 public class ContainerWithMostWater {
 
-    private int getArea(int height, int length) {
-        return height * length;
-
+    int getArea(int height, int width) {
+        return height * width;
     }
 
-    public int maxArea(int[] height) {
-        int n = height.length - 1;
-        int left = 0;
-        int right = n;
-        int minCol = Math.min(height[left], height[right]);
-        int maxArea = getArea(minCol, n);
+    public int maxArea(int[] heights) {
+        int left = 0, right = heights.length - 1;
+
+        int maxArea = 0;
+        int minCol = 0;
 
         while (left < right) {
-            minCol = Math.min(height[left], height[right]);
+            minCol = Math.min(heights[left], heights[right]);
             maxArea = Math.max(maxArea, getArea(minCol, right - left));
-            if (height[left] <= height[right]) {
+
+            if (heights[left] < heights[right]) {
                 left++;
             } else {
                 right--;
@@ -38,8 +37,8 @@ public class ContainerWithMostWater {
         return maxArea;
     }
 
-    public void run() {
-        int[] nums = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-        System.out.println(maxArea(nums));
+    public static void main(String[] args) {
+        ContainerWithMostWater c = new ContainerWithMostWater();
+        System.out.println(c.maxArea(new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 }));
     }
 }

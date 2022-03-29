@@ -1,5 +1,7 @@
 package Problems.TwoPointers;
 
+import java.util.Arrays;
+
 /**
  * Given n non-negative integers representing an elevation map where the width
  * of each bar is 1,
@@ -16,7 +18,8 @@ package Problems.TwoPointers;
 
 public class TrappingRainWater {
     public int trap(int[] height) {
-        if (height.length == 0) return 0;
+        if (height.length == 0)
+            return 0;
 
         int left = 0, right = height.length - 1;
         int leftMax = 0, rightMax = 0;
@@ -36,8 +39,34 @@ public class TrappingRainWater {
         return ans;
     }
 
-    public void run() {
-        int[] height = {0,1,0,2,1,0,1,3,2,1,2,1};
-        System.out.println(trap(height));
+    //intuition: get max of left and right, then get min of both. 
+    //result[i] = Math.min(maxLeft, maxRight) - height[i];
+    public int trap2(int[] height) {
+        int[] leftMaxArr = new int[height.length];
+        int[] rightMaxArr = new int[height.length];
+        int[] ans = new int[height.length];
+
+        int leftMax = 0, rightMax = 0;
+
+        for (int i = 1; i < height.length; i++) {
+            leftMax = Math.max(leftMax, height[i-1]);
+            leftMaxArr[i] = leftMax;
+        }
+
+        for(int i = height.length - 2; i>=0; i--){
+            rightMax = Math.max(rightMax, height[i + 1]);
+            rightMaxArr[i] = rightMax;
+        }
+
+        for (int i = 0; i < ans.length; i++) {
+            ans[i] = Math.max(0, Math.min(leftMaxArr[i], rightMaxArr[i]) - height[i]);
+        }
+
+        return Arrays.stream(ans).sum();
+    }
+
+    public static void main(String[] args) {
+        TrappingRainWater t = new TrappingRainWater();
+        System.out.println(t.trap2(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }));
     }
 }

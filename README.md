@@ -47,7 +47,7 @@
 |  9  | [4Sum](https://leetcode.com/problems/4sum/) | [Java](src/Problems/TwoPointers/FourSum.java) | 3sum + 2 sum | T: O(N^3) |
 |  10 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | [Java](src/Problems/TwoPointers/BackspaceStringCompare.java) | two pointer: <br>1. start from the end of the string <br>2. inner while loop to skip backspaces <br>3. compare if current char in s != t<br> can be solved using a stack | T: O(N+M) <br>S: O(1)) |
 |  11 | [Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) | [Java](src/Problems/TwoPointers/ShortestSubarrayToBeRemoved.java) |  |  |
-
+|  12 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [Java](src/Problems/TwoPointers/ContainerWithMostWater.java) | 1. left and right pointer <br>2. get the area of min(arr[left], arr[right]) <br>3. keep track of the max area <br>4. move the shorter colum | T: O(N) <br>S:O(1) |
 
 
 ## 3) Fast and Slow Pointers
@@ -253,7 +253,7 @@
 | 16   | [Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)  | [Java](src/Problems/Sequences/MinimumInRotatedSortedArray.java) | 1. use binary search logic <br>2. if mid < right -> search left side <br>3. if mid > right -> search right side  | O(log(N))  | 
 | 17   | [Number of Islands](https://leetcode.com/problems/number-of-islands/)  | [Java](src/Problems/GraphsProblems/IslandCount.java) | 1. use BFS or DFS <br>2. dfs returns true if all checks are valid, else returns false <br>3. if dfs returns true, increment count | O(M*N)  | 
 | 18   | [Remove Nth Node From End of List](https://leetcode.com/problems/number-of-islands/)  | [Java](src/Problems/LinkedLists/RemoveNodeFromEnd.java) | 1. get the node position from head <br>2. traverse to the node before the to delete node | O(N)  | 
-| 19   | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)  | [Java](src/Problems/Sequences/ContainerWithMostWater.java) | 1. left and right pointer <br>2. get the area of min(value[left], value[right]) <br>3. keep track of the max area | O(N)  | 
+ 
 | 20   | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)  | [Java](src/Problems/SlidingWindow/MaxAverage.java) | 1. sliding window <br>2. calculate the sum of the first window <br>3. slide the window and recalculate the max sum <br>4. return maxSum/windowSize | O(N)  | 
 | 21   | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)  | [Java](src/Problems/SlidingWindow/LongestSubstringWithoutRepeatingCharacters.java) | 1. sliding window <br>2. if char is seen, remove most-left char, else increment our window | O(N)  | Sliding Window
 | 22   | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)  | [Java](src/Problems/SlidingWindow/LongestRepeatingCharacterReplacement.java) | 1. sliding window & hash map <br>2. check if window size - max freq char > k (we exhausted all replacement) <br>3. if true slide left side and decrement char count <br>4. result is equal to the maximum window size | O(N)  | 
