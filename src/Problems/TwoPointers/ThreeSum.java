@@ -110,7 +110,6 @@ public class ThreeSum {
    public static void main(String[] args) {
        ThreeSum t = new ThreeSum();
         int[] nums = { -1, 0, 1, 2, -1, -4 };
-        int[] nums2 = { -1, -1, -4 };
-        System.out.println(t.isThreeSum(nums2));
+        System.out.println(t.isThreeSum(nums));
     }
 }
