@@ -1,4 +1,4 @@
-package algorithms.other;
+package howTo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -40,8 +40,9 @@ public class ParseNumber {
         return result;
     }
 
-    public void run() {
+    public static void main(String[] args) {
         int num = 54321;
-        System.out.println(parseDecimal(num));
+        ParseNumber p = new ParseNumber();
+        System.out.println(p.parseInteger(num));
     }
 }

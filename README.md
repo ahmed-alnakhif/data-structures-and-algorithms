@@ -308,6 +308,7 @@
 | 68  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) | 1. typical DFS <br>2. keep track of count | Time: O(N^2) <br> Space: O(N) |
 | 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
 | 70  | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](src/Problems/Sequences/FirstUniqueCharacter.java) | 1. a hash map to count freq | Time: O(N) <br> Space: O(N) |
+| 71  | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](src/Problems/Sequences/IntegerToRoman.java) | greedy approach where we start from the largest value and keep subtracting our number <br>1. create an array for symbols and values <br>2. iterate through values <br>2. while values[i] <= num, keep subtracting and add symbol[i] to the result  | Time: O(N) <br> Space: O(1) |
 
 
 # Grokking the Coding Interview
