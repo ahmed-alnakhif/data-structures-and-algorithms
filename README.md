@@ -306,6 +306,7 @@
 | 66  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Java](src/Problems/matrixBFS/RottingOranges.java) | 1. add all rotten oranges to queue and count fresh oranges <br>2. perform BFS and add cell neighbors to the queue if it's a fresh orange <br>3. increment elapsed time | Time: O(N * M) <br> Space: O(N * M) |
 | 67  | [Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/) | [Java](src/Problems/Graphs/DetonateMaxBombs.java) | 1. iterate through each bomb <br>2. call dfs or bfs to get max count <br>3. inside dfs of bfs, iterate through the bombs and check if the next bomb is in the range of the current bomb. | Time: O(N^2) <br> Space: O(N) |
 | 68  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) | 1. typical DFS <br>2. keep track of count | Time: O(N^2) <br> Space: O(N) |
+| 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
 
 
 # Grokking the Coding Interview
