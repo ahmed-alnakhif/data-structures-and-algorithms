@@ -307,6 +307,7 @@
 | 67  | [Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/) | [Java](src/Problems/Graphs/DetonateMaxBombs.java) | 1. iterate through each bomb <br>2. call dfs or bfs to get max count <br>3. inside dfs of bfs, iterate through the bombs and check if the next bomb is in the range of the current bomb. | Time: O(N^2) <br> Space: O(N) |
 | 68  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) | 1. typical DFS <br>2. keep track of count | Time: O(N^2) <br> Space: O(N) |
 | 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
+| 70  | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](src/Problems/Sequences/FirstUniqueCharacter.java) | 1. a hash map to count freq | Time: O(N) <br> Space: O(N) |
 
 
 # Grokking the Coding Interview
