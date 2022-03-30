@@ -56,3 +56,4 @@ public class ConnectedComponentCount {
         System.out.println(connectedComponentCount(graph));
     }
 }
+

@@ -1,5 +1,8 @@
 package Problems.Graphs;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * You are given a list of bombs. The range of a bomb is defined as the area
  * where its effect can be felt. This area is in the shape of a circle with the
@@ -28,35 +31,54 @@ package Problems.Graphs;
 
 public class DetonateMaxBombs {
 
-    int count = 0;
-
     public int maximumDetonation(int[][] bombs) {
         int max = 0;
-
         for (int i = 0; i < bombs.length; i++) {
-            count = 0;
-            dfs(i, bombs, new boolean[bombs.length]);
-            max = Math.max(max, count);
+            max = Math.max(max, getMaxDFS(i, bombs, new boolean[bombs.length]));
         }
-
         return max;
     }
 
-    private void dfs(int index, int[][] bombs, boolean[] seen) {
-        count++;
+    private int getMaxDFS(int index, int[][] bombs, boolean[] seen) {
+        int count = 1;
         seen[index] = true;
-
         for (int i = 0; i < bombs.length; i++) {
-            if (!seen[i] && inRange(bombs[index], bombs[i])) {
-                seen[index] = true;
-                dfs(i, bombs, seen);
+            if (!seen[i] && isInRange(bombs[index], bombs[i])) {
+                count += getMaxDFS(i, bombs, seen);
             }
         }
+        return count;
     }
 
-    private boolean inRange(int[] point1, int[] point2) {
+    private int getMaxBFS(int[][] bombs, int index) {
+        Queue<Integer> queue = new LinkedList<>();
+        boolean[] seen = new boolean[bombs.length];
+
+        seen[index] = true;
+        queue.offer(index);
+
+        int count = 1; // start from 1 since the first added bomb can detonate itself
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                int currBomb = queue.poll();
+                for (int j = 0; j < bombs.length; j++) { // search for bombs to detonate
+                    if (!seen[j] && isInRange(bombs[currBomb], bombs[j])) {
+                        seen[j] = true;
+                        count++;
+                        queue.offer(j);
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
+    private boolean isInRange(int[] point1, int[] point2) {
         long dx = point1[0] - point2[0], dy = point1[1] - point2[1], radius = point1[2];
-        long distance =  dx * dx + dy * dy;
+        long distance = dx * dx + dy * dy;
         return distance <= radius * radius;
     }
 
