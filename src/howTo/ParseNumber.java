@@ -9,8 +9,8 @@ public class ParseNumber {
         LinkedList<Integer> result = new LinkedList<>();
 
         while (num > 1) {
-            int digit = num % 10;
-            num = num / 10;
+            int digit = num % 10; //last digit
+            num = num / 10; //carry over digit
             result.addFirst(digit);
         }
 

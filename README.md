@@ -83,6 +83,7 @@
 
 ## 6) Linked Lists
 |  1  | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Java](src/Problems/LinkedLists/CopyListWithRandomPointers.java) | 1. first iteration, add all nodes to a hash map <br>2. second iteration, map.get(curr).next = map.get(curr.next) <br> and map.get(curr).random = map.get(curr.random) <br> lastly, we return map.get(head) | T: O(N) <br>S: O(N) |
+|  2  | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Java](src/Problems/LinkedLists/AddTwoNumbers.java) | 1. same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br>2. handle carrier | T: O(max(M, N)) <br>S: O(1) |
 
 ## 7) In-place Reversal of a Linked List
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
