@@ -1,10 +1,8 @@
 package Problems.LinkedLists;
 
 /**
- * Given the head of a singly linked list, return the middle node of the linked
- * list.
+ * Given the head of a singly linked list, return true if it is a palindrome.
  * 
- * If there are two middle nodes, return the second middle node.
  */
 
 public class PalindromeLinkedList {
@@ -46,7 +44,7 @@ public class PalindromeLinkedList {
         return true;
     }
 
-     //Better Space complexity => T: O(N), S: O(1)
+    // Better Space complexity => T: O(N), S: O(1)
     public boolean isPalindrome2(ListNode head) {
         // 1) find end of first half
         ListNode firstHalfEnd = getFirstHalfEnd(head);
