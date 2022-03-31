@@ -85,6 +85,7 @@
 |  1  | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Java](src/Problems/LinkedLists/CopyListWithRandomPointers.java) | 1. first iteration, add all nodes to a hash map <br>2. second iteration, map.get(curr).next = map.get(curr.next) <br> and map.get(curr).random = map.get(curr.random) <br> lastly, we return map.get(head) | T: O(N) <br>S: O(N) |
 |  2  | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Java](src/Problems/LinkedLists/AddTwoNumbers.java) | 1. same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br>2. handle carrier | T: O(max(M, N)) <br>S: O(1) |
 
+
 ## 7) In-place Reversal of a Linked List
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
@@ -309,6 +310,7 @@
 | 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
 | 70  | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](src/Problems/Sequences/FirstUniqueCharacter.java) | 1. a hash map to count freq | Time: O(N) <br> Space: O(N) |
 | 71  | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](src/Problems/Sequences/IntegerToRoman.java) | greedy approach where we start from the largest value and keep subtracting our number <br>1. create an array for symbols and values <br>2. iterate through values <br>2. while values[i] <= num, keep subtracting and add symbol[i] to the result  | Time: O(N) <br> Space: O(1) |
+| 72  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Java](src/Problems/Sequences/ReverseInteger.java) | 1. use string builder to easily reverse a number and then apply the sign. OR <br> use division and mod operator to parse the digits <br> make sure to handle overflow cases | Time: O(N) <br> Space: O(1) |
 
 
 # Grokking the Coding Interview
