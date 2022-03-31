@@ -37,8 +37,7 @@ public class MeetingRoomsII {
 
     // T: O(nlogn), S: O(n)
     public int minMeetingRooms(int[][] intervals) {
-        if (intervals.length == 0)
-            return 0;
+        if (intervals.length == 0) return 0;
 
         PriorityQueue<Integer> roomsPQ = new PriorityQueue<>();
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
@@ -58,11 +57,9 @@ public class MeetingRoomsII {
         return roomsPQ.size();
     }
 
-    public void run() {
-        int[][] intervals = new int[][] {
-                { 0, 30 }, { 5, 10 }, { 15, 20 }
-        };
-
-        System.out.println(minMeetingRooms(intervals));
+    public static void main(String[] args) {
+        MeetingRoomsII m = new MeetingRoomsII();
+        int[][] intervals = {{0, 30}, {5, 10}, {15, 20}};
+        System.out.println(m.minMeetingRooms(intervals));
     }
 }
