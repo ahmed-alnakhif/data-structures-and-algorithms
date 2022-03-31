@@ -312,6 +312,7 @@
 | 71  | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](src/Problems/Sequences/IntegerToRoman.java) | greedy approach where we start from the largest value and keep subtracting our number <br>1. create an array for symbols and values <br>2. iterate through values <br>2. while values[i] <= num, keep subtracting and add symbol[i] to the result  | Time: O(N) <br> Space: O(1) |
 | 72  | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Java](src/Problems/Sequences/RomanToInteger.java) | 1. a map to hold roman values <br>2. iterate from the end of the string <br>3. if curr char value < prev subtract from sum <br> else, add to sum <br> 4. prev = curr| Time: O(N) <br> Space: O(1) |
 | 73  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Java](src/Problems/Sequences/ReverseInteger.java) | 1. use string builder to easily reverse a number and then apply the sign. OR <br> use division and mod operator to parse the digits <br> make sure to handle overflow cases | Time: O(N) <br> Space: O(1) |
+| 73  | [Favorite Genre](https://leetcode.com/discuss/interview-question/373006) | [Java](src/Companies/amazon/FavoriteGenres.java) | 1. create a map for songs genres <br>2. iterate through each user and create a count map and track max <br>3. iterate through count map and if value == max, then add genre to the user favorite genre | Time: O(G*(G+S) <br> Space: O(S) |
 
 
 # Grokking the Coding Interview
@@ -361,6 +362,12 @@
 | 16  | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrder.java) | Trees |
 | 17  | [Binary Tree Vertical Order Traversal II](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/) | [Java](src/Problems/Trees/BinaryTreeVerticalOrderII.java) | Trees |
 | 18  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | [Java](src/Companies/facebook/MakeParenthesesValid.java) | Strings | 
+
+## Amazon
+|  #  | Title                                                   | Solution                                      | Type              |
+| --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
+|  1  | [Favorite Genre](https://leetcode.com/discuss/interview-question/373006) | [Java](src/Companies/amazon/FavoriteGenres.java) | Hash Map |
+
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
