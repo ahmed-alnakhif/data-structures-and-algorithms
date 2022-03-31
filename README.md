@@ -310,7 +310,8 @@
 | 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
 | 70  | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](src/Problems/Sequences/FirstUniqueCharacter.java) | 1. a hash map to count freq | Time: O(N) <br> Space: O(N) |
 | 71  | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](src/Problems/Sequences/IntegerToRoman.java) | greedy approach where we start from the largest value and keep subtracting our number <br>1. create an array for symbols and values <br>2. iterate through values <br>2. while values[i] <= num, keep subtracting and add symbol[i] to the result  | Time: O(N) <br> Space: O(1) |
-| 72  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Java](src/Problems/Sequences/ReverseInteger.java) | 1. use string builder to easily reverse a number and then apply the sign. OR <br> use division and mod operator to parse the digits <br> make sure to handle overflow cases | Time: O(N) <br> Space: O(1) |
+| 72  | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | [Java](src/Problems/Sequences/RomanToInteger.java) | 1. a map to hold roman values <br>2. iterate from the end of the string <br>3. if curr char value < prev subtract from sum <br> else, add to sum <br> 4. prev = curr| Time: O(N) <br> Space: O(1) |
+| 73  | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Java](src/Problems/Sequences/ReverseInteger.java) | 1. use string builder to easily reverse a number and then apply the sign. OR <br> use division and mod operator to parse the digits <br> make sure to handle overflow cases | Time: O(N) <br> Space: O(1) |
 
 
 # Grokking the Coding Interview
