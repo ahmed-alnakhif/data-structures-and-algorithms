@@ -13,29 +13,27 @@ package Problems.SlidingWindow;
 
 public class MaximumSumSubarrayOfSizeK {
 
-    public int maximumSumSubarrayOfSizeK(int[] arr, int k) {
-        int left = 0, right = k - 1;
-        int max = 0, sum = 0;
-        for (int i = 0; i < k; i++) {
-            sum = sum + arr[i];
+    public int maxSubArraySum(int[] arr, int k) {
+        int maxSum = 0;
+        int sum = 0;
+        int left = 0, right = 0;
+
+        while (right < k) {
+            sum += arr[right++];
+        }
+        maxSum = sum;
+
+        while (right < arr.length) {
+            sum = sum - arr[left++] + arr[right++];
+            maxSum = Math.max(maxSum, sum);
         }
 
-        while (left < right) {
-            right++;
-            left++;
-
-            if (right == arr.length) break;
-
-            sum = sum - arr[left - 1] + arr[right];
-            max = Math.max(max, sum);
-        }
-
-        return max;
+        return maxSum;
     }
 
-    public void run() {
-        int[] nums = { 2, 1, 5, 1, 3, 2 };
-        int k = 3;
-        System.out.println(maximumSumSubarrayOfSizeK(nums, k));
+    public static void main(String[] args) {
+        MaximumSumSubarrayOfSizeK mOfSizeK = new MaximumSumSubarrayOfSizeK();
+        System.out.println(mOfSizeK.maxSubArraySum(new int[]{ 2, 1, 5, 1, 3, 2 }, 3));
+        
     }
 }
