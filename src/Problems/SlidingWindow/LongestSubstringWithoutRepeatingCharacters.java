@@ -20,21 +20,19 @@ public class LongestSubstringWithoutRepeatingCharacters {
         int max = 0, left = 0, right = 0;
 
         while (right < s.length()) {
-            if (!set.contains(s.charAt(right))) {
-                set.add(s.charAt(right));
-                max = Math.max(max, set.size());
-                right++;
+            if (set.contains(s.charAt(right))) {
+                set.remove(s.charAt(left++));
             } else {
-                set.remove(s.charAt(left));
-                left++;
+                set.add(s.charAt(right++));
+                max = Math.max(max, set.size());
             }
         }
 
         return max;
     }
 
-    public void run() {
-        String s = "abcabcbb";
-        System.out.println(lengthOfLongestSubstring(s));
+    public static void main(String[] args) {
+        LongestSubstringWithoutRepeatingCharacters f = new LongestSubstringWithoutRepeatingCharacters();
+        System.out.println(f.lengthOfLongestSubstring("abcabcbb"));
     }
 }
