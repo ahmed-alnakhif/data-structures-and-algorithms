@@ -26,7 +26,7 @@
 ## 1) Sliding Window
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP) | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) |  | T: O(N) |
+|  1  | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP) | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | 1. calculate the sum of the first subarray of size k <br>2. slide the window until the end of the array <br>3. while sliding, calculate the sum and compare with max | T: O(N) <br>S: O(1) |
 |  2  | [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | T: O(N) |
 |  3  | [Max Consecutive Ones II](https://leetcode.com/problems/max-consecutive-ones-ii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesII.java) | 1. if num is zero, decrement allowed number of zeros <br>2. if allowedZeros < 0, increment allowedZeros if num == 0, and increment left <br>3. keep incrementing right | T: O(N) | 
 |  4  | [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnesIII.java) | 1. if num is zero, decrement k <br>2. if k < 0, increment k if num == 0, and increment left <br>3. keep incrementing right | T: O(N)
@@ -320,7 +320,6 @@
 # Grokking the Coding Interview
 |  #  | Title                                                   | Solution                                      | Pattern           |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP) | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | Sliding Window
 |  2  | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ) | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | | Sliding Window
 |  3  | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) | Sliding Window
 |  4  | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)  | [Java](src/Problems/SlidingWindow/FruitIntoBaskets.java) | Sliding Window

@@ -34,6 +34,5 @@ public class MaximumSumSubarrayOfSizeK {
     public static void main(String[] args) {
         MaximumSumSubarrayOfSizeK mOfSizeK = new MaximumSumSubarrayOfSizeK();
         System.out.println(mOfSizeK.maxSubArraySum(new int[]{ 2, 1, 5, 1, 3, 2 }, 3));
-        
     }
 }
