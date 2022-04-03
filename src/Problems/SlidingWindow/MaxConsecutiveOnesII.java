@@ -20,25 +20,46 @@ public class MaxConsecutiveOnesII {
         int right = 0, left = 0;
 
         while (right < nums.length) {
-            if (nums[right] == 0) {
+            if (nums[right++] == 0) {
                 allowedZeros--;
             }
 
             if (allowedZeros < 0) {
-                if (nums[left] == 0) {
+                if (nums[left++] == 0) {
                     allowedZeros++;
                 }
-                left++;
             }
-
-            right++;
         }
 
         return right - left;
     }
 
-    public void run() {
-        int[] nums = { 1, 1, 0, 1, 1, 1 };
-        System.out.println(findMaxConsecutiveOnes(nums));
+    public int findMaxConsecutiveOnes2(int[] nums) {
+        int left = 0, right = 0;
+        int maxLength = 0, onesCount = 0;
+        int k = 1;
+
+        while (right < nums.length) {
+            if (nums[right] == 1) {
+                onesCount++;
+            }
+
+            while ((right - left + 1) - onesCount > k) {
+                if (nums[left++] == 1) {
+                    onesCount--;
+                }
+            }
+
+            maxLength = Math.max(maxLength, (right - left + 1));
+            right++;
+        }
+
+        return maxLength;
+    }
+
+    public static void main(String[] args) {
+        MaxConsecutiveOnesII maxOnes = new MaxConsecutiveOnesII();
+        int[] nums = { 1, 0, 1, 1, 0 };
+        System.out.println(maxOnes.findMaxConsecutiveOnes(nums));
     }
 }
