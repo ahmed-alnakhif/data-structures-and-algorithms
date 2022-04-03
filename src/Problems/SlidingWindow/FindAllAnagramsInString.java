@@ -102,8 +102,6 @@ public class FindAllAnagramsInString {
 
     public static void main(String[] args) {
         FindAllAnagramsInString anagramsInString = new FindAllAnagramsInString();
-        String s = "cbaebabacd";
-        String p = "abc";
-        System.out.println(anagramsInString.findAnagrams(s, p));
+        System.out.println(anagramsInString.findAnagrams("cbaebabacd", "abc"));
     }
 }
