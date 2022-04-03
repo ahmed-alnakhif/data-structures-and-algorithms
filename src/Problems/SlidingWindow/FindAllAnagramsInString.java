@@ -36,7 +36,6 @@ public class FindAllAnagramsInString {
             pCount.put(ch, pCount.getOrDefault(ch, 0)+1);
         }
         
-        
         int left = 0, right = 0;
         while(right < s.length()){
             char currChar = s.charAt(right);
@@ -44,13 +43,12 @@ public class FindAllAnagramsInString {
             
             //if we reached max window size, remove or decrement LMC
             if(right >= p.length()){
-                char leftMostChar = s.charAt(left);
+                char leftMostChar = s.charAt(left++);
                 if(sCount.get(leftMostChar) == 1){
                     sCount.remove(leftMostChar);
                 } else {
                     sCount.put(leftMostChar, sCount.get(leftMostChar)-1);
                 }
-                left++;
             }
             
             //if both maps are the same then we anagram
@@ -68,29 +66,44 @@ public class FindAllAnagramsInString {
     public List<Integer> findAnagrams2(String s, String p) {
         List<Integer> result = new ArrayList<>();
 
-        p = sort(p);
-
         int left = 0, right = p.length() - 1;
         while (right < s.length()) {
-            String sub = sort(s.substring(left, right + 1));
-            if (p.equals(sub)) {
+            String sub = s.substring(left, right + 1);
+
+            if(compare(p, sub)){
                 result.add(left);
             }
+
             right++;
             left++;
         }
 
         return result;
     }
-    private String sort(String str) {
-        char[] arr = str.toCharArray();
-        Arrays.sort(arr);
-        return String.valueOf(arr);
+
+    private boolean compare(String str1, String str2){
+        if(str1.length() != str2.length()){
+            return false;
+        }
+        
+        Map<Character, Integer> map1 = new HashMap<>();
+        Map<Character, Integer> map2 = new HashMap<>();
+        
+        for(char ch : str1.toCharArray()){
+            map1.put(ch, map1.getOrDefault(ch, 0)+1);
+        }
+        
+        for(char ch : str2.toCharArray()){
+            map2.put(ch, map2.getOrDefault(ch, 0)+1);
+        }
+        
+        return map1.equals(map2);
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        FindAllAnagramsInString anagramsInString = new FindAllAnagramsInString();
         String s = "cbaebabacd";
         String p = "abc";
-        System.out.println(findAnagrams(s, p));
+        System.out.println(anagramsInString.findAnagrams(s, p));
     }
 }
