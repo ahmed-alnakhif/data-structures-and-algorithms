@@ -24,28 +24,28 @@ public class LongestRepeatingCharacterReplacement {
 
     public int characterReplacement(String s, int k) {
         Map<Character, Integer> map = new HashMap<>();
-        int result = 0, maxFreq = 0;
         int left = 0, right = 0;
+        int maxLength = 0, charFreq = 0;
 
         while (right < s.length()) {
-            char rightChar = s.charAt(right);
-            map.put(rightChar, map.getOrDefault(rightChar, 0) + 1);
+            char ch = s.charAt(right);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+            charFreq = Math.max(charFreq, map.get(ch));
 
-            maxFreq = Math.max(maxFreq, map.get(rightChar));
-            while ((right - left + 1) - maxFreq > k) {
-                char leftChar = s.charAt(left);
+            while ((right - left + 1) - charFreq > k) {
+                char leftChar = s.charAt(left++);
                 map.put(leftChar, map.get(leftChar) - 1);
-                left++;
             }
-            result = Math.max(result, (right - left + 1));
+
+            maxLength = Math.max(maxLength, (right - left + 1));
             right++;
         }
-        return result;
+
+        return maxLength;
     }
 
-    public void run() {
-        String s = "AABABBA";
-        int k = 4;
-        System.out.println(characterReplacement(s, k));
+    public static void main(String[] args) {
+        LongestRepeatingCharacterReplacement l = new LongestRepeatingCharacterReplacement();
+        System.out.println(l.characterReplacement("AABABBA", 1));
     }
 }

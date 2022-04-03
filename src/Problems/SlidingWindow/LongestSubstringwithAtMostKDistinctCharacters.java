@@ -26,10 +26,11 @@ public class LongestSubstringwithAtMostKDistinctCharacters {
 
         while (right < s.length()) {
             Character c = s.charAt(right);
+
             if (map.containsKey(c)) {
                 map.remove(c);
             }
-            map.put(c, right);
+            map.put(c, right++);
 
             if (map.size() > k) {
                 Map.Entry<Character, Integer> leftMostEntry = map.entrySet().iterator().next();
@@ -37,7 +38,6 @@ public class LongestSubstringwithAtMostKDistinctCharacters {
                 left = leftMostEntry.getValue() + 1;
             }
 
-            right++;
             maxLen = Math.max(maxLen, right - left);
         }
 
