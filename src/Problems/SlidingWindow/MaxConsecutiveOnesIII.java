@@ -15,30 +15,25 @@ package Problems.SlidingWindow;
 public class MaxConsecutiveOnesIII {
 
     public int longestOnes(int[] nums, int k) {
-        int allowedZeros = k;
         int right = 0, left = 0;
 
         while (right < nums.length) {
-            if (nums[right] == 0) {
-                allowedZeros--;
+            if (nums[right++] == 0) {
+                k--;
             }
 
-            if (allowedZeros < 0) {
-                if (nums[left] == 0) {
-                    allowedZeros++;
+            if (k < 0) {
+                if (nums[left++] == 0) {
+                    k++;
                 }
-                left++;
             }
-
-            right++;
         }
 
         return right - left;
     }
 
-    public void run() {
-        int[] nums = { 1, 1, 0, 1, 0, 1 };
-        int k = 2;
-        System.out.println(longestOnes(nums, k));
+    public static void main(String[] args) {
+        MaxConsecutiveOnesIII maxOnes = new MaxConsecutiveOnesIII();
+        System.out.println(maxOnes.longestOnes(new int[] { 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0 }, 2));
     }
 }
