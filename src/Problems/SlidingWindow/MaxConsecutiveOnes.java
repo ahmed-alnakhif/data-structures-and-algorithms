@@ -18,25 +18,22 @@ public class MaxConsecutiveOnes {
 
     public int findMaxConsecutiveOnes(int[] nums) {
         int max = 0, count = 0;
-        int right = 0;
 
-        while (right < nums.length) {
-            if (nums[right] == 1) {
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 1) {
                 count++;
             } else {
-                max = Math.max(max, count);
                 count = 0;
             }
-            right++;
-        }
 
-        max = Math.max(max, count);
+            max = Math.max(max, count);
+        }
 
         return max;
     }
 
-    public void run() {
-        int[] nums = { 1, 1, 0, 1, 1, 1 };
-        System.out.println(findMaxConsecutiveOnes(nums));
+    public static void main(String[] args) {
+        MaxConsecutiveOnes maxOnes = new MaxConsecutiveOnes();
+        System.out.println(maxOnes.findMaxConsecutiveOnes(new int[] { 1, 1, 0, 1, 1, 1 }));
     }
 }
