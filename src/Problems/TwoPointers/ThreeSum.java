@@ -1,8 +1,8 @@
 package Problems.TwoPointers;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
@@ -21,7 +21,7 @@ import java.util.Set;
  */
 
 public class ThreeSum {
-    List<List<Integer>> result = new LinkedList<>();
+    List<List<Integer>> result = new ArrayList<>();
 
     public boolean isThreeSum(int[] nums){
         for (int i = 0; i < nums.length - 2; i++) {
@@ -88,6 +88,33 @@ public class ThreeSum {
                 }
             }
 
+            set.add(nums[j]);
+        }
+    }
+    
+    List<List<Integer>> result2 = new ArrayList<>();
+    Set<String> seen = new HashSet<>();
+    
+    public List<List<Integer>> threeSum2(int[] nums) {
+        Arrays.sort(nums);
+        for(int i = 0; i<nums.length-2; i++){
+            twoSumWithHashSet2(i, nums);
+        }
+        return result;
+    }
+    
+    void twoSumWithHashSet2(int i, int[] nums) {
+        Set<Integer> set = new HashSet<>();
+
+        for (int j = i + 1; j < nums.length; j++) {
+            int comp = -nums[i] - nums[j];
+            String sum = nums[i]+","+nums[j]+","+comp;
+            
+            if (set.contains(comp) && !seen.contains(sum)) {
+                result.add(List.of(nums[i], nums[j], comp));
+                seen.add(sum);
+            }
+            
             set.add(nums[j]);
         }
     }

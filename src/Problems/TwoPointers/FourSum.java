@@ -14,7 +14,6 @@ import java.util.List;
  * You may return the answer in any order.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [1,0,-1,0,-2,2], target = 0
@@ -67,9 +66,8 @@ public class FourSum {
         }
     }
 
-    public void run() {
-        int[] nums = { 1, 0, -1, 0, -2, 2 };
-        int target = 0;
-        System.out.println(fourSum(nums, target));
+    public static void main(String[] args) {
+        FourSum f = new FourSum();
+        System.out.println(f.fourSum(new int[] { 1, 0, -1, 0, -2, 2 }, 0));
     }
 }
