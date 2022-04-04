@@ -38,8 +38,8 @@ public class SortColors {
         nums[j] = tmp;
     }
 
-    public void run() {
-        int[] nums = { 2, 0, 2, 1, 1, 0 };
-        sortColors(nums);
+   public static void main(String[] args) {
+        SortColors s = new SortColors();    
+        s.sortColors(new int[]{ 2, 0, 2, 1, 1, 0 });
     }
 }
