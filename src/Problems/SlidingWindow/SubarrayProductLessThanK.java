@@ -16,32 +16,28 @@ package Problems.SlidingWindow;
  */
 
 public class SubarrayProductLessThanK {
+
     public int numSubarrayProductLessThanK(int[] nums, int k) {
+        // the product should be less than k,
+        // and since nums are positive k should be greater than 1
         if (k <= 1) return 0;
 
-        int count = 0;
-        int left = 0, right = 0;
-        int product = 1;
+        int result = 0;
+        int product = 1, left = 0, right = 0;
 
         while (right < nums.length) {
-            product = product * nums[right];
-
+            product *= nums[right++];
             while (product >= k) {
-                product = product / nums[left];
-                left++;
+                product /= nums[left++];
             }
-
-            // calculate the number of items inside the window
-            count = count + (right - left + 1);
-            right++;
+            result += right - left;
         }
 
-        return count;
+        return result;
     }
 
-    public void run() {
-        int[] nums = { 10, 5, 2, 6 };
-        int k = 100;
-        System.out.println(numSubarrayProductLessThanK(nums, k));
+    public static void main(String[] args) {
+        SubarrayProductLessThanK s = new SubarrayProductLessThanK();                 
+        System.out.println(s.numSubarrayProductLessThanK(new int[] { 10, 5, 2, 6 }, 100));
     }
 }
