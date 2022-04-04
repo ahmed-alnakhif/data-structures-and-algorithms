@@ -4,7 +4,6 @@ package Problems.TwoPointers;
  * Given an integer array nums sorted in non-decreasing order, return an array
  * of the squares of each number sorted in non-decreasing order.
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [-4,-1,0,3,10]
@@ -15,9 +14,9 @@ package Problems.TwoPointers;
 
 public class SquaresOfSortedArray {
     public int[] sortedSquares(int[] nums) {
-        int left = 0, right = nums.length - 1;
         int[] result = new int[nums.length];
 
+        int left = 0, right = nums.length - 1;
         for (int i = nums.length - 1; i >= 0; i--) {
             if (Math.abs(nums[left]) < Math.abs(nums[right])) {
                 result[i] = nums[right] * nums[right];
@@ -31,8 +30,8 @@ public class SquaresOfSortedArray {
         return result;
     }
 
-    public void run() {
-        int[] nums = { -7, -3, 2, 3, 11 };
-        System.out.println(sortedSquares(nums));
+    public static void main(String[] args) {
+        SquaresOfSortedArray s = new SquaresOfSortedArray();
+        System.out.println(s.sortedSquares(new int[] { -7, -3, 2, 3, 11 }));
     }
 }
