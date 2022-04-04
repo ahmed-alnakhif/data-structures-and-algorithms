@@ -28,36 +28,35 @@ public class Sum3Closest {
 
         for (int i = 0; i < nums.length; i++) {
             if (i == 0 || nums[i] != nums[i - 1]) {
-                twoSum(i, nums, target);
+                twoSum(i, target, nums);
             }
         }
 
         return result;
     }
 
-    private void twoSum(int i, int[] nums, int target) {
+    private void twoSum(int i, int target, int[] nums) {
         int left = i + 1, right = nums.length - 1;
 
         while (left < right) {
             int sum = nums[i] + nums[left] + nums[right];
+            int currDiff = target - sum;
 
-            if (Math.abs(sum - target) < Math.abs(minDiff)) {
-                minDiff = target - sum;
+            if (Math.abs(currDiff) < Math.abs(minDiff)) {
+                minDiff = currDiff;
+                result = sum;
             }
 
-            if (sum < target) {
+            if (sum <= target) {
                 left++;
             } else {
                 right--;
             }
         }
-
-        result = target - minDiff;
     }
 
-    public void run() {
-        int[] nums = { -1, 2, 1, -4 };
-        int target = 1;
-        System.out.println(threeSumClosest(nums, target));
+    public static void main(String[] args) {
+        Sum3Closest closest = new Sum3Closest();
+        System.out.println(closest.threeSumClosest(new int[] { -1, 2, 1, -4 }, 1));
     }
 }
