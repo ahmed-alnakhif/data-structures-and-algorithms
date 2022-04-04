@@ -44,7 +44,7 @@
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [2 Sum](https://leetcode.com/problems/max-consecutive-ones/) | [Java](src/Problems/SlidingWindow/MaxConsecutiveOnes.java) | 1. expand window to the right and keep count of 1s <br>2. if 0, then reset count | T: O(N) <br> S: O(N) |
 |  2  | [3 Sum](https://leetcode.com/problems/3sum/) | [Java](src/Problems/TwoPointers/ThreeSum.java) | using two pointers <br>1. sort the array first <br>2. iterate and find the two sum from i + 1| T: O(N^2) <br>S: O(1) |
-|  3  | [4 Sum](https://leetcode.com/problems/4sum/) | [Java](src/Problems/TwoPointers/FourSum.java) | 3sum + 2 sum | T: O(N^3) |
+|  3  | [4 Sum](https://leetcode.com/problems/4sum/) | [Java](src/Problems/TwoPointers/FourSum.java) | 3sum + 2 sum | T: O(N^3) <br>S: O(N) |
 |  2  | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | [Java](src/Problems/TwoPointers/RemoveDuplicates.java) | 1. if left != right, increment left <br>2. left = right | T: O(N) <br>S: O(1)
 |  3  | [Remove Element](https://leetcode.com/problems/remove-element/) | [Java](src/Problems/TwoPointers/RemoveElement.java) | 1. if right != val, left = right and increment left  | T: O(N) <br>S: O(1)
 |  4  | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array) | [Java](src/Problems/TwoPointers/SquaresOfSortedArray.java) | 1. check the largest absolute value and place the square value to the end of the result array <br>2. adjust right or left pointer accordingly  | T: O(N) <br>S: O(N) 
