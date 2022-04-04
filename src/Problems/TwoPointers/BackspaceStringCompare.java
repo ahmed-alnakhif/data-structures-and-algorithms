@@ -49,12 +49,12 @@ public class BackspaceStringCompare {
                 }
             }
 
-            // If two actual characters are different
+            // if two actual characters are different
             if (i >= 0 && j >= 0 && S.charAt(i) != T.charAt(j)) {
                 return false;
             }
 
-            // If expecting to compare char vs nothing
+            // if expecting to compare char vs nothing
             if ((i >= 0) != (j >= 0)) {
                 return false;
             }
@@ -66,7 +66,7 @@ public class BackspaceStringCompare {
         return true;
     }
 
-    // uisng stringBuilder/stack
+    // using stringBuilder/stack
     public boolean backspaceCompare2(String S, String T) {
         return build(S).equals(build(T));
     }
@@ -84,9 +84,9 @@ public class BackspaceStringCompare {
         return strBuilder.toString();
     }
 
-    public void run() {
-        String s = "a##c";
-        String t = "#a#c";
-        System.out.println(backspaceCompare(s, t));
+    public static void main(String[] args) {
+        BackspaceStringCompare s = new BackspaceStringCompare();
+        
+        System.out.println(s.backspaceCompare("a##c", "#a#c"));
     }
 }
