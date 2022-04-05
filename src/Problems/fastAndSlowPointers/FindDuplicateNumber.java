@@ -10,7 +10,6 @@ package Problems.fastAndSlowPointers;
  * constant extra space.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [1,3,4,2,2]
@@ -18,8 +17,8 @@ package Problems.fastAndSlowPointers;
  */
 
 public class FindDuplicateNumber {
-    
-    //Floyd's Algorithm => T: O(N), S: O(1), no modification
+
+    // Floyd's Algorithm => T: O(N), S: O(1), no modification
     public int findDuplicate(int[] nums) {
         int slow = nums[0], fast = nums[0];
 
@@ -39,7 +38,7 @@ public class FindDuplicateNumber {
         return fast;
     }
 
-    //T: O(N), S: O(1), array modified
+    // T: O(N), S: O(1), array modified
     public int findDuplicate2(int[] nums) {
         while (nums[0] != nums[nums[0]]) {
             int next = nums[nums[0]];
@@ -49,7 +48,8 @@ public class FindDuplicateNumber {
         return nums[0];
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        FindDuplicateNumber f = new FindDuplicateNumber();
+        System.out.println(f.findDuplicate(new int[] { 1, 3, 4, 2, 2 }));
     }
 }
