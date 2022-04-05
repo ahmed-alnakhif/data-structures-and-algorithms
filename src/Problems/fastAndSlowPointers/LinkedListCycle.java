@@ -51,7 +51,7 @@ public class LinkedListCycle {
         return false;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
