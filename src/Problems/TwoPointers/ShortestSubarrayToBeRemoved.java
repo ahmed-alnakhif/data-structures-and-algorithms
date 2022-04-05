@@ -34,29 +34,30 @@ public class ShortestSubarrayToBeRemoved {
             right--;
         }
 
-        // [-------left [possible unsorted subarray] --------arr.length]
-        int shortestSubarry = Math.min(arr.length - left, right + 1);
+        // [-------left-> [unsorted subarray] --------> arr.length]
+        int shortestSubarray = Math.min(arr.length - left, right + 1);
 
-        // ptrs reached the end of the arrary, so all elements are sorted properly
+        // pointers reached the end/start of the array, so all elements are sorted properly
         if (left == arr.length || right == -1) {
-            return shortestSubarry;
+            return shortestSubarray;
         }
 
-        int lo = 0, hi = right + 1;
-        while (lo < left && hi < arr.length) {
-            if (arr[hi] >= arr[lo]) {
-                int currWindowSize = hi - lo - 1;
-                shortestSubarry = Math.min(shortestSubarry, currWindowSize);
-                lo++;
+        int low = 0, high = right + 1;
+        while (low < left && high < arr.length) {
+            if (arr[high] >= arr[low]) {
+                int currWindowSize = high - low - 1;
+                shortestSubarray = Math.min(shortestSubarray, currWindowSize);
+                low++;
             } else {
-                hi++;
+                high++;
             }
         }
-        return shortestSubarry;
+        return shortestSubarray;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        ShortestSubarrayToBeRemoved s = new ShortestSubarrayToBeRemoved();
         int[] arr = { 1, 2, 3, 10, 4, 2, 3, 5 };
-        System.out.println(findLengthOfShortestSubarray(arr));
+        System.out.println(s.findLengthOfShortestSubarray(arr));
     }
 }
