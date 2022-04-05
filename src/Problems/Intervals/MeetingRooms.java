@@ -16,11 +16,12 @@ public class MeetingRooms {
         return true;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        MeetingRooms mr = new MeetingRooms();        
         int[][] firstList = new int[][] {
                 { 0, 2 }, { 5, 10 }, { 13, 23 }, { 24, 25 }
         };
 
-        System.out.println(canAttendMeetings(firstList));
+        System.out.println(mr.canAttendMeetings(firstList));
     }
 }
