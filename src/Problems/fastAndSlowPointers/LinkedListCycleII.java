@@ -52,6 +52,7 @@ public class LinkedListCycleII {
         if (head == null) return null;
 
         ListNode intersect = findIntersection(head);
+        
         if (intersect == null) return null;
 
         ListNode ptr1 = intersect;
@@ -65,8 +66,7 @@ public class LinkedListCycleII {
     }
 
     private ListNode findIntersection(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode slow = head, fast = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -79,7 +79,7 @@ public class LinkedListCycleII {
         return null;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
