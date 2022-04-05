@@ -6,6 +6,10 @@ public class CarPooling {
 
     // T: O(N*log(N)), S: O(N)
     public boolean carPooling(int[][] trips, int capacity) {
+        //if values are the same, pick drop off time first
+        // PriorityQueue<int[]> minHeap = new PriorityQueue<>((a,b)->
+        //     a[0] == b[0] ? b[2]-a[2]: a[0]-b[0] 
+        // );
         TreeMap<Integer, Integer> timestamp = new TreeMap<>();
 
         for (int[] trip : trips) {
@@ -13,10 +17,10 @@ public class CarPooling {
             timestamp.put(trip[2], timestamp.getOrDefault(trip[2], 0) - trip[0]);
         }
 
-        int usedCapacity = 0;
+        int currCapacity = 0;
         for (int passengerChange : timestamp.values()) {
-            usedCapacity += passengerChange;
-            if (usedCapacity > capacity) {
+            currCapacity += passengerChange;
+            if (currCapacity > capacity) {
                 return false;
             }
         }
@@ -40,13 +44,11 @@ public class CarPooling {
         return true;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        CarPooling cp = new CarPooling();
         int[][] trips = new int[][] {
-                { 2, 1, 5 }, { 3, 3, 7 }
+            { 2, 1, 5 }, { 3, 3, 7 }
         };
-
-        int capacity = 4;
-
-        System.out.println(carPooling(trips, capacity));
+        System.out.println(cp.carPooling(trips, 4));
     }
 }

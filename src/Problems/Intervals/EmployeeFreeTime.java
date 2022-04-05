@@ -22,21 +22,20 @@ import java.util.List;
  * free time intervals would be [-inf, 1], [3, 4], [10, inf].
  * We discard any intervals that contain inf as they aren't finite.
  */
+class Interval {
+    public int start;
+    public int end;
+
+    public Interval() {
+    }
+
+    public Interval(int _start, int _end) {
+        start = _start;
+        end = _end;
+    }
+};
 
 public class EmployeeFreeTime {
-
-    class Interval {
-        public int start;
-        public int end;
-
-        public Interval() {
-        }
-
-        public Interval(int _start, int _end) {
-            start = _start;
-            end = _end;
-        }
-    };
 
     public List<Interval> employeeFreeTime(List<List<Interval>> schedule) {
         List<Interval> result = new LinkedList<>();
@@ -98,12 +97,13 @@ public class EmployeeFreeTime {
         return list;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        EmployeeFreeTime eft = new EmployeeFreeTime();        
         List<List<Interval>> schedule = List.of(
                 List.of(new Interval(1, 2), new Interval(6, 7)),
                 List.of(new Interval(2, 4)),
                 List.of(new Interval(2, 5), new Interval(9, 12)));
 
-        System.out.println(employeeFreeTime(schedule));
+        System.out.println(eft.employeeFreeTime(schedule));
     }
 }
