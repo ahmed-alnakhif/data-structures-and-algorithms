@@ -48,10 +48,10 @@ public class FirstMissingPositive {
         nums[j] = tmp;
     }
 
-    public void run() {
-        int[] arr = { 7, 8, 9, 11, 12 };
-        firstMissingPositive(arr);
-        System.out.println(Arrays.toString(arr));
+    public static void main(String[] args) {
+
+        FirstMissingPositive fmp = new FirstMissingPositive();
+        System.out.println(fmp.firstMissingPositive(new int[] { 7, 8, 9, 11, 12 }));
 
     }
 }

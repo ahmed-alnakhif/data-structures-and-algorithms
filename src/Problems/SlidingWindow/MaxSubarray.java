@@ -25,7 +25,7 @@ public class MaxSubarray {
             if(sum < 0){
                 sum = 0;
             }
-            sum = sum + num;
+            sum += num;
             max = Math.max(max, sum);
         }
         

@@ -8,6 +8,7 @@ public class CyclicSort {
         int i = 0;
         while (i < arr.length) {
             int index = arr[i] - 1;
+            
             if (arr[i] > 0 && arr[i] <= arr.length && arr[i] != arr[index]) {
                 swap(arr, i, index);
             } else {
@@ -22,9 +23,10 @@ public class CyclicSort {
         arr[j] = tmp;
     }
 
-    public void run() {
-        int[] arr = { 2, 1, 4, 5, 3, 8, 6, 7 };
-        cyclicSort(arr);
+    public static void main(String[] args) {
+        CyclicSort cs = new CyclicSort();
+        int[] arr = { 2, 1, 4, 5, 3, -1, 8, 6, 7 };
+        cs.cyclicSort(arr);
         System.out.println(Arrays.toString(arr));
 
     }

@@ -84,8 +84,8 @@
 ## 5) Cyclic Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [Java](src/Problems/CyclicSort/FirstMissingPositive.java) | 1. sort nums using cyclic sort <br>2. return first unmatch index | T: O(N) <br>S: O(1) |
-|  2  | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/) | [Java](src/Problems/CyclicSort/FirstKthMissingPositive.java) | using binary search | T: O(log(N)) <br>S: O(1) |
+|  1  | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | [Java](src/Problems/cyclicSort/FirstMissingPositive.java) | 1. sort nums using cyclic sort <br>2. return first unmatched index | T: O(N) <br>S: O(1) |
+|  2  | [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/) | [Java](src/Problems/cyclicSort/FirstKthMissingPositive.java) | using binary search | T: O(log(N)) <br>S: O(1) |
 
 
 ## 6) Linked Lists
@@ -254,7 +254,7 @@
 |  4  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/Sequences/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(N) |
 |  5  | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | [Java](src/Problems/Sequences/ProductOfArrayExceptSelf.java) | 1. calculate product and number of zeros <br>2. check number of zeros and return the proper product | O(N) |
 |  6  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)  | [Java](src/Problems/Sequences/ValidParentheses.java) | 1. use a stack to push open brackets <br>2. check if next char is matching closing bracket && stack is empty at the end | O(N) |
-|  7  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/Sequences/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | O(N) |
+|  7  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/SlidingWindow/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | O(N) |
 |  8  | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)  | [Java](src/Problems/TwoPointers/TwoSumII.java) | 1. use a left and a right pointer <br>2. check if the sum is equal to the target <br>3. increment left if sum is lower, decrement right if sum is larger | O(N) |
 |  9  | [Three Sum Sorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. two nested loop; first loop gets the first value, and second loop performs 2Sum (find 2 values == target) <br>2. Array must be sorted to avoid duplicates <br>3. we can use L & R pointers, hashSet, or binary search to solve 2Sum| O(N^2) |
 |  10 | [Three Sum Unsorted](https://leetcode.com/problems/3sum/)  | [Java](src/Problems/TwoPointers/ThreeSum.java) | 1. since the array is not sorted, we can avoid duplicate by sorting the 3 values before adding them to the resultSet list and if the new set is not new, it won't be added again| O(N^2) |
