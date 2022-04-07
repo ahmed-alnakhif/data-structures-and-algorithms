@@ -49,11 +49,32 @@ public class MinimumDepthOfBinaryTree {
         return minDepth;
     }
 
+    //DFS
+    int min = Integer.MAX_VALUE;
+    public int minDepthDFS(TreeNode root) {
+        if(root == null) return 0;
+        dfs(root, 0);
+        return min;
+    }
+    
+    private void dfs(TreeNode root, int depth){
+        if(root == null) return;
+        
+        depth+=1;
+        
+        if(isLeafNode(root)){
+            min = Math.min(min, depth);
+        }
+        
+        dfs(root.left, depth);
+        dfs(root.right, depth);
+    }
+
     private boolean isLeafNode(TreeNode root) {
         return root != null && root.left == null && root.right == null;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }

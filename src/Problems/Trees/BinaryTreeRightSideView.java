@@ -51,25 +51,23 @@ public class BinaryTreeRightSideView {
 
 
     // using DFS
-    List<Integer> list = new LinkedList<>();
-
+    List<Integer> rightSideList = new LinkedList<>();
     public List<Integer> rightSideView2(TreeNode root) {
-        traverse(root, 1);
-        return list;
+        postDFS(root, 1);
+        return rightSideList;
     }
-    private void traverse(TreeNode root, int depth) {
-        if (root == null)
-            return;
+    private void postDFS(TreeNode root, int level) {
+        if (root == null) return;
 
-        if (depth > list.size()) {
-            list.add(root.val);
+        if (level > rightSideList.size()) {
+            rightSideList.add(root.val);
         }
 
-        traverse(root.right, depth + 1);
-        traverse(root.left, depth + 1);
+        postDFS(root.right, level + 1);
+        postDFS(root.left, level + 1);
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
