@@ -1,5 +1,6 @@
 package Problems.TreeBreadthFirstSearch;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -45,8 +46,10 @@ public class BinaryTreeLevelOrderTraversal {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                if (node.left != null) queue.add(node.left);
-                if (node.right != null) queue.add(node.right); 
+                if (node.left != null)
+                    queue.add(node.left);
+                if (node.right != null)
+                    queue.add(node.right);
                 level.add(node.val);
             }
             levels.add(level);
@@ -55,7 +58,29 @@ public class BinaryTreeLevelOrderTraversal {
         return levels;
     }
 
-    public void run() {
+    // dfs
+    List<List<Integer>> levels;
+
+    public List<List<Integer>> levelOrderDFS(TreeNode root) {
+        levels = new ArrayList<>();
+        dfs(root, 0);
+        return levels;
+    }
+
+    private void dfs(TreeNode root, int level) {
+        if (root == null) return;
+
+        if (levels.size() == level) {
+            levels.add(new ArrayList<>());
+        }
+
+        levels.get(level).add(root.val);
+
+        dfs(root.left, level + 1);
+        dfs(root.right, level + 1);
+    }
+
+    public static void main(String[] args) {
 
     }
 }

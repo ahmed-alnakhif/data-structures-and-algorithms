@@ -28,8 +28,7 @@ public class RotateLinkedList {
     }
 
     public ListNode rotateRight(ListNode head, int k) {
-        if (head == null || head.next == null)
-            return head;
+        if (head == null || head.next == null) return head;
 
         // 1) get tail and length
         ListNode oldTail = head;
@@ -60,7 +59,7 @@ public class RotateLinkedList {
         return newHead;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }

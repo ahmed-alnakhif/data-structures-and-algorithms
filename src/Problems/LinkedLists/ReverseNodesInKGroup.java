@@ -102,7 +102,7 @@ public class ReverseNodesInKGroup {
         return prev;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
