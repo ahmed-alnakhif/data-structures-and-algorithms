@@ -89,19 +89,18 @@
 
 
 ## 6) Linked Lists
-|  1  | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Java](src/Problems/LinkedLists/CopyListWithRandomPointers.java) | 1. first iteration, add all nodes to a hash map <br>2. second iteration, map.get(curr).next = map.get(curr.next) <br> and map.get(curr).random = map.get(curr.random) <br> lastly, we return map.get(head) | T: O(N) <br>S: O(N) |
-|  2  | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Java](src/Problems/LinkedLists/AddTwoNumbers.java) | 1. same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br>2. handle carrier | T: O(max(M, N)) <br>S: O(1) |
-
-
-## 7) In-place Reversal of a Linked List
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | 1. curr & prev pointers <br>2. iterate through the linked list and reverse | T: O(N) <br>S: O(1) |
-|  2  | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | [Java](src/Problems/LinkedLists/ReverseLinkedListII.java) | 1. get left and right nodes <br>2. reverse sub linked list <br>3. connect pointers | T: O(N) <br>S: O(1) |
-|  3  | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Java](src/Problems/LinkedLists/SwapNodesPairs.java) | 1. create dummy head <br>2. swap between first 2 nodes <br>3. move prev and head to next pairs | T: O(N) <br>S: O(1) |
-|  4  | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) | [Java](src/Problems/LinkedLists/SwapNodesInLinkedList.java) | 1. get front and end nodes <br>2. swap values | T: O(N) <br>S: O(1) |
-|  5  | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [Java](src/Problems/LinkedLists/ReverseNodesInKGroup.java) | 1. set left and right of sub linkedlist in a loop < LL length <br>2. head = reverseLinkedListII with left and right| T: O(N) <br>S: O(1) |
-|  6  | [Rotate Linked List](https://leetcode.com/problems/rotate-list/) | [Java](src/Problems/LinkedLists/RotateLinkedList.java) | 1. get the tail and length <br>2. calculate new tail k%length <br>3. link oldTail to head <br>4. move newTail ptr to new tail position <br>5. set newHead to newTail.next <br>6. set newTai.next to null| T: O(N) <br>S: O(1) |
+|  1  | [Merge Two Linked Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/LinkedLists/MergeLinkedLists.java) | 1. while second list is not empty, make l1.next -> l2, and make l2.next -> l1  | T: O(M + N) <br>S: O(1) |
+|  2  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | 1. min heap to hold the head of the two lists <br>2. poll min top and connect pointers <br>3. return head  <br>** check recursive approach for optimized solution| T: O(N * log(2)) <br>S: O(1) |
+|  3  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | [Java](src/Problems/LinkedLists/ReverseLinkedList.java) | 1. curr & prev pointers <br>2. iterate through the linked list and reverse | T: O(N) <br>S: O(1) |
+|  4  | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | [Java](src/Problems/LinkedLists/ReverseLinkedListII.java) | 1. get left and right nodes <br>2. reverse sub linked list <br>3. connect pointers | T: O(N) <br>S: O(1) |
+|  5  | [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/) | [Java](src/Problems/LinkedLists/CopyListWithRandomPointers.java) | 1. first iteration, add all nodes to a hash map <br>2. second iteration, map.get(curr).next = map.get(curr.next) <br> and map.get(curr).random = map.get(curr.random) <br> lastly, we return map.get(head) | T: O(N) <br>S: O(N) |
+|  6 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Java](src/Problems/LinkedLists/AddTwoNumbers.java) | 1. same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br>2. handle carrier | T: O(max(M, N)) <br>S: O(1) |
+|  7  | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Java](src/Problems/LinkedLists/SwapNodesPairs.java) | 1. create dummy head <br>2. swap between first 2 nodes <br>3. move prev and head to next pairs | T: O(N) <br>S: O(1) |
+|  8  | [Swapping Nodes in a Linked List](https://leetcode.com/problems/swapping-nodes-in-a-linked-list/) | [Java](src/Problems/LinkedLists/SwapNodesInLinkedList.java) | 1. get front and end nodes <br>2. swap values | T: O(N) <br>S: O(1) |
+|  9  | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | [Java](src/Problems/LinkedLists/ReverseNodesInKGroup.java) | 1. set left and right of sub linkedlist in a loop < LL length <br>2. head = reverseLinkedListII with left and right| T: O(N) <br>S: O(1) |
+|  10  | [Rotate Linked List](https://leetcode.com/problems/rotate-list/) | [Java](src/Problems/LinkedLists/RotateLinkedList.java) | 1. get the tail and length <br>2. calculate new tail k%length <br>3. link oldTail to head <br>4. move newTail ptr to new tail position <br>5. set newHead to newTail.next <br>6. set newTai.next to null| T: O(N) <br>S: O(1) |
 
 
 ## 8) Tree - Breadth First Search
