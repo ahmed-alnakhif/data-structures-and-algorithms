@@ -1,6 +1,5 @@
 package Problems.cyclicSort;
 
-import java.util.Arrays;
 
 /**
  * Given an unsorted integer array nums, return the smallest missing positive
