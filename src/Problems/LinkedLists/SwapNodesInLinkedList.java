@@ -53,10 +53,11 @@ public class SwapNodesInLinkedList {
         int temp = front.val;
         front.val = end.val;
         end.val = temp;
+
         return head;
     }
 
-    public void run() {
+    public static void main(String[] args) {
 
     }
 }

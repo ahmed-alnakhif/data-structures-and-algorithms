@@ -51,7 +51,7 @@ public class SwapNodesPairs {
         return dummy.next;
     }
 
-    public void run() {
+    public static void main(String[] args) {
 
     }
 }
