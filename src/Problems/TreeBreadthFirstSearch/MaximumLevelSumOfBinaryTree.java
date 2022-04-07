@@ -46,7 +46,9 @@ public class MaximumLevelSumOfBinaryTree {
 
         int max = Integer.MIN_VALUE;
         int level = 0, maxLevel = 0;
+
         queue.add(root);
+        
         while (!queue.isEmpty()) {
             level++;
             int sum = 0;

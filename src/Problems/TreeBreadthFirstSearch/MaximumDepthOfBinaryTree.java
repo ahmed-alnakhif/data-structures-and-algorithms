@@ -13,27 +13,28 @@ import java.util.Queue;
  * Output: 3
  */
 
-public class MaximumDepthOfBinaryTree {
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
+    TreeNode() {
     }
 
-    public int minDepth(TreeNode root) {
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
+public class MaximumDepthOfBinaryTree {
+    // bfs
+    public int maxDepthBFS(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
 
         if (root == null) return 0;
@@ -53,7 +54,30 @@ public class MaximumDepthOfBinaryTree {
         return minDepth;
     }
 
-    public void run() {
 
+    //dfs
+    int max = 0;
+    
+    public int maxDepthDFS(TreeNode root) {
+        dfs(root, 0);
+        return max;
+    }
+    
+    private void dfs(TreeNode root, int depth){
+        if(root == null) return;
+        
+        depth+=1;
+        
+        max = Math.max(max, depth);
+        
+        dfs(root.left, depth);
+        dfs(root.right, depth);
+    }
+
+    public static void main(String[] args) {
+        MaximumDepthOfBinaryTree maxDepth = new MaximumDepthOfBinaryTree();
+        TreeNode root = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+        System.out.println(maxDepth.maxDepthBFS(root));
+        System.out.println(maxDepth.maxDepthDFS(root));
     }
 }
