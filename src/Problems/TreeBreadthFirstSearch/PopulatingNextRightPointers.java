@@ -46,6 +46,7 @@ public class PopulatingNextRightPointers {
         queue.add(root);
         while (!queue.isEmpty()) {
             int size = queue.size();
+            
             for (int i = 0; i < size; i++) {
                 Node node = queue.poll();
                 if (i < size - 1) node.next = queue.peek(); // point to the next node in the same level
