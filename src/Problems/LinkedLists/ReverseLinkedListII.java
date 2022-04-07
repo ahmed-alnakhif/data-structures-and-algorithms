@@ -51,10 +51,10 @@ public class ReverseLinkedListII {
         endNext = end.next;
         end.next = null;
 
-        //reverse the sub linkedlist
+        //reverse the sub linked list
         ListNode reversedHead = reverse(start, end);
 
-        //if sub is the start of the linkedlist
+        //if sub is the start of the linked list
         if (startPrev == null) {
             head = reversedHead;
         } 
@@ -63,14 +63,14 @@ public class ReverseLinkedListII {
             startPrev.next = reversedHead;
         }
 
-        //connect the end of the sub linkedlist to the saved end.next
+        //connect the end of the sub linked list to the saved end.next
         start.next = endNext;
 
         //return beginning of the linked list 
         return head;
     }
 
-    // normal reverse linkedlist method 
+    // normal reverse linked list method 
     private ListNode reverse(ListNode start, ListNode end) {
         ListNode curr = start, prev = null;
         while (curr != null) {
@@ -82,7 +82,8 @@ public class ReverseLinkedListII {
         return prev;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        
 
     }
 }

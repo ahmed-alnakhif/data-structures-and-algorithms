@@ -34,7 +34,8 @@ public class ReverseLinkedList {
         return prev;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        
        
     }
 }
