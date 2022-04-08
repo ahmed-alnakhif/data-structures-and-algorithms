@@ -35,39 +35,15 @@ public class PathWithGivenSequence {
     }
 
     public boolean findPath(TreeNode root, int[] sequence) {
-        String strSequence = "";
-        for (int num : sequence) {
-            strSequence += num;
-        }
-
-        return preOrderDFS(root, "", strSequence);
+        return dfs(root, sequence, 0);
     }
 
-    private boolean preOrderDFS(TreeNode root, String currPath, String sequence) {
-        if (root == null) return false;
-
-        currPath += root.val;
-
-        if (isLeafNode(root) && currPath.equals(sequence)) {
-            return true;
-        }
-
-        return preOrderDFS(root.left, currPath, sequence) || preOrderDFS(root.right, currPath, sequence);
-    }
-
-    private boolean findPathRecursive(TreeNode root, int[] sequence, int index) {
-
-        if (root == null) return false;
-    
-        if (index >= sequence.length || root.val != sequence[index]) return false;
-    
-        // if the current node is a leaf, add it is the end of the sequence, we have found a path!
-        if (isLeafNode(root) && index == sequence.length - 1) return true;
-    
-        // recursively call to traverse the left and right sub-tree
-        // return true if any of the two recursive call return true
-        return findPathRecursive(root.left, sequence, index + 1)
-            || findPathRecursive(root.right, sequence, index + 1);
+    private boolean dfs(TreeNode root, int[] seq, int index){
+        if(root == null) return false;
+        if(seq[index] != root.val) return false;
+        if(index == seq.length-1 && !isLeafNode(root)) return false;
+        if(index == seq.length-1) return true;
+        return dfs(root.left, seq, index + 1) || dfs(root.right, seq, index + 1);
       }
 
     private boolean isLeafNode(TreeNode root){
