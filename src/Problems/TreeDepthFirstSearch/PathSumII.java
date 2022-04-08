@@ -51,15 +51,14 @@ public class PathSumII {
         if (root == null) return;
 
         sum += root.val;
-
         list.add(root.val);
 
         if (isLeafNode(root) && sum == targetSum) {
             result.add(new LinkedList<>(list));
-        } else {
-            preOrderDFS(root.left, sum, targetSum);
-            preOrderDFS(root.right, sum, targetSum);
-        }
+        } 
+        
+        preOrderDFS(root.left, sum, targetSum);
+        preOrderDFS(root.right, sum, targetSum);
 
         list.removeLast();
     }
