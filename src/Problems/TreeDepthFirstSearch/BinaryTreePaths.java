@@ -33,13 +33,14 @@ public class BinaryTreePaths {
     }
 
     List<String> allPaths = new ArrayList<>();
+    StringBuilder path = new StringBuilder();
 
     public List<String> binaryTreePaths(TreeNode root) {
-        dfs(root, new StringBuilder());
+        dfs(root);
         return allPaths;
     }
 
-    void dfs(TreeNode root, StringBuilder path) {
+    void dfs(TreeNode root) {
         if (root == null) return;
 
         int originalLength = path.length();
@@ -50,9 +51,10 @@ public class BinaryTreePaths {
             allPaths.add(path.toString());
         } else {
             path.append("->");
-            dfs(root.left, path);
-            dfs(root.right, path);
         }
+
+        dfs(root.left);
+        dfs(root.right);
 
         // backtrack to the previous path
         path.setLength(originalLength);

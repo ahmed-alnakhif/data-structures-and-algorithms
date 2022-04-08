@@ -243,11 +243,17 @@
 |  7  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | [Java](src/Problems/topologicalSort/MinimumHeightTrees.java) |  | T:O() <br> S:O() |
 
 
-
-## 18) Other
+## 18) Prefix Sum Technique
 |  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
-|  2  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |
+|  1  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)  | [Java](src/Problems/Sequences/SubarraySumEqualsK.java) | 1. calculate sum while iterating <br>2. check if sum - k is in the map <br>3. if yes then our map has the desired sum  | Time: O(N) <br> Space: O(N) |
+|  2  | [Path Sum III](https://leetcode.com/problems/path-sum-iii/) | [Java](src/Problems/TreeDepthFirstSearch/PathSumIII.java) | 1. dfs recursion <br>2. calculate sum <br>3. check if sum - target is in the map <br>3. call left and right subtrees <br>4. remove curr sum from map, so we don't us it with other subtrees paths | T: O(N) <br>S: O(N) |
+
+
+## 19) Other
+|  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
+| --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
+|  1  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |
 |  3  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
 |  4  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/Sequences/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(N) |
 |  5  | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | [Java](src/Problems/Sequences/ProductOfArrayExceptSelf.java) | 1. calculate product and number of zeros <br>2. check number of zeros and return the proper product | O(N) |
@@ -270,7 +276,7 @@
 | 30   | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, calculate min and increment left <br>3. else incrementright | Time: O(N) <br> Space: O(1) | Sliding Window
 | 31   | [Largest Subarray Length K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/LargestSubarrayLengthK.java) | 1. find largest starting value of a window <br>2. return all elements from start | Time: O(N) <br> Space: O(N) | Fixed Window
 | 32   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/submissions/)  | [Java](src/Problems/SlidingWindow/LongestSubstringwithAtMostKDistinctCharacters.java) | 1. ordered hash map <br>2. if we get a seen char, remove it from the map and put the new index <br>3. if the map size > k keep removing left most char and assign left to its index <br>4. keep track of max length | Time: O(N) <br> Space: O(N) | Sliding Window, Hash Map
-| 35   | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)  | [Java](src/Problems/Sequences/SubarraySumEqualsK.java) | 1. calculate sum while iterating <br>2. check if sum - k is in the map <br>3. if yes then our map has the desired sum  | Time: O(N) <br> Space: O(N) | Hash Map
+
 | 37  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [Java](src/Problems/Sequences/PermutationInString.java) | sort each substring and check if equal | O(L1Log(L1) + (L2 - L1)*L1Log(L1))
 | 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)
 | 39  | [Find Disappeared Numbers](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/) | [Java](src/Problems/Sequences/FindDisappearedNumbers.java) | 1. mark the index of each num as negative <br>2. check if all numbers are negative | T: O(N) <br>S: O(1)
