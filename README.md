@@ -103,7 +103,7 @@
 |  10  | [Rotate Linked List](https://leetcode.com/problems/rotate-list/) | [Java](src/Problems/LinkedLists/RotateLinkedList.java) | 1. get the tail and length <br>2. calculate new tail k%length <br>3. link oldTail to head <br>4. move newTail ptr to new tail position <br>5. set newHead to newTail.next <br>6. set newTai.next to null| T: O(N) <br>S: O(1) |
 
 
-## 8) Tree - Breadth First Search
+## 7) Tree - Breadth First Search
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Java](src/Problems/TreeBreadthFirstSearch/BinaryTreeLevelOrderTraversal.java) | 1. regular BFS <br>2. save queue size and loop < size <br>3. add polled node to your level list <br>4. after loop is done, add the level list to the final result list | T: O(N) <br>S: O(N) |
@@ -117,7 +117,7 @@
 |  9  | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/) | [Java](src/Problems/TreeBreadthFirstSearch/PopulatingNextRightPointers.java) | 1. [BFS](https://leetcode.com/problems/binary-tree-level-order-traversal/) <br>2. node points to next in the queue if node is not the last in the level | T: O(N) <br>S: O(N) |
 
 
-## 9) Tree - Depth First Search
+## 8) Tree - Depth First Search
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Path Sum](https://leetcode.com/problems/path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/PathSum.java) | 1. preorder DFS <br>2. keep track of accumulative sum <br>3. if sum = target AND is leaf node then return true <br>4. else check if left OR right is true | T: O(N) <br>S: O(N) |
@@ -130,7 +130,7 @@
 |  8  | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Java](src/Problems/TreeDepthFirstSearch/MaximumPathSum.java) | 1. global variable to track max <br>2. get max gain for left and right subtrees <br>3. sum subtree gain (root+left+righ) <br>4. update maxSum <br>5. return root value and max of left or right | T: O(N) <br>S: O(N) |
 
 
-## 10) Two Heaps
+## 9) Two Heaps
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [IPO](https://leetcode.com/problems/ipo/) | [Java](src/Problems/twoHeaps/IPO.java) | the idea is to maximize the profit and minimize the capital <br>1. max heap for profit & min heap for capital <br>2. while our available capital is less than the min cap, then we have to take it <br> we add the profit of the project to our avail cap | T: O(N*log(N)) <br>S: O(N) |
@@ -139,7 +139,7 @@
 |  4  | [Find Right Interval](https://leetcode.com/problems/find-right-interval/) | [Java](src/Problems/twoHeaps/FindRightInterval.java) | the idea is to access the max end time and compare it with max start time <br>1. two max heaps for start and end times <br>2. check if top end time is less than top start time, if true then we find a possible right interval. <br>3. however, we still need to check if there's a smaller start time | T: O(N*log(N)) <br>S: O(N) |
 
 
-## 11) Subsets
+## 10) Subsets
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Subsets](https://leetcode.com/problems/subsets/) | [Java](src/Problems/Subsets/Subsets.java) | Cascading <br>1. start with an empty list <br>2. an outer loop to iterate through numbers <br>3. an inner loop to grab each subset and add num to it | T: O(N*2^N) <br>S: O(N*2^N) |
@@ -153,7 +153,7 @@
 |  9  | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O( ) S: O( ) |
 
 
-## 12) Modified Binary Search
+## 11) Modified Binary Search
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Binary Search](https://leetcode.com/problems/binary-search/) | [Java](src/Problems/modifiedBinarySearch/BinarySearch.java) | 1. left and right pointers <br>2. mid = (left+right)/2 <br>3. if val < target, divide the array and move left to mid + 1 <br>4. if val > target, divide the array and move right to mid - 1 | T: O(log(N)) <br>S: O(1) |
@@ -164,7 +164,7 @@
 |  6  | [First and Last Position of Element in Sorted Array](https://leetcode.com/problems/search-suggestions-system/) | [Java](src/Problems/modifiedBinarySearch/SearchSuggestionsSystem.java) | The idea here is to use prefix substrings from search word and use binary search to find if there're any words that start with the prefix substring in our products list. <br>1. sort products <br>2.  | Time: O(log(N)) <br> Space: O(1) |
 
 
-## 13) Top Kth Elements
+## 12) Top Kth Elements
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) | [Java](src/Problems/topKElements/KthLargestElement.java) | 1. min heap to hold k elements <br>2. traverse and add nums to min heap. <br>3. if size > k then poll so we only keep the largest k elements <br>4. return top in the heap | T: O(N * log(k)) <br>S: O(k) |
@@ -182,7 +182,7 @@
 |  13  | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | [Java](src/Problems/topKElements/KClosestPointsToOrigin.java) | max heap <br>1. add each point with its distance to the heap <br>2. poll if size > k | T: O(N*log(N)) <br>S: O(N) |
 
 
-## 14) K-Way Merge
+## 13) K-Way Merge
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | 1. min heap to hold the head of the two lists <br>2. poll min top and connect pointers <br>3. return head  <br>** check recursive approach for optimized solution| T: O(N * log(2)) <br>S: O(2) |
@@ -193,13 +193,13 @@
 |  6  | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Java](src/Problems/kWayMerge/FindKSmallestPairs.java) | 1. min heap <br>2. create a pair by iterating through the first list and the first element in the second list <br>3. while we're larger than k, pop the top element and add it to the result <br>4. increment index of second list and add it to the min heap | T: O(K*log(K)) <br>S: O(K) |
 |  7  | [Find K Pairs with Largest Sums](https://www.educative.io/courses/grokking-the-coding-interview/N767x7VoYmK) | [Java](src/Problems/kWayMerge/FindKLargestPairs.java) |  | T: O(K*log(K)) <br>S: O(K) |
 
-## 15) Graphs
+## 14) Graphs
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V) |  
 |  2  | [Island Count](https://leetcode.com/problems/number-of-islands/) | [Java](src/Problems/Graphs/NumberOfIslands.java) |  | T:O(N * M) <br>S:O(N * M) | 
 
-## 16) Dynamic Programming
+## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 | 1.1 | [Fibonacci](https://leetcode.com/problems/fibonacci-number/) | memoization: [Java](src/Problems/dynamicProgramming/memoization/Fib.java) | 1. base case: n <= 2 return 1 <br> 2. recursive case: n = (n-1) + (n-2) | T: O(n) <br>S: O(n) |
@@ -231,7 +231,7 @@
 | 16 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O(N^2) <br>S: O(N) |
 
 
-## 17) Topological Sort
+## 16) Topological Sort
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Topological Sort Algorithm](https://www.educative.io/courses/grokking-the-coding-interview/m25rBmwLV00) | [Java](src/Problems/topologicalSort/TopologicalSortAlgorithm.java) | 1. build a graph and an in-degree map <br>2. create a source queue (nodes that have 0 in-degree edges) <br>3. while the queue is not empty: <br>  a. poll the node  <br>  b. decrement the children degree <br>  c. if child degree == 0, add it to the queue <br>4. check if we were able to add all the nodes to the result list | T:O(V+E) <br>S:O(V+E) |
@@ -243,14 +243,14 @@
 |  7  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | [Java](src/Problems/topologicalSort/MinimumHeightTrees.java) |  | T:O() <br> S:O() |
 
 
-## 18) Prefix Sum Technique
+## 17) Prefix Sum Technique
 |  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 |  1  | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)  | [Java](src/Problems/Sequences/SubarraySumEqualsK.java) | 1. calculate sum while iterating <br>2. check if sum - k is in the map <br>3. if yes then our map has the desired sum  | Time: O(N) <br> Space: O(N) |
 |  2  | [Path Sum III](https://leetcode.com/problems/path-sum-iii/) | [Java](src/Problems/TreeDepthFirstSearch/PathSumIII.java) | 1. dfs recursion <br>2. calculate sum <br>3. check if sum - target is in the map <br>3. call left and right subtrees <br>4. remove curr sum from map, so we don't us it with other subtrees paths | T: O(N) <br>S: O(N) |
 
 
-## 19) Other
+## 18) Other
 |  #  | Title         | Solution                                    | Basic idea |  O Notation  |   Pattern   |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ | ----------- |
 |  1  | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. HashSet <br>2. for loop to check if complement exists in the set | O(N) |

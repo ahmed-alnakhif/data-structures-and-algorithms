@@ -24,14 +24,14 @@ import java.util.List;
 // Can be solved in a more optimized way using sliding window
 public class LetterCasePermutation {
 
-    static List<String> result = new ArrayList<>();
+    List<String> result = new ArrayList<>();
 
-    public static List<String> letterCasePermutation(String s) {
+    public List<String> letterCasePermutation(String s) {
         backtrack(s, new StringBuilder(), 0);
         return result;
     }
 
-    private static void backtrack(String str, StringBuilder resultStr, int left) {
+    private void backtrack(String str, StringBuilder resultStr, int left) {
         if (left == str.length()) {
             result.add(resultStr.toString());
             return;
@@ -53,7 +53,7 @@ public class LetterCasePermutation {
     }
 
     public static void main(String[] args) {
-        String s = "a1b2";
-        System.out.println(letterCasePermutation(s));
+        LetterCasePermutation c = new LetterCasePermutation();
+        System.out.println(c.letterCasePermutation("a1b2"));
     }
 }
