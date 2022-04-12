@@ -28,23 +28,23 @@ public class GenerateParentheses {
     static List<String> result = new ArrayList<>();
 
     public static List<String> generateParenthesis(int n) {
-        backtrack(n, 0, 0, new StringBuilder());
+        generate(n, 0, 0, new StringBuilder());
         return result;
     }
 
-    private static void backtrack(int n, int open, int close, StringBuilder perString) {
-        if (open == close && open == n) {
+    private static void generate(int n, int open, int close, StringBuilder perString) {
+        if (open == n && close == n) {
             result.add(perString.toString());
             return;
         }
 
         if (open < n) {
-            backtrack(n, open + 1, close, perString.append("("));
+            generate(n, open + 1, close, perString.append("("));
             perString.deleteCharAt(perString.length() - 1);
         }
 
         if (close < open) {
-            backtrack(n, open, close + 1, perString.append(")"));
+            generate(n, open, close + 1, perString.append(")"));
             perString.deleteCharAt(perString.length() - 1);
         }
     }
