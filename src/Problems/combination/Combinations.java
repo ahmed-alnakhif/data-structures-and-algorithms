@@ -18,14 +18,14 @@ import java.util.List;
  */
 
 public class Combinations {
-    static List<List<Integer>> result = new LinkedList<>();
+    List<List<Integer>> result = new LinkedList<>();
 
-    public static List<List<Integer>> combine(int n, int k) {
+    public List<List<Integer>> combine(int n, int k) {
         combination(1, n, k, new LinkedList<>());
         return result;
     }
 
-    private static void combination(int start, int n, int k, LinkedList<Integer> comb) {
+    private void combination(int start, int n, int k, LinkedList<Integer> comb) {
         if (comb.size() == k) {
             result.add(new LinkedList<>(comb));
             return;
@@ -45,7 +45,7 @@ public class Combinations {
     }
 
     public static void main(String[] args) {
-        int n = 4, k = 2;
-        System.out.println(combine(n, k));
+        Combinations c = new Combinations();
+        System.out.println(c.combine(4, 2));
     }
 }
