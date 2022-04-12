@@ -33,9 +33,9 @@ import java.util.Map;
 
 public class DiffWaysToAddParentheses {
 
-    static Map<String, List<Integer>> cache = new HashMap<>();
+    Map<String, List<Integer>> cache = new HashMap<>();
 
-    public static List<Integer> diffWaysToCompute(String expression) {
+    public List<Integer> diffWaysToCompute(String expression) {
         List<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < expression.length(); i++) {
@@ -75,11 +75,12 @@ public class DiffWaysToAddParentheses {
         return result;
     }
 
-    static boolean isOperator(char c) {
+    private boolean isOperator(char c) {
         return c == '+' || c == '-' || c == '*';
     }
 
     public static void main(String[] args) {
-        System.out.println(diffWaysToCompute("2-1-1"));
+        DiffWaysToAddParentheses solution = new DiffWaysToAddParentheses();
+        System.out.println(solution.diffWaysToCompute("2-1-1"));
     }
 }
