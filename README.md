@@ -198,6 +198,7 @@
 |  2  | [Shortest Path in Unweighted Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/) | [Java](src/Problems/Graphs/ShortestPath.java) | BFS | T: O(E+V) <br>S:O(V) |  
 |  3  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | [Java](src/Problems/Graphs/NumberOfIslands.java) |  | T:O(N * M) <br>S:O(N * M) | 
 |  4  | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Java](src/Problems/Graphs/NumberOfConnectedComponents.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
+|  4  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
 |  2  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 

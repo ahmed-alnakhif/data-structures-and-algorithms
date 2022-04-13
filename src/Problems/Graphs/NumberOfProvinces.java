@@ -34,8 +34,7 @@ public class NumberOfProvinces {
     }
 
     private boolean dfs(int[][] board, int index, boolean[] visited) {
-        if (visited[index])
-            return false;
+        if (visited[index]) return false;
 
         visited[index] = true;
 
