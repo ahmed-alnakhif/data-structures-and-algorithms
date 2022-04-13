@@ -194,7 +194,7 @@
 ## 14) Graphs
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
-|  1  | [Has Path]() | [Java]() | use DFS or BFS | T: O(E+V) <br>S:O(V) |  
+|  1  | [Find if Path Exists in Graph](https://leetcode.com/problems/find-if-path-exists-in-graph/) | [Java](src/Problems/Graphs/FindIfPathExists.java) | BFS | T: O(E+V) <br>S:O(V) |  
 |  2  | [Island Count](https://leetcode.com/problems/number-of-islands/) | [Java](src/Problems/Graphs/NumberOfIslands.java) |  | T:O(N * M) <br>S:O(N * M) | 
 
 ## 15) Dynamic Programming
