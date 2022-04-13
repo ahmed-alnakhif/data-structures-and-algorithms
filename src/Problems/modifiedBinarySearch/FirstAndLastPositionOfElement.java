@@ -18,8 +18,9 @@ import java.util.Arrays;
 
 public class FirstAndLastPositionOfElement {
 
-    public static int[] searchRange(int[] nums, int target) {
+    public int[] searchRange(int[] nums, int target) {
         int[] answer = { -1, -1 };
+
         int pos = Arrays.binarySearch(nums, target);
 
         if (pos > -1) {
@@ -41,8 +42,9 @@ public class FirstAndLastPositionOfElement {
     }
 
     public static void main(String[] args) {
+        FirstAndLastPositionOfElement f = new FirstAndLastPositionOfElement();
         int[] nums = { 5, 7, 7, 8, 8, 10 };
         int target = 8;
-        System.out.println(searchRange(nums, target));
+        System.out.println(f.searchRange(nums, target));
     }
 }
