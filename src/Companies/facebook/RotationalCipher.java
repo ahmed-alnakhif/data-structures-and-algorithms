@@ -29,7 +29,7 @@ public class RotationalCipher {
             if (Character.isLetter(ch)) {
                 if (Character.isUpperCase(ch)) {
                     // subtract ascii value and take mod 26 so we can find the position from 0 -> 25
-                    // add + 'A' (ascii value) so we convert it back to a char
+                    // add + 'A' (ascii value) to convert it back to a char
                     ch = (char) (((ch - 'A' + rotationFactor) % 26) + 'A');
                 } else {
                     ch = (char) (((ch - 'a' + rotationFactor) % 26) + 'a');

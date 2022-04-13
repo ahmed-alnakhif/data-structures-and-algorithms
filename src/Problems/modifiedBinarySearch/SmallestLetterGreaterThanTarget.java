@@ -1,5 +1,7 @@
 package Problems.modifiedBinarySearch;
 
+import java.util.Arrays;
+
 /**
  * Given a characters array letters that is sorted in non-decreasing order and a
  * character target, return the smallest character in the array that is larger
@@ -18,7 +20,22 @@ package Problems.modifiedBinarySearch;
 
 public class SmallestLetterGreaterThanTarget {
 
-    public static char nextGreatestLetter(char[] letters, char target) {
+    public char nextGreatestLetter(char[] letters, char target) {
+        char nextChar = (char) ((target - 'a' + 1) + 'a');
+        int nextCharIndex = Arrays.binarySearch(letters, nextChar);
+
+        if (nextCharIndex < 0) {
+            nextCharIndex = Math.abs(nextCharIndex) - 1;
+        }
+
+        if (nextCharIndex < letters.length) {
+            return letters[nextCharIndex];
+        }
+
+        return letters[0];
+    }
+
+    public char nextGreatestLetter2(char[] letters, char target) {
         int left = 0, right = letters.length - 1;
 
         while (left <= right) {
@@ -41,6 +58,7 @@ public class SmallestLetterGreaterThanTarget {
     }
 
     public static void main(String[] args) {
-
+        SmallestLetterGreaterThanTarget s = new SmallestLetterGreaterThanTarget();
+        System.out.println(s.nextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'a'));
     }
 }
