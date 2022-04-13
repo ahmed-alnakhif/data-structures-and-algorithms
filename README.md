@@ -317,7 +317,7 @@
 | 74  | [Favorite Genre](https://leetcode.com/discuss/interview-question/373006) | [Java](src/Companies/amazon/FavoriteGenres.java) | 1. create a map for songs genres <br>2. iterate through each user and create a count map and track max <br>3. iterate through count map and if value == max, then add genre to the user favorite genre | Time: O(G*(G+S) <br> Space: O(S) |
 | 75  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | [Java](src/Problems/Graphs/WallsAndGates.java) | 1. BFS <br> 2. add all gates cells to the queue <br>2. process the queue <br>3. if parent room < curr room, then update current room and add it to the queue | Time: O(N*M) <br> Space: O(N*M) |
 | 76  | [Next Permutation](https://leetcode.com/problems/next-permutation/) | [Java](src/Problems/arrays/NextPermutation.java) | 1. start from the end and find the non-increasing suffix <br>2. start again from the end and find the next larger number to the pivot <br>3. swap with the pivot <br>4. reverse the suffix  | Time: O(N) <br> Space: O(1) |
-| 77  | [Next Permutation](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/arrays/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
+| 77  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/arrays/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
 
 
 # Companies 
@@ -363,7 +363,7 @@
 ## Twitter
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java]() | Hash Map |
+|  1  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/arrays/UserActiveMinutes.java) | Hash Map |
 
 
 ## Uber
