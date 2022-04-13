@@ -1,4 +1,4 @@
-package Problems.Graphs;
+package Problems.matrixBFS;
 
 import java.util.LinkedList;
 import java.util.Queue;
