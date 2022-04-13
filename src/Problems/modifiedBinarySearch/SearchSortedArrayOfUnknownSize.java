@@ -37,6 +37,7 @@ public class SearchSortedArrayOfUnknownSize {
     public int search(ArrayReader reader, int target) {
         int left = 0, right = 1;
 
+        //find upper bound
         while (reader.get(right) < target) {
             left = right;
             right *= 2;
@@ -57,6 +58,9 @@ public class SearchSortedArrayOfUnknownSize {
     }
 
     public static void main(String[] args) {
-
+        SearchSortedArrayOfUnknownSize s = new SearchSortedArrayOfUnknownSize();
+        ArrayReader reader = new ArrayReader();
+        int target = 9;
+        System.out.println(s.search(reader, target));
     }
 }
