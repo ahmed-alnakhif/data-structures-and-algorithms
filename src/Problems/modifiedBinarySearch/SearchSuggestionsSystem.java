@@ -40,7 +40,7 @@ public class SearchSuggestionsSystem {
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         List<List<String>> suggestionsList = new ArrayList<>();
 
-        //sort products lexicographically
+        // sort products lexicographically
         Arrays.sort(products);
 
         for (int i = 0; i < searchWord.length(); i++) {
@@ -53,16 +53,12 @@ public class SearchSuggestionsSystem {
             // no prefix in products
             // find the first one larger than prefix.
             if (index < 0) {
-                index = -index - 1;
+                index = Math.abs(index) - 1;
             }
 
             List<String> suggestions = new ArrayList<>();
             int max = index + 3;
-            for (int j = index; j < products.length; j++) {
-                if (j == max){ // if we have reached the max number of suggestions
-                    break;
-                }
-
+            for (int j = index; j < products.length && j < max; j++) {
                 if (products[j].startsWith(prefix)) { // if the product starts with the prefix
                     suggestions.add(products[j]);
                 }
@@ -77,6 +73,7 @@ public class SearchSuggestionsSystem {
     public static void main(String[] args) {
         SearchSuggestionsSystem s = new SearchSuggestionsSystem();
         System.out.println(
-                s.suggestedProducts(new String[] { "bags", "baggage", "banner", "cdf", "box", "clothes", "dog", "dig" }, "clothes"));
+                s.suggestedProducts(new String[] { "bags", "baggage", "banner", "cdf", "box", "clothes", "dog", "dig" },
+                        "clothes"));
     }
 }
