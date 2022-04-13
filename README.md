@@ -317,8 +317,9 @@
 | 74  | [Favorite Genre](https://leetcode.com/discuss/interview-question/373006) | [Java](src/Companies/amazon/FavoriteGenres.java) | 1. create a map for songs genres <br>2. iterate through each user and create a count map and track max <br>3. iterate through count map and if value == max, then add genre to the user favorite genre | Time: O(G*(G+S) <br> Space: O(S) |
 | 75  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | [Java](src/Problems/Graphs/WallsAndGates.java) | 1. BFS <br> 2. add all gates cells to the queue <br>2. process the queue <br>3. if parent room < curr room, then update current room and add it to the queue | Time: O(N*M) <br> Space: O(N*M) |
 | 76  | [Next Permutation](https://leetcode.com/problems/next-permutation/) | [Java](src/Problems/arrays/NextPermutation.java) | 1. start from the end and find the non-increasing suffix <br>2. start again from the end and find the next larger number to the pivot <br>3. swap with the pivot <br>4. reverse the suffix  | Time: O(N) <br> Space: O(1) |
-| 77  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/arrays/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
-| 78  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/arrays/FollowerRelationship.java) | 1. iterate through relationships and add each followee to the follower <br>2. if followee exists in the map and contains the follower, then we found a pair  | Time: O(N) <br> Space: O(N) |
+| 77  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/hashMap/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
+| 78  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through relationships and add each followee to the follower <br>2. if followee exists in the map and contains the follower, then we found a pair  | Time: O(N) <br> Space: O(N) |
+| 79  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through the first map <br>2. if key doesn't exist in the second map return false <br>3. if value of the key is not equal to the one in the second map then return false | Time: O(N) <br> Space: O(1) |
 
 
 # Companies 
@@ -364,8 +365,9 @@
 ## Twitter
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
-|  1  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/arrays/UserActiveMinutes.java) | Hash Map |
-|  2  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/arrays/FollowerRelationship.java) | Hash Map |
+|  1  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/hashMap/UserActiveMinutes.java) | Hash Map |
+|  2  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | Hash Map |
+|  3  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | Hash Map |
 
 
 ## Uber
