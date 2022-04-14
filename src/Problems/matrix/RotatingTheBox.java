@@ -1,4 +1,4 @@
-package Problems.Matrices;
+package Problems.matrix;
 
 /**
  * You are given an m x n matrix of characters box representing a side-view of a

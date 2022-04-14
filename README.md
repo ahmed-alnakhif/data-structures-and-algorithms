@@ -200,7 +200,7 @@
 |  4  | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Java](src/Problems/Graphs/NumberOfConnectedComponents.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
 |  4  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) |  | T:O(N * M) <br>S:O(N * M) | 
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
-|  6  | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() | 
+|  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java)  | Graphs  |
 |  2  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 
 ## 15) Dynamic Programming
@@ -320,7 +320,7 @@
 | 77  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/hashMap/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
 | 78  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through relationships and add each followee to the follower <br>2. if followee exists in the map and contains the follower, then we found a pair  | Time: O(N) <br> Space: O(N) |
 | 79  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through the first map <br>2. if key doesn't exist in the second map return false <br>3. if value of the key is not equal to the one in the second map then return false | Time: O(N) <br> Space: O(1) |
-
+|  6  | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() |
 
 # Companies 
 
