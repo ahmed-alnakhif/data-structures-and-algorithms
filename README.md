@@ -200,6 +200,7 @@
 |  4  | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Java](src/Problems/Graphs/NumberOfConnectedComponents.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
 |  4  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) |  | T:O(N * M) <br>S:O(N * M) | 
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
+|  6  | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() | 
 |  2  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 
 ## 15) Dynamic Programming
@@ -270,7 +271,6 @@
 | 20   | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)  | [Java](src/Problems/SlidingWindow/MaxAverage.java) | 1. sliding window <br>2. calculate the sum of the first window <br>3. slide the window and recalculate the max sum <br>4. return maxSum/windowSize | O(N)  | 
 | 23   | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  | [Java](src/Problems/SlidingWindow/MinimumWindowSubstring.java) |  | O(S + T)  | 
 | 24   | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)  | [Java](src/Problems/Sequences/PalindromicSubstrings.java) | 1. palindromes are like unions, so if we count palnidromes around centers <br>2. center is every character in a string | Time: O(N^2) <br>Space: O(1) | 
-| 25   | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/GraphsProblems/PacificAtlanticWaterFlow.java) |  |  | 
 | 26   | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  | [Java](src/Problems/Sequences/TopKFrequentElements.java) | 1. HashMap to count frequency <br>2. Priority Queue to get max K times | Time: O(N Log(N)) <br> Space: O(N) | 
 | 27   | [Validate Binary Tree](https://leetcode.com/problems/validate-binary-search-tree/)  | [Java](src/Problems/Trees/ValidateBinaryTree.java) | 1. validate each subtree <br>2. if curr.val < low || curr.val > high return false | Time: O(N) <br> Space: O(N) | 
 | 28   | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | [Java](src/Problems/Trees/InvertBinaryTree.java) | 1. swap children <br>2. call recursive function one for the left side and one for the right side | Time: O(N) <br> Space: O(N) | 

@@ -33,36 +33,6 @@ public class PacificAtlanticWaterFlow {
     Map<String, int[]> pacMap = new HashMap<>();
     Map<String, int[]> atlMap = new HashMap<>();
 
-    boolean isValidCell(int[] cell, int[][] heights) {
-        boolean rowInBounds = cell[0] >= 0 && cell[0] <= heights.length - 1;
-        boolean colInBounds = cell[1] >= 0 && cell[1] <= heights[0].length - 1;
-        return rowInBounds && colInBounds;
-    }
-
-    void dfs(int[] cell, int[] prevCell, Map<String, int[]> visitedMap, int[][] heights) {
-        String key = String.valueOf(cell[0]) + "," + String.valueOf(cell[1]);
-        int[] value = { cell[0], cell[1] };
-
-        if (visitedMap.containsKey(key)) {
-            return;
-        }
-
-        if (!isValidCell(cell, heights)) {
-            return;
-        }
-
-        if (heights[cell[0]][cell[1]] < heights[prevCell[0]][prevCell[1]]) {
-            return;
-        }
-
-        visitedMap.put(key, value);
-
-        dfs(new int[] { cell[0] + 1, cell[1] }, value, visitedMap, heights);
-        dfs(new int[] { cell[0] - 1, cell[1] }, value, visitedMap, heights);
-        dfs(new int[] { cell[0], cell[1] + 1 }, value, visitedMap, heights);
-        dfs(new int[] { cell[0], cell[1] - 1 }, value, visitedMap, heights);
-    }
-
     public List<List<Integer>> pacificAtlantic(int[][] heights) {
         List<List<Integer>> result = new LinkedList<>();
 
@@ -88,9 +58,31 @@ public class PacificAtlanticWaterFlow {
         return result;
     }
 
-    public void run() {
-        int[][] heights = { { 1, 2, 2, 3, 5 }, { 3, 2, 3, 4, 4 }, { 2, 4, 5, 3, 1 }, { 6, 7, 1, 4, 5 },
-                { 5, 1, 1, 2, 4 } };
-        System.out.println(pacificAtlantic(heights));
+
+    void dfs(int[] cell, int[] prevCell, Map<String, int[]> visitedMap, int[][] heights) {
+        String key = cell[0]+ ","+ cell[1];
+
+        if (!isValidCell(cell, heights)) return;
+        if (visitedMap.containsKey(key)) return;
+        if (heights[cell[0]][cell[1]] < heights[prevCell[0]][prevCell[1]]) return;
+
+        visitedMap.put(key, cell);
+
+        dfs(new int[] { cell[0] + 1, cell[1] }, cell, visitedMap, heights);
+        dfs(new int[] { cell[0] - 1, cell[1] }, cell, visitedMap, heights);
+        dfs(new int[] { cell[0], cell[1] + 1 }, cell, visitedMap, heights);
+        dfs(new int[] { cell[0], cell[1] - 1 }, cell, visitedMap, heights);
+    }
+
+    boolean isValidCell(int[] cell, int[][] heights) {
+        boolean rowInBounds = cell[0] >= 0 && cell[0] <= heights.length - 1;
+        boolean colInBounds = cell[1] >= 0 && cell[1] <= heights[0].length - 1;
+        return rowInBounds && colInBounds;
+    }
+
+    public static void main(String[] args) {
+        int[][] heights = { { 1, 2, 2, 3, 5 }, { 3, 2, 3, 4, 4 }, { 2, 4, 5, 3, 1 }, { 6, 7, 1, 4, 5 }, { 5, 1, 1, 2, 4 } };
+        List<List<Integer>> result = new PacificAtlanticWaterFlow().pacificAtlantic(heights);
+        System.out.println(result);
     }
 }
