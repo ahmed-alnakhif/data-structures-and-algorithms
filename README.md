@@ -200,7 +200,7 @@
 |  4  | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Java](src/Problems/Graphs/NumberOfConnectedComponents.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
 |  4  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) |  | T:O(N * M) <br>S:O(N * M) | 
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
-|  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java) |  | T:O() <br>S:O() | 
+|  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java) | 1. construct a graph for flights and sort destinations <br>2. call dfs starting from starting airport <br>3. perform dfs for destinations and then add source to result | T:O(E + V*log(V)) <br>S:O(V) | 
 |  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
 |  8  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 
