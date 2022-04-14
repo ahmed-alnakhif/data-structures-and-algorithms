@@ -200,8 +200,9 @@
 |  4  | [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Java](src/Problems/Graphs/NumberOfConnectedComponents.java) | 1. generate a graph <br>2. perform DFS <br>3. if dfs value is true, increment count | T:O(N * M) <br>S:O(N * M) | 
 |  4  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) |  | T:O(N * M) <br>S:O(N * M) | 
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
-|  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java)  | Graphs  |
-|  2  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
+|  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java) |  | T:O() <br>S:O() | 
+|  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
+|  8  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -308,7 +309,6 @@
 | 65  | [Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/) | [Java](src/Problems/Sequences/CountBinarySubstrings.java) | 1. variables to track pervious and current run length of substrings <br>2. if same char, increase current length <br>3. else, assign its value to prev and reset current len <br>4. if prev len >= curr len; meaning that we have a valid group, increase our result  | Time: O(N) <br> Space: O(1) |
 | 66  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | [Java](src/Problems/matrixBFS/RottingOranges.java) | 1. add all rotten oranges to queue and count fresh oranges <br>2. perform BFS and add cell neighbors to the queue if it's a fresh orange <br>3. increment elapsed time | Time: O(N * M) <br> Space: O(N * M) |
 | 67  | [Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs/) | [Java](src/Problems/Graphs/DetonateMaxBombs.java) | 1. iterate through each bomb <br>2. call dfs or bfs to get max count <br>3. inside dfs of bfs, iterate through the bombs and check if the next bomb is in the range of the current bomb. | Time: O(N^2) <br> Space: O(N) |
-| 68  | [Number of Provinces](https://leetcode.com/problems/number-of-provinces/) | [Java](src/Problems/Graphs/NumberOfProvinces.java) | 1. typical DFS <br>2. keep track of count | Time: O(N^2) <br> Space: O(N) |
 | 69  | [Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files/) | [Java](src/Problems/Sequences/ReorderLogs.java) | 1. custom comparator <br>2. split the log into an identifier and content | Time: O(M * Nlog(N)) <br> Space: O(M*log(N)) |
 | 70  | [First Unique Character](https://leetcode.com/problems/first-unique-character-in-a-string/) | [Java](src/Problems/Sequences/FirstUniqueCharacter.java) | 1. a hash map to count freq | Time: O(N) <br> Space: O(N) |
 | 71  | [Integer to Roman](https://leetcode.com/problems/integer-to-roman/) | [Java](src/Problems/Sequences/IntegerToRoman.java) | greedy approach where we start from the largest value and keep subtracting our number <br>1. create an array for symbols and values <br>2. iterate through values <br>2. while values[i] <= num, keep subtracting and add symbol[i] to the result  | Time: O(N) <br> Space: O(1) |
