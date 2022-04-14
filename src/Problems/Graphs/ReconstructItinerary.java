@@ -46,7 +46,9 @@ public class ReconstructItinerary {
         result.add(source);
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        ReconstructItinerary ri = new ReconstructItinerary();
+        
         List<String> flight1 = new ArrayList<>(List.of("JFK", "SFO"));
         List<String> flight2 = new ArrayList<>(List.of("JFK", "ATL"));
         List<String> flight3 = new ArrayList<>(List.of("SFO", "ATL"));
@@ -54,6 +56,6 @@ public class ReconstructItinerary {
         List<String> flight5 = new ArrayList<>(List.of("ATL", "SFO"));
         List<List<String>> tickets = new ArrayList<>(List.of(flight1, flight2, flight3, flight4, flight5));
 
-        System.out.println(findItinerary(tickets));
+        System.out.println(ri.findItinerary(tickets));
     }
 }
