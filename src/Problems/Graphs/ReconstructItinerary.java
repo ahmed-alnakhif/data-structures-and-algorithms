@@ -1,7 +1,6 @@
 package Problems.Graphs;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -14,41 +13,41 @@ import java.util.Map;
 
 public class ReconstructItinerary {
     Map<String, LinkedList<String>> flightsMap = new HashMap<>();
-    List<String> result = new ArrayList<>();
+    LinkedList<String> result = new LinkedList<>();
 
     public List<String> findItinerary(List<List<String>> tickets) {
         constructFlightMap(tickets);
         dfs("JFK");
-        Collections.reverse(result);
         return result;
     }
 
-    void constructFlightMap(List<List<String>> tickets) {
-        for (List<String> flight : tickets) {
-            if (flightsMap.containsKey(flight.get(0))) {
-                flightsMap.get(flight.get(0)).add(flight.get(1));
-                Collections.sort(flightsMap.get(flight.get(0)));
-            } else {
-                flightsMap.put(flight.get(0), new LinkedList<>(Arrays.asList(flight.get(1))));
+    private void dfs(String src) {
+        if (flightsMap.containsKey(src)) {
+            LinkedList<String> destList = flightsMap.get(src);
+            while (!destList.isEmpty()) {
+                dfs(destList.pollFirst());
             }
         }
+
+        result.addFirst(src);
     }
 
-    public void dfs(String source) {
-        if (flightsMap.containsKey(source)) {
-            LinkedList<String> destList = flightsMap.get(source);
-            while (!destList.isEmpty()) {
-                String dest = destList.pop();
-                dfs(dest);
+    private void constructFlightMap(List<List<String>> tickets) {
+        for (List<String> flight : tickets) {
+            if (!flightsMap.containsKey(flight.get(0))) {
+                flightsMap.put(flight.get(0), new LinkedList<>());
             }
+            flightsMap.get(flight.get(0)).add(flight.get(1));
         }
 
-        result.add(source);
+        for (List<String> list : flightsMap.values()) {
+            Collections.sort(list);
+        }
     }
 
     public static void main(String[] args) {
         ReconstructItinerary ri = new ReconstructItinerary();
-        
+
         List<String> flight1 = new ArrayList<>(List.of("JFK", "SFO"));
         List<String> flight2 = new ArrayList<>(List.of("JFK", "ATL"));
         List<String> flight3 = new ArrayList<>(List.of("SFO", "ATL"));
