@@ -203,7 +203,8 @@
 |  5  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | [Java](src/Problems/Graphs/MaxAreaOfIsland.java) | 1. perform DFS <br>2. add 1 every time we find a land and explore other direction | T:O(N * M) <br>S:O(N * M) | 
 |  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java) | 1. construct a graph for flights and sort destinations <br>2. call dfs starting from starting airport <br>3. perform dfs for destinations and then add source to result | T:O(E + V*log(V)) <br>S:O(V) | 
 |  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
-|  8  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
+|  8  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [Java](src/Problems/Graphs/NetworkDelayTime.java) | 1. use Dijkstra's Algorithm <br>2. after min times table is filled, get the max time | T:O(V+E*log(V)) <br>S:O(V) | 
+|  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
 
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
