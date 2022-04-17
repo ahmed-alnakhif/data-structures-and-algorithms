@@ -10,14 +10,15 @@
 <br><br>
 
 # Algorithms
-| #   | Title         | Solution                                    | Basic Idea |  O Notation  |
+|  #  | Title         | Solution                                    | Basic Idea |  O Notation  |
 | --- | ------------- | ------------------------------------------- | ---------- | ------------ |
-| 1   | Permutation   | [Java](src/algorithms/PermutationList.java) | use recursion <br>1. base case is when left == array length <br>2. swap left with i <br>3. call recursive function and increment left <br>4. swap again to revert back | O(N!) |
-| 2   | [Combinations](https://leetcode.com/problems/combinations/) | [Java](src/Problems/Combination/Combinations.java) | 1. base case is when comb size == k <br>2. iterate from start to required length <br>3. add curr to comb list <br>4. call func recursively with i+1 <br>5. backtrack by removing the last added number | T: O(r * rCn) = O(n!/r!(n-r)!) <br>S: O(r * rCn) |
-| 3   | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
-| 4   | Binary Search | [java](src/algorithms/BinarySearch.java) | 1. set a most left & most right pointer <br>2. while pointers don't cross each other, calculate mid index <br>3. check if mid value equals the target | O(log(N)) |
-| 5   | Quick Sort | [java](src/algorithms/QuickSort.java) |  | O(N^2) |
-| 6   | Quick Select | [java](src/algorithms/searching/QuickSelect.java) |  | O(N^2) |
+|  1  | Permutation   | [Java](src/algorithms/PermutationList.java) | use recursion <br>1. base case is when left == array length <br>2. swap left with i <br>3. call recursive function and increment left <br>4. swap again to revert back | O(N!) |
+|  2  | [Combinations](https://leetcode.com/problems/combinations/) | [Java](src/Problems/Combination/Combinations.java) | 1. base case is when comb size == k <br>2. iterate from start to required length <br>3. add curr to comb list <br>4. call func recursively with i+1 <br>5. backtrack by removing the last added number | T: O(r * rCn) = O(n!/r!(n-r)!) <br>S: O(r * rCn) |
+|  3  | [Subsets](https://leetcode.com/problems/subsets/)  | [java](src/algorithms/Subset.java)  | 1. iterate through the list <br>2. get each subset in the result list, add the current number to it, and then add the new subset to the result list  | O(2^N) |
+|  4  | Binary Search | [java](src/algorithms/BinarySearch.java) | 1. set a most left & most right pointer <br>2. while pointers don't cross each other, calculate mid index <br>3. check if mid value equals the target | O(log(N)) |
+|  5  | Quick Sort | [java](src/algorithms/QuickSort.java) |  | O(N^2) |
+|  6  | Quick Select | [java](src/algorithms/searching/QuickSelect.java) |  | O(N^2) |
+|  7  | Dijkstra| [java](src/algorithms/graphs/Dijkstra.java) |  | T: O(V+E*log(V)) <br>S:O(V) |
 
 <br><br>
 
@@ -271,12 +272,12 @@
 | 18   | [Remove Nth Node From End of List](https://leetcode.com/problems/number-of-islands/)  | [Java](src/Problems/LinkedLists/RemoveNodeFromEnd.java) | 1. get the node position from head <br>2. traverse to the node before the to delete node | O(N)  | 
 | 20   | [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/)  | [Java](src/Problems/SlidingWindow/MaxAverage.java) | 1. sliding window <br>2. calculate the sum of the first window <br>3. slide the window and recalculate the max sum <br>4. return maxSum/windowSize | O(N)  | 
 | 23   | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)  | [Java](src/Problems/SlidingWindow/MinimumWindowSubstring.java) |  | O(S + T)  | 
-| 24   | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)  | [Java](src/Problems/Sequences/PalindromicSubstrings.java) | 1. palindromes are like unions, so if we count palnidromes around centers <br>2. center is every character in a string | Time: O(N^2) <br>Space: O(1) | 
+| 24   | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)  | [Java](src/Problems/Sequences/PalindromicSubstrings.java) | 1. palindromes are like unions, so if we count palindromes around centers <br>2. center is every character in a string | Time: O(N^2) <br>Space: O(1) | 
 | 26   | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)  | [Java](src/Problems/Sequences/TopKFrequentElements.java) | 1. HashMap to count frequency <br>2. Priority Queue to get max K times | Time: O(N Log(N)) <br> Space: O(N) | 
 | 27   | [Validate Binary Tree](https://leetcode.com/problems/validate-binary-search-tree/)  | [Java](src/Problems/Trees/ValidateBinaryTree.java) | 1. validate each subtree <br>2. if curr.val < low || curr.val > high return false | Time: O(N) <br> Space: O(N) | 
 | 28   | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)  | [Java](src/Problems/Trees/InvertBinaryTree.java) | 1. swap children <br>2. call recursive function one for the left side and one for the right side | Time: O(N) <br> Space: O(N) | 
 | 29   | [Maximum Sum Subarray of Size K](https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP)  | [Java](src/Problems/SlidingWindow/MaximumSumSubarrayOfSizeK.java) | 1. calculate window of size k <br>2. slide the window to the right and track the max value  | Time: O(N) <br> Space: O(1) | Sliding Window
-| 30   | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, calculate min and increment left <br>3. else incrementright | Time: O(N) <br> Space: O(1) | Sliding Window
+| 30   | [Smallest Subarray With a Greater Sum](https://www.educative.io/courses/grokking-the-coding-interview/7XMlMEQPnnQ)  | [Java](src/Problems/SlidingWindow/MinSizeSubArraySum.java) | 1. increase window size until sum is >= K <br>2. if true, calculate min and increment left <br>3. else increment right | Time: O(N) <br> Space: O(1) | Sliding Window
 | 31   | [Largest Subarray Length K](https://leetcode.com/problems/largest-subarray-length-k/)  | [Java](src/Problems/SlidingWindow/LargestSubarrayLengthK.java) | 1. find largest starting value of a window <br>2. return all elements from start | Time: O(N) <br> Space: O(N) | Fixed Window
 | 37  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | [Java](src/Problems/Sequences/PermutationInString.java) | sort each substring and check if equal | O(L1Log(L1) + (L2 - L1)*L1Log(L1))
 | 38  | [Find Missing Number](https://leetcode.com/problems/missing-number/) | [Java](src/Problems/Sequences/FindMissingNumber.java ) | calculate expected sum - actual sum | T: O(N) <br>S: O(1)

@@ -3,7 +3,7 @@ package howTo;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ParseNumber {
+public class Parsing {
 
     List<Integer> parseInteger(int num) {
         LinkedList<Integer> result = new LinkedList<>();
@@ -42,7 +42,7 @@ public class ParseNumber {
 
     public static void main(String[] args) {
         int num = 54321;
-        ParseNumber p = new ParseNumber();
+        Parsing p = new Parsing();
         System.out.println(p.parseInteger(num));
     }
 }
