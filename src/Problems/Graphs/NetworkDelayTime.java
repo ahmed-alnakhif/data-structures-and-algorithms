@@ -30,14 +30,14 @@ import java.util.PriorityQueue;
 public class NetworkDelayTime {
     public int networkDelayTime(int[][] times, int N, int source) {
         Map<Integer, List<int[]>> graph = new HashMap<>();
-        for (int[] edge : times) {
-            graph.putIfAbsent(edge[0], new ArrayList<>());
-            graph.get(edge[0]).add(new int[] { edge[1], edge[2] });
-        }
-
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> (a[1] - b[1]));
         boolean[] visited = new boolean[N + 1];
         int[] signalTimes = new int[N + 1];
+
+        for (int[] time : times) {
+            graph.putIfAbsent(time[0], new ArrayList<>());
+            graph.get(time[0]).add(new int[] { time[1], time[2] });
+        }
 
         Arrays.fill(signalTimes, Integer.MAX_VALUE);
         signalTimes[source] = 0;

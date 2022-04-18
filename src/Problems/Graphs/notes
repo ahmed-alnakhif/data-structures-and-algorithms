@@ -22,8 +22,16 @@ Ways to represent graphs:
   2) adjacency matrix
   3) adjacency set
 
-
+Notes: 
+  - when solving a graph problem, start by identifying the type of graph
+    - directed vs undirected
+    - weighted vs unweighted
+    - cyclic vs acyclic
+  - Example: 
+    - unweighted -> BFS
+    - weighted with positive edges -> Dijkstra's Alg.
+    - weighted with negative edges -> Bellman Ford's Alg.
+    
 TODO: 
-  - Dijkstra Algo. (network delay LC)
   - Prim's or Kruskal's (minimum spanning tree)
   - Floyd Warshall's Algo. (very rare)
