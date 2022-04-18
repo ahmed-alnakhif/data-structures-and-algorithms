@@ -28,10 +28,8 @@ public class FollowerRelationship {
 
         for (int[] relationship : relationships) {
             int follower = relationship[0], followee = relationship[1];
-
-            if (!map.containsKey(follower)) {
-                map.put(follower, new HashSet<>());
-            }
+            
+            map.putIfAbsent(follower, new HashSet<>());
             map.get(follower).add(followee);
 
             if (map.containsKey(followee) && map.get(followee).contains(follower)) {
