@@ -204,7 +204,7 @@
 |  6  | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)  | [java](src/Problems/Graphs/ReconstructItinerary.java) | 1. construct a graph for flights and sort destinations <br>2. call dfs starting from starting airport <br>3. perform dfs for destinations and then add source to result | T:O(E + V*log(V)) <br>S:O(V) | 
 |  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
 |  8  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [Java](src/Problems/Graphs/NetworkDelayTime.java) | 1. use Dijkstra's Algorithm <br>2. after min times table is filled, get the max time | T:O(V+E*log(V)) <br>S:O(V) | 
-|  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java]() |  | T:O() <br>S:O() | 
+|  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java](src/Problems/Graphs/CheapestFlightsWithKStops.java) | Bellman-Ford's Alg. | T:O(E*K) <br>S:O(V) | 
 
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
