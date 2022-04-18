@@ -39,6 +39,7 @@
 |  10  | [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/) | [Java](src/Problems/SlidingWindow/RepeatedDNASequences.java) | fixed window, and a hash map to check for DNA occurrence | T: O(N) <br>S: O(N) |
 |  11  | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [Java](src/Problems/SlidingWindow/FindAllAnagramsInString.java) | 1. fixed window, and a hash map for each string <br>2. check if both hash maps are equal | T: O(S) <br>S: O(26)
 |  12  | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | [Java](src/Problems/SlidingWindow/SubarrayProductLessThanK.java) | 1. calculate product <br>2. if product is greater than K, then remove left most num and increment left <br>3. then calculate count = count + window size and increment right | T: O(N) <br>S: O(N) |
+|  13  | [BotIps]() | [Java](src/Problems/SlidingWindow/BotIps.java) | 1. keep track of ip frequency <br>2. check if freq == count <br>3. while current timestamp window size > window size, then slide the window  | T: O(N) <br>S: O(N) |
 
 ## 2) Two Pointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -372,8 +373,8 @@
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/hashMap/UserActiveMinutes.java) | Hash Map |
 |  2  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | Hash Map |
-|  3  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | Hash Map |
-
+|  3  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/CompareHashMaps.java) | Hash Map |
+|  4  | [BotIps]() | [Java](src/Problems/SlidingWindow/BotIps.java) | Sliding Window  |
 
 ## Uber
 |  #  | Title                                                   | Solution                                      | Type              |
