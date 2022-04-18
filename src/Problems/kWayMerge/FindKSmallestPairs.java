@@ -4,6 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * You are given two integer arrays nums1 and nums2 sorted in ascending order
+ * and an integer k.
+ * 
+ * Define a pair (u, v) which consists of one element from the first array and
+ * one element from the second array.
+ * 
+ * Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
+ * 
+ * 
+ * Example 1:
+ * 
+ * Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+ * Output: [[1,2],[1,4],[1,6]]
+ * Explanation: The first 3 pairs are returned from the sequence:
+ * [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]
+ */
+
 public class FindKSmallestPairs {
 
     public static List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
@@ -19,7 +37,7 @@ public class FindKSmallestPairs {
             minHeap.add(new int[] { i, 0 });
         }
 
-        while (k-- > 0 && !minHeap.isEmpty()) {
+        while (!minHeap.isEmpty() && k-- > 0) {
             int[] curr = minHeap.poll();
 
             result.add(new ArrayList<>(List.of(nums1[curr[0]], nums2[curr[1]])));

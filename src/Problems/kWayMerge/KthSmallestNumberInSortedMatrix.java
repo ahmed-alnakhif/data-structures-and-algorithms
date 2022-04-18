@@ -101,8 +101,7 @@ public class KthSmallestNumberInSortedMatrix {
         while (!minHeap.isEmpty()) {
             // take the smallest (top) element form the min heap,
             Node node = minHeap.poll();
-            result = matrix[node.row][node.col];
-            node.col++;
+            result = matrix[node.row][node.col++];
 
             count++;
 
@@ -113,7 +112,7 @@ public class KthSmallestNumberInSortedMatrix {
 
             // if the array of the top element has more elements, add the next element to
             // the heap
-            if (node.col < matrix[node.row].length) {
+            if (node.col < matrix[0].length) {
                 minHeap.add(node);
             }
         }

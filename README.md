@@ -185,12 +185,13 @@
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
 | --- | --------------------------- | --------------------------- | --------------------------------------------- |------------- |
 |  1  | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | 1. min heap to hold the head of the two lists <br>2. poll min top and connect pointers <br>3. return head  <br>** check recursive approach for optimized solution| T: O(N * log(2)) <br>S: O(2) |
-|  2  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeTwoSortedLists.java) | same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br> we just need to add all the roots of all lists| T: O(N * log(K)) <br>S: O(K) |
+|  2  | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | [Java](src/Problems/kWayMerge/MergeKSortedLists.java) | same approach as [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) <br> we just need to add all the roots of all lists| T: O(N * log(K)) <br>S: O(K) |
 |  3  | [Kth Smallest Number in Sorted Lists](https://www.educative.io/courses/grokking-the-coding-interview/myAqDMyRXn3) | [Java](src/Problems/kWayMerge/KthSmallestNumberInSortedLists.java) | 1. add the first cells from all lists to the min heap <br>2. while our min heap is not empty, pop the first element <br>3. if count == k, then we reached our kth number <br>4. if popped element array still has elements, then we increment index of element and add it to the min heap | T: O(K * log(M)) <br>S: O(M) |
 |  4  | [Kth Smallest Number in Sorted Matrix](https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/) | [Java](src/Problems/kWayMerge/KthSmallestNumberInSortedMatrix.java) | same as [Kth Smallest Number in Sorted Lists](https://www.educative.io/courses/grokking-the-coding-interview/myAqDMyRXn3) <br> optimized approach using binary search | T: O(min(K,N)+K∗logN) <br>S: O(N) |
 |  5  | [Smallest Range Covering Elements from K Lists](https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/) | [Java](src/Problems/kWayMerge/SmallestRange.java) | same approach but extra trackers <br>1. add the head of each list to min heap <br>2. track the max head <br>3. while we have all lists in our heap, poll top and calculate the new range <br>4. update the range if less  | T: O(N*log(M)) <br>S: O(M) |
 |  6  | [Find K Pairs with Smallest Sums](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/) | [Java](src/Problems/kWayMerge/FindKSmallestPairs.java) | 1. min heap <br>2. create a pair by iterating through the first list and the first element in the second list <br>3. while we're larger than k, pop the top element and add it to the result <br>4. increment index of second list and add it to the min heap | T: O(K*log(K)) <br>S: O(K) |
 |  7  | [Find K Pairs with Largest Sums](https://www.educative.io/courses/grokking-the-coding-interview/N767x7VoYmK) | [Java](src/Problems/kWayMerge/FindKLargestPairs.java) |  | T: O(K*log(K)) <br>S: O(K) |
+
 
 ## 14) Graphs
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -205,6 +206,7 @@
 |  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
 |  8  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [Java](src/Problems/Graphs/NetworkDelayTime.java) | 1. use Dijkstra's Algorithm <br>2. after min times table is filled, get the max time | T:O(V+E*log(V)) <br>S:O(V) | 
 |  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java](src/Problems/Graphs/CheapestFlightsWithKStops.java) | Bellman-Ford's Alg. | T:O(E*K) <br>S:O(V) | 
+
 
 ## 15) Dynamic Programming
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -323,6 +325,7 @@
 | 78  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through relationships and add each followee to the follower <br>2. if followee exists in the map and contains the follower, then we found a pair  | Time: O(N) <br> Space: O(N) |
 | 79  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through the first map <br>2. if key doesn't exist in the second map return false <br>3. if value of the key is not equal to the one in the second map then return false | Time: O(N) <br> Space: O(1) |
 |  6  | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() |
+
 
 # Companies 
 

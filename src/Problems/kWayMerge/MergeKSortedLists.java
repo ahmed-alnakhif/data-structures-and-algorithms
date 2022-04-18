@@ -42,10 +42,9 @@ public class MergeKSortedLists {
     }
 
     // merge lists one by one
-    // T: O(kN), S:O(1)
+    // T: O(N*k), S:O(1)
     public ListNode mergeKLists1(ListNode[] lists) {
-        if (lists.length == 0)
-            return null;
+        if (lists.length == 0) return null;
 
         ListNode sortedList = lists[0];
 
@@ -59,9 +58,7 @@ public class MergeKSortedLists {
     // Divide & Conquer approach
     // T: O(N*log(k)), S: O(1)
     public ListNode mergeKLists2(ListNode[] lists) {
-        if (lists.length == 0) {
-            return null;
-        }
+        if (lists.length == 0) return null;
 
         int interval = 1;
         while (interval < lists.length) {

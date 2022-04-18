@@ -37,13 +37,13 @@ public class SmallestRange {
                 (n1, n2) -> lists.get(n1.listIndex).get(n1.elementIndex)
                         - lists.get(n2.listIndex).get(n2.elementIndex));
 
-        int rangeStart = 0, rangeEnd = Integer.MAX_VALUE, currentMaxNumber = Integer.MIN_VALUE;
+        int rangeStart = 0, rangeEnd = Integer.MAX_VALUE, currMaxNum = Integer.MIN_VALUE;
 
         // put the 1st element of each list in the min heap
         for (int i = 0; i < lists.size(); i++) {
             if (lists.get(i) != null) {
                 minHeap.add(new Node(0, i));
-                currentMaxNumber = Math.max(currentMaxNumber, lists.get(i).get(0));
+                currMaxNum = Math.max(currMaxNum, lists.get(i).get(0));
             }
         }
 
@@ -51,20 +51,20 @@ public class SmallestRange {
             // take the smallest (top) element form the min heap,
             Node node = minHeap.poll();
 
-            int currRange = currentMaxNumber - lists.get(node.listIndex).get(node.elementIndex);
+            int currRange = currMaxNum - lists.get(node.listIndex).get(node.elementIndex);
             int prevRange = rangeEnd - rangeStart;
 
             // if it gives us smaller range, update the ranges
             if (currRange < prevRange) {
                 rangeStart = lists.get(node.listIndex).get(node.elementIndex);
-                rangeEnd = currentMaxNumber;
+                rangeEnd = currMaxNum;
             }
 
             // if there're more elements in the list, insert the next element & update max
             if (lists.get(node.listIndex).size() > node.elementIndex + 1) {
                 node.elementIndex++;
                 minHeap.add(node);
-                currentMaxNumber = Math.max(currentMaxNumber, lists.get(node.listIndex).get(node.elementIndex));
+                currMaxNum = Math.max(currMaxNum, lists.get(node.listIndex).get(node.elementIndex));
             }
         }
 
@@ -77,6 +77,6 @@ public class SmallestRange {
         lists.add(List.of(0, 9, 12, 20));
         lists.add(List.of(5, 18, 22, 30));
         int[] result = smallestRange(lists);
-        System.out.println("minimun range: " + result[0] + " -> " + result[1]);
+        System.out.println("minimum range: " + result[0] + " -> " + result[1]);
     }
 }

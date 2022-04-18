@@ -1,6 +1,7 @@
 package Problems.kWayMerge;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -38,8 +39,8 @@ class Node {
 public class KthSmallestNumberInSortedLists {
 
     // T: O(K*log(M)), S: O(M)
-    public static int findKthSmallest(List<Integer[]> lists, int k) {
-        PriorityQueue<Node> minHeap = new PriorityQueue<Node>(
+    public static int findKthSmallest(List<int[]> lists, int k) {
+        PriorityQueue<Node> minHeap = new PriorityQueue<>(
                 (n1, n2) -> lists.get(n1.arrayIndex)[n1.elementIndex] - lists.get(n2.arrayIndex)[n2.elementIndex]);
 
         // put the 1st element of each array in the min heap
@@ -52,10 +53,10 @@ public class KthSmallestNumberInSortedLists {
         int count = 0, result = 0;
 
         while (!minHeap.isEmpty()) {
-            // take the smallest (top) element form the min heap,
+            // poll the smallest (top) element form the min heap,
             Node node = minHeap.poll();
-            result = lists.get(node.arrayIndex)[node.elementIndex];
-            node.elementIndex++;
+
+            result = lists.get(node.arrayIndex)[node.elementIndex++];
             count++;
 
             // if the running count is equal to k, return the number
@@ -74,14 +75,12 @@ public class KthSmallestNumberInSortedLists {
     }
 
     public static void main(String[] args) {
-        Integer[] l1 = new Integer[] { 2, 6, 8 };
-        Integer[] l2 = new Integer[] { 3, 6, 7 };
-        Integer[] l3 = new Integer[] { 1, 3, 4 };
-        List<Integer[]> lists = new ArrayList<Integer[]>();
-        lists.add(l1);
-        lists.add(l2);
-        lists.add(l3);
-        int result = findKthSmallest(lists, 5);
-        System.out.println("Kth smallest number is: " + result);
+        int[] l1 = new int[] { 2, 6, 8 };
+        int[] l2 = new int[] { 3, 6, 7 };
+        int[] l3 = new int[] { 1, 3, 4 };
+        List<int[]> lists = new ArrayList<>(Arrays.asList(l1, l2, l3));
+        int k = 5;
+        int result = findKthSmallest(lists, k);
+        System.out.println(k+"th smallest number is: " + result);
     }
 }
