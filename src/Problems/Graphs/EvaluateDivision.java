@@ -53,7 +53,7 @@ public class EvaluateDivision {
                 results[i] = 1.0;
             }
 
-            // perform dfs and calcuate accumulative product
+            // perform dfs and calculate accumulative product
             else {
                 results[i] = DFS(dividend, divisor, new HashSet<>());
             }
@@ -67,9 +67,10 @@ public class EvaluateDivision {
             String start = equations.get(i).get(0);
             String end = equations.get(i).get(1);
             Double ratio = values[i];
+
             graph.putIfAbsent(start, new HashMap<>());
-            graph.get(start).put(end, ratio);
             graph.putIfAbsent(end, new HashMap<>());
+            graph.get(start).put(end, ratio);
             graph.get(end).put(start, 1.0 / ratio);
         }
     }
@@ -89,12 +90,12 @@ public class EvaluateDivision {
 
         // explore each adjacent node
         for (String adj : graph.get(currNode).keySet()) {
-            double accumlitiveProduct = DFS(adj, targetNode, visited);
+            double accumulativeProduct = DFS(adj, targetNode, visited);
 
-            // if result of DFS is not -1, then there was a path, and therefore, we calcuate
-            // the accumlitive product
-            if (accumlitiveProduct != -1) {
-                return accumlitiveProduct * graph.get(currNode).get(adj);
+            // if result of DFS is not -1, then there was a path, and therefore, we calculate
+            // the accumulative product
+            if (accumulativeProduct != -1) {
+                return accumulativeProduct * graph.get(currNode).get(adj);
             }
         }
 
@@ -102,12 +103,11 @@ public class EvaluateDivision {
         return -1;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        EvaluateDivision obj = new EvaluateDivision();
         List<String> eq1 = new ArrayList<>(List.of("a", "b"));
         List<String> eq2 = new ArrayList<>(List.of("b", "c"));
         List<List<String>> equations = new ArrayList<>(List.of(eq1, eq2));
-        
-        double[] values = {2.0, 3.0};
 
         List<String> query1 = new ArrayList<>(List.of("a", "c"));
         List<String> query2 = new ArrayList<>(List.of("b", "a"));
@@ -116,6 +116,8 @@ public class EvaluateDivision {
         List<String> query5 = new ArrayList<>(List.of("x", "x"));
         List<List<String>> queries = new ArrayList<>(List.of(query1, query2, query3, query4, query5));
 
-        System.out.println(calcEquation(equations, values, queries));
+        double[] values = {2.0, 3.0};
+
+        System.out.println(obj.calcEquation(equations, values, queries));
     }
 }
