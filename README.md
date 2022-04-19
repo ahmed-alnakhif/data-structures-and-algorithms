@@ -81,6 +81,7 @@
 |  5  | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/) | [Java](src/Problems/Intervals/MeetingRoomsII.java) | 1. create an array for start time and array for end time then sort them <br>2. iterate and increment count <br>3. if start >= end decrement count | T: O(N*log(N)) <br>S: O(N)
 |  6  | [Car Pooling](https://leetcode.com/problems/car-pooling/) | [Java](src/Problems/Intervals/CarPooling.java) | 1. use TreeMap or PQ <br>2. add start time with + passengers <br>3. add end time with - passengers <br>4. get the accumulative sum of values <br>if > capacity then false | T: O(N*log(N)) <br>S: O(N)
 |  7  | [Employee Free Time](https://leetcode.com/problems/employee-free-time/) | [Java](src/Problems/Intervals/EmployeeFreeTime.java) | 1. flatten all employees intervals <br>2. sort all intervals <br>3. merge intersected intervals <br>4. add end time and start time of the next interval | T: O(N*log(N)) <br>S: O(N)
+|  8  | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii/) | [Java](src/Problems/Intervals/CourseScheduleIII.java) | 1. sort the courses <br>2. max PQ <br>3. if curr time + duration <= last day, add to the PQ <br>4. top of PQ > duration, we remove the top and add the curr duration instead <br>5. return the size of the PQ| T: O(N*log(N)) <br>S: O(N)
 
 
 ## 5) Cyclic Sort
