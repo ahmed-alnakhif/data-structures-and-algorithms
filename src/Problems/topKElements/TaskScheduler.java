@@ -44,7 +44,7 @@ import java.util.Queue;
 public class TaskScheduler {
 
     //TO REVIEW!! 
-    //T: O(N), O(1)
+    //T: O(N*log(N)), O(1)
     public static int leastInterval(char[] tasks, int n) {
         // frequencies of the tasks
         int[] tasksFreq = new int[26];
@@ -67,41 +67,40 @@ public class TaskScheduler {
     }
 
     //T: O(N*log(N)) S: O(N)
-    public static int leastInterval2(char[] tasks, int k) {
+    public int leastInterval2(char[] tasks, int k) {
         int time = 0;
-        Map<Character, Integer> taskFrequencyMap = new HashMap<>();
+        Map<Character, Integer> taskFreqMap = new HashMap<>();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->b-a);
+        
         for (char chr : tasks) {
-            taskFrequencyMap.put(chr, taskFrequencyMap.getOrDefault(chr, 0) + 1);
+            taskFreqMap.put(chr, taskFreqMap.getOrDefault(chr, 0) + 1);
         }
-
-        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<Map.Entry<Character, Integer>>(
-                (e1, e2) -> e2.getValue() - e1.getValue());
-
-        // add all tasks to the max heap
-        maxHeap.addAll(taskFrequencyMap.entrySet());
-
+        
+        maxHeap.addAll(taskFreqMap.values());
+        
         while (!maxHeap.isEmpty()) {
-            Queue<Map.Entry<Character, Integer>> waitQueue = new LinkedList<>();
+            Queue<Integer> waitQueue = new LinkedList<>();
             int n = k + 1; // try to execute as many as 'k+1' tasks from the max-heap
-
-            while (n > 0 && !maxHeap.isEmpty()) {
-                Map.Entry<Character, Integer> currentEntry = maxHeap.poll();
-                time++;
-
-                if (currentEntry.getValue() > 1) {
-                    currentEntry.setValue(currentEntry.getValue() - 1);
-                    waitQueue.add(currentEntry);
+            
+            while (!maxHeap.isEmpty() && n > 0) {
+                int top = maxHeap.poll();
+                
+                if(top > 1){
+                    top--;
+                    waitQueue.add(top);
                 }
+                
+                time++;
                 n--;
             }
-
-            maxHeap.addAll(waitQueue); // put all the waiting list back on the heap
-
+            
+            maxHeap.addAll(waitQueue);// put all the waiting list back on the heap
+            
             if (!maxHeap.isEmpty()) {
                 time += n; // we'll be having 'n' idle intervals for the next iteration
             }
         }
-
+        
         return time;
     }
 

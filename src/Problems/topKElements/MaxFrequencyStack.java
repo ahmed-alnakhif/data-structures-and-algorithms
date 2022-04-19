@@ -29,15 +29,6 @@ class Element {
     }
 }
 
-class ElementComparator implements Comparator<Element> {
-    public int compare(Element e1, Element e2) {
-        if (e1.freq != e2.freq) {
-            return e2.freq - e1.freq;
-        } else {
-            return e2.created - e1.created;
-        }
-    }
-}
 
 public class MaxFrequencyStack {
 
@@ -47,7 +38,7 @@ public class MaxFrequencyStack {
 
     public MaxFrequencyStack() {
         map = new HashMap<Integer, Integer>();
-        maxHeap = new PriorityQueue<Element>(new ElementComparator());
+        maxHeap = new PriorityQueue<Element>((a, b) -> a.freq != b.freq ? b.freq - a.freq : b.created - a.created);
         created = 0;
     }
 
@@ -67,13 +58,6 @@ public class MaxFrequencyStack {
 
         return topNum;
     }
-
-    /**
-     * Your FreqStack object will be instantiated and called as such:
-     * FreqStack obj = new FreqStack();
-     * obj.push(val);
-     * int param_2 = obj.pop();
-     */
 
     public static void main(String[] args) {
 
