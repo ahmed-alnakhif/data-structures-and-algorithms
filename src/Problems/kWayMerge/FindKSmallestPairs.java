@@ -43,7 +43,7 @@ public class FindKSmallestPairs {
             result.add(new ArrayList<>(List.of(nums1[curr[0]], nums2[curr[1]])));
 
             if (curr[1] < nums2.length - 1) {
-                curr[1] += 1;
+                curr[1]++;
                 minHeap.add(curr);
             }
         }
