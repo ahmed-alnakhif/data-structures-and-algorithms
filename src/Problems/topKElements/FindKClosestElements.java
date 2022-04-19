@@ -28,7 +28,6 @@ public class FindKClosestElements {
         }
 
         return result;
-
     }
 
     // T: O(log(N) + k), S: O(1)

@@ -31,10 +31,10 @@ public class ReorganizeStringKDistanceApart {
             return str;
         }
 
-        Map<Character, Integer> charFrequencyMap = new HashMap<>();
+        Map<Character, Integer> charFreqMap = new HashMap<>();
         for (char chr : str.toCharArray()) {
-            charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
-            if (charFrequencyMap.get(chr) > (str.length() + 1) / 2) {
+            charFreqMap.put(chr, charFreqMap.getOrDefault(chr, 0) + 1);
+            if (charFreqMap.get(chr) > (str.length() + 1) / 2) {
                 return "";
             }
         }
@@ -43,18 +43,18 @@ public class ReorganizeStringKDistanceApart {
                 (a, b) -> b.getValue() - a.getValue());
 
         // add all characters to the max heap
-        maxHeap.addAll(charFrequencyMap.entrySet());
+        maxHeap.addAll(charFreqMap.entrySet());
 
         Queue<Map.Entry<Character, Integer>> queue = new LinkedList<>();
         StringBuilder resultString = new StringBuilder(str.length());
         while (!maxHeap.isEmpty()) {
-            Map.Entry<Character, Integer> currentEntry = maxHeap.poll();
+            Map.Entry<Character, Integer> currEntry = maxHeap.poll();
 
             // append the current character to the result string and decrement its count
-            resultString.append(currentEntry.getKey());
-            currentEntry.setValue(currentEntry.getValue() - 1);
+            resultString.append(currEntry.getKey());
+            currEntry.setValue(currEntry.getValue() - 1);
 
-            queue.offer(currentEntry);
+            queue.offer(currEntry);
 
             // add item waiting in the queue if we reach k distance
             if (queue.size() == k) {

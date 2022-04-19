@@ -1,8 +1,10 @@
 package Problems.topKElements;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 /**
  * Given a string s, rearrange the characters of s so that any two adjacent
@@ -25,33 +27,35 @@ import java.util.PriorityQueue;
 public class ReorganizeString {
 
     public static String reorganizeString(String str) {
-        Map<Character, Integer> charFrequencyMap = new HashMap<>();
-        for (char chr : str.toCharArray()) {
-            charFrequencyMap.put(chr, charFrequencyMap.getOrDefault(chr, 0) + 1);
+        Map<Character, Integer> charFreqMap = new HashMap<>();
+        for (char ch : str.toCharArray()) {
+            charFreqMap.put(ch, charFreqMap.getOrDefault(ch, 0) + 1);
         }
 
-        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<Map.Entry<Character, Integer>>(
+        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>(
                 (a, b) -> b.getValue() - a.getValue());
 
         // add all characters to the max heap
-        maxHeap.addAll(charFrequencyMap.entrySet());
+        maxHeap.addAll(charFreqMap.entrySet());
 
-        Map.Entry<Character, Integer> previousEntry = null;
+        Queue<Map.Entry<Character, Integer>> queue = new LinkedList<>();
         StringBuilder resultString = new StringBuilder(str.length());
         while (!maxHeap.isEmpty()) {
-            Map.Entry<Character, Integer> currentEntry = maxHeap.poll();
+            Map.Entry<Character, Integer> currEntry = maxHeap.poll();
 
-            // add the previous entry back in the heap if its frequency is greater than zero
-            if (previousEntry != null && previousEntry.getValue() > 0) {
-                maxHeap.offer(previousEntry);
-            }
-
-            // append the current character to the result string and decrement its count
-            resultString.append(currentEntry.getKey());
-            currentEntry.setValue(currentEntry.getValue() - 1);
+            resultString.append(currEntry.getKey());
+            currEntry.setValue(currEntry.getValue() - 1);
             
-            previousEntry = currentEntry;
+            queue.offer(currEntry);
+            
+            if (queue.size() == 2) {
+                Map.Entry<Character, Integer> entry = queue.poll();
+                if (entry.getValue() > 0) {
+                    maxHeap.offer(entry);
+                }
+            }
         }
+
 
         // if successful in appending all the characters to the result string, return it
         return resultString.length() == str.length() ? resultString.toString() : "";

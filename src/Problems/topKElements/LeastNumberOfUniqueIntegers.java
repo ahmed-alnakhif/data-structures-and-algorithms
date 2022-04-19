@@ -31,7 +31,7 @@ public class LeastNumberOfUniqueIntegers {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
         minHeap.addAll(map.values());
 
-        while (k > 0 && !minHeap.isEmpty()) {
+        while (!minHeap.isEmpty() && k > 0) {
             k -= minHeap.poll();
         }
 
