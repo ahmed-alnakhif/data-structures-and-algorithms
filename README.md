@@ -368,6 +368,8 @@
 |  #  | Title                                                   | Solution                                      | Type              |
 | --- | ------------------------------------------------------- | --------------------------------------------- |------------------ |
 |  1  | [Favorite Genre](https://leetcode.com/discuss/interview-question/373006) | [Java](src/Companies/amazon/FavoriteGenres.java) | Hash Map |
+|  2  | [Quality of Server Channels]() | [Java](src/Companies/amazon/QualityOfServerChannels.java) | Arrays |
+|  3  | [Max Frequency Deviation]() | [Java](src/Companies/amazon/MaxFrequencyDeviation.java) |  |
 
 ## Twitter
 |  #  | Title                                                   | Solution                                      | Type              |

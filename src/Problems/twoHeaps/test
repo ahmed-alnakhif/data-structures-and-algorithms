@@ -1,0 +1,66 @@
+package Problems.twoHeaps;
+
+public class test {
+
+    private static void getMaximumFrequencyDeviation(String s) {
+        int[] count = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            count[s.charAt(i) - 'a']++;
+        }
+
+        int max = 0;
+        int min = 0;
+        for (int i = 0; i < 26; i++) {
+            if (count[i] > 0) {
+                max = Math.max(max, count[i]);
+                min = Math.min(min, count[i]);
+            }
+        }
+
+        System.out.println(max - min);
+
+    }
+
+    private static void getMaximumFrequencyDeviation(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+
+        int dev = 0;
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i + 1; j <= s.length(); j++) {
+                String sub = s.substring(i, j);
+                for (int k = 0; k < sub.length(); k++) {
+                    char c = sub.charAt(k);
+                    Integer val = map.get(c);
+                    if (val != null) {
+                        map.put(c, new Integer(val + 1));
+                    } else {
+                        map.put(c, 1);
+                    }
+                }
+            }
+
+            
+            Integer[] a = map.values().toArray(new Integer[0]);
+            int max = a[0];
+            int min = a[0];
+
+            for (int j = 1; j < a.length; j++) {
+                if (a[j] > max) {
+                    max = a[j];
+                }
+                if (a[j] < min) {
+                    min = a[j];
+                }
+            }
+            if (dev < max - min) {
+                dev = max - min;
+            }
+            map.clear();
+        }
+        System.out.println(dev);
+    }
+
+    public static void main(String[] args) {
+
+    }
+}
