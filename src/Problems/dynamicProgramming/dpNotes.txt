@@ -1,5 +1,5 @@
 Tackling Dynamic Programming Problems
-    1) notice any overlapping subproblems
+    1) notice any overlapping sub-problems
     2) decide what is the trivially smallest input
     3) think recursively to use Memoization 
     4) think iteratively to use Tabulation 
