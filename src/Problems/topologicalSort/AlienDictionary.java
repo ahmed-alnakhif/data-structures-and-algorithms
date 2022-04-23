@@ -3,6 +3,8 @@ package Problems.topologicalSort;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 import java.util.Queue;
 
 /**
@@ -33,8 +35,8 @@ import java.util.Queue;
 public class AlienDictionary {
 
     public String alienOrder(String[] words) {
-        HashMap<Character, ArrayList<Character>> graph = new HashMap<>();
-        HashMap<Character, Integer> inDegree = new HashMap<>();
+        Map<Character, List<Character>> graph = new HashMap<>();
+        Map<Character, Integer> inDegree = new HashMap<>();
 
         for (String word : words) {
             for (char ch : word.toCharArray()) {
