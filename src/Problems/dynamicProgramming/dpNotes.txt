@@ -1,6 +1,35 @@
-Tackling Dynamic Programming Problems
-    1) notice any overlapping sub-problems
+Tackling Dynamic Programming Problems:
+    1) notice any overlapping subproblems
     2) decide what is the trivially smallest input
     3) think recursively to use Memoization 
     4) think iteratively to use Tabulation 
     5) draw a strategy! 
+
+Characteristics of DP problems that are easy to identify:
+    1) The problem will ask for the optimum value (maximum or minimum) of something, 
+       or the number of ways there are to do something. For example:
+        - What is the minimum cost of doing...
+        - What is the maximum profit from...
+        - How many ways are there to do...
+        - What is the longest possible...
+        - Is it possible to reach a certain point...
+        
+        *Note: 
+            The first characteristic is not sufficient. 
+            Sometimes, a problem in this format (max/min/longest etc.) is meant to be solved with a greedy algorithm.
+    
+    2) Future "decisions" depend on earlier decisions.
+        - Deciding to do something at one step may affect the ability to do something in a later step
+        - This characteristic is what makes a greedy algorithm invalid for a DP problem
+        
+        *Note: 
+            When you're solving a problem on your own and trying to decide if the second characteristic is applicable, 
+            assume it isn't, then try to think of a counterexample that proves a greedy algorithm won't work. 
+            If you can think of an example where earlier decisions affect future decisions, then DP is applicable.
+
+
+Framework for DP Problems
+    To solve a DP problem, we need to combine 3 things:
+        1) A function or data structure that will compute/contain the answer to the problem for every given state.
+        2) A recurrence relation to transition between states.
+        3) Base cases, so that our recurrence relation doesn't go on infinitely.
