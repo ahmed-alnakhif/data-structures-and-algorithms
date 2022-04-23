@@ -5,22 +5,17 @@ import java.util.Map;
 
 public class Fib {
 
-    Map<Integer, Long> memoMap = new HashMap<>();
+    Map<Integer, Long> memoMap;
 
     public long fibSequence(int n) {
-        long result = fib(n);
-        memoMap.clear();
-        return result;
+        memoMap = new HashMap<>();
+        return fib(n);
     }
 
     public long fib(int n) {
-        if (memoMap.containsKey(n)) {
-            return memoMap.get(n);
-        }
-
-        if (n <= 2) {
-            return 1;
-        }
+        if (memoMap.containsKey(n)) return memoMap.get(n);
+        if(n==0) return 0;
+        if(n==1) return 1;
 
         memoMap.put(n, fib(n - 1) + fib(n - 2));
 
