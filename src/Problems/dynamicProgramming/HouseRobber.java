@@ -58,8 +58,9 @@ public class HouseRobber {
         dp[0] = houses[0];
         dp[1] = Math.max(houses[0], houses[1]);
 
+        // Recurrence relation
         for (int i = 2; i < houses.length; i++) {
-            dp[i] = Math.max(dp[i - 1], dp[i - 2] + houses[i]); // Recurrence relation
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + houses[i]); 
         }
 
         return dp[houses.length - 1];

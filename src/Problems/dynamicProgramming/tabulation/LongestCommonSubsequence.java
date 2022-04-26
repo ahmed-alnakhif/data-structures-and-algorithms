@@ -22,12 +22,44 @@ package Problems.dynamicProgramming.tabulation;
  */
 
 public class LongestCommonSubsequence {
+
+    String txt1, txt2;
+    int[][] dp;
+    
+    public int longestCommonSubsequenceMemo(String text1, String text2) {
+        this.txt1 = text1;
+        this.txt2 = text2;
+        this.dp = new int[text1.length()][text2.length()];
+        
+        for (int col = 0; col < dp[0].length; col++) {
+            for (int row = 0; row < dp.length; row++) {
+                dp[row][col] = -1;
+            }
+        }
+        
+        return LCS(0, 0);
+    }
+    
+    private int LCS(int p1, int p2){
+        if(p1 == txt1.length()) return 0;
+        if(p2 == txt2.length()) return 0;
+        if(dp[p1][p2] != -1) return dp[p1][p2];
+        
+        if (txt1.charAt(p1) == txt2.charAt(p2)) {
+            dp[p1][p2] = LCS(p1+1, p2+1) + 1; //equal sub
+        } else {
+            dp[p1][p2] = Math.max(LCS(p1+1, p2), LCS(p1, p2+1)); //check max between moving left OR right
+        }
+        
+        return dp[p1][p2];
+    }
+
     /**
      * approach:
      * if there's a match, then get the previous diagonal cell value (row-1, col-1) + 1
      * else, get the max between the upper cell and the left cell
      */
-    public int longestCommonSubsequence(String text1, String text2) {
+    public int longestCommonSubsequenceTab(String text1, String text2) {
         int n = text1.length() + 1;
         int m = text2.length() + 1;
 
@@ -48,6 +80,6 @@ public class LongestCommonSubsequence {
 
     public static void main(String[] args) {
         LongestCommonSubsequence l = new LongestCommonSubsequence();
-        System.out.println(l.longestCommonSubsequence("abcde", "ace"));
+        System.out.println(l.longestCommonSubsequenceTab("abcde", "ace"));
     }
 }
