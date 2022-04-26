@@ -1,7 +1,5 @@
 package Problems.dynamicProgramming.memoization;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /*
  * you are a traveler on a 2d grid. you'r beginning from the top-left corner, and your goal is to travel to the bottom-right corner
