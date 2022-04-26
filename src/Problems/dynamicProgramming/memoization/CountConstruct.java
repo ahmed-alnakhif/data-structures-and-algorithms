@@ -17,13 +17,8 @@ public class CountConstruct {
     }
 
     static int countConstructHelper(String target, String[] wordBank) {
-        if (target.equals("")) {
-            return 1;
-        }
-
-        if (memoMap.containsKey(target)) {
-            return memoMap.get(target);
-        }
+        if (target.equals(""))  return 1;
+        if (memoMap.containsKey(target))return memoMap.get(target);
 
         int totalCount = 0;
         for (String word : wordBank) {
