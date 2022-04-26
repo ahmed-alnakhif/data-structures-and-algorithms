@@ -19,17 +19,9 @@ public class HowSum {
     }
 
     List<Integer> howSumHelper(int target, int[] nums) {
-        if (target == 0) {
-            return new ArrayList<>();
-        }
-
-        if (target < 0) {
-            return null;
-        }
-
-        if (memoMap.containsKey(target)) {
-            return memoMap.get(target);
-        }
+        if (target == 0) return new ArrayList<>();
+        if (target < 0) return null;
+        if (memoMap.containsKey(target)) return memoMap.get(target);
 
         for (int num : nums) {
             int remainder = target - num;
