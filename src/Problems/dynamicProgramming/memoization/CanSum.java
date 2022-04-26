@@ -17,17 +17,9 @@ public class CanSum {
     }
 
     boolean canSum(int target, int[] nums) {
-        if (memoMap.containsKey(target)) {
-            return memoMap.get(target);
-        }
-
-        if (target == 0) {
-            return true;
-        }
-
-        if (target < 0) {
-            return false;
-        }
+        if (target == 0) return true;
+        if (target < 0) return false;
+        if (memoMap.containsKey(target)) return memoMap.get(target);
 
         for (int num : nums) {
             int remainder = target - num;
