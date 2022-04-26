@@ -19,18 +19,13 @@ public class CanConstruct {
     static Boolean canConstructHelper(String target, String[] wordBank) {
         // base case: string becomes empty;
         // meaning that we were able to take off all the letters from the word bank
-        if (target.equals("")) {
-            return true;
-        }
-
-        if (memoMap.containsKey(target)) {
-            return memoMap.get(target);
-        }
+        if (target.equals("")) return true;
+        if (memoMap.containsKey(target)) return memoMap.get(target);
 
         for (String word : wordBank) {
             if (target.indexOf(word) == 0) {
-                String prefix = target.substring(word.length());
-                if (canConstructHelper(prefix, wordBank)) {
+                String suffix = target.substring(word.length());
+                if (canConstructHelper(suffix, wordBank)) {
                     memoMap.put(target, true);
                     return true;
                 }
