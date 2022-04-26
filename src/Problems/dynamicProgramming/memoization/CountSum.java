@@ -17,18 +17,10 @@ public class CountSum {
     }
 
     private int countSubsetsRecursive(int[] nums, int targetSum, int index) {
-        if (targetSum == 0) {
-            return 1;
-        }
-
-        if (targetSum < 0 || index >= nums.length) {
-            return 0;
-        }
-
         String key = targetSum + "," + nums[index];
-        if (cache.containsKey(key)) {
-            return cache.get(key);
-        }
+        if (targetSum == 0) return 1;
+        if (targetSum < 0 || index >= nums.length) return 0;
+        if (cache.containsKey(key)) return cache.get(key);
 
         int count = 0;
 
