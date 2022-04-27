@@ -26,17 +26,31 @@ public class BestTimeToBuyAndSell {
 
     public int maxProfit(int[] prices) {
         int minBuyPrice = Integer.MAX_VALUE;
-        int profit = 0;
+        int maxProfit = 0;
 
         for (int price : prices) {
             if (price < minBuyPrice) {
                 minBuyPrice = price;
             } else {
-                profit = Math.max(profit, price - minBuyPrice);
+                maxProfit = Math.max(maxProfit, price - minBuyPrice);
             }
         }
 
-        return profit;
+        return maxProfit;
+    }
+
+    //using DP
+    public int maxProfit2(int[] prices) {
+        int[] dp = new int[prices.length];
+        dp[0] = 0;
+        int min = prices[0];
+        
+        for (int i = 1; i < prices.length; i++) {
+            min = Math.min(min, prices[i]);
+            dp[i] = Math.max(dp[i-1],  prices[i] - min );
+        }
+        
+        return dp[prices.length - 1];
     }
 
     public void run() {
