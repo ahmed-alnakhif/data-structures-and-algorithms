@@ -39,6 +39,7 @@ public class RemoveNodeFromEnd {
         
         //else
         prev.next = prev.next.next;
+        
         return head;
     }
     
