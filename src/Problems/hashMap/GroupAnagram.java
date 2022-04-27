@@ -1,4 +1,4 @@
-package Problems.Sequences;
+package Problems.hashMap;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +13,6 @@ import java.util.Map;
  * An Anagram is a word or phrase formed by rearranging the letters of a
  * different word or phrase, typically using all the original letters exactly
  * once.
- * 
  * 
  * 
  * Example 1:
@@ -35,12 +34,12 @@ public class GroupAnagram {
         for (String str : strings) {
             char[] tempChars = str.toCharArray();
             Arrays.sort(tempChars);
-            String word = String.valueOf(tempChars);
+            String sortedWord = String.valueOf(tempChars);
 
-            if (map.containsKey(word)) {
-                map.get(word).add(str);
+            if (map.containsKey(sortedWord)) {
+                map.get(sortedWord).add(str);
             } else {
-                map.put(word, new ArrayList<>(Arrays.asList(str)));
+                map.put(sortedWord, new ArrayList<>(Arrays.asList(str)));
             }
         }
 
