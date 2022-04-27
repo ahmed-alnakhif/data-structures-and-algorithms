@@ -1,6 +1,5 @@
 package Problems.SlidingWindow;
 
-
 /**
  * Given an integer array nums, find the contiguous subarray (containing at
  * least one number) which has the largest sum and return its sum.
@@ -20,20 +19,21 @@ public class MaxSubarray {
     public int maxSubArray(int[] nums) {
         int max = nums[0];
         int sum = 0;
-        
-        for(int num : nums){
-            if(sum < 0){
+
+        for (int num : nums) {
+            if (sum < 0) {
                 sum = 0;
             }
             sum += num;
             max = Math.max(max, sum);
         }
-        
+
         return max;
     }
 
-    public void run() {
-        int[] nums = { -2,1,-3,4,-1,2,1,-5,4 };
-        System.out.println(maxSubArray(nums));
+    public static void main(String[] args) {
+        MaxSubarray obj = new MaxSubarray();
+        int[] nums = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+        System.out.println(obj.maxSubArray(nums));
     }
 }

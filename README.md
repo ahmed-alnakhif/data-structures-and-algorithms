@@ -40,6 +40,8 @@
 |  11  | [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/) | [Java](src/Problems/SlidingWindow/FindAllAnagramsInString.java) | 1. fixed window, and a hash map for each string <br>2. check if both hash maps are equal | T: O(S) <br>S: O(26)
 |  12  | [Subarray Product Less Than K](https://leetcode.com/problems/subarray-product-less-than-k/) | [Java](src/Problems/SlidingWindow/SubarrayProductLessThanK.java) | 1. calculate product <br>2. if product is greater than K, then remove left most num and increment left <br>3. then calculate count = count + window size and increment right | T: O(N) <br>S: O(N) |
 |  13  | [BotIps]() | [Java](src/Problems/SlidingWindow/BotIps.java) | 1. keep track of ip frequency <br>2. check if freq == count <br>3. while current timestamp window size > window size, then slide the window  | T: O(N) <br>S: O(N) |
+|  14  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/SlidingWindow/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | T: O(N) <br>S: O(1) |
+
 
 ## 2) Two Pointers
 |  #  | Title                       | Solution                    | Basic Idea                                    |  O Notation  |
@@ -274,7 +276,7 @@
 |  4  | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)  | [Java](src/Problems/Sequences/ValidAnagram.java) | 1. HashMap <br>2. add occurrence of first string chars and then subtract occurrence from second string <br>3. map values should be 0 | O(N) |
 |  5  | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)  | [Java](src/Problems/arrays/ProductOfArrayExceptSelf.java) | 1. calculate product and number of zeros <br>2. check number of zeros and return the proper product | O(N) |
 |  6  | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)  | [Java](src/Problems/Sequences/ValidParentheses.java) | 1. use a stack to push open brackets <br>2. check if next char is matching closing bracket && stack is empty at the end | O(N) |
-|  7  | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)  | [Java](src/Problems/SlidingWindow/MaxSubarray.java) | 1. iterate and count the sum <br>2. reset if sum + nums[i] is negative <br>3. keep track of max subarray | O(N) |
+
 |  11 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/)  | [Java](src/Problems/Sequences/GroupAnagram.java) | sort each word and put it in a map where key is the word and value is a list of the words that match the sorted word| O(n* wLog(w)) | 
 |  12 | [Max Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)  | [Java](src/Problems/Sequences/MaxProductSubarray.java) |  | O(N) | 
 | 13   | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)  | [Java](src/Problems/Sequences/SearchRotatedSortedArray.java) |  | O(log(N))  | 
