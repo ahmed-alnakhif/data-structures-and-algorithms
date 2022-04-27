@@ -12,7 +12,6 @@ import java.util.List;
  * segmentation.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: str = "catsanddog", wordDict = ["cat","cats","and","sand","dog"]
