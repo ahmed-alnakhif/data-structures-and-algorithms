@@ -37,8 +37,8 @@ public class ValidAnagram {
             map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) - 1);
         }
 
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() != 0) {
+        for (int value : map.values()) {
+            if (value != 0) {
                 return false;
             }
         }
@@ -46,11 +46,12 @@ public class ValidAnagram {
         return true;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        ValidAnagram validAnagram = new ValidAnagram();
         String s = "anagram", t = "nagaram";
         String s1 = "rat", t2 = "car";
 
-        System.out.println(isAnagram(s, t));
-        System.out.println(isAnagram(s1, t2));
+        System.out.println(validAnagram.isAnagram(s, t));
+        System.out.println(validAnagram.isAnagram(s1, t2));
     }
 }

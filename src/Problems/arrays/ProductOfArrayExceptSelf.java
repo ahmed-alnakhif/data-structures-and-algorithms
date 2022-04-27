@@ -1,4 +1,6 @@
-package Problems.Sequences;
+package Problems.arrays;
+
+import java.util.Arrays;
 
 /**
  * Given an integer array nums, return an array answer such that answer[i] is
@@ -11,7 +13,6 @@ package Problems.Sequences;
  * division operation.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [1,2,3,4]
@@ -21,6 +22,29 @@ package Problems.Sequences;
 public class ProductOfArrayExceptSelf {
 
     public int[] productExceptSelf(int[] nums) {
+        int[] result = new int[nums.length];
+        int[] left = new int[nums.length];
+        int[] right = new int[nums.length];
+
+        left[0] = 1;
+        right[nums.length - 1] = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            left[i] = left[i - 1] * nums[i - 1];
+        }
+
+        for (int i = nums.length - 2; i >= 0; i--) {
+            right[i] = right[i + 1] * nums[i + 1];
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            result[i] = left[i] * right[i];
+        }
+
+        return result;
+    }
+
+    public int[] productExceptSelf2(int[] nums) {
         int product = 1;
         int zeroCount = 0;
 
@@ -45,9 +69,9 @@ public class ProductOfArrayExceptSelf {
         return nums;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        ProductOfArrayExceptSelf obj = new ProductOfArrayExceptSelf();
         int[] nums = { 1, 2, 3, 4 };
-
-        System.out.println(productExceptSelf(nums));
+        System.out.println(Arrays.toString(obj.productExceptSelf(nums)));
     }
 }
