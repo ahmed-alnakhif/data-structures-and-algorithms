@@ -1,5 +1,7 @@
 package Problems.dynamicProgramming.tabulation;
 
+import java.util.Arrays;
+
 /**
  * Given two strings text1 and text2, return the length of their longest common
  * subsequence. If there is no common subsequence, return 0.
@@ -31,10 +33,8 @@ public class LongestCommonSubsequence {
         this.txt2 = text2;
         this.dp = new int[text1.length()][text2.length()];
         
-        for (int col = 0; col < dp[0].length; col++) {
-            for (int row = 0; row < dp.length; row++) {
-                dp[row][col] = -1;
-            }
+        for(int[] arr : dp){
+            Arrays.fill(arr, -1);
         }
         
         return LCS(0, 0);
