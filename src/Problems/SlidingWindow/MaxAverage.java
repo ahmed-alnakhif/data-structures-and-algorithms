@@ -9,7 +9,6 @@ package Problems.SlidingWindow;
  * than 10-5 will be accepted.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [1,12,-5,-6,50,3], k = 4
@@ -31,18 +30,17 @@ public class MaxAverage {
         double maxSum = sum;
 
         while (right < nums.length) {
-            sum = sum - nums[left] + nums[right];
+            sum = sum - nums[left++] + nums[right++];
             maxSum = Math.max(maxSum, sum);
-            right++;
-            left++;
         }
 
         return maxSum / k;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        MaxAverage obj = new MaxAverage();
         int[] nums = { 1, 12, -5, -6, 50, 3 };
         int k = 4;
-        System.out.println(findMaxAverage(nums, k));
+        System.out.println(obj.findMaxAverage(nums, k));
     }
 }
