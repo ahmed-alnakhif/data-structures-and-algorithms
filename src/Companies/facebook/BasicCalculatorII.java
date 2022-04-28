@@ -2,6 +2,7 @@ package Companies.facebook;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Given a string s which represents an expression, evaluate this expression and
@@ -28,7 +29,7 @@ public class BasicCalculatorII {
     public int calculate(String equation) {
         if (equation.isEmpty()) return 0;
 
-        HashSet<Character> opsSet = new HashSet<>(List.of('+', '-', '*', '/'));
+        Set<Character> opsSet = new HashSet<>(List.of('+', '-', '*', '/'));
 
         int result = 0;
         int currNum = 0, lastNum = 0;

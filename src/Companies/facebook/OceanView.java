@@ -1,6 +1,7 @@
 package Companies.facebook;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * There are n buildings in a line. You are given an integer array heights of
@@ -12,7 +13,6 @@ import java.util.ArrayList;
  * 
  * Return a list of indices (0-indexed) of buildings that have an ocean view,
  * sorted in increasing order.
- * 
  * 
  * 
  * Example 1:
@@ -27,11 +27,9 @@ public class OceanView {
 
     public int[] findBuildings(int[] heights) {
         ArrayList<Integer> result = new ArrayList<>();
+        int max = Integer.MIN_VALUE;
 
-        result.add(heights.length - 1);
-        int max = heights[heights.length - 1];
-
-        for (int i = heights.length - 2; i >= 0; i--) {
+        for (int i = heights.length - 1; i >= 0; i--) {
             if (heights[i] > max) {
                 result.add(i);
                 max = heights[i];
@@ -47,6 +45,6 @@ public class OceanView {
 
     public static void main(String[] args) {
         OceanView oceanView = new OceanView();
-        oceanView.findBuildings(new int[] { 4, 2, 3, 1 });
+        System.out.println(Arrays.toString(oceanView.findBuildings(new int[] { 4, 2, 3, 1 })));
     }
 }
