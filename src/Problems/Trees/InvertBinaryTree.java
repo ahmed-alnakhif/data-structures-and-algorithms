@@ -26,8 +26,7 @@ public class InvertBinaryTree {
     }
 
     public TreeNode invertTree(TreeNode root) {
-        if (root == null)
-            return root;
+        if (root == null) return root;
 
         TreeNode tmp = root.left;
         root.left = root.right;
@@ -39,7 +38,7 @@ public class InvertBinaryTree {
         return root;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
