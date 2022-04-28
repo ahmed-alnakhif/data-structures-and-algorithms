@@ -26,6 +26,7 @@ public class RotationalCipher {
         // T: O(N), S: O(N)
         for (int i = 0; i < sBuilder.length(); i++) {
             char ch = sBuilder.charAt(i);
+
             if (Character.isLetter(ch)) {
                 if (Character.isUpperCase(ch)) {
                     // subtract ascii value and take mod 26 so we can find the position from 0 -> 25
@@ -127,8 +128,6 @@ public class RotationalCipher {
         String expected_2 = "stuvRPQrpq-999.@";
         String output_2 = rotationalCipher(input_2, rotationFactor_2);
         check(expected_2, output_2);
-
-        // Add your own test cases here
 
     }
 
