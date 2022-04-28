@@ -9,10 +9,7 @@ import java.util.Map;
  * is included in the window. If there is no such substring, return the empty
  * string "".
  * 
- * The testcases will be generated such that the answer is unique.
- * 
  * A substring is a contiguous sequence of characters within the string.
- * 
  * 
  * 
  * Example 1:
@@ -26,16 +23,20 @@ import java.util.Map;
 public class MinimumWindowSubstring {
 
     public String minWindow(String s, String t) {
-        Map<Character, Integer> map = new HashMap<>();
-        for (char c : t.toCharArray())
-            map.put(c, map.getOrDefault(c, 0) + 1);
+        Map<Character, Integer> freqMap = new HashMap<>();
+
+        for (char c : t.toCharArray()){
+            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+        }
 
         int left = 0, right = 0, minStart = 0, minLen = Integer.MAX_VALUE, remaining = t.length();
+
         while (right < s.length()) {
             char c = s.charAt(right);
-            if (map.containsKey(c)) {
-                map.put(c, map.get(c) - 1);
-                if (map.get(c) >= 0) {
+            
+            if (freqMap.containsKey(c)) {
+                freqMap.put(c, freqMap.get(c) - 1);
+                if (freqMap.get(c) >= 0) {
                     remaining--;
                 }
             }
@@ -47,9 +48,9 @@ public class MinimumWindowSubstring {
                     minStart = left;
                 }
                 char leftChar = s.charAt(left);
-                if (map.containsKey(leftChar)) {
-                    map.put(leftChar, map.get(leftChar) + 1);
-                    if (map.get(leftChar) > 0) {
+                if (freqMap.containsKey(leftChar)) {
+                    freqMap.put(leftChar, freqMap.get(leftChar) + 1);
+                    if (freqMap.get(leftChar) > 0) {
                         remaining++;
                     }
                 }

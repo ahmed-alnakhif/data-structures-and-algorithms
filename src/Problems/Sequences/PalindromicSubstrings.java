@@ -10,7 +10,6 @@ import java.util.HashSet;
  * A substring is a contiguous sequence of characters within the string.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: s = "abc"
@@ -28,7 +27,7 @@ public class PalindromicSubstrings {
             String sub = "";
             for (int j = i; j < s.length(); j++) {
                 sub += String.valueOf(s.charAt(j));
-                if (isPalindrom(sub)) {
+                if (isPalindrome(sub)) {
                     set.add(sub);
                     count++;
                 }
@@ -38,7 +37,7 @@ public class PalindromicSubstrings {
         return count;
     }
 
-    boolean isPalindrom(String str) {
+    boolean isPalindrome(String str) {
         if (set.contains(str)) {
             return true;
         }
@@ -59,28 +58,30 @@ public class PalindromicSubstrings {
         int count = 0;
         for (int i = 0; i < s.length(); i++) {
             // for odds
-            count = count + palindromAroundCenter(i, i, s);
+            count += palindromeAroundCenter(i, i, s);
             // for even
-            count = count + palindromAroundCenter(i, i + 1, s);
+            count += palindromeAroundCenter(i, i + 1, s);
         }
         return count;
     }
 
-    int palindromAroundCenter(int left, int right, String str) {
+    int palindromeAroundCenter(int left, int right, String str) {
         int count = 0;
         while (left >= 0 && right < str.length()) {
             if (str.charAt(left) != str.charAt(right)) {
                 break;
             }
             count++;
+
             left--;
             right++;
         }
+
         return count;
     }
 
-    public void run() {
-        String s = "abcddcba";
-        System.out.println(countSubstrings(s));
+   public static void main(String[] args) {
+        PalindromicSubstrings p = new PalindromicSubstrings();
+        System.out.println(p.countSubstrings("abcddcba"));
     }
 }

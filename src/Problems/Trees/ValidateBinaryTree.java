@@ -38,17 +38,15 @@ public class ValidateBinaryTree {
         return check(root, null, null);
     }
 
-    public boolean check(TreeNode root, Integer min, Integer max) {
-        if (root == null)
-            return true;
+    public boolean check(TreeNode node, Integer min, Integer max) {
+        if (node == null) return true;
+        if (min != null && node.val <= min) return false;
+        if (max != null && node.val >= max) return false;
 
-        if ((min != null && root.val <= min) || (max != null && root.val >= max))
-            return false;
-
-        return check(root.left, min, root.val) && check(root.right, root.val, max);
+        return check(node.left, min, node.val) && check(node.right, node.val, max);
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
