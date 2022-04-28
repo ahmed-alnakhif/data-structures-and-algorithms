@@ -1,6 +1,8 @@
 package Companies.facebook;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * You are given two integer arrays of equal length target and arr. In one step,
@@ -8,7 +10,6 @@ import java.util.Arrays;
  * to make any number of steps.
  * 
  * Return true if you can make arr equal to target or false otherwise.
- * 
  * 
  * 
  * Example 1:
@@ -19,7 +20,29 @@ import java.util.Arrays;
 
 public class CanBeEqual {
 
+
+
     public boolean canBeEqual(int[] target, int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num : arr){
+            map.put(num, map.getOrDefault(num,0)+1);
+        }
+        
+        for(int num : target){
+            if(!map.containsKey(num)){
+                return false;
+            } 
+            
+            map.put(num, map.get(num)-1);
+            if(map.get(num)<=0){
+                map.remove(num);
+            }
+        }
+        
+        return map.isEmpty();
+    }
+
+    public boolean canBeEqual2(int[] target, int[] arr) {
         if (target.length != arr.length) return false;
 
         Arrays.sort(target);
