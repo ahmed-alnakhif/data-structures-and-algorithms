@@ -10,7 +10,6 @@ import java.util.Arrays;
  * s2.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: s1 = "ab", s2 = "eidbaooo"
@@ -26,8 +25,7 @@ import java.util.Arrays;
 public class PermutationInString {
 
     public boolean checkInclusion(String s1, String s2) {
-        if (s1.length() > s2.length())
-            return false;
+        if (s1.length() > s2.length()) return false;
 
         s1 = sort(s1);
 
@@ -46,9 +44,8 @@ public class PermutationInString {
         return String.valueOf(arr);
     }
 
-    public void run() {
-        String s1 = "ab";
-        String s2 = "eidboaoo";
-        System.out.println(checkInclusion(s1, s2));
-    }
+    public static void main(String[] args) {
+        PermutationInString p = new PermutationInString();
+        System.out.println(p.checkInclusion("ab", "eidbaooo"));
+    }        
 }

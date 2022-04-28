@@ -8,7 +8,6 @@ import java.util.Set;
  * the only number in the range that is missing from the array.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [3,0,1]
@@ -23,7 +22,7 @@ public class FindMissingNumber {
     public int missingNumber(int[] nums) {
         int expectedSum = nums.length * (nums.length + 1) / 2;
 
-        // instead of uisng the formula, you can get the expected sum from i -> n
+        // instead of using the formula, you can get the expected sum from i -> n
 
         int actualSum = 0;
         for (int num : nums) {
@@ -41,9 +40,9 @@ public class FindMissingNumber {
         }
 
         int expectedNumCount = nums.length + 1;
-        for (int number = 0; number < expectedNumCount; number++) {
-            if (!numSet.contains(number)) {
-                return number;
+        for (int num = 0; num < expectedNumCount; num++) {
+            if (!numSet.contains(num)) {
+                return num;
             }
         }
 
@@ -59,8 +58,9 @@ public class FindMissingNumber {
         return missing;
     }
 
-    public void run() {
+   public static void main(String[] args) {
+        FindMissingNumber f = new FindMissingNumber();
         int[] num = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(missingNumber(num));
+        System.out.println(f.missingNumber(num));
     }
 }

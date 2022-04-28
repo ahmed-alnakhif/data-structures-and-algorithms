@@ -18,12 +18,11 @@ public class MinSizeSubArraySum {
     public int findMinSubArray(int[] arr, int k) {
         int sum = arr[0];
         int left = 0, right = 0;
-        int min = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
 
         while (left <= right && right < arr.length) {
-
             if (sum >= k) {
-                min = Math.min(min, right - left + 1);
+                minLength = Math.min(minLength, right - left + 1);
                 sum -= arr[left++];
             } else {
                 right++;
@@ -31,10 +30,9 @@ public class MinSizeSubArraySum {
                     sum += arr[right];
                 }
             }
-
         }
 
-        return min;
+        return minLength;
     }
 
     public static void main(String[] args) {

@@ -14,7 +14,6 @@ package Problems.SlidingWindow;
  * of nums of length k.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: nums = [1,4,5,2,3], k = 3
@@ -41,9 +40,10 @@ public class LargestSubarrayLengthK {
         return resultArr;
     }
 
-    public void run() {
+   public static void main(String[] args) {
+        LargestSubarrayLengthK l = new LargestSubarrayLengthK();
         int[] nums = { 2, 1, 5, 1, 3, 2 };
         int k = 3;
-        System.out.println(largestSubarray(nums, k));
+        System.out.println(l.largestSubarray(nums, k));
     }
 }
