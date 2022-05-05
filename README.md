@@ -216,6 +216,7 @@
 |  7  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | [java](src/Problems/Graphs/EvaluateDivision.java) |  | T:O() <br>S:O() |
 |  8  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [Java](src/Problems/Graphs/NetworkDelayTime.java) | 1. use Dijkstra's Algorithm <br>2. after min times table is filled, get the max time | T:O(V+E*log(V)) <br>S:O(V) | 
 |  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java](src/Problems/Graphs/CheapestFlightsWithKStops.java) | Bellman-Ford's Alg. | T:O(E*K) <br>S:O(V) | 
+|  10 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() |
 
 
 ## 15) Dynamic Programming
@@ -329,7 +330,7 @@
 | 77  | [Finding the Users Active Minutes](https://leetcode.com/problems/finding-the-users-active-minutes/) | [Java](src/Problems/hashMap/UserActiveMinutes.java) | 1. add each user id with all actions as a value in hash set <br>2. iterate through sets and increment result according to the place of the set size  | Time: O(N) <br> Space: O(N) |
 | 78  | [Follower Relationship](https://leetcode.com/discuss/interview-question/1022416/Twitter-Phone-interview) | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through relationships and add each followee to the follower <br>2. if followee exists in the map and contains the follower, then we found a pair  | Time: O(N) <br> Space: O(N) |
 | 79  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through the first map <br>2. if key doesn't exist in the second map return false <br>3. if value of the key is not equal to the one in the second map then return false | Time: O(N) <br> Space: O(1) |
-|  6  | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() |
+
 
 
 # Companies 
