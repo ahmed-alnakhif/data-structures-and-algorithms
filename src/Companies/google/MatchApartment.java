@@ -58,26 +58,24 @@ public class MatchApartment {
         // fill shared
         if (shared.size() > 0) {
             for (Apartment apartment : apartments) {
-                int size = Math.min(shared.size(), apartmentMap.get(apartment.id).rooms);
-                for (int i = 0; i < size; i++) {
+                while(apartmentMap.get(apartment.id).rooms > 0 && shared.size() > 0) {
                     String name = shared.poll();
-
                     applicantMap.put(name, apartment.id);
                     apartmentMap.get(apartment.id).rooms--;
                     apartmentMap.get(apartment.id).applicantsList.add(name);
-                    size = Math.min(shared.size(), apartmentMap.get(apartment.id).rooms);
                 }
 
+                if(shared.isEmpty()) {
+                    break;
+                }
             }
         }
 
         // fill single
         if (single.size() > 0) {
-            int i = 0;
             for (Apartment apartment : apartments) {
                 if (apartmentMap.get(apartment.id).applicantsList.isEmpty() && !single.isEmpty()) {
-                    String name = shared.poll();
-
+                    String name = single.poll();
                     applicantMap.put(name, apartment.id);
                     apartmentMap.get(apartment.id).rooms--;
                     apartmentMap.get(apartment.id).applicantsList.add(name);
@@ -109,6 +107,7 @@ public class MatchApartment {
         apartments.add(new Apartment(3, 2));
         apartments.add(new Apartment(4, 3));
         apartments.add(new Apartment(5, 1));
+        apartments.add(new Apartment(6, 1));
 
         MatchApartment matchApartment = new MatchApartment();
         Map<String, Integer> map = matchApartment.mapApplicantToApartment(applicants, apartments);
