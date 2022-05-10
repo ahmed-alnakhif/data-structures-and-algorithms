@@ -36,11 +36,12 @@ public class MaxOlivesInPizza {
             count++;
         }
 
-        //TODO: fix logic here
+        // TODO: fix logic here
         int[] firstTwoMaxOlives = maxOlives.poll();
-        while(!maxOlives.isEmpty()) {
-        for (int i = 1; i < maxOlives.size(); i++) {
-           
+        while (!maxOlives.isEmpty()) {
+            for (int i = 1; i < maxOlives.size(); i++) {
+
+            }
         }
 
         return Math.max(firstTwoMaxOlives, secondTwoMaxOlives);
