@@ -41,7 +41,7 @@ public class MaxOlivesInPizza {
         int[] secondTwoMaxOlives;
         while (!maxOlives.isEmpty()) {
             for (int i = 1; i < maxOlives.size(); i++) {
-
+                
             }
         }
 
