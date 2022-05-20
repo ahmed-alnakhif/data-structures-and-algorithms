@@ -1,8 +1,5 @@
 package Problems.arrays;
 
-// you can also use imports, for example:
-// import java.util.*;
-
 public class EncodeCharacters {
 
     public static String getEncode(String str){
