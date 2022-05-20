@@ -27,7 +27,6 @@ public class EncodeCharacters {
     public static String getDecode(String str){
         StringBuilder result = new StringBuilder();
 
-        // 3a
         char currChar = ' ';
         for(char ch : str.toCharArray()){
             if(Character.isAlphabetic(ch)){
@@ -50,6 +49,5 @@ public class EncodeCharacters {
         System.out.println(getEncode("aabaaa"));
 
         System.out.println(getDecode("a3b2c1"));
-
     }
 }
