@@ -1,6 +1,8 @@
 package Problems.Graphs;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Given an m x n 2D binary grid grid which represents a map of '1's (land) and
@@ -24,6 +26,10 @@ import java.util.HashSet;
  */
 
 public class NumberOfIslands {
+
+    int[][] dir = {{1,0}, {-1, 0}, {0, 1}, {0, -1}};
+    boolean [][] visited;
+
     HashSet<String> seenCells = new HashSet<>();
 
     public int numIslands(char[][] grid) {
@@ -41,19 +47,45 @@ public class NumberOfIslands {
     }
 
     private boolean dfs(char[][] grid, int row, int col) {
-        String key = row + "," + col;
-
         if (!isValidCell(grid, row, col)) return false;
         if (isWater(grid, row, col)) return false;
-        if (seenCells.contains(key)) return false;
+        if (visited[row][col]) return false;
 
-        seenCells.add(key);
+        visited[row][col] = true;
 
         dfs(grid, row + 1, col);
         dfs(grid, row - 1, col);
         dfs(grid, row, col + 1);
         dfs(grid, row, col - 1);
 
+        return true;
+    }
+
+    private boolean bfs(char[][] grid, int row, int col){
+        if(visited[row][col]) return false;
+        if(grid[row][col] == '0') return false;
+        Queue<int[]> queue = new LinkedList<>();
+        
+        queue.offer(new int[]{row, col});
+        visited[row][col] = true;
+        
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            
+            for(int i = 0; i<size; i++){
+                int[] node = queue.poll();
+                
+                for(int j = 0; j < dir.length; j++){
+                    int newX = node[0] + dir[j][0], newY = node[1] + dir[j][1];
+                    
+                    if(isValidCell(grid, newX, newY) && !visited[newX][newY]  && grid[newX][newY] == '1'){
+                        queue.offer(new int[]{newX, newY});
+                        visited[newX][newY] = true;
+                    }
+                }
+            }
+        }
+    
         return true;
     }
 
