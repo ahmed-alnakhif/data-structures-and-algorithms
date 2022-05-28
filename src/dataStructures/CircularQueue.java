@@ -4,8 +4,8 @@ import java.util.LinkedList;
 
 public class CircularQueue {
 
-    LinkedList<Integer> list;
-    int size;
+    private LinkedList<Integer> list;
+    private int size;
 
     public CircularQueue(int k) {
         list = new LinkedList<>();
