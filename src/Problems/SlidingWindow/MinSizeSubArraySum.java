@@ -14,7 +14,6 @@ package Problems.SlidingWindow;
  */ //{ 2, 1, 5, 2, 8 }; 7
 
 public class MinSizeSubArraySum {
-
     
     public int findMinSubArray(int[] arr, int k){
         int left = 0, right = 0;
