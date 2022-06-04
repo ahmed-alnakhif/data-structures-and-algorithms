@@ -11,11 +11,28 @@ package Problems.SlidingWindow;
  * Output: 2
  * Explanation: The smallest subarray with a sum greater than or equal to '7' is
  * [5, 2].
- */
+ */ //{ 2, 1, 5, 2, 8 }; 7
 
 public class MinSizeSubArraySum {
 
-    public int findMinSubArray(int[] arr, int k) {
+    
+    public int findMinSubArray(int[] arr, int k){
+        int left = 0, right = 0;
+        int sum = 0, min = Integer.MAX_VALUE;
+
+        while(right < arr.length){
+            sum += arr[right++];
+
+            while(sum >= k){
+                min = Math.min(min, right - left);
+                sum -= arr[left++];
+            }
+        }
+
+        return min == Integer.MAX_VALUE ? 0 : min;
+    }
+
+    public int findMinSubArray2(int[] arr, int k) {
         int sum = arr[0];
         int left = 0, right = 0;
         int minLength = Integer.MAX_VALUE;
@@ -32,8 +49,9 @@ public class MinSizeSubArraySum {
             }
         }
 
-        return minLength;
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
+
 
     public static void main(String[] args) {
         MinSizeSubArraySum f = new MinSizeSubArraySum();
@@ -46,5 +64,8 @@ public class MinSizeSubArraySum {
         int[] arr3 = { 2, 1, 5, 2, 8 };
         int S3 = 7;
         System.out.println(f.findMinSubArray(arr3, S3));
+        int[] arr4 = { 1, 1, 1, 1, 1 };
+        int S4 = 7;
+        System.out.println(f.findMinSubArray(arr4, S4));
     }
 }
