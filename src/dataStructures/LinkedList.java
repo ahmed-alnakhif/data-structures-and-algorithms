@@ -79,6 +79,7 @@ public class LinkedList {
     public void insertFirst(int value) {
         Node newNode = new Node(value);
 
+        //empty
         if (this.head == null) {
             this.head = newNode;
             return;
