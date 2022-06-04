@@ -30,7 +30,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
         return max;
     }
-
+ 
     public static void main(String[] args) {
         LongestSubstringWithoutRepeatingCharacters f = new LongestSubstringWithoutRepeatingCharacters();
         System.out.println(f.lengthOfLongestSubstring("abcabcbb"));
