@@ -13,7 +13,7 @@ import java.util.Map;
  * Output: true
  */
 
-public class LongestSubstringwithAtMostKDistinctCharacters {
+public class LongestSubstringWithAtMostKDistinctCharacters {
 
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
         if (s.length() * k == 0) {
@@ -33,9 +33,9 @@ public class LongestSubstringwithAtMostKDistinctCharacters {
             map.put(c, right++);
 
             if (map.size() > k) {
-                Map.Entry<Character, Integer> leftMostEntry = map.entrySet().iterator().next();
-                map.remove(leftMostEntry.getKey());
-                left = leftMostEntry.getValue() + 1;
+                var leftEntry = map.entrySet().iterator().next();
+                map.remove(leftEntry.getKey());
+                left = leftEntry.getValue() + 1;
             }
 
             maxLen = Math.max(maxLen, right - left);
@@ -44,10 +44,11 @@ public class LongestSubstringwithAtMostKDistinctCharacters {
         return maxLen;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        LongestSubstringWithAtMostKDistinctCharacters f = new LongestSubstringWithAtMostKDistinctCharacters();
         String s = "eeeceba";
         int k = 2;
 
-        System.out.println(lengthOfLongestSubstringKDistinct(s, k));
+        System.out.println(f.lengthOfLongestSubstringKDistinct(s, k));
     }
 }
