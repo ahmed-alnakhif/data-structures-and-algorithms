@@ -32,8 +32,7 @@ import java.util.Map;
 public class FruitIntoBaskets {
 
     public int totalFruit(int[] fruits) {
-        if (fruits.length == 0)
-            return 0;
+        if (fruits.length == 0) return 0;
 
         Map<Integer, Integer> map = new LinkedHashMap<>();
         int maxLen = 0;
@@ -43,7 +42,7 @@ public class FruitIntoBaskets {
             if (map.containsKey(fruits[right])) {
                 map.remove(fruits[right]);
             }
-            map.put(fruits[right], right);
+            map.put(fruits[right], right++);
 
             if (map.size() > 2) {
                 Map.Entry<Integer, Integer> leftMostFruit = map.entrySet().iterator().next();
@@ -51,17 +50,15 @@ public class FruitIntoBaskets {
                 left = leftMostFruit.getValue() + 1;
             }
 
-            right++;
-
             maxLen = Math.max(maxLen, right - left);
         }
 
         return maxLen;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        FruitIntoBaskets f = new FruitIntoBaskets();
         int[] fruits = { 1, 2, 1 };
-
-        System.out.println(totalFruit(fruits));
+        System.out.println(f.totalFruit(fruits));
     }
 }

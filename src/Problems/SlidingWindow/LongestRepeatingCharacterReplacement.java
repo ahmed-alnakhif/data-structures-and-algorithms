@@ -25,20 +25,20 @@ public class LongestRepeatingCharacterReplacement {
     public int characterReplacement(String s, int k) {
         Map<Character, Integer> map = new HashMap<>();
         int left = 0, right = 0;
-        int maxLength = 0, charFreq = 0;
+        int maxLength = 0, maxFreq = 0;
 
         while (right < s.length()) {
-            char ch = s.charAt(right);
-            map.put(ch, map.getOrDefault(ch, 0) + 1);
-            charFreq = Math.max(charFreq, map.get(ch));
+            char ch = s.charAt(right++);
 
-            while ((right - left + 1) - charFreq > k) {
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
+            maxFreq = Math.max(maxFreq, map.get(ch));
+
+            while ((right - left) - maxFreq > k) {
                 char leftChar = s.charAt(left++);
                 map.put(leftChar, map.get(leftChar) - 1);
             }
 
-            maxLength = Math.max(maxLength, (right - left + 1));
-            right++;
+            maxLength = Math.max(maxLength, (right - left));
         }
 
         return maxLength;
