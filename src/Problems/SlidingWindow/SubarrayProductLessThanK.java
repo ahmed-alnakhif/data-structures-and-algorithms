@@ -27,6 +27,7 @@ public class SubarrayProductLessThanK {
 
         while (right < nums.length) {
             product *= nums[right++];
+            
             while (product >= k) {
                 product /= nums[left++];
             }
