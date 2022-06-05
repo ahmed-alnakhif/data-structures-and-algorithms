@@ -1,9 +1,10 @@
 package Problems.SlidingWindow;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * The DNA sequence is composed of a series of nucleotides abbreviated as 'A',
@@ -30,28 +31,25 @@ import java.util.List;
 public class RepeatedDNASequences {
 
     public List<String> findRepeatedDnaSequences(String s) {
-        if (s.length() < 10)
-            return new ArrayList<>();
-
-        List<String> result = new LinkedList<>();
-        HashMap<String, Integer> map = new HashMap<>();
+        Set<String> result = new HashSet<>();
+        Set<String> seen = new HashSet<>();
 
         int left = 0, right = 9;
 
         while (right < s.length()) {
             String window = s.substring(left, right + 1);
 
-            map.put(window, map.getOrDefault(window, 0) + 1);
-
-            if (map.get(window) == 2) {
+            if (seen.contains(window)) {
                 result.add(window);
             }
+
+            seen.add(window);
 
             right++;
             left++;
         }
 
-        return result;
+        return new ArrayList<>(result);
     }
 
     public static void main(String[] args) {
