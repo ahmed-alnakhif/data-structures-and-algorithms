@@ -44,10 +44,10 @@ public class FindAllAnagramsInString {
             //if we reached max window size, remove or decrement LMC
             if(right >= p.length()){
                 char leftMostChar = s.charAt(left++);
-                if(sCount.get(leftMostChar) == 1){
+                sCount.put(leftMostChar, sCount.get(leftMostChar)-1);
+
+                if(sCount.get(leftMostChar) < 1){
                     sCount.remove(leftMostChar);
-                } else {
-                    sCount.put(leftMostChar, sCount.get(leftMostChar)-1);
                 }
             }
             
@@ -62,7 +62,7 @@ public class FindAllAnagramsInString {
         return result;
     }
 
-    //not very effecient
+    //not very efficient
     public List<Integer> findAnagrams2(String s, String p) {
         List<Integer> result = new ArrayList<>();
 
