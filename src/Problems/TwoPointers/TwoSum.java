@@ -22,7 +22,7 @@ public class TwoSum {
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            Integer comp = target - nums[i];
+            int comp = target - nums[i];
             if (map.containsKey(comp)) {
                 return (new int[] { i, map.get(comp) });
             }
@@ -32,10 +32,11 @@ public class TwoSum {
         return new int[2];
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        TwoSum f = new TwoSum();
         int[] nums = { 2, 7, 11, 15 };
         int target = 9;
-        System.out.println(twoSum(nums, target)[0]);
-        System.out.println(twoSum(nums, target)[1]);
+        System.out.println(f.twoSum(nums, target)[0]);
+        System.out.println(f.twoSum(nums, target)[1]);
     }
 }
