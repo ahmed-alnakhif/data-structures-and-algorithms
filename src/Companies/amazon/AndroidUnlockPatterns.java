@@ -1,4 +1,4 @@
-package Companies.google;
+package Companies.amazon;
 
 /**
  * Given two integers m and n, return the number of unique and valid unlock
