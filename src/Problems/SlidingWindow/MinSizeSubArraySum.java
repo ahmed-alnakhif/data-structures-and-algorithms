@@ -51,7 +51,6 @@ public class MinSizeSubArraySum {
         return minLength == Integer.MAX_VALUE ? 0 : minLength;
     }
 
-
     public static void main(String[] args) {
         MinSizeSubArraySum f = new MinSizeSubArraySum();
         int[] arr1 = { 2, 1, 5, 2, 3, 2 };
