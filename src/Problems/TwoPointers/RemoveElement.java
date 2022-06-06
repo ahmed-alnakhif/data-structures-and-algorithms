@@ -11,8 +11,7 @@ package Problems.TwoPointers;
 
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
-        if (nums.length == 0)
-            return 0;
+        if (nums.length == 0)  return 0;
 
         int k = 0;
         int left = 0, right = 0;
@@ -28,9 +27,8 @@ public class RemoveElement {
         return k;
     }
 
-    public void run() {
-        int[] nums = { 0, 0, 1, 2, 2, 3, 0, 4, 2 };
-        int val = 2;
-        System.out.println(removeElement(nums, val));
+   public static void main(String[] args) {
+        RemoveElement r = new RemoveElement();
+        System.out.println(r.removeElement(new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 }, 1));
     }
 }
