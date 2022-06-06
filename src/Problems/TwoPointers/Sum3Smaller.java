@@ -17,11 +17,7 @@ import java.util.Arrays;
  */
 
 public class Sum3Smaller {
-
-    int result;
-    int minDiff = Integer.MAX_VALUE;
-
-    int count = 0;
+    int closestSum = 0;
 
     public int threeSumSmaller(int[] nums, int target) {
         Arrays.sort(nums);
@@ -30,7 +26,7 @@ public class Sum3Smaller {
             twoSum(i, nums, target);
         }
 
-        return count;
+        return closestSum;
     }
 
     private void twoSum(int i, int[] nums, int target) {
@@ -40,7 +36,7 @@ public class Sum3Smaller {
             int sum = nums[i] + nums[left] + nums[right];
 
             if (sum < target) {
-                count = count + right - left;
+                closestSum = closestSum + right - left;
                 left++;
             } else {
                 right--;
@@ -48,9 +44,10 @@ public class Sum3Smaller {
         }
     }
 
-    public void run() {
-        int[] nums = { -2,0,1,3,-2,1 };
+    public static void main(String[] args) {
+        Sum3Smaller s = new Sum3Smaller();    
+        int[] nums = { -2, 0, 1, 3, -2, 1 };
         int target = 2;
-        System.out.println(threeSumSmaller(nums, target));
+        System.out.println(s.threeSumSmaller(nums, target));
     }
 }

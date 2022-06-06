@@ -77,8 +77,10 @@ public class BackspaceStringCompare {
         for (char c : str.toCharArray()) {
             if (c != '#') {
                 strBuilder.append(c);
-            } else if (strBuilder.length() != 0) {
-                strBuilder.deleteCharAt(strBuilder.length() - 1);
+            } else {
+                if (strBuilder.length() > 0) {
+                    strBuilder.deleteCharAt(strBuilder.length() - 1);
+                }
             }
         }
         return strBuilder.toString();
