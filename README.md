@@ -61,7 +61,7 @@
 |  10 | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | [Java](src/Problems/TwoPointers/BackspaceStringCompare.java) | two pointer: <br>1. start from the end of the string <br>2. two inner while loops to count backspaces <br>3. compare if current char in s != t<br> can also be solved using a stack | T: O(N+M) <br>S: O(1)) |
 |  11 | [Shortest Subarray to be Removed to Make Array Sorted](https://leetcode.com/problems/shortest-subarray-to-be-removed-to-make-array-sorted/) | [Java](src/Problems/TwoPointers/ShortestSubarrayToBeRemoved.java) |  | T: O(N) <br>S: O(1) |
 |  12 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | [Java](src/Problems/TwoPointers/ContainerWithMostWater.java) | 1. left and right pointer <br>2. get the area of min(arr[left], arr[right]) <br>3. keep track of the max area <br>4. move the shorter colum | T: O(N) <br>S:O(1) |
-|  13 | [Trapping Rain Water](https://leetcode.com/problems/container-with-most-water/) | [Java](src/Problems/TwoPointers/TrappingRainWater.java) | 1. track leftMax and rightMax <br>2. if leftMax < rightMax, add leftMax - height[left] to the result <br>3. else, add rightMax - height[right] | T: O(N) <br>S:O(1) |
+|  13 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | [Java](src/Problems/TwoPointers/TrappingRainWater.java) | 1. track leftMax and rightMax <br>2. if leftMax < rightMax, add leftMax - height[left] to the result <br>3. else, add rightMax - height[right] | T: O(N) <br>S:O(1) |
 
 
 ## 3) Fast and Slow Pointers
