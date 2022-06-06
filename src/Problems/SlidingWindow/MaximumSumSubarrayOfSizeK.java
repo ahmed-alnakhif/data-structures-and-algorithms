@@ -34,7 +34,7 @@ public class MaximumSumSubarrayOfSizeK {
 
     public int maxSum(int[] arr, int k){
         int left = 0, right = 0;
-        int sum = 0, max = 0;
+        int sum = 0, max = Integer.MIN_VALUE;
         
         while(right < arr.length){
             sum += arr[right];
