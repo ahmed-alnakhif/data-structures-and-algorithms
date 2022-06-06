@@ -332,6 +332,11 @@
 | 79  | [Compare Two Hash Maps]() | [Java](src/Problems/hashMap/FollowerRelationship.java) | 1. iterate through the first map <br>2. if key doesn't exist in the second map return false <br>3. if value of the key is not equal to the one in the second map then return false | Time: O(N) <br> Space: O(1) |
 
 
+## 18) Design
+|  #  | Title         | Solution                                    | Basic idea |  O Notation  |
+| --- | ------------- | ------------------------------------------- | ---------- | ------------ |
+|  1  | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | [java](src/Problems/design/TicTacToe.java) | 1. create a board of size n <br>2. create an array for rowSum & colSum, and variable for diag & antiDiag to track values<br>3. player1 +1, player2 -1 to rowSum & colSum & diag & antiDiag <br>4. if any of the tracking abs(variables) == n, then there's a winner | T: O(1) to check the winner |
+
 
 # Companies 
 
