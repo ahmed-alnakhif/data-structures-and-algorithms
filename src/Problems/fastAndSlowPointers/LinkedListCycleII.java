@@ -63,7 +63,7 @@ public class LinkedListCycleII {
         }
 
         return ptr1;
-    }
+    } 
 
     private ListNode findIntersection(ListNode head) {
         ListNode slow = head, fast = head;
