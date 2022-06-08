@@ -38,6 +38,7 @@ public class LargestComponent {
         for (Integer node : graph.get(source)) {
             count = dfs(node, graph, count);
         }
+        
         return count;
     }
 
