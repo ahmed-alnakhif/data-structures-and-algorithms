@@ -25,6 +25,7 @@ public class FirstKthMissingPositive {
     // Using Binary Search,  T: O(log(N)), S: O(1)
     public int findKthPositive(int[] arr, int k) {
         int left = 0, right = arr.length - 1;
+
         while (left <= right) {
             int pivot = left + (right - left) / 2;
             if (arr[pivot] - pivot - 1 < k) {
