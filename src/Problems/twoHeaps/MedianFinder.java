@@ -30,6 +30,5 @@ public class MedianFinder {
         } else { //odd size 
             return (double) maxH.peek();
         }
-
     }
 }
