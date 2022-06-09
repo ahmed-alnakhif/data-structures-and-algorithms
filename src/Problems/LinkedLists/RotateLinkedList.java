@@ -30,7 +30,7 @@ public class RotateLinkedList {
     public ListNode rotateRight(ListNode head, int k) {
         if (head == null || head.next == null) return head;
 
-        // 1) get tail and length
+        // 1) get tail and length 
         ListNode oldTail = head;
         int length;
         for (length = 1; oldTail.next != null; length++) {
