@@ -43,6 +43,7 @@ public class PathWithGivenSequence {
         if(seq[index] != root.val) return false;
         if(index == seq.length-1 && !isLeafNode(root)) return false;
         if(index == seq.length-1) return true;
+        
         return dfs(root.left, seq, index + 1) || dfs(root.right, seq, index + 1);
       }
 
