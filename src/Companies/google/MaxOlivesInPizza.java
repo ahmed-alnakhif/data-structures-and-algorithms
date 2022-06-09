@@ -63,5 +63,7 @@ public class MaxOlivesInPizza {
         MaxOlivesInPizza maxOlivesInPizza = new MaxOlivesInPizza();
         System.out.println(maxOlivesInPizza.maxOlives(slices));
 
+        //try DP
+
     }
 }
