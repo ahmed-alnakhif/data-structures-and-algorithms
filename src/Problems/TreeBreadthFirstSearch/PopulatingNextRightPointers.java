@@ -39,11 +39,12 @@ public class PopulatingNextRightPointers {
     };
 
     public Node connect(Node root) {
+        if (root == null) return root;
+        
         Queue<Node> queue = new LinkedList<>();
 
-        if (root == null) return root;
-
         queue.add(root);
+
         while (!queue.isEmpty()) {
             int size = queue.size();
             
@@ -58,7 +59,7 @@ public class PopulatingNextRightPointers {
         return root;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
