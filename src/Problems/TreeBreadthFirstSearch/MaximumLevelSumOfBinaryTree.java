@@ -59,6 +59,7 @@ public class MaximumLevelSumOfBinaryTree {
                 if (node.right != null) queue.add(node.right);
                 sum += node.val;
             }
+            
             if(sum > max){
                 max = sum;
                 maxLevel = level;
