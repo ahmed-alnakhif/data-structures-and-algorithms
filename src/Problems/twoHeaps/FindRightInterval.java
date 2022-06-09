@@ -13,7 +13,6 @@ import java.util.PriorityQueue;
  * interval exists for interval i, then put -1 at index i.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: intervals = [[1,2]]
