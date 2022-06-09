@@ -23,53 +23,26 @@ import java.util.PriorityQueue;
 
 public class SortCharactersByFrequency {
 
-    static class LetterFreq {
-        char letter;
-        int freq;
-        String word;
-
-        LetterFreq(char l, int f) {
-            this.letter = l;
-            this.freq = f;
-            this.word = String.valueOf(l);
-        }
-
-        LetterFreq(String w, int f) {
-            this.freq = f;
-            this.word = w;
-        }
-
-        void incrementFreq() {
-            this.freq += 1;
-            this.word += String.valueOf(letter);
-        }
-    }
-
     public static String frequencySort(String s) {
-        Map<Character, LetterFreq> map = new HashMap<>();
+        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>(
+                (a, b) -> b.getValue() - a.getValue());
+        Map<Character, Integer> frequency = new HashMap<>();
 
-        for (char c : s.toCharArray()) {
-            if (map.containsKey(c)) {
-                map.get(c).incrementFreq();
-            } else {
-                map.put(c, new LetterFreq(c, 1));
+        for (Character c : s.toCharArray()) {
+            frequency.put(c, frequency.getOrDefault(c, 0) + 1);
+        }
+
+        maxHeap.addAll(frequency.entrySet());
+
+        StringBuilder sb = new StringBuilder();
+        while (maxHeap.size() > 0) {
+            Map.Entry<Character, Integer> entry = maxHeap.remove();
+            for (int i = 0; i < entry.getValue(); i++) {
+                sb.append(entry.getKey());
             }
         }
 
-        PriorityQueue<LetterFreq> maxHeap = new PriorityQueue<>((a, b) -> b.freq != a.freq
-                ? b.freq - a.freq
-                : a.word.compareTo(b.word));
-
-        map.forEach((e, v) -> {
-            maxHeap.add(new LetterFreq(v.word, v.freq));
-        });
-
-        String result = "";
-        while (!maxHeap.isEmpty()) {
-            result += maxHeap.poll().word;
-        }
-
-        return result;
+        return sb.toString();
     }
 
     public static void main(String[] args) {
