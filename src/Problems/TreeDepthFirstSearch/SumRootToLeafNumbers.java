@@ -61,4 +61,8 @@ public class SumRootToLeafNumbers {
     private boolean isLeafNode(TreeNode root){
         return root != null && root.left == null && root.right == null;
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
