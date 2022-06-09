@@ -32,20 +32,20 @@ public class GenerateParentheses {
         return result;
     }
 
-    private static void generate(int n, int open, int close, StringBuilder perString) {
+    private static void generate(int n, int open, int close, StringBuilder str) {
         if (open == n && close == n) {
-            result.add(perString.toString());
+            result.add(str.toString());
             return;
         }
 
         if (open < n) {
-            generate(n, open + 1, close, perString.append("("));
-            perString.deleteCharAt(perString.length() - 1);
+            generate(n, open + 1, close, str.append("("));
+            str.deleteCharAt(str.length() - 1);
         }
 
         if (close < open) {
-            generate(n, open, close + 1, perString.append(")"));
-            perString.deleteCharAt(perString.length() - 1);
+            generate(n, open, close + 1, str.append(")"));
+            str.deleteCharAt(str.length() - 1);
         }
     }
 
