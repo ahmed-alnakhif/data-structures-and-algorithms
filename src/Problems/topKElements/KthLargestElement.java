@@ -21,6 +21,7 @@ public class KthLargestElement {
         // keep k largest elements in the heap
         for (int n : nums) {
             minHeap.add(n);
+            
             if (minHeap.size() > k) {
                 minHeap.poll();
             }

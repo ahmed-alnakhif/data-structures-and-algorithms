@@ -21,9 +21,7 @@ import java.util.PriorityQueue;
 public class TopKFrequentElements {
 
     public static int[] topKFrequent(int[] nums, int k) {
-        if (k == nums.length) {
-            return nums;
-        }
+        if (k == nums.length) return nums;
 
         HashMap<Integer, Integer> map = new HashMap<>();
         PriorityQueue<int[]> minHeap = new PriorityQueue<int[]>((a, b) -> a[1] - b[1]);
