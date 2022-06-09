@@ -46,8 +46,8 @@ public class CopyListWithRandomPointers {
         if(head == null) return null;
         
         HashMap<Node, Node> map = new HashMap<>();
-        
         Node curr = head;
+        
         while(curr != null){
             map.put(curr, new Node(curr.val));
             curr = curr.next;
