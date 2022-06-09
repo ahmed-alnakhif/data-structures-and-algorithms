@@ -70,7 +70,7 @@ public class RemoveNodeFromEnd {
         return head;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
