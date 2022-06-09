@@ -49,6 +49,7 @@ public class DiffWaysToAddParentheses {
                 for (Integer operand1 : suffixResult) {
                     for (Integer operand2 : prefixResult) {
                         int operationResult = 0;
+
                         switch (expression.charAt(i)) {
                             case '+':
                                 operationResult = operand1 + operand2;
@@ -60,6 +61,7 @@ public class DiffWaysToAddParentheses {
                                 operationResult = operand1 * operand2;
                                 break;
                         }
+                        
                         result.add(operationResult);
                     }
                 }
