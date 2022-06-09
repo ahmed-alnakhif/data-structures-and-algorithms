@@ -1,11 +1,12 @@
 package Problems.Intervals;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class IntervalListIntersections {
 
     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
-        ArrayList<int[]> result = new ArrayList<>();
+        List<int[]> result = new ArrayList<>();
         int i = 0, j = 0;
 
         while (i < firstList.length && j < secondList.length) {
