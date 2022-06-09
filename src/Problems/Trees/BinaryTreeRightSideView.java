@@ -51,11 +51,13 @@ public class BinaryTreeRightSideView {
 
 
     // using DFS
-    List<Integer> rightSideList = new LinkedList<>();
+    List<Integer> rightSideList;
     public List<Integer> rightSideView2(TreeNode root) {
+        rightSideList = new LinkedList<>();
         postDFS(root, 1);
         return rightSideList;
     }
+    
     private void postDFS(TreeNode root, int level) {
         if (root == null) return;
 

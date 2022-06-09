@@ -29,12 +29,13 @@ public class MinimumDepthOfBinaryTree {
     }
 
     public int minDepth(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-
         if (root == null) return 0;
-
+        
+        Queue<TreeNode> queue = new LinkedList<>();
         int minDepth = 0;
+
         queue.add(root);
+
         while (!queue.isEmpty()) {
             minDepth++;
             int size = queue.size();
