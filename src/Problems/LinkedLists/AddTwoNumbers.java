@@ -56,8 +56,7 @@ public class AddTwoNumbers {
             if(l1.next != null){
                 l1.next.val += carry;
             } else {
-                ListNode newNode = new ListNode(carry);
-                l1.next = newNode;
+                l1.next = new ListNode(carry);
             }
         }
 
