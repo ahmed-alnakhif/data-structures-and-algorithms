@@ -48,6 +48,7 @@ public class IntersectionOfTwoLists {
             }
             current2 = current2.next;
         }
+        
         return null;
     }
 
