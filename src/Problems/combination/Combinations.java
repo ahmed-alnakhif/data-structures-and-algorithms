@@ -19,13 +19,14 @@ import java.util.List;
 
 public class Combinations {
     List<List<Integer>> result = new LinkedList<>();
+    LinkedList<Integer> comb = new LinkedList<>();
 
     public List<List<Integer>> combine(int n, int k) {
-        combination(1, n, k, new LinkedList<>());
+        combination(1, n, k);
         return result;
     }
 
-    private void combination(int start, int n, int k, LinkedList<Integer> comb) {
+    private void combination(int start, int n, int k) {
         if (comb.size() == k) {
             result.add(new LinkedList<>(comb));
             return;
@@ -39,7 +40,7 @@ public class Combinations {
 
         for (int i = start; i < n + 1; i++) {
             comb.add(i);
-            combination(i + 1, n, k, comb);
+            combination(i + 1, n, k);
             comb.removeLast();
         }
     }
