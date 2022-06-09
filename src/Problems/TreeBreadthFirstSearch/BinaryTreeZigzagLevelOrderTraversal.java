@@ -38,14 +38,14 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         List<List<Integer>> levels = new LinkedList<>();
         Queue<TreeNode> queue = new LinkedList<>();
 
-        if (root == null)
-            return levels;
+        if (root == null) return levels;
 
         queue.add(root);
         boolean reverse = false;
         while (!queue.isEmpty()) {
             LinkedList<Integer> level = new LinkedList<>();
             int size = queue.size();
+            
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 if (node.left != null) queue.add(node.left);
