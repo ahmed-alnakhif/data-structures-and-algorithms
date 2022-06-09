@@ -56,7 +56,7 @@ public class BinaryTreeLevelOrderTraversalII {
         return levels;
     }
 
-    public void run() {
-
+    public static void main(String[] args) {
+        
     }
 }
