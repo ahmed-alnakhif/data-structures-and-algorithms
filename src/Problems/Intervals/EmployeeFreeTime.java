@@ -64,6 +64,7 @@ public class EmployeeFreeTime {
         for (List<Interval> employeeIntervals : schedule) {
             intervals.addAll(employeeIntervals);
         }
+        
         Collections.sort(intervals, (a, b) -> a.start - b.start);
 
         intervals = mergeInterval(intervals);
