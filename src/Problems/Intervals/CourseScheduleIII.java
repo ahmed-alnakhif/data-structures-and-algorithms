@@ -35,10 +35,11 @@ import java.util.PriorityQueue;
 public class CourseScheduleIII {
 
     public int scheduleCourse(int[][] courses) {
-        Arrays.sort(courses, (a, b) -> a[1] - b[1]);
-        
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
         int time = 0;
+        
+        Arrays.sort(courses, (a, b) -> a[1] - b[1]);
+
         for (int[] course: courses) {
             int duration = course[0], lastDay = course[1];
             
@@ -46,8 +47,8 @@ public class CourseScheduleIII {
                 maxHeap.add(duration);
                 time += duration;
             } else if (!maxHeap.isEmpty() && maxHeap.peek() > duration) {
-                time += duration - maxHeap.poll();
                 maxHeap.add(duration);
+                time += duration - maxHeap.poll();
             }
         }
         return maxHeap.size(); 
