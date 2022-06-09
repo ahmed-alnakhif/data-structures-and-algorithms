@@ -29,28 +29,28 @@ import java.util.PriorityQueue;
 
 class Project {
     int cap;
-    int pro;
+    int proj;
 
-    public Project(int cap, int pro) {
+    public Project(int cap, int proj) {
         this.cap = cap;
-        this.pro = pro;
+        this.proj = proj;
     }
 }
 
 public class IPO {
 
     public static int findMaximizedCapital(int k, int w, int[] profit, int[] capital) {
-        PriorityQueue<Project> maxHeapPro = new PriorityQueue<>((a, b) -> b.pro - a.pro);
+        PriorityQueue<Project> maxHeapPro = new PriorityQueue<>((a, b) -> b.proj - a.proj);
         PriorityQueue<Project> minHeapCap = new PriorityQueue<>((a, b) -> a.cap - b.cap);
 
-        int availCapital = w;
+        int availCap = w;
 
         for (int i = 0; i < profit.length; i++) {
             minHeapCap.add(new Project(capital[i], profit[i]));
         }
 
         for (int i = 0; i < k; i++) {
-            while (!minHeapCap.isEmpty() && minHeapCap.peek().cap <= availCapital) {
+            while (!minHeapCap.isEmpty() && minHeapCap.peek().cap <= availCap) {
                 maxHeapPro.add(minHeapCap.poll());
             }
 
@@ -58,10 +58,10 @@ public class IPO {
                 break;
             }
 
-            availCapital += maxHeapPro.poll().pro;
+            availCap += maxHeapPro.poll().proj;
         }
 
-        return availCapital;
+        return availCap;
     }
 
     public static void main(String[] args) {
