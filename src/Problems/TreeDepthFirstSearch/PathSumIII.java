@@ -27,13 +27,14 @@ public class PathSumIII {
         }
     }
 
-    HashMap<Integer, Integer> map = new HashMap<>();
-    int count = 0;
+    HashMap<Integer, Integer> map;
+    int paths = 0;
 
     public int pathSum(TreeNode root, int targetSum) {
+        map = new HashMap<>();
         map.put(0, 1);
         subPathSumDFS(root, 0, targetSum);
-        return count;
+        return paths;
     }
 
     private void subPathSumDFS(TreeNode root, int currSum, int targetSum) {
@@ -42,7 +43,7 @@ public class PathSumIII {
         currSum += root.val;
 
         if (map.containsKey(currSum - targetSum)) {
-            count += map.get(currSum - targetSum);
+            paths += map.get(currSum - targetSum);
         }
 
         map.put(currSum, map.getOrDefault(currSum, 0) + 1);
