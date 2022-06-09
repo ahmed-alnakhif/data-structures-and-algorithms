@@ -6,6 +6,28 @@ import java.util.PriorityQueue;
 public class MeetingRoomsII {
 
     // T: O(nlogn), S: O(n)
+    public int minMeetingRooms(int[][] intervals) {
+        if (intervals.length == 0) return 0;
+
+        PriorityQueue<Integer> roomsPQ = new PriorityQueue<>();
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+
+        // add first meeting end time
+        roomsPQ.add(intervals[0][1]);
+
+        for (int i = 1; i < intervals.length; i++) {
+            // meeting in the pq has finished, and we can take its room
+            if (intervals[i][0] >= roomsPQ.peek()) {
+                roomsPQ.poll();
+            }
+
+            roomsPQ.add(intervals[i][1]);
+        }
+
+        return roomsPQ.size();
+    }
+
+    // T: O(nlogn), S: O(n)
     public int minMeetingRooms2(int[][] intervals) {
         int[] startTimes = new int[intervals.length];
         int[] endTimes = new int[intervals.length];
@@ -33,28 +55,6 @@ public class MeetingRoomsII {
         }
 
         return requiredRooms;
-    }
-
-    // T: O(nlogn), S: O(n)
-    public int minMeetingRooms(int[][] intervals) {
-        if (intervals.length == 0) return 0;
-
-        PriorityQueue<Integer> roomsPQ = new PriorityQueue<>();
-        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
-
-        // add first meeting end time
-        roomsPQ.add(intervals[0][1]);
-
-        for (int i = 1; i < intervals.length; i++) {
-            // meeting in the pq has finished, and we can take its room
-            if (intervals[i][0] >= roomsPQ.peek()) {
-                roomsPQ.poll();
-            }
-
-            roomsPQ.add(intervals[i][1]);
-        }
-
-        return roomsPQ.size();
     }
 
     public static void main(String[] args) {
