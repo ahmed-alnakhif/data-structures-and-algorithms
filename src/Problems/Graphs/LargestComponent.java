@@ -16,25 +16,18 @@ public class LargestComponent {
         int max = 0;
 
         for (Map.Entry<Integer, List<Integer>> entry : graph.entrySet()) {
-            int count = 0;
-            if (!visited.contains(entry.getKey())) {
-                count = dfs(entry.getKey(), graph, count);
-                if (count > max) {
-                    max = count;
-                }
-            }
+            max = Math.max(max, dfs(entry.getKey(), graph, 0));
         }
 
         return max;
     }
 
     int dfs(int source, Map<Integer, List<Integer>> graph, int count) {
-        if (visited.contains(source)) {
-            return count;
-        }
+        if (visited.contains(source)) return count;
 
         visited.add(source);
         count++;
+        
         for (Integer node : graph.get(source)) {
             count = dfs(node, graph, count);
         }
@@ -57,8 +50,9 @@ public class LargestComponent {
         return graph;
     }
 
-    public void run() {
-        Map<Integer, List<Integer>> graph = generateGraph();
-        System.out.println(largestComponent(graph));
+    public static void main(String[] args) {
+        LargestComponent obj = new LargestComponent();
+        Map<Integer, List<Integer>> graph = obj.generateGraph();
+        System.out.println(obj.largestComponent(graph));
     }
 }
