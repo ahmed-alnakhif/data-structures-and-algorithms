@@ -28,8 +28,9 @@ public class ContainsDuplicate {
         return false;
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        ContainsDuplicate c = new ContainsDuplicate();
         int[] nums = { 1, 2, 3, 1 };
-        System.out.println(containsDuplicate(nums));
+        System.out.println(c.containsDuplicate(nums));
     }
 }
