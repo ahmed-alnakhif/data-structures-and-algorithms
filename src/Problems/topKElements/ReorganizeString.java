@@ -13,7 +13,6 @@ import java.util.Queue;
  * Return any possible rearrangement of s or return "" if not possible.
  * 
  * 
- * 
  * Example 1:
  * 
  * Input: s = "aab"
