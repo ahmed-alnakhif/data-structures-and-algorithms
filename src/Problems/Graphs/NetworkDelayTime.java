@@ -28,6 +28,7 @@ import java.util.PriorityQueue;
 
 
 public class NetworkDelayTime {
+    
     public int networkDelayTime(int[][] times, int N, int source) {
         Map<Integer, List<int[]>> graph = new HashMap<>();
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> (a[1] - b[1]));
