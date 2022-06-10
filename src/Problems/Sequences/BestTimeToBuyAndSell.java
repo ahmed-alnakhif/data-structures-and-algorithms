@@ -53,8 +53,9 @@ public class BestTimeToBuyAndSell {
         return dp[prices.length - 1];
     }
 
-    public void run() {
+    public static void main(String[] args) {
+        BestTimeToBuyAndSell b = new BestTimeToBuyAndSell();
         int[] prices = { 7, 1, 5, 3, 6, 4 };
-        System.out.println(maxProfit(prices));
+        System.out.println(b.maxProfit(prices));
     }
 }
