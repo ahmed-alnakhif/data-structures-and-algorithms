@@ -1,6 +1,5 @@
 package Problems.dynamicProgramming.memoization;
 
-
 /*
  * you are a traveler on a 2d grid. you'r beginning from the top-left corner, and your goal is to travel to the bottom-right corner
  * you may only move down or right
@@ -11,18 +10,18 @@ package Problems.dynamicProgramming.memoization;
 public class CountUniquePaths {
 
     public static int uniquePaths(int m, int n) {
-        int[][] dp = new int[m+1][n+1];
+        int[][] dp = new int[m + 1][n + 1];
         return countPaths(dp, m, n);
     }
-    
-    private static int countPaths(int[][]dp, int row, int col){
+
+    private static int countPaths(int[][] dp, int row, int col) {
         if (row * col == 0) return 0;
         if (row == 1 && col == 1) return 1;
         if (dp[row][col] != 0) return dp[row][col];
 
         dp[row][col] = countPaths(dp, row - 1, col) + countPaths(dp, row, col - 1);
 
-        return dp[row][col];
+        return dp[row][col]; 
     }
 
     public static void main(String[] args) {
