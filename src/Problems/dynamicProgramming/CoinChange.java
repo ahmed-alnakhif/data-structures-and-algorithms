@@ -38,6 +38,7 @@ public class CoinChange {
 
         for (int coin : coins) {
             int totalCoins = minCoinChange(coins, amount - coin);
+
             if (totalCoins >= 0 && totalCoins < minCoins) {
                 minCoins = totalCoins + 1;
             }
@@ -51,6 +52,8 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-
+        CoinChange c = new CoinChange();
+        int[] coins = { 1, 2, 5 };
+        System.out.println(c.coinChange2(coins, 11));
     }
 }
