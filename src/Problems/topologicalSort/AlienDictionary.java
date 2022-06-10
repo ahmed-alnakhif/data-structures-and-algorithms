@@ -55,6 +55,7 @@ public class AlienDictionary {
 
             for (int j = 0; j < Math.min(w1.length(), w2.length()); j++) {
                 char parent = w1.charAt(j), child = w2.charAt(j);
+
                 if (parent != child) {
                     graph.get(parent).add(child);
                     inDegree.put(child, inDegree.get(child) + 1);
@@ -74,9 +75,10 @@ public class AlienDictionary {
         StringBuilder sortedOrder = new StringBuilder();
 
         while (!sourcesQueue.isEmpty()) {
-            Character node = sourcesQueue.poll();
+            char node = sourcesQueue.poll();
             sortedOrder.append(node);
-            for (Character child : graph.get(node)) {
+
+            for (char child : graph.get(node)) {
                 inDegree.put(child, inDegree.get(child) - 1);
                 if (inDegree.get(child) == 0) {
                     sourcesQueue.add(child);

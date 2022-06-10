@@ -217,6 +217,7 @@
 |  8  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | [Java](src/Problems/Graphs/NetworkDelayTime.java) | 1. use Dijkstra's Algorithm <br>2. after min times table is filled, get the max time | T:O(V+E*log(V)) <br>S:O(V) | 
 |  9  | [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/) | [Java](src/Problems/Graphs/CheapestFlightsWithKStops.java) | Bellman-Ford's Alg. | T:O(E*K) <br>S:O(V) | 
 |  10 | [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)  | [Java](src/Problems/Graphs/PacificAtlanticWaterFlow.java) |  | T:O() <br>S:O() |
+|  11 | [Min Knight Moves](https://leetcode.com/problems/minimum-knight-moves/)  | [Java](src/Companies/amazon/MinimumKnightMove.java) |  | T:O() <br>S:O() |
 
 
 ## 15) Dynamic Programming
