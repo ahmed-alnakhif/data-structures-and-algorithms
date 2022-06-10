@@ -18,15 +18,14 @@ public class ShortestPath {
     List<Integer> result = new LinkedList<>();
 
     int bfs(Map<Integer, List<Integer>> graph, int source, int dest) {
-        Queue<List<Integer>> queue = new LinkedList<>();
+        Queue<int[]> queue = new LinkedList<>();
         HashSet<Integer> visited = new LinkedHashSet<>();
 
-        queue.add(List.of(source, 0));
+        queue.add(new int[]{source, 0});
 
         while (!queue.isEmpty()) {
-            List<Integer> node = queue.poll();
-            Integer nodeLabel = node.get(0);
-            Integer nodeWeight = node.get(1);
+            int[] node = queue.poll();
+            int nodeLabel = node[0], nodeWeight = node[1];
             
             visited.add(nodeLabel);
 
@@ -34,9 +33,9 @@ public class ShortestPath {
                 return nodeWeight;
             }
 
-            for (Integer adjNode : graph.get(nodeLabel)) {
+            for (int adjNode : graph.get(nodeLabel)) {
                 if (!visited.contains(adjNode)) {
-                    queue.add(List.of(adjNode, nodeWeight + 1));
+                    queue.add(new int[]{adjNode, nodeWeight + 1});
                 }
             }
         }
