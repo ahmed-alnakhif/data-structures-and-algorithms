@@ -31,7 +31,7 @@ public class WordSearch {
     int[] rowDir = { 0, 1, 0, -1 };
     int[] colDir = { 1, 0, -1, 0 };
 
-    Set<String> charSet = new HashSet<>();
+    Set<String> visited = new HashSet<>();
 
     public boolean exist(char[][] board, String word) {
         for (int row = 0; row < board.length; row++) {
@@ -39,7 +39,7 @@ public class WordSearch {
                 if (dfs(board, word, row, col, 0)) {
                     return true;
                 }
-                charSet.clear();
+                visited.clear();
             }
         }
 
@@ -53,19 +53,20 @@ public class WordSearch {
         if (index >= word.length()) return true;
         if (!isInbound(board, row, col)) return false;
         if (word.charAt(index) != board[row][col]) return false;
-        if (charSet.contains(key)) return false;
+        if (visited.contains(key)) return false;
 
-        charSet.add(key);
+        visited.add(key);
 
         boolean result = false;
         for (int i = 0; i < 4; i++) {
             result = dfs(board, word, rowDir[i] + row, colDir[i] + col, index + 1);
+
             if (result) {
                 return true;
             }
         }
 
-        charSet.remove(key);
+        visited.remove(key);
 
         return false;
     }
