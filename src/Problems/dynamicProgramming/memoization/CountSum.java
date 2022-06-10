@@ -31,6 +31,7 @@ public class CountSum {
         count += countSubsetsRecursive(nums, targetSum, index + 1);
 
         cache.put(key, count);
+        
         return count;
     }
 
