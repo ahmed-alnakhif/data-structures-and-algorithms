@@ -35,16 +35,16 @@ public class HouseRobber {
 
     Map<Integer, Integer> map = new HashMap<>();
 
-    public int robMemo(int[] houses) {
-        return rob(houses.length - 1, houses);
+    public int rob(int[] houses) {
+        return robMemo(houses.length - 1, houses);
     }
 
-    private int rob(int i, int[] houses) {
+    private int robMemo(int i, int[] houses) {
         if (i == 0) return houses[0];
         if (i == 1) return Math.max(houses[0], houses[1]);
         if (map.containsKey(i)) return map.get(i);
 
-        map.put(i, Math.max(rob(i - 1, houses), rob(i - 2, houses) + houses[i]));
+        map.put(i, Math.max(robMemo(i - 1, houses), robMemo(i - 2, houses) + houses[i]));
 
         return map.get(i);
     }
@@ -69,7 +69,7 @@ public class HouseRobber {
     public static void main(String[] args) {
         HouseRobber hr = new HouseRobber();
         int[] houses = { 1, 2, 3, 1 };
-        System.out.println(hr.robMemo(houses));
+        System.out.println(hr.rob(houses));
         System.out.println(hr.robTab(houses));
     }
 }
