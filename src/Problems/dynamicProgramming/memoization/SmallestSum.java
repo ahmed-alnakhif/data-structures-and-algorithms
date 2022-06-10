@@ -29,6 +29,7 @@ public class SmallestSum {
         for (int num : nums) {
             int remainder = target - num;
             List<Integer> combination = smallestSumHelper(remainder, nums);
+            
             if (combination != null) {
                 combination.add(num);
                 if (shortestCombination == null || combination.size() < shortestCombination.size()) {

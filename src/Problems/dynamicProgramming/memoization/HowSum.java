@@ -15,7 +15,9 @@ public class HowSum {
 
     List<Integer> howSum(int target, int[] nums) {
         memoMap = new HashMap<>();
-        return howSumHelper(target, nums);
+        List<Integer> result = howSumHelper(target, nums);
+        
+        return result == null ? new ArrayList<>() : result;
     }
 
     List<Integer> howSumHelper(int target, int[] nums) {
@@ -26,6 +28,7 @@ public class HowSum {
         for (int num : nums) {
             int remainder = target - num;
             List<Integer> list = howSumHelper(remainder, nums);
+
             if (list != null) {
                 list.add(num);
                 memoMap.put(target, list);
