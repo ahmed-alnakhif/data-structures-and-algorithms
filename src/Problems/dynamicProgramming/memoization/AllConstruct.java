@@ -38,7 +38,7 @@ public class AllConstruct {
                 String substring = target.substring(word.length());
                 List<List<String>> suffixWays = allConstructHelper(substring, wordBank, memoMap);
                 for (List<String> subList : suffixWays) {
-                    List<String> newList = new ArrayList<String>(subList);
+                    List<String> newList = new ArrayList<>(subList);
                     newList.add(0, word);
                     result.add(newList);
                 }
