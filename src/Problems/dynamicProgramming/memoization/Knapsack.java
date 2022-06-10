@@ -39,10 +39,10 @@ public class Knapsack {
 
         int profitByNotPickingUpItem = solveKnapSackHelper(profits, weights, capacity, index + 1);
 
-        int max = Math.max(profitByPickingUpItem, profitByNotPickingUpItem);
-        cache.put(key, max);
+        int maxProfit = Math.max(profitByPickingUpItem, profitByNotPickingUpItem);
+        cache.put(key, maxProfit);
         
-        return max;
+        return maxProfit;
     }
 
     public static void main(String[] args) {
