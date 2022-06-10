@@ -1,5 +1,9 @@
 package Problems.Graphs;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * return the number of connected component in a graph
@@ -7,46 +11,44 @@ package Problems.Graphs;
 
 public class NumberOfConnectedComponents {
 
+    boolean[] visited;
+    
     public int countComponents(int n, int[][] edges) {
-        int[][] graph = generateGraph(n, edges);
-        boolean[] visited = new boolean[graph.length];
+        visited = new boolean[n+1];
+        Map<Integer, List<Integer>> graph = generateGraph(n, edges);
         int count = 0;
-
-        for (int i = 0; i < graph.length; i++) {
-            if (dfs(graph, i, visited)) {
-                count++;
-            }
+        
+        for(int node : graph.keySet()){
+            if(dfs(1, node, graph)) count++;
         }
-
+        
         return count;
     }
-
-    private boolean dfs(int[][] graph, int index, boolean[] visited) {
-        if (visited[index]) return false;
-
-        visited[index] = true;
-
-        for (int i = 0; i < graph.length; i++) {
-            if (!visited[i] && graph[index][i] == 1) {
-                dfs(graph, i, visited);
-            }
+    
+    private boolean dfs(int count, int node, Map<Integer, List<Integer>> graph){
+        if(visited[node]) return false;
+        
+        visited[node] = true;
+        
+        for(int adj : graph.get(node)){
+            dfs(count, adj, graph);
         }
-
+        
         return true;
     }
-
-    private int[][] generateGraph(int n, int[][] edges) {
-        int[][] graph = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            graph[i][i] = 1;
+    
+    private Map<Integer, List<Integer>> generateGraph(int n, int[][] edges){
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        
+        for(int i = 0; i < n; i++){
+            graph.put(i, new ArrayList<>());
         }
-
-        for (int[] edge : edges) {
-            graph[edge[0]][edge[1]] = 1;
-            graph[edge[1]][edge[0]] = 1;
+        
+        for(int[] edge : edges){
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
         }
-
+        
         return graph;
     }
 
