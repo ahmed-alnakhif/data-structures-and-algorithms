@@ -63,4 +63,9 @@ public class AndroidUnlockPatterns {
 
         return count;
     }
+
+    public static void main(String[] args) {
+        AndroidUnlockPatterns a = new AndroidUnlockPatterns();
+        System.out.println(a.numberOfPatterns(1, 1));
+    }
 }
