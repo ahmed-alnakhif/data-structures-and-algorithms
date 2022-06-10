@@ -51,7 +51,7 @@ public class LongestCommonSubsequence {
             dp[p1][p2] = Math.max(LCS(p1+1, p2), LCS(p1, p2+1)); //check max between moving left OR right
         }
         
-        return dp[p1][p2];
+        return dp[p1][p2]; 
     }
 
     /**
