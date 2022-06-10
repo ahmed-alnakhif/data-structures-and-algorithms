@@ -254,7 +254,7 @@
 | 17 | [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) | tabulation: [Java](src/Problems/dynamicProgramming/tabulation/LongestCommonSubsequence.java) | 1. create a 2d table of size text1+1 and text2+1 <br>2. iterate through each cell and apply 2 rules <br>3. if matching character, then get the prev diagonal value + 1 <br>4. else, get the max of upper and left cell | T: O(M*N) <br>S: O(M*N) |
 | 18  | [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees) | [Java](src/Problems/dynamicProgramming/tabulation/UniqueBinarySearchTrees.java) | or apply Catalan number formula | T: O(N^2)/O(N) S: O(N) |
 | 19  | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | [Java](src/Problems/dynamicProgramming/UniqueBinarySearchTreesII.java) |  | T: O( ) S: O( ) |
-| 20  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/ContainsDuplicate.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
+| 20  | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Java](src/Problems/Sequences/BestTimeToBuyAndSell.java) | 1. keep track of the minimum price <br>2. keep track of the max profit | O(N) |
 | 21  | [Coin Change](https://leetcode.com/problems/coin-change/) | [Java](src/Problems/dynamicProgramming/CoinChange.java) | 1. create a table of size amount + 1 and fill with max value <br> 2. base case: dp[0] = 0 <br>3. recursive case: iterate through the table cells <br>4. if num - coin > 0, then get the min of the current cell and 1 + dp[num - coin] | Time: O(N*C) <br> Space: O(C) |
 
 
