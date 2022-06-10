@@ -5,26 +5,36 @@ import java.util.Queue;
 
 public class WinnerOfCircularGame {
 
+    //T: O(N*K), S: O(k)
     public int findTheWinner(int n, int k) {
-        Queue<Integer> queue = new LinkedList<>();
-        for(int i = 1; i <= n; i++) {
-            queue.add(i);
+        Queue<Integer> participantsQueue = new LinkedList<>();
+        for (int i = 1; i <= n; i++) {
+            participantsQueue.add(i);
         }
 
-        while(queue.size() > 1) {
+        while (participantsQueue.size() > 1) {
             int turns = k;
 
-            while(turns > 1) {
-               queue.add(queue.poll());
-               turns--;
+            while (turns > 1) {
+                participantsQueue.add(participantsQueue.poll());
+                turns--;
             }
-            
-            queue.poll();
+
+            participantsQueue.poll();
         }
 
-        return queue.peek();
+        return participantsQueue.peek();
     }
-    
+
+    //T: O(N), S: O(1)
+    public int findTheWinner2(int n, int k) {
+        int result = 0;
+        for(int i=1; i<=n; i++) {
+            result = (result + k) % i;
+        }
+        return result + 1;
+    }
+
     public static void main(String[] args) {
         WinnerOfCircularGame w = new WinnerOfCircularGame();
         System.out.println(w.findTheWinner(3, 2));
