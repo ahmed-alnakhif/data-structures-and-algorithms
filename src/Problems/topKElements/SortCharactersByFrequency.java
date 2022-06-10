@@ -1,5 +1,6 @@
 package Problems.topKElements;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -43,6 +44,28 @@ public class SortCharactersByFrequency {
         }
 
         return sb.toString();
+    }
+
+    public int leastInterval(char[] tasks, int n) {
+        // frequencies of the tasks
+        int[] frequencies = new int[26];
+        for (int task : tasks) {
+            frequencies[task - 'A']++;
+        }
+
+        Arrays.sort(frequencies);
+
+        // max frequency
+        int maxFreq = frequencies[25];
+        int idleTime = (maxFreq - 1) * n;
+        
+        for (int i = frequencies.length - 2; i >= 0 && idleTime > 0; --i) {
+            idleTime -= Math.min(maxFreq - 1, frequencies[i]); 
+        }
+        
+        idleTime = Math.max(0, idleTime);
+
+        return idleTime + tasks.length;
     }
 
     public static void main(String[] args) {
