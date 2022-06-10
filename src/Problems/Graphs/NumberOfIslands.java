@@ -115,6 +115,6 @@ public class NumberOfIslands {
     public static void main(String[] args) {
         NumberOfIslands n = new NumberOfIslands();
         char[][] grid = n.generateGrid();
-        System.out.println(n.numIslands(grid));
+        System.out.println(n.numIslands(grid)); 
     }
 }
