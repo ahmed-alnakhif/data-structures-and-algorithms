@@ -4,6 +4,25 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 
+ * We are in charge of designing a system to install packages. We are required
+ * to support the installation
+ * of a package and all of its dependent packages.
+ * 
+ * Here is an example of a package structure that we would need to install:
+ * 
+ * A depends on B, C
+ * B depends on D, E, F
+ * C depends on F
+ * F depends on G
+ * 
+ * Define what a package looks like and code a solution to this problem.
+ * 
+ * private installPayload(Payload payload); // does not need to be implemented
+ *
+ */
+
 class Payload {
     String data;
 }
@@ -40,7 +59,8 @@ public class DesignPackageService {
     }
 
     void dfs(Package head) {
-        if (seen.contains(head.id)) return;
+        if (seen.contains(head.id))
+            return;
         if (head.getDependencies().isEmpty()) {
             installPayload(head.getPayload());
             return;
@@ -52,6 +72,7 @@ public class DesignPackageService {
             dfs(dependency);
         }
     }
+
     void installPayload(Payload payload) {
         // TODO
     }
