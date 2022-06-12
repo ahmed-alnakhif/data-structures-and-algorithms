@@ -10,14 +10,21 @@ class Payload {
 
 class Package {
     String id;
-    Payload payload;
+    private Payload payload;
+    private List<Package> dependencies;
+
+    public Package(String id, Payload payload, List<Package> dependencies) {
+        this.id = id;
+        this.payload = payload;
+        this.dependencies = dependencies;
+    }
 
     List<Package> getDependencies() {
-        return null;
+        return this.dependencies;
     }
 
     Payload getPayload() {
-        return null;
+        return this.payload;
     }
 }
 
