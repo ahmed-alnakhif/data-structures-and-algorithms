@@ -33,6 +33,7 @@ public class HasCommonAncestor {
     }
 
     public boolean hasCommonAncestor(int[][] pairs, int node1, int node2) {
+        visited = new HashSet<>();
         dfs(node1);
         dfs(node2);
 
@@ -67,7 +68,7 @@ public class HasCommonAncestor {
 
         HasCommonAncestor solution = new HasCommonAncestor(pairs);
 
-        System.out.println(solution.hasCommonAncestor(pairs, 3, 8)); // => false
+        // System.out.println(solution.hasCommonAncestor(pairs, 3, 8)); // => false
         // System.out.println(solution.hasCommonAncestor(pairs, 5, 8)); // => true
         // System.out.println(solution.hasCommonAncestor(pairs, 6, 8)); // => true
         // System.out.println(solution.hasCommonAncestor(pairs, 6, 9)); // => true
