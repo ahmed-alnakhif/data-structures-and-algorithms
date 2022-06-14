@@ -84,7 +84,7 @@ Complexity analysis variables:
 n: number of pairs in the input
 c: number of courses in the input
  */
-import java.io.*;
+
 import java.util.*;
 
 public class MiddleCourse {
