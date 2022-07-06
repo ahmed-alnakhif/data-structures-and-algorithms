@@ -21,7 +21,7 @@ import java.util.PriorityQueue;
 // sellOrders = [
 //     LimitOrder(0.25, 10.00),  // limit (USD), quantity (XRP)
 //     LimitOrder(0.50, 20.00),
-//       LimitOrder(0.75, 5.00),
+//     LimitOrder(0.75, 5.00),
 // ];
 // calculateXrpQuote(sellOrders, 1.25);  // 5.0
 // calculateXrpQuote(sellOrders, 2.5);    // 10.0
@@ -55,8 +55,8 @@ class XrpQuote {
     // LimitOrder(0.75, 5.00),
     // ];
     // calculateXrpQuote(sellOrders, 1.25); // 5.0
-    // calculateXrpQuote(sellOrders, 2.5); // 10.0
-    // calculateXrpQuote(sellOrders, 5.0); // 15.0
+    // calculateXrpQuote(sellOrders, 2.5);  // 10.0
+    // calculateXrpQuote(sellOrders, 5.0);  // 15.0
 
     public double calculateXrpQuote(List<LimitOrder> sellOrders, double amount) {
         double xrpAmount = 0.0;

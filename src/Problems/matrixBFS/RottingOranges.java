@@ -35,9 +35,8 @@ public class RottingOranges {
             }
         }
 
-        if (freshOranges == 0) {
-            return 0;
-        }
+        if (freshOranges == 0) return 0;
+        
 
         int elapsedTime = 0;
         int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
